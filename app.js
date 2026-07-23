@@ -480,7 +480,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const ALL_THEME_CLASSES = [
     'theme-gx-classic','theme-ultraviolet','theme-sub-zero','theme-frutti-di-mare',
     'theme-purple-haze','theme-vaporwave','theme-rose-quartz','theme-coming-soon',
-    'theme-hackerman','theme-lambda','theme-after-eight','theme-pay-to-win','theme-white-wolf'
+    'theme-hackerman','theme-lambda','theme-after-eight','theme-pay-to-win','theme-white-wolf',
+    'theme-glass'
 ];
 
 // CSS variables + overlay gradient per tema
@@ -591,6 +592,23 @@ const THEME_DATA = {
         overlay:'radial-gradient(ellipse at 15% 15%, rgba(148,163,184,0.18) 0%, rgba(148,163,184,0.05) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(226,232,240,0.14) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(100,116,139,0.12) 0%, transparent 50%), linear-gradient(160deg, #0a0b0d 0%, #0c0d0f 40%, #0a0b0d 70%, #0b0c0e 100%)',
         orb1:'rgba(148,163,184,0.14)', orb2:'rgba(226,232,240,0.10)',
         glassTint:'rgba(148,163,184,0.06)', cardBorder:'rgba(148,163,184,0.18)'
+    },
+
+    // ── Glass — iPhone Liquid Glass / Frosted Premium ─────────────────────
+    'glass': {
+        primary:'#a8c8ff', primaryHover:'#7fb3ff', primaryGlow:'rgba(168,200,255,0.55)',
+        accent:'#d4c8ff',  accentGlow:'rgba(212,200,255,0.45)', focusBorder:'rgba(168,200,255,0.75)',
+        bgDark:'#060a14',
+        overlay:[
+            'radial-gradient(ellipse at 18% 12%, rgba(100,160,255,0.36) 0%, rgba(70,110,220,0.12) 42%, transparent 68%)',
+            'radial-gradient(ellipse at 82% 88%, rgba(190,130,255,0.30) 0%, rgba(140,90,220,0.10) 42%, transparent 65%)',
+            'radial-gradient(ellipse at 55% 45%, rgba(80,200,220,0.14) 0%, transparent 55%)',
+            'radial-gradient(ellipse at 28% 78%, rgba(210,160,255,0.14) 0%, transparent 50%)',
+            'radial-gradient(ellipse at 70% 20%, rgba(140,200,255,0.10) 0%, transparent 45%)',
+            'linear-gradient(160deg, #060a14 0%, #090f26 40%, #080d1e 70%, #070b18 100%)'
+        ].join(', '),
+        orb1:'rgba(100,165,255,0.36)', orb2:'rgba(190,135,255,0.28)',
+        glassTint:'rgba(140,190,255,0.06)', cardBorder:'rgba(160,210,255,0.18)'
     },
 };
 
@@ -720,7 +738,8 @@ function applyThemePreset(themeName, clickedCard, silent) {
             'gx-classic':'GX Classic','ultraviolet':'Ultraviolet','sub-zero':'Sub Zero',
             'frutti-di-mare':'Frutti Di Mare','purple-haze':'Purple Haze','vaporwave':'Vaporwave',
             'rose-quartz':'Rose Quartz','coming-soon':'Coming Soon','hackerman':'Hackerman',
-            'lambda':'Lambda','after-eight':'After Eight','pay-to-win':'Pay-To-Win','white-wolf':'White Wolf'
+            'lambda':'Lambda','after-eight':'After Eight','pay-to-win':'Pay-To-Win',
+            'white-wolf':'White Wolf','glass':'Glass'
         };
         const displayName = names[themeName] || themeName;
         let toast = document.getElementById('themeToast');
