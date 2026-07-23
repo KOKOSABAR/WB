@@ -2752,28 +2752,183 @@ MANDIRI  Wiwin Saptorini  1380027429245" style="width: 100%; background: #0f131d
 
                         <!-- Body -->
                         <div style="padding: 24px; max-height: 75vh; overflow-y: auto;">
-                            <!-- Section 1: Presets -->
-                            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Galeri Tema Presets</label>
-                            <div class="staff-bg-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
-                                <div class="staff-bg-card" data-bg="linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31104b 100%)" onclick="selectStaffBgPreset(this)" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31104b 100%);">
-                                    <span>Deep Space</span>
+                            <!-- Section 1: Galeri Tema Presets -->
+                            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;"><i class="fa-solid fa-swatchbook" style="margin-right:6px;"></i>Galeri Tema Presets</label>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px;">
+
+                                <!-- GX Classic -->
+                                <div class="theme-preset-card" data-theme="gx-classic" onclick="applyThemePreset('gx-classic', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f0608,#120610,#0f060d);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#e91e63;"></div><div style="width:14px;height:14px;border-radius:3px;background:#ff5252;"></div><div style="width:14px;height:14px;border-radius:3px;background:#880e4f;"></div><div style="width:14px;height:14px;border-radius:3px;background:#b71c1c;"></div></div>
+                                        <div style="height:18px;background:rgba(233,30,99,0.15);border-radius:4px;border-left:2px solid #e91e63;"></div>
+                                        <div style="height:10px;background:rgba(255,82,82,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">GX Classic</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
-                                <div class="staff-bg-card" data-bg="linear-gradient(135deg, #061e29 0%, #082f49 50%, #0f172a 100%)" onclick="selectStaffBgPreset(this)" style="background: linear-gradient(135deg, #061e29 0%, #082f49 50%, #0f172a 100%);">
-                                    <span>Cyber Cyan</span>
+
+                                <!-- Ultraviolet -->
+                                <div class="theme-preset-card" data-theme="ultraviolet" onclick="applyThemePreset('ultraviolet', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#07040f,#090612,#07040f);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#7c3aed;"></div><div style="width:14px;height:14px;border-radius:3px;background:#a855f7;"></div><div style="width:14px;height:14px;border-radius:3px;background:#4c1d95;"></div><div style="width:14px;height:14px;border-radius:3px;background:#6d28d9;"></div></div>
+                                        <div style="height:18px;background:rgba(124,58,237,0.15);border-radius:4px;border-left:2px solid #7c3aed;"></div>
+                                        <div style="height:10px;background:rgba(168,85,247,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Ultraviolet</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
-                                <div class="staff-bg-card" data-bg="linear-gradient(135deg, #18092c 0%, #2e1065 50%, #090d16 100%)" onclick="selectStaffBgPreset(this)" style="background: linear-gradient(135deg, #18092c 0%, #2e1065 50%, #090d16 100%);">
-                                    <span>Midnight Violet</span>
+
+                                <!-- Sub Zero -->
+                                <div class="theme-preset-card" data-theme="sub-zero" onclick="applyThemePreset('sub-zero', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#04060f,#050810,#04060f);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#2563eb;"></div><div style="width:14px;height:14px;border-radius:3px;background:#38bdf8;"></div><div style="width:14px;height:14px;border-radius:3px;background:#1e3a8a;"></div><div style="width:14px;height:14px;border-radius:3px;background:#0369a1;"></div></div>
+                                        <div style="height:18px;background:rgba(37,99,235,0.15);border-radius:4px;border-left:2px solid #2563eb;"></div>
+                                        <div style="height:10px;background:rgba(56,189,248,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Sub Zero</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
-                                <div class="staff-bg-card" data-bg="linear-gradient(135deg, #022c22 0%, #064e3b 50%, #020617 100%)" onclick="selectStaffBgPreset(this)" style="background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #020617 100%);">
-                                    <span>Emerald Cyber</span>
+
+                                <!-- Frutti Di Mare -->
+                                <div class="theme-preset-card" data-theme="frutti-di-mare" onclick="applyThemePreset('frutti-di-mare', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f060a,#120609,#0f060a);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#f43f5e;"></div><div style="width:14px;height:14px;border-radius:3px;background:#fb7185;"></div><div style="width:14px;height:14px;border-radius:3px;background:#881337;"></div><div style="width:14px;height:14px;border-radius:3px;background:#be123c;"></div></div>
+                                        <div style="height:18px;background:rgba(244,63,94,0.15);border-radius:4px;border-left:2px solid #f43f5e;"></div>
+                                        <div style="height:10px;background:rgba(251,113,133,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Frutti Di Mare</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
-                                <div class="staff-bg-card" data-bg="linear-gradient(135deg, #2a1b08 0%, #451a03 50%, #090d16 100%)" onclick="selectStaffBgPreset(this)" style="background: linear-gradient(135deg, #2a1b08 0%, #451a03 50%, #090d16 100%);">
-                                    <span>Golden Luxury</span>
+
+                                <!-- Purple Haze -->
+                                <div class="theme-preset-card" data-theme="purple-haze" onclick="applyThemePreset('purple-haze', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#050f04,#061006,#050f04);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#84cc16;"></div><div style="width:14px;height:14px;border-radius:3px;background:#a3e635;"></div><div style="width:14px;height:14px;border-radius:3px;background:#365314;"></div><div style="width:14px;height:14px;border-radius:3px;background:#4d7c0f;"></div></div>
+                                        <div style="height:18px;background:rgba(132,204,22,0.15);border-radius:4px;border-left:2px solid #84cc16;"></div>
+                                        <div style="height:10px;background:rgba(163,230,53,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Purple Haze</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
-                                <div class="staff-bg-card" data-bg="#080a14" onclick="selectStaffBgPreset(this)" style="background: #080a14;">
-                                    <span>Minimal Dark</span>
+
+                                <!-- Vaporwave -->
+                                <div class="theme-preset-card" data-theme="vaporwave" onclick="applyThemePreset('vaporwave', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#040d0f,#050f0d,#040d0e);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#06b6d4;"></div><div style="width:14px;height:14px;border-radius:3px;background:#2dd4bf;"></div><div style="width:14px;height:14px;border-radius:3px;background:#164e63;"></div><div style="width:14px;height:14px;border-radius:3px;background:#0f766e;"></div></div>
+                                        <div style="height:18px;background:rgba(6,182,212,0.15);border-radius:4px;border-left:2px solid #06b6d4;"></div>
+                                        <div style="height:10px;background:rgba(45,212,191,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Vaporwave</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
                                 </div>
+
+                                <!-- Rose Quartz -->
+                                <div class="theme-preset-card" data-theme="rose-quartz" onclick="applyThemePreset('rose-quartz', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f040f,#12060e,#0f040f);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#d946ef;"></div><div style="width:14px;height:14px;border-radius:3px;background:#f0abfc;"></div><div style="width:14px;height:14px;border-radius:3px;background:#701a75;"></div><div style="width:14px;height:14px;border-radius:3px;background:#a21caf;"></div></div>
+                                        <div style="height:18px;background:rgba(217,70,239,0.15);border-radius:4px;border-left:2px solid #d946ef;"></div>
+                                        <div style="height:10px;background:rgba(240,171,252,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Rose Quartz</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Coming Soon -->
+                                <div class="theme-preset-card" data-theme="coming-soon" onclick="applyThemePreset('coming-soon', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f0e04,#100f05,#0f0e04);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#eab308;"></div><div style="width:14px;height:14px;border-radius:3px;background:#86efac;"></div><div style="width:14px;height:14px;border-radius:3px;background:#713f12;"></div><div style="width:14px;height:14px;border-radius:3px;background:#14532d;"></div></div>
+                                        <div style="height:18px;background:rgba(234,179,8,0.15);border-radius:4px;border-left:2px solid #eab308;"></div>
+                                        <div style="height:10px;background:rgba(134,239,172,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Coming Soon</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Hackerman -->
+                                <div class="theme-preset-card" data-theme="hackerman" onclick="applyThemePreset('hackerman', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#040f07,#04100a,#040f07);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#22c55e;"></div><div style="width:14px;height:14px;border-radius:3px;background:#4ade80;"></div><div style="width:14px;height:14px;border-radius:3px;background:#14532d;"></div><div style="width:14px;height:14px;border-radius:3px;background:#15803d;"></div></div>
+                                        <div style="height:18px;background:rgba(34,197,94,0.15);border-radius:4px;border-left:2px solid #22c55e;"></div>
+                                        <div style="height:10px;background:rgba(74,222,128,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Hackerman</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Lambda -->
+                                <div class="theme-preset-card" data-theme="lambda" onclick="applyThemePreset('lambda', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f0904,#100a04,#0f0904);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#f97316;"></div><div style="width:14px;height:14px;border-radius:3px;background:#fbbf24;"></div><div style="width:14px;height:14px;border-radius:3px;background:#7c2d12;"></div><div style="width:14px;height:14px;border-radius:3px;background:#92400e;"></div></div>
+                                        <div style="height:18px;background:rgba(249,115,22,0.15);border-radius:4px;border-left:2px solid #f97316;"></div>
+                                        <div style="height:10px;background:rgba(251,191,36,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Lambda</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- After Eight -->
+                                <div class="theme-preset-card" data-theme="after-eight" onclick="applyThemePreset('after-eight', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#040f0e,#050f0e,#040f0e);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#14b8a6;"></div><div style="width:14px;height:14px;border-radius:3px;background:#5eead4;"></div><div style="width:14px;height:14px;border-radius:3px;background:#134e4a;"></div><div style="width:14px;height:14px;border-radius:3px;background:#0f766e;"></div></div>
+                                        <div style="height:18px;background:rgba(20,184,166,0.15);border-radius:4px;border-left:2px solid #14b8a6;"></div>
+                                        <div style="height:10px;background:rgba(94,234,212,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">After Eight</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Pay-To-Win -->
+                                <div class="theme-preset-card" data-theme="pay-to-win" onclick="applyThemePreset('pay-to-win', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#0f0d04,#100e04,#0f0d04);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#f59e0b;"></div><div style="width:14px;height:14px;border-radius:3px;background:#d9f99d;"></div><div style="width:14px;height:14px;border-radius:3px;background:#78350f;"></div><div style="width:14px;height:14px;border-radius:3px;background:#3f6212;"></div></div>
+                                        <div style="height:18px;background:rgba(245,158,11,0.15);border-radius:4px;border-left:2px solid #f59e0b;"></div>
+                                        <div style="height:10px;background:rgba(217,249,157,0.1);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">Pay-To-Win</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- White Wolf -->
+                                <div class="theme-preset-card" data-theme="white-wolf" onclick="applyThemePreset('white-wolf', this)" style="cursor:pointer;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);transition:all 0.25s;position:relative;">
+                                    <div style="background:linear-gradient(160deg,#080909,#09090a,#080909);padding:14px 12px;display:flex;flex-direction:column;gap:8px;">
+                                        <div style="display:flex;gap:5px;"><div style="width:14px;height:14px;border-radius:3px;background:#94a3b8;"></div><div style="width:14px;height:14px;border-radius:3px;background:#e2e8f0;"></div><div style="width:14px;height:14px;border-radius:3px;background:#334155;"></div><div style="width:14px;height:14px;border-radius:3px;background:#475569;"></div></div>
+                                        <div style="height:18px;background:rgba(148,163,184,0.12);border-radius:4px;border-left:2px solid #94a3b8;"></div>
+                                        <div style="height:10px;background:rgba(226,232,240,0.08);border-radius:3px;width:70%;"></div>
+                                    </div>
+                                    <div style="padding:8px 10px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;">
+                                        <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.85);">White Wolf</span>
+                                        <div class="theme-radio" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;"></div>
+                                    </div>
+                                </div>
+
                             </div>
+
+                            <!-- Divider -->
+                            <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);margin-bottom:20px;"></div>
 
                             <!-- Section 2: Upload Gambar -->
                             <label style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Upload Wallpaper Sendiri</label>
@@ -2794,10 +2949,15 @@ MANDIRI  Wiwin Saptorini  1380027429245" style="width: 100%; background: #0f131d
                         </div>
 
                         <!-- Footer -->
-                        <div style="padding: 16px 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.2);">
-                            <button type="button" class="btn btn-secondary" onclick="resetStaffBgToDefault()" style="font-size: 0.8rem; color: var(--text-muted);">
-                                <i class="fa-solid fa-rotate-left"></i> Reset Default
-                            </button>
+                        <div style="padding: 16px 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.2); flex-wrap: wrap; gap: 8px;">
+                            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                                <button type="button" class="btn btn-secondary" onclick="resetStaffBgToDefault()" style="font-size: 0.8rem; color: var(--text-muted);">
+                                    <i class="fa-solid fa-rotate-left"></i> Reset Wallpaper
+                                </button>
+                                <button type="button" class="btn btn-secondary" onclick="applyThemePreset('default', null, false)" style="font-size: 0.8rem; color: var(--text-muted);">
+                                    <i class="fa-solid fa-circle-half-stroke"></i> Reset Tema
+                                </button>
+                            </div>
                             <button type="button" class="btn btn-secondary" onclick="closeStaffBgModal()" style="font-size: 0.85rem;">Tutup</button>
                         </div>
                     </div>

@@ -460,7 +460,87 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof initBackgroundCustomizer === 'function') {
         initBackgroundCustomizer();
     }
+
+    // Initialize theme preset dari localStorage
+    const savedTheme = localStorage.getItem('restease_theme_preset');
+    if (savedTheme) {
+        applyThemePreset(savedTheme, null, true);
+    }
 });
+
+// ============================================================
+// THEME PRESET SYSTEM
+// ============================================================
+const ALL_THEME_CLASSES = [
+    'theme-gx-classic','theme-ultraviolet','theme-sub-zero','theme-frutti-di-mare',
+    'theme-purple-haze','theme-vaporwave','theme-rose-quartz','theme-coming-soon',
+    'theme-hackerman','theme-lambda','theme-after-eight','theme-pay-to-win','theme-white-wolf'
+];
+
+function applyThemePreset(themeName, clickedCard, silent) {
+    // 1. Remove semua theme classes dari body
+    ALL_THEME_CLASSES.forEach(cls => document.body.classList.remove(cls));
+
+    // 2. Terapkan class baru jika bukan 'default'
+    if (themeName && themeName !== 'default') {
+        document.body.classList.add('theme-' + themeName);
+    }
+
+    // 3. Simpan ke localStorage
+    localStorage.setItem('restease_theme_preset', themeName || 'default');
+
+    // 4. Update semua radio button di galeri
+    document.querySelectorAll('.theme-preset-card').forEach(card => {
+        const radio = card.querySelector('.theme-radio');
+        const isActive = card.getAttribute('data-theme') === themeName;
+        
+        if (isActive) {
+            card.style.border = '2px solid var(--primary, #8b5cf6)';
+            card.style.boxShadow = '0 0 16px rgba(139,92,246,0.3)';
+            if (radio) {
+                radio.style.background = 'var(--primary, #8b5cf6)';
+                radio.style.borderColor = 'var(--primary, #8b5cf6)';
+                radio.innerHTML = '<div style="width:6px;height:6px;border-radius:50%;background:white;"></div>';
+            }
+        } else {
+            card.style.border = '2px solid rgba(255,255,255,0.08)';
+            card.style.boxShadow = '';
+            if (radio) {
+                radio.style.background = '';
+                radio.style.borderColor = 'rgba(255,255,255,0.3)';
+                radio.innerHTML = '';
+            }
+        }
+    });
+
+    // 5. Tampilkan notif singkat jika bukan silent (saat init)
+    if (!silent && themeName) {
+        const names = {
+            'gx-classic':'GX Classic','ultraviolet':'Ultraviolet','sub-zero':'Sub Zero',
+            'frutti-di-mare':'Frutti Di Mare','purple-haze':'Purple Haze','vaporwave':'Vaporwave',
+            'rose-quartz':'Rose Quartz','coming-soon':'Coming Soon','hackerman':'Hackerman',
+            'lambda':'Lambda','after-eight':'After Eight','pay-to-win':'Pay-To-Win','white-wolf':'White Wolf'
+        };
+        const displayName = names[themeName] || themeName;
+        // Tampilkan toast kecil
+        let toast = document.getElementById('themeToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'themeToast';
+            toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(10,12,25,0.95);border:1px solid rgba(139,92,246,0.3);border-radius:10px;padding:8px 18px;color:white;font-size:0.78rem;font-weight:700;z-index:99999;opacity:0;transition:all 0.3s;pointer-events:none;backdrop-filter:blur(10px);white-space:nowrap;';
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = `<i class="fa-solid fa-swatchbook" style="margin-right:7px;color:var(--primary,#8b5cf6)"></i>Tema <span style="color:var(--primary,#8b5cf6)">${displayName}</span> diterapkan`;
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(20px)';
+        }, 2500);
+    }
+}
+window.applyThemePreset = applyThemePreset;
 
 // Helper Tampilan Setup & App Shell
 function showSetupView() {
@@ -5681,6 +5761,11 @@ function openStaffBgModal() {
         modal.classList.remove('hide');
         highlightCurrentStaffBg();
         syncStaffBackgroundAnimationToggleUI(state.staffBackgroundAnimationEnabled);
+        // Refresh radio state tema
+        const savedTheme = localStorage.getItem('restease_theme_preset') || 'default';
+        if (typeof applyThemePreset === 'function') {
+            applyThemePreset(savedTheme, null, true);
+        }
     }
 }
 

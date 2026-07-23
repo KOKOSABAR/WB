@@ -108,6 +108,168 @@ body {
     background-size: cover;
 }
 
+/* ============================================================
+   THEME PRESETS — body.theme-* overrides
+   ============================================================ */
+
+/* GX Classic — Red + Hot Pink */
+body.theme-gx-classic {
+    --primary: #e91e63; --primary-hover: #c2185b; --primary-glow: rgba(233,30,99,0.35);
+    --accent: #ff5252; --accent-glow: rgba(255,82,82,0.3);
+    --glass-border-focus: rgba(233,30,99,0.5);
+}
+body.theme-gx-classic .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(233,30,99,0.1) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(255,82,82,0.07) 0%, transparent 55%),
+                linear-gradient(160deg, #0f0608 0%, #120610 40%, #0f060d 70%, #100508 100%);
+}
+
+/* Ultraviolet — Purple + Indigo */
+body.theme-ultraviolet {
+    --primary: #7c3aed; --primary-hover: #6d28d9; --primary-glow: rgba(124,58,237,0.4);
+    --accent: #a855f7; --accent-glow: rgba(168,85,247,0.3);
+    --glass-border-focus: rgba(124,58,237,0.5);
+}
+body.theme-ultraviolet .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.1) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(168,85,247,0.07) 0%, transparent 55%),
+                linear-gradient(160deg, #07040f 0%, #090612 40%, #07040f 70%, #080512 100%);
+}
+
+/* Sub Zero — Blue + Electric */
+body.theme-sub-zero {
+    --primary: #2563eb; --primary-hover: #1d4ed8; --primary-glow: rgba(37,99,235,0.4);
+    --accent: #38bdf8; --accent-glow: rgba(56,189,248,0.3);
+    --glass-border-focus: rgba(37,99,235,0.5);
+}
+body.theme-sub-zero .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(37,99,235,0.1) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(56,189,248,0.07) 0%, transparent 55%),
+                linear-gradient(160deg, #04060f 0%, #050810 40%, #04060f 70%, #050810 100%);
+}
+
+/* Frutti Di Mare — Rose + Coral */
+body.theme-frutti-di-mare {
+    --primary: #f43f5e; --primary-hover: #e11d48; --primary-glow: rgba(244,63,94,0.35);
+    --accent: #fb7185; --accent-glow: rgba(251,113,133,0.3);
+    --glass-border-focus: rgba(244,63,94,0.5);
+}
+body.theme-frutti-di-mare .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(244,63,94,0.1) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(251,113,133,0.07) 0%, transparent 55%),
+                linear-gradient(160deg, #0f060a 0%, #120609 40%, #0f060a 70%, #120609 100%);
+}
+
+/* Purple Haze — Lime + Green */
+body.theme-purple-haze {
+    --primary: #84cc16; --primary-hover: #65a30d; --primary-glow: rgba(132,204,22,0.35);
+    --accent: #a3e635; --accent-glow: rgba(163,230,53,0.3);
+    --glass-border-focus: rgba(132,204,22,0.5);
+}
+body.theme-purple-haze .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(132,204,22,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(163,230,53,0.06) 0%, transparent 55%),
+                linear-gradient(160deg, #050f04 0%, #061006 40%, #050f04 70%, #060f05 100%);
+}
+
+/* Vaporwave — Cyan + Teal */
+body.theme-vaporwave {
+    --primary: #06b6d4; --primary-hover: #0891b2; --primary-glow: rgba(6,182,212,0.35);
+    --accent: #2dd4bf; --accent-glow: rgba(45,212,191,0.3);
+    --glass-border-focus: rgba(6,182,212,0.5);
+}
+body.theme-vaporwave .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(6,182,212,0.09) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(45,212,191,0.06) 0%, transparent 55%),
+                linear-gradient(160deg, #040d0f 0%, #050f0d 40%, #040d0e 70%, #050d0e 100%);
+}
+
+/* Rose Quartz — Fuchsia + Pink */
+body.theme-rose-quartz {
+    --primary: #d946ef; --primary-hover: #c026d3; --primary-glow: rgba(217,70,239,0.35);
+    --accent: #f0abfc; --accent-glow: rgba(240,171,252,0.3);
+    --glass-border-focus: rgba(217,70,239,0.5);
+}
+body.theme-rose-quartz .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(217,70,239,0.09) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(240,171,252,0.06) 0%, transparent 55%),
+                linear-gradient(160deg, #0f040f 0%, #12060e 40%, #0f040f 70%, #12060e 100%);
+}
+
+/* Coming Soon — Yellow + Green */
+body.theme-coming-soon {
+    --primary: #eab308; --primary-hover: #ca8a04; --primary-glow: rgba(234,179,8,0.35);
+    --accent: #86efac; --accent-glow: rgba(134,239,172,0.3);
+    --glass-border-focus: rgba(234,179,8,0.5);
+}
+body.theme-coming-soon .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(234,179,8,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(134,239,172,0.05) 0%, transparent 55%),
+                linear-gradient(160deg, #0f0e04 0%, #100f05 40%, #0f0e04 70%, #0f0e05 100%);
+}
+
+/* Hackerman — Matrix Green */
+body.theme-hackerman {
+    --primary: #22c55e; --primary-hover: #16a34a; --primary-glow: rgba(34,197,94,0.35);
+    --accent: #4ade80; --accent-glow: rgba(74,222,128,0.3);
+    --glass-border-focus: rgba(34,197,94,0.5);
+}
+body.theme-hackerman .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(34,197,94,0.09) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(74,222,128,0.06) 0%, transparent 55%),
+                linear-gradient(160deg, #040f07 0%, #04100a 40%, #040f07 70%, #051009 100%);
+}
+
+/* Lambda — Orange + Amber */
+body.theme-lambda {
+    --primary: #f97316; --primary-hover: #ea580c; --primary-glow: rgba(249,115,22,0.35);
+    --accent: #fbbf24; --accent-glow: rgba(251,191,36,0.3);
+    --glass-border-focus: rgba(249,115,22,0.5);
+}
+body.theme-lambda .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(249,115,22,0.09) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(251,191,36,0.06) 0%, transparent 55%),
+                linear-gradient(160deg, #0f0904 0%, #100a04 40%, #0f0904 70%, #100a04 100%);
+}
+
+/* After Eight — Mint + Teal */
+body.theme-after-eight {
+    --primary: #14b8a6; --primary-hover: #0f9688; --primary-glow: rgba(20,184,166,0.35);
+    --accent: #5eead4; --accent-glow: rgba(94,234,212,0.3);
+    --glass-border-focus: rgba(20,184,166,0.5);
+}
+body.theme-after-eight .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(20,184,166,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(94,234,212,0.05) 0%, transparent 55%),
+                linear-gradient(160deg, #040f0e 0%, #050f0e 40%, #040f0e 70%, #050e0d 100%);
+}
+
+/* Pay-To-Win — Gold + Lime */
+body.theme-pay-to-win {
+    --primary: #f59e0b; --primary-hover: #d97706; --primary-glow: rgba(245,158,11,0.35);
+    --accent: #d9f99d; --accent-glow: rgba(217,249,157,0.3);
+    --glass-border-focus: rgba(245,158,11,0.5);
+}
+body.theme-pay-to-win .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(245,158,11,0.09) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(217,249,157,0.05) 0%, transparent 55%),
+                linear-gradient(160deg, #0f0d04 0%, #100e04 40%, #0f0d04 70%, #0f0d04 100%);
+}
+
+/* White Wolf — Silver + Slate */
+body.theme-white-wolf {
+    --primary: #94a3b8; --primary-hover: #64748b; --primary-glow: rgba(148,163,184,0.3);
+    --accent: #e2e8f0; --accent-glow: rgba(226,232,240,0.2);
+    --glass-border-focus: rgba(148,163,184,0.4);
+}
+body.theme-white-wolf .bg-gradient-dark {
+    background: radial-gradient(ellipse at 20% 20%, rgba(148,163,184,0.06) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(226,232,240,0.04) 0%, transparent 55%),
+                linear-gradient(160deg, #080909 0%, #09090a 40%, #080909 70%, #090909 100%);
+}
+
+/* ============================================================ */
+
 /* Dynamic background overlay */
 .background-overlay {
     position: fixed;
