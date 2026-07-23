@@ -3862,7 +3862,8 @@ window.saveRoleAccessSettings = async function() {
 
     const newSettingsVal = {
         ...state.settings,
-        role_access: newRoleAccess
+        role_access: newRoleAccess,
+        staff_access: window.tempStaffAccess || {}
     };
 
     try {
@@ -3874,12 +3875,82 @@ window.saveRoleAccessSettings = async function() {
         if (error) throw error;
         
         state.settings = newSettingsVal;
+        window.tempStaffAccess = null;
         updateRoleBasedSidebarAccess();
         showToast("Pengaturan akses menu berhasil disimpan!", "success");
     } catch (err) {
         console.error("Gagal menyimpan role access:", err);
         showToast("Terjadi kesalahan saat menyimpan pengaturan akses.", "error");
     }
+};
+
+window.openRbacStaffModal = function(viewId, menuLabel) {
+    window.currentEditingMenuView = viewId;
+    const modal = document.getElementById('rbacStaffModal');
+    const titleEl = document.getElementById('rbacStaffModalTitle');
+    const listEl = document.getElementById('rbacStaffList');
+    
+    if (!modal || !titleEl || !listEl) return;
+    
+    titleEl.textContent = `Akses Khusus: ${menuLabel}`;
+    listEl.innerHTML = '';
+    
+    // Ensure tempStaffAccess is initialized
+    if (!window.tempStaffAccess) {
+        window.tempStaffAccess = state.settings.staff_access ? JSON.parse(JSON.stringify(state.settings.staff_access)) : {};
+    }
+    
+    const selectedStaffIds = window.tempStaffAccess[viewId] || [];
+    
+    if (!state.staff || state.staff.length === 0) {
+        listEl.innerHTML = '<div style="color:var(--text-muted); text-align:center; padding: 20px;">Belum ada data staff.</div>';
+    } else {
+        const sortedStaff = [...state.staff].sort((a, b) => a.name.localeCompare(b.name));
+        
+        sortedStaff.forEach(st => {
+            const isChecked = selectedStaffIds.includes(st.id);
+            const role = formatRoleNameUpper(st.role) || "TIDAK ADA ROLE";
+            
+            listEl.innerHTML += `
+                <div style="display:flex; align-items:center; justify-content:space-between; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="display:flex; flex-direction:column;">
+                        <span style="font-weight:600; color:#fff; font-size:0.95rem;">${st.name.toUpperCase()}</span>
+                        <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-solid fa-user-tag" style="margin-right:4px;"></i>${role}</span>
+                    </div>
+                    <label class="feature-toggle-switch" style="margin:0;">
+                        <input type="checkbox" class="rbac-staff-cb" value="${st.id}" ${isChecked ? 'checked' : ''}>
+                        <span class="feature-toggle-slider" style="box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></span>
+                    </label>
+                </div>
+            `;
+        });
+    }
+    
+    modal.classList.remove('hide');
+};
+
+window.closeRbacStaffModal = function() {
+    const modal = document.getElementById('rbacStaffModal');
+    if (modal) modal.classList.add('hide');
+};
+
+window.saveRbacStaffSelection = function() {
+    if (!window.currentEditingMenuView) return;
+    const viewId = window.currentEditingMenuView;
+    
+    if (!window.tempStaffAccess) window.tempStaffAccess = {};
+    
+    const selectedIds = [];
+    const checkboxes = document.querySelectorAll('.rbac-staff-cb:checked');
+    checkboxes.forEach(cb => {
+        selectedIds.push(cb.value);
+    });
+    
+    window.tempStaffAccess[viewId] = selectedIds;
+    
+    closeRbacStaffModal();
+    // Re-render the matrix to update button counters
+    renderAdminRoleAccess();
 };
 
 // 15. ADMIN PANEL: CONFIG UMUM
