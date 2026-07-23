@@ -3694,6 +3694,9 @@ function renderAdminRoleAccess() {
     const container = document.getElementById("roleAccessContainer");
     if (!container) return;
     container.innerHTML = "";
+    
+    // Override inline styles with luxurious grid
+    container.style.cssText = "display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;";
 
     const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
     const allRoles = getAllowedRoles();
@@ -3702,19 +3705,47 @@ function renderAdminRoleAccess() {
         const menuAllowedRoles = roleAccess[menu.id] || [];
 
         const menuWrapper = document.createElement("div");
-        menuWrapper.className = "role-access-item";
-        menuWrapper.style.cssText = "padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);";
+        menuWrapper.className = "glass-card rbac-premium-card";
+        menuWrapper.style.cssText = `
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-left: 4px solid var(--accent);
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.3) 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        `;
+        menuWrapper.onmouseenter = () => {
+            menuWrapper.style.transform = "translateY(-3px)";
+            menuWrapper.style.boxShadow = "0 8px 25px rgba(0,0,0,0.3)";
+        };
+        menuWrapper.onmouseleave = () => {
+            menuWrapper.style.transform = "translateY(0)";
+            menuWrapper.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+        };
         
-        let html = `<h4 style="margin:0 0 10px 0; color:var(--accent); font-size:1rem;">${menu.label}</h4>`;
-        html += `<div style="display:flex; flex-wrap:wrap; gap:10px;">`;
+        let html = `
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:38px; height:38px; border-radius:50%; background:var(--primary-glow); display:flex; align-items:center; justify-content:center; color:var(--primary); font-size:1.1rem; flex-shrink:0;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h4 style="margin:0; color:#fff; font-size:1.05rem; font-weight:600; letter-spacing:0.3px;">${menu.label}</h4>
+            </div>
+            <div style="height:1px; background:rgba(255,255,255,0.05); margin: 5px 0;"></div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+        `;
         
         allRoles.forEach(role => {
             const isChecked = menuAllowedRoles.includes(role);
             html += `
-                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.85rem;">
-                    <input type="checkbox" class="rbac-checkbox" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''} style="cursor:pointer; width:16px; height:16px;">
-                    ${role}
-                </label>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding: 10px 12px; border-radius:8px; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.03); transition: background 0.2s;">
+                    <span style="font-size:0.9rem; color:rgba(255,255,255,0.9); font-weight:500;"><i class="fa-solid fa-user-tag" style="margin-right:8px; color:var(--text-muted); font-size:0.8rem;"></i>${role}</span>
+                    <label class="feature-toggle-switch" style="margin:0;">
+                        <input type="checkbox" class="rbac-checkbox" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''}>
+                        <span class="feature-toggle-slider"></span>
+                    </label>
+                </div>
             `;
         });
         
