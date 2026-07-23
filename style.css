@@ -424,7 +424,7 @@ body.theme-glass .btn-primary:hover {
 body.theme-glass .btn-primary:active { transform: translateY(0) scale(0.98) !important; }
 
 body.theme-glass .btn-secondary,
-body.theme-glass .btn:not(.btn-primary):not(.btn-danger) {
+body.theme-glass .btn:not(.btn-primary):not(.btn-danger):not(.btn-status-sudah):not(.btn-status-belum):not(.btn-status-locked) {
     background: rgba(255,255,255,0.06) !important;
     border: 1px solid rgba(200,220,255,0.16) !important;
     border-top: 1px solid rgba(255,255,255,0.20) !important;
@@ -433,7 +433,7 @@ body.theme-glass .btn:not(.btn-primary):not(.btn-danger) {
     transition: all 0.25s ease !important;
 }
 body.theme-glass .btn-secondary:hover,
-body.theme-glass .btn:not(.btn-primary):not(.btn-danger):hover {
+body.theme-glass .btn:not(.btn-primary):not(.btn-danger):not(.btn-status-sudah):not(.btn-status-belum):not(.btn-status-locked):hover {
     background: rgba(168,200,255,0.11) !important;
     border-color: rgba(168,200,255,0.35) !important;
     color: #ffffff !important;
