@@ -95,44 +95,22 @@ function deduplicateRekeningItems(items) {
 }
 window.deduplicateRekeningItems = deduplicateRekeningItems;
 
-/// 1. MEMUAT DATA REKENING (Base44 902 Data Importer & Supabase/LocalStorage Sync)
+// 1. MEMUAT DATA REKENING (Mengganti seluruh data lama dengan dataset 952 akun terbaru)
 async function fetchRekeningData() {
-    const base44Items = (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) 
+    const rawUserItems = (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) 
         ? window.BASE44_REKENING_DATA 
         : [];
 
-    // Filter out any legacy dummy sample data (rek-1, rek-2, etc.)
-    const cleanBase44 = base44Items.filter(item => item && !String(item.id).startsWith('rek-1') && !String(item.id).startsWith('rek-2') && !item.is_sample);
+    // Filter valid user records (ID rek-user-*)
+    const userItems = rawUserItems.filter(item => item && item.no_rekening && !item.is_sample);
 
-    if (window.supabaseClient) {
-        try {
-            const { data, error } = await window.supabaseClient
-                .from('data_rekening')
-                .select('*')
-                .order('tanggal_input', { ascending: false });
+    // Overwrite local items and cache directly
+    rekeningState.items = userItems;
+    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(userItems));
 
-            if (!error && data && data.length > 0) {
-                // Filter legacy sample data from Supabase
-                const cleanData = data.filter(item => item && !String(item.id).startsWith('rek-1') && !String(item.id).startsWith('rek-2') && !item.is_sample);
-                
-                if (cleanData.length >= cleanBase44.length && cleanData.length > 0) {
-                    rekeningState.items = cleanData;
-                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(cleanData));
-                    return;
-                }
-            }
-        } catch (err) {
-            console.warn("Gagal memuat data_rekening dari Supabase, menggunakan Base44 dataset:", err);
-        }
-    }
-
-    // Default: Load complete 902 Base44 dataset & update cache
-    rekeningState.items = cleanBase44;
-    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(cleanBase44));
-
-    // Seed Base44 items to Supabase if Supabase is connected
-    if (window.supabaseClient && cleanBase44.length > 0) {
-        seedBase44ToSupabase(cleanBase44);
+    // Optional background sync to Supabase
+    if (window.supabaseClient && userItems.length > 0) {
+        seedBase44ToSupabase(userItems);
     }
 }
 
