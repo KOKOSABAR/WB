@@ -3014,8 +3014,17 @@ MANDIRI  Wiwin Saptorini  1380027429245" style="width: 100%; background: #0f131d
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
+                        
+                        <!-- Search Bar -->
+                        <div style="padding: 16px 24px 0 24px;">
+                            <div style="position: relative; width: 100%;">
+                                <i class="fa-solid fa-search" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                <input type="text" id="rbacStaffSearch" placeholder="CARI NAMA STAFF..." oninput="filterRbacStaffList()" style="width: 100%; padding: 12px 14px 12px 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: white; outline: none; font-family: var(--font-family); font-size: 0.9rem;">
+                            </div>
+                        </div>
+
                         <!-- Body -->
-                        <div style="padding: 16px 24px; max-height: 60vh; overflow-y: auto;">
+                        <div style="padding: 16px 24px; max-height: 50vh; overflow-y: auto;">
                             <div id="rbacStaffList" style="display: flex; flex-direction: column;">
                                 <!-- Checkboxes populated via JS -->
                             </div>

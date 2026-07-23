@@ -3889,11 +3889,13 @@ window.openRbacStaffModal = function(viewId, menuLabel) {
     const modal = document.getElementById('rbacStaffModal');
     const titleEl = document.getElementById('rbacStaffModalTitle');
     const listEl = document.getElementById('rbacStaffList');
+    const searchInput = document.getElementById('rbacStaffSearch');
     
     if (!modal || !titleEl || !listEl) return;
     
     titleEl.textContent = `Akses Khusus: ${menuLabel}`;
     listEl.innerHTML = '';
+    if (searchInput) searchInput.value = ''; // Reset search
     
     // Ensure tempStaffAccess is initialized
     if (!window.tempStaffAccess) {
@@ -3912,10 +3914,12 @@ window.openRbacStaffModal = function(viewId, menuLabel) {
             const role = formatRoleNameUpper(st.role) || "TIDAK ADA ROLE";
             
             listEl.innerHTML += `
-                <div style="display:flex; align-items:center; justify-content:space-between; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="display:flex; flex-direction:column;">
-                        <span style="font-weight:600; color:#fff; font-size:0.95rem;">${st.name.toUpperCase()}</span>
-                        <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-solid fa-user-tag" style="margin-right:4px;"></i>${role}</span>
+                <div class="rbac-staff-item" data-name="${st.name.toLowerCase()}" style="display:flex; align-items:center; justify-content:space-between; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="display:flex; flex-direction:column; align-items:flex-start;">
+                        <span style="font-weight:600; color:#fff; font-size:0.95rem; text-transform: uppercase;">${st.name}</span>
+                        <span style="font-size:0.75rem; color:var(--text-muted); display:flex; align-items:center; gap:4px; margin-top:2px;">
+                            <i class="fa-solid fa-user-tag"></i> ${role}
+                        </span>
                     </div>
                     <label class="feature-toggle-switch" style="margin:0;">
                         <input type="checkbox" class="rbac-staff-cb" value="${st.id}" ${isChecked ? 'checked' : ''}>
@@ -3927,6 +3931,22 @@ window.openRbacStaffModal = function(viewId, menuLabel) {
     }
     
     modal.classList.remove('hide');
+};
+
+window.filterRbacStaffList = function() {
+    const searchInput = document.getElementById('rbacStaffSearch');
+    if (!searchInput) return;
+    const filter = searchInput.value.toLowerCase();
+    
+    const items = document.querySelectorAll('.rbac-staff-item');
+    items.forEach(item => {
+        const name = item.getAttribute('data-name');
+        if (name.includes(filter)) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 };
 
 window.closeRbacStaffModal = function() {
