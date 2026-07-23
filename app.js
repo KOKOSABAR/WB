@@ -1374,19 +1374,6 @@ function setupEventListeners() {
         btn.addEventListener("click", async (e) => {
             const target = btn.getAttribute("data-target");
 
-            // Cek otorisasi role untuk Serah Terima & Data Rekening (CS LINE & KAPTEN KASIR)
-            if (target === 'serahTerimaCSLineView' || target === 'serahTerimaKaptenView' || target === 'dataRekeningView') {
-                const staff = state.currentStaff;
-                if (staff && staff.role) {
-                    const rUpper = formatRoleNameUpper(staff.role);
-                    if (!['CS LINE', 'KAPTEN KASIR'].includes(rUpper)) {
-                        showToast(`Staff dengan role "${rUpper}" tidak memiliki akses ke halaman ini.`, "error");
-                        e.preventDefault();
-                        e.stopPropagation();
-                        return;
-                    }
-                }
-            }
 
             localStorage.setItem("restease_active_tab", target);
             showView(target);
@@ -2005,10 +1992,8 @@ function setRoleNavVisibility(el, visible, flexMode = 'flex') {
     if (!el) return;
     if (visible) {
         el.classList.remove('role-restricted-hidden');
-        el.style.setProperty('display', flexMode, 'important');
     } else {
         el.classList.add('role-restricted-hidden');
-        el.style.setProperty('display', 'none', 'important');
     }
 }
 
