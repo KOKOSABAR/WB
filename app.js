@@ -891,7 +891,7 @@ async function loadAllData() {
             supabaseClient.from('staff').select('*').order('name'),
             supabaseClient.from('roles_config').select('*').order('role'),
             supabaseClient.from('active_breaks').select('*'),
-            supabaseClient.from('break_logs').select('*').order('end_time', { ascending: false })
+            supabaseClient.from('break_logs').select('*').order('end_time', { ascending: false }).limit(300)
         ]);
 
         if (sErr)  throw sErr;
@@ -2870,9 +2870,14 @@ async function handleBreakAction() {
             showToast("Selamat kembali bekerja!", "success");
         }
         
-        // Render UI Instan (Optimistic UI Update)
+        // Render UI Instan (Optimistic UI Update) — targeted, bukan renderAll
         updateStaffConsoleUI();
-        if (typeof renderAll === "function") renderAll();
+        // Perbarui hanya bagian yang relevan: monitor aktif dan stats
+        scheduleRender("staff-console", () => updateStaffConsoleUI());
+        if (isSectionActive("izinView") && getActiveIzinTabId() === "monitorView") {
+            scheduleRender("izin-monitor", () => renderMonitorSection());
+            scheduleRender("izin-monitor-stats", () => updateStatsSummary());
+        }
         
     } catch (err) {
         console.error("Gagal melakukan aksi istirahat:", err);
@@ -2943,42 +2948,44 @@ function renderViewOnDemand(viewId) {
 }
 
 function updateStatsSummary() {
-    // 1. Sedang Istirahat
-    const activeCount = state.activeBreaks.length;
-    document.getElementById("statActiveCount").textContent = activeCount;
-    document.getElementById("activeBreaksCount").textContent = `${activeCount} Staff`;
-    
-    // 2. Kumpulkan semua staff yang terlambat hari ini (sedang istirahat maupun yang sudah kembali)
+    // ── Dirty-check: skip full rebuild jika data tidak berubah ──────────────
     const now = new Date().getTime();
+
+    const activeCount = state.activeBreaks.length;
+
+    // Hitung late count tanpa membangun DOM dulu
     const activeLateStaff = [];
-    
     state.activeBreaks.forEach(b => {
-        const start = new Date(b.start_time).getTime();
-        const elapsed = Math.floor((now - start) / 1000);
+        const elapsed = Math.floor((now - new Date(b.start_time).getTime()) / 1000);
         if (elapsed > b.allowed_duration) {
-            activeLateStaff.push({
-                name: b.staff_name,
-                role: b.role,
-                status: "Aktif",
-                overtime: elapsed // Tampilkan durasi istirahat penuh (misal 00:23:08) alih-alih selisih telat saja
-            });
+            activeLateStaff.push({ name: b.staff_name, role: b.role, status: "Aktif", overtime: elapsed });
         }
     });
-    
+
     const loggedLateStaff = state.logs
         .filter(l => isLogToday(l.start_time) && l.status === "Terlambat")
-        .map(l => ({
-            name: l.staff_name,
-            role: l.role,
-            status: "Kembali",
-            overtime: l.duration_seconds // Tampilkan durasi istirahat penuh (misal 00:23:08) alih-alih selisih telat saja
-        }));
-        
+        .map(l => ({ name: l.staff_name, role: l.role, status: "Kembali", overtime: l.duration_seconds }));
+
     const allLateStaff = [...activeLateStaff, ...loggedLateStaff];
-    
-    // Update Terlambat Hari Ini Count
-    document.getElementById("statLateCount").textContent = allLateStaff.length;
-    
+    const lateCount    = allLateStaff.length;
+    const finishedTodayCount = state.logs.filter(l => isLogToday(l.start_time)).length;
+    const totalTodayCount = activeCount + finishedTodayCount;
+
+    // Buat fingerprint ringkas: jika sama dengan sebelumnya, skip DOM writes
+    const fingerprint = `${activeCount}|${lateCount}|${totalTodayCount}|` +
+        activeLateStaff.map(s => `${s.name}:${Math.floor(s.overtime / 30)}`).join(',');
+
+    if (updateStatsSummary._lastFingerprint === fingerprint) return; // tidak ada yang berubah
+    updateStatsSummary._lastFingerprint = fingerprint;
+
+    // ── DOM writes — hanya jika data benar-benar berubah ────────────────────
+    document.getElementById("statActiveCount").textContent = activeCount;
+    document.getElementById("activeBreaksCount").textContent = `${activeCount} Staff`;
+    document.getElementById("statLateCount").textContent = lateCount;
+
+    const totalTodayEl = document.getElementById("statTotalTodayCount");
+    if (totalTodayEl) totalTodayEl.textContent = totalTodayCount;
+
     // Render daftar nama staff yang terlambat
     const lateListEl = document.getElementById("lateStaffList");
     if (lateListEl) {
@@ -2986,13 +2993,12 @@ function updateStatsSummary() {
         if (allLateStaff.length === 0) {
             lateListEl.innerHTML = '<div class="empty-state-mini"><i class="fa-solid fa-circle-check" style="color: var(--success)"></i> Aman. Tidak ada yang terlambat.</div>';
         } else {
+            const frag = document.createDocumentFragment();
             allLateStaff.forEach(staff => {
                 const item = document.createElement("div");
                 item.className = "late-staff-item";
-                
                 const badgeClass = staff.status === "Aktif" ? "active" : "returned";
                 const badgeLabel = staff.status === "Aktif" ? "Sedang Izin" : "Kembali";
-                
                 item.innerHTML = `
                     <div class="staff-info">
                         <span class="staff-name">${staff.name}</span>
@@ -3006,18 +3012,10 @@ function updateStatsSummary() {
                         <span class="overtime-label">Telat</span>
                     </div>
                 `;
-                lateListEl.appendChild(item);
+                frag.appendChild(item);
             });
+            lateListEl.appendChild(frag);
         }
-    }
-    
-    // 3. Total Izin Hari Ini (aktif + riwayat hari ini)
-    const finishedTodayCount = state.logs.filter(l => isLogToday(l.start_time)).length;
-    const totalTodayCount = activeCount + finishedTodayCount;
-    
-    const totalTodayEl = document.getElementById("statTotalTodayCount");
-    if (totalTodayEl) {
-        totalTodayEl.textContent = totalTodayCount;
     }
 }
 
@@ -4746,6 +4744,9 @@ function renderAbsensiDaily() {
 
 // Render panel status CUTI / OFF / 1/2 untuk hari yang dipilih
 function renderDailyStatusPanel() {
+    // Guard: hanya render jika absensiView sedang aktif (hemat DOM ops)
+    if (!isSectionActive("absensiView")) return;
+
     const cutiList  = document.getElementById("cutiList");
     const offList   = document.getElementById("offList");
     const halfList  = document.getElementById("halfList");
