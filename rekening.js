@@ -655,6 +655,7 @@ function processBatchRekeningSearch() {
     const matchBadge = document.getElementById('rekBatchMatchCountBadge');
     const unmatchedBadge = document.getElementById('rekBatchUnmatchedCountBadge');
     const unmatchedDetails = document.getElementById('rekBatchUnmatchedDetails');
+    const foundResultsContainer = document.getElementById('rekBatchFoundResults');
 
     if (!textarea) return;
 
@@ -662,6 +663,7 @@ function processBatchRekeningSearch() {
     if (!rawText) {
         rekeningState.filters.batchTargets = [];
         if (summaryContainer) summaryContainer.classList.add('hide');
+        if (foundResultsContainer) foundResultsContainer.classList.add('hide');
         renderRekeningTable();
         return;
     }
@@ -671,11 +673,9 @@ function processBatchRekeningSearch() {
     const unmatchedList = [];
 
     lines.forEach((line, index) => {
-        // Extract digit sequences (e.g. 0771392422, 07713 92422, 077139.2422, 138-002-7429-245)
         const digitMatches = line.match(/\d[\d\s\.\-]{3,}\d|\d{4,}/g) || [];
         const cleanNums = Array.from(new Set(digitMatches.map(cleanAccountNumber).filter(n => n.length >= 4)));
 
-        // Extract text tokens (words like bca, mandiri, wiwin, saptorini)
         const tokens = line.toLowerCase()
             .replace(/[^\w\s]/gi, ' ')
             .split(/\s+/)
@@ -691,33 +691,35 @@ function processBatchRekeningSearch() {
 
     rekeningState.filters.batchTargets = parsedTargets;
 
-    // Evaluate matching status against database items
+    // Evaluate matching & collect matched items
     let matchedCount = 0;
     const items = rekeningState.items;
+    const allMatchedItems = []; // flat list of {inputLine, item}
 
     parsedTargets.forEach(target => {
-        let isFound = false;
+        const matchedForLine = [];
         items.forEach(item => {
             const cleanItemNo = cleanAccountNumber(item.no_rekening);
             const rawItemNo = (item.no_rekening || '').toLowerCase();
             const itemText = ((item.nama_rekening || '') + ' ' + (item.nama_bank || '')).toLowerCase();
 
-            // Check number match
+            let isMatch = false;
             if (target.cleanNums.length > 0) {
                 if (target.cleanNums.some(num => (cleanItemNo && (cleanItemNo.includes(num) || num.includes(cleanItemNo))) || rawItemNo.includes(num))) {
-                    isFound = true;
+                    isMatch = true;
                 }
             }
-            // Check text match
-            if (!isFound && target.tokens.length > 0) {
+            if (!isMatch && target.tokens.length > 0) {
                 if (target.tokens.every(tok => itemText.includes(tok))) {
-                    isFound = true;
+                    isMatch = true;
                 }
             }
+            if (isMatch) matchedForLine.push(item);
         });
 
-        if (isFound) {
+        if (matchedForLine.length > 0) {
             matchedCount++;
+            matchedForLine.forEach(item => allMatchedItems.push({ inputLine: target.originalLine, item }));
         } else {
             const label = target.cleanNums.length > 0 ? target.cleanNums.join(', ') : target.originalLine;
             unmatchedList.push(label);
@@ -738,15 +740,120 @@ function processBatchRekeningSearch() {
         }
     }
 
+    // Render found result cards
+    if (foundResultsContainer) {
+        if (allMatchedItems.length > 0) {
+            foundResultsContainer.classList.remove('hide');
+            let cardsHtml = `<div style="font-size:0.7rem;color:rgba(255,255,255,0.45);padding:2px 4px 6px 4px;font-weight:700;letter-spacing:0.3px;"><i class="fa-solid fa-list-check"></i> DATA REKENING YANG DITEMUKAN (${allMatchedItems.length} record)</div>`;
+
+            allMatchedItems.forEach(({ inputLine, item }, idx) => {
+                const statusColor = item.status === 'AKTIF' ? '#4ade80' : item.status === 'DI OFFKAN' ? '#fca5a5' : '#fde68a';
+                const statusBg = item.status === 'AKTIF' ? 'rgba(34,197,94,0.15)' : item.status === 'DI OFFKAN' ? 'rgba(239,68,68,0.15)' : 'rgba(234,179,8,0.15)';
+
+                let masaAktifStr = '';
+                let masaAktifBadge = '';
+                if (item.masa_aktif) {
+                    const exp = new Date(item.masa_aktif);
+                    const now = new Date();
+                    const daysLeft = Math.ceil((exp - now) / (1000 * 60 * 60 * 24));
+                    const expFormatted = exp.toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
+                    masaAktifStr = expFormatted;
+                    const badgeColor = daysLeft < 0 ? '#f87171' : daysLeft <= 30 ? '#fca5a5' : daysLeft <= 90 ? '#fde68a' : '#86efac';
+                    const badgeBg = daysLeft < 0 ? 'rgba(239,68,68,0.2)' : daysLeft <= 30 ? 'rgba(239,68,68,0.15)' : daysLeft <= 90 ? 'rgba(234,179,8,0.15)' : 'rgba(34,197,94,0.12)';
+                    const daysLabel = daysLeft < 0 ? `Expired ${Math.abs(daysLeft)} hari` : `Sisa ${daysLeft} hari`;
+                    masaAktifBadge = `<span style="background:${badgeBg};color:${badgeColor};padding:1px 6px;border-radius:4px;font-size:0.62rem;font-weight:800;border:1px solid ${badgeColor}33;white-space:nowrap;">${daysLabel}</span>`;
+                }
+
+                const salinText = [item.nama_bank, item.nama_rekening, item.no_rekening].filter(Boolean).join(' | ');
+                const jenisBadge = `<span style="background:rgba(139,92,246,0.2);color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.62rem;font-weight:800;">${escapeHtml(item.jenis || '')}</span>`;
+                const screenshotBtn = item.screenshot_url ? `<button onclick="viewRekeningScreenshot('${escapeHtml(item.screenshot_url)}', '${escapeHtml(item.nama_rekening)}')" title="Lihat Screenshot" style="padding:3px 8px;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);border-radius:5px;color:#38bdf8;font-size:0.65rem;font-weight:700;cursor:pointer;"><i class="fa-solid fa-image"></i></button>` : '';
+
+                cardsHtml += `
+                <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.35);border:1px solid rgba(139,92,246,0.2);border-radius:8px;padding:8px 12px;gap:8px;flex-wrap:wrap;">
+                    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;flex-wrap:wrap;">
+                        <div style="width:30px;height:30px;border-radius:7px;background:rgba(139,92,246,0.2);color:#a78bfa;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;">
+                            <i class="${getBankIconClass(item.nama_bank)}"></i>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+                            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                                <span style="color:white;font-weight:800;font-size:0.82rem;">${escapeHtml(item.nama_rekening || '-')}</span>
+                                <span style="color:rgba(255,255,255,0.5);font-size:0.7rem;">·</span>
+                                <span style="color:#38bdf8;font-weight:700;font-size:0.78rem;">${escapeHtml(item.nama_bank || '')}</span>
+                                ${jenisBadge}
+                                <span style="background:${statusBg};color:${statusColor};padding:1px 6px;border-radius:4px;font-size:0.62rem;font-weight:800;">${escapeHtml(item.status || '')}</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                                <span style="font-family:monospace;color:#facc15;font-size:0.82rem;font-weight:700;letter-spacing:0.5px;">${escapeHtml(item.no_rekening || '')}</span>
+                                ${masaAktifStr ? `<span style="color:rgba(255,255,255,0.4);font-size:0.68rem;">Masa Aktif: ${masaAktifStr}</span>` : ''}
+                                ${masaAktifBadge}
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+                        ${screenshotBtn}
+                        <button onclick="copyBatchRekText(this)" data-copy="${salinText.replace(/"/g, '&quot;')}" style="padding:3px 9px;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.4);border-radius:5px;color:#c4b5fd;font-size:0.68rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;" title="Salin info rekening ini">
+                            <i class="fa-solid fa-copy"></i> Salin
+                        </button>
+                    </div>
+                </div>`;
+            });
+
+            foundResultsContainer.innerHTML = cardsHtml;
+        } else {
+            foundResultsContainer.classList.add('hide');
+            foundResultsContainer.innerHTML = '';
+        }
+    }
+
     renderRekeningTable();
 }
 window.processBatchRekeningSearch = processBatchRekeningSearch;
+
+// Helper: Salin teks rekening dari kartu hasil batch search
+function copyBatchRekText(btn) {
+    const text = btn.getAttribute('data-copy') || '';
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(() => {
+            const t = document.createElement('textarea');
+            t.value = text;
+            document.body.appendChild(t);
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+        });
+    } else {
+        const t = document.createElement('textarea');
+        t.value = text;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+    }
+    const prevHtml = btn.innerHTML;
+    const prevColor = btn.style.color;
+    const prevBorder = btn.style.borderColor;
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Tersalin!';
+    btn.style.color = '#4ade80';
+    btn.style.borderColor = 'rgba(74,222,128,0.5)';
+    setTimeout(() => {
+        btn.innerHTML = prevHtml;
+        btn.style.color = prevColor;
+        btn.style.borderColor = prevBorder;
+    }, 1500);
+}
+window.copyBatchRekText = copyBatchRekText;
 
 function clearRekBatchSearch() {
     const textarea = document.getElementById('rekBatchSearchInput');
     if (textarea) textarea.value = '';
     const summaryContainer = document.getElementById('rekBatchResultSummary');
     if (summaryContainer) summaryContainer.classList.add('hide');
+    const foundResultsContainer = document.getElementById('rekBatchFoundResults');
+    if (foundResultsContainer) {
+        foundResultsContainer.classList.add('hide');
+        foundResultsContainer.innerHTML = '';
+    }
     rekeningState.filters.batchTargets = [];
     renderRekeningTable();
 }
