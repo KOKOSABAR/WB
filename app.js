@@ -968,6 +968,7 @@ async function loadAllData() {
             chatOn = cached !== null ? JSON.parse(cached) : true;
         }
         applyChatEnabled(chatOn);
+        applyRulesCardSettings();
 
         // Pulihkan sesi login staff dari localStorage jika ada
         const savedStaffId = localStorage.getItem("restease_current_staff_id");
@@ -1233,6 +1234,7 @@ function handleSettingsRealtime(payload) {
             chatOn = cached !== null ? JSON.parse(cached) : true;
         }
         applyChatEnabled(chatOn);
+        applyRulesCardSettings();
         // Sync toggle di admin panel jika sedang terbuka
         const toggleChat = document.getElementById("toggleChatEnabled");
         if (toggleChat) toggleChat.checked = chatOn;
@@ -4088,6 +4090,202 @@ function applyChatEnabled(enabled) {
         }
     }
 }
+
+// ----------------------------------------------------------------
+// RULES CARD (INGAT YA TEMAN-TEMAN) — FEATURE TOGGLE + TEXT EDITOR
+// ----------------------------------------------------------------
+
+const RULES_CARD_DEFAULTS = {
+    enabled: true,
+    title: 'INGAT YA TEMAN-TEMAN',
+    points: [
+        'Dilarang melakukan tindak manipulasi dalam bentuk apa pun.',
+        'Dilarang melakukan segala bentuk perjudian.',
+        'Dilarang menggunakan, menyimpan, atau mengedarkan narkotika dan obat-obatan terlarang (narkoba).'
+    ]
+};
+
+/** Show/hide the rules card in bioView and sync the toggle in admin panel */
+function applyRulesCardSettings() {
+    const s = (state.settings && state.settings.rules_card) ? state.settings.rules_card : RULES_CARD_DEFAULTS;
+    const enabled = s.enabled !== false; // default true
+    const title   = s.title  || RULES_CARD_DEFAULTS.title;
+    const points  = Array.isArray(s.points) && s.points.length ? s.points : RULES_CARD_DEFAULTS.points;
+
+    // 1. Show / hide the section wrapper
+    const section = document.getElementById('rulesCardSection');
+    if (section) section.style.display = enabled ? '' : 'none';
+
+    // 2. Update title text in bioView
+    const titleEl = document.getElementById('rulesCardTitle');
+    if (titleEl) titleEl.textContent = title;
+
+    // 3. Render rules points in bioView
+    renderRulesPointsDisplay(points);
+
+    // 4. Sync admin toggle
+    const toggleEl = document.getElementById('toggleRulesCardEnabled');
+    if (toggleEl) toggleEl.checked = enabled;
+
+    // 5. Sync admin text editor
+    syncRulesCardEditor(title, points);
+}
+
+/** Render the styled rules rows inside #rulesPointsList (bioView display) */
+function renderRulesPointsDisplay(points) {
+    const list = document.getElementById('rulesPointsList');
+    if (!list) return;
+    const colors = ['rgba(239,68,68', 'rgba(251,146,60', 'rgba(239,68,68'];
+    const textColors = ['rgba(255,220,210', 'rgba(255,225,205', 'rgba(255,220,210'];
+    const highlightColors = ['#fca5a5', '#fdba74', '#fca5a5'];
+    list.innerHTML = points.map((pt, i) => {
+        const ci = i % colors.length;
+        const c  = colors[ci];
+        const tc = textColors[ci];
+        const hc = highlightColors[ci];
+        return `
+        <div style="display:flex;align-items:flex-start;gap:14px;background:${c},0.07);border:1px solid ${c},0.18);border-radius:12px;padding:13px 16px;">
+            <div style="width:28px;height:28px;background:linear-gradient(135deg,${c},0.3),${c},0.15));border:1px solid ${c},0.45);border-radius:8px;display:flex;align-items:center;justify-content:center;color:${hc};font-size:0.75rem;flex-shrink:0;margin-top:1px;">
+                <i class="fa-solid fa-ban"></i>
+            </div>
+            <span style="font-size:0.88rem;font-weight:600;color:${tc},0.92);line-height:1.6;letter-spacing:0.2px;">${escapeHtml(pt)}</span>
+        </div>`;
+    }).join('');
+}
+
+/** Sync the admin editor inputs with current data */
+function syncRulesCardEditor(title, points) {
+    const titleInput = document.getElementById('inputRulesCardTitle');
+    if (titleInput) titleInput.value = title;
+
+    // Re-render the points editor rows
+    const container = document.getElementById('rulesPointsContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    points.forEach((pt, i) => addRulesPointRow(pt, i));
+}
+
+/** Add one point-row in the admin editor */
+function addRulesPoint() {
+    const container = document.getElementById('rulesPointsContainer');
+    if (!container) return;
+    addRulesPointRow('', container.children.length);
+}
+
+function addRulesPointRow(text, index) {
+    const container = document.getElementById('rulesPointsContainer');
+    if (!container) return;
+    const row = document.createElement('div');
+    row.className = 'rules-point-row';
+    row.style.cssText = 'display:flex;align-items:center;gap:8px;';
+    row.innerHTML = `
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);min-width:20px;text-align:right;font-weight:700;">${index + 1}.</span>
+        <input type="text" value="${escapeHtml(text)}"
+               placeholder="Contoh: Dilarang melakukan tindak korupsi..."
+               style="flex:1;padding:9px 12px;font-size:0.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:9px;color:white;outline:none;"
+               oninput="renumberRulesPoints()">
+        <button type="button" onclick="removeRulesPointRow(this)"
+                style="width:30px;height:30px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:8px;color:#f87171;font-size:0.75rem;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-solid fa-trash"></i>
+        </button>`;
+    container.appendChild(row);
+}
+
+function removeRulesPointRow(btn) {
+    const row = btn.closest('.rules-point-row');
+    if (row) { row.remove(); renumberRulesPoints(); }
+}
+
+function renumberRulesPoints() {
+    const container = document.getElementById('rulesPointsContainer');
+    if (!container) return;
+    Array.from(container.children).forEach((row, i) => {
+        const num = row.querySelector('span');
+        if (num) num.textContent = `${i + 1}.`;
+    });
+}
+
+/** Escape HTML for safe rendering */
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+/** Toggle handler — ON/OFF */
+async function handleRulesCardToggle(enabled) {
+    const toggle = document.getElementById('toggleRulesCardEnabled');
+    if (toggle) toggle.disabled = true;
+    if (!state.settings) state.settings = {};
+    if (!state.settings.rules_card) state.settings.rules_card = { ...RULES_CARD_DEFAULTS };
+    state.settings.rules_card.enabled = enabled;
+
+    applyRulesCardSettings();
+    localStorage.setItem('rules_card_enabled', JSON.stringify(enabled));
+
+    try {
+        const { error } = await supabaseClient
+            .from('settings')
+            .update({ value: state.settings })
+            .eq('key', 'general');
+        if (error) throw error;
+        showToast(`Kartu Pengingat ${enabled ? 'ditampilkan ✓' : 'disembunyikan ✓'}.`, enabled ? 'success' : 'info');
+    } catch (err) {
+        console.error('[Admin] Gagal simpan rules_card.enabled:', err);
+        showToast('Tersimpan lokal, gagal sinkron DB: ' + err.message, 'warning');
+    } finally {
+        if (toggle) toggle.disabled = false;
+    }
+}
+
+/** Save button — persist title + points text */
+async function saveRulesCardSettings() {
+    const spinner = document.getElementById('rulesCardSaveSpinner');
+    const titleInput = document.getElementById('inputRulesCardTitle');
+    const container  = document.getElementById('rulesPointsContainer');
+    if (!titleInput || !container) return;
+
+    const title  = titleInput.value.trim() || RULES_CARD_DEFAULTS.title;
+    const points = Array.from(container.querySelectorAll('input[type="text"]'))
+        .map(inp => inp.value.trim())
+        .filter(v => v.length > 0);
+
+    if (points.length === 0) {
+        showToast('Tambahkan minimal 1 poin larangan.', 'warning'); return;
+    }
+
+    if (spinner) spinner.classList.remove('hide');
+    if (!state.settings) state.settings = {};
+    if (!state.settings.rules_card) state.settings.rules_card = { ...RULES_CARD_DEFAULTS };
+    state.settings.rules_card.title  = title;
+    state.settings.rules_card.points = points;
+
+    applyRulesCardSettings();
+
+    try {
+        const { error } = await supabaseClient
+            .from('settings')
+            .update({ value: state.settings })
+            .eq('key', 'general');
+        if (error) throw error;
+        showToast('Kartu Pengingat berhasil disimpan ✓', 'success');
+    } catch (err) {
+        console.error('[Admin] Gagal simpan rules_card:', err);
+        showToast('Tersimpan lokal, gagal sinkron DB: ' + err.message, 'warning');
+    } finally {
+        if (spinner) spinner.classList.add('hide');
+    }
+}
+
+// Expose globally
+window.handleRulesCardToggle = handleRulesCardToggle;
+window.saveRulesCardSettings = saveRulesCardSettings;
+window.addRulesPoint         = addRulesPoint;
+window.removeRulesPointRow   = removeRulesPointRow;
+window.renumberRulesPoints   = renumberRulesPoints;
 
 // ----------------------------------------------------------------
 // 16. KUSTOMISASI BACKGROUND STYLING
@@ -7016,6 +7214,9 @@ function updateBioView() {
     }
     const dailyIdx = Math.abs(seedHash) % MOTIVATIONAL_QUOTES.length;
     motivationQuoteEl.textContent = `"${MOTIVATIONAL_QUOTES[dailyIdx]}"`;
+
+    // Apply rules card visibility + content from settings
+    applyRulesCardSettings();
 }
 
 window.updateBioView = updateBioView;

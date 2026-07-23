@@ -332,7 +332,7 @@
                     </div>
 
                     <!-- ===== RULES CARD: INGAT YA TEMAN-TEMAN ===== -->
-                    <div style="position: relative; max-width: 640px; width: 100%;">
+                    <div id="rulesCardSection" style="position: relative; max-width: 640px; width: 100%;">
 
                         <!-- Ambient glow: red warning left, orange right -->
                         <div style="position: absolute; top: -40px; left: -40px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(239,68,68,0.10) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
@@ -379,7 +379,7 @@
                                 <div style="width: 34px; height: 34px; background: linear-gradient(135deg, rgba(239,68,68,0.25), rgba(251,146,60,0.15)); border: 1px solid rgba(239,68,68,0.50); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: #f87171; box-shadow: 0 0 14px rgba(239,68,68,0.30); flex-shrink: 0;">
                                     <i class="fa-solid fa-triangle-exclamation"></i>
                                 </div>
-                                <div style="font-size: 1rem; font-weight: 900; letter-spacing: 2.5px; text-transform: uppercase; background: linear-gradient(135deg, #fca5a5, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                                <div id="rulesCardTitle" style="font-size: 1rem; font-weight: 900; letter-spacing: 2.5px; text-transform: uppercase; background: linear-gradient(135deg, #fca5a5, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                                     INGAT YA TEMAN-TEMAN
                                 </div>
                                 <div style="width: 34px; height: 34px; background: linear-gradient(135deg, rgba(239,68,68,0.25), rgba(251,146,60,0.15)); border: 1px solid rgba(239,68,68,0.50); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: #f87171; box-shadow: 0 0 14px rgba(239,68,68,0.30); flex-shrink: 0;">
@@ -393,32 +393,8 @@
                             </div>
 
                             <!-- Rules list -->
-                            <div style="display: flex; flex-direction: column; gap: 14px; text-align: left;">
-
-                                <!-- Rule 1 -->
-                                <div style="display: flex; align-items: flex-start; gap: 14px; background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.18); border-radius: 12px; padding: 13px 16px;">
-                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, rgba(239,68,68,0.3), rgba(239,68,68,0.15)); border: 1px solid rgba(239,68,68,0.45); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 0.75rem; flex-shrink: 0; margin-top: 1px;">
-                                        <i class="fa-solid fa-ban"></i>
-                                    </div>
-                                    <span style="font-size: 0.88rem; font-weight: 600; color: rgba(255,220,210,0.92); line-height: 1.6; letter-spacing: 0.2px;">Dilarang melakukan tindak <span style="color: #fca5a5; font-weight: 700;">manipulasi</span> dalam bentuk apa pun.</span>
-                                </div>
-
-                                <!-- Rule 2 -->
-                                <div style="display: flex; align-items: flex-start; gap: 14px; background: rgba(251,146,60,0.07); border: 1px solid rgba(251,146,60,0.18); border-radius: 12px; padding: 13px 16px;">
-                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, rgba(251,146,60,0.3), rgba(251,146,60,0.15)); border: 1px solid rgba(251,146,60,0.45); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fb923c; font-size: 0.75rem; flex-shrink: 0; margin-top: 1px;">
-                                        <i class="fa-solid fa-ban"></i>
-                                    </div>
-                                    <span style="font-size: 0.88rem; font-weight: 600; color: rgba(255,225,205,0.92); line-height: 1.6; letter-spacing: 0.2px;">Dilarang melakukan segala bentuk <span style="color: #fdba74; font-weight: 700;">perjudian</span>.</span>
-                                </div>
-
-                                <!-- Rule 3 -->
-                                <div style="display: flex; align-items: flex-start; gap: 14px; background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.18); border-radius: 12px; padding: 13px 16px;">
-                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, rgba(239,68,68,0.3), rgba(239,68,68,0.15)); border: 1px solid rgba(239,68,68,0.45); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 0.75rem; flex-shrink: 0; margin-top: 1px;">
-                                        <i class="fa-solid fa-ban"></i>
-                                    </div>
-                                    <span style="font-size: 0.88rem; font-weight: 600; color: rgba(255,220,210,0.92); line-height: 1.6; letter-spacing: 0.2px;">Dilarang menggunakan, menyimpan, atau mengedarkan <span style="color: #fca5a5; font-weight: 700;">narkotika dan obat-obatan terlarang (narkoba)</span>.</span>
-                                </div>
-
+                            <div id="rulesPointsList" style="display: flex; flex-direction: column; gap: 14px; text-align: left;">
+                                <!-- Rules rendered dynamically by JS -->
                             </div>
 
                             <!-- Bottom shimmer line red-orange -->
@@ -938,8 +914,58 @@
                                         </label>
                                     </div>
 
+                                    <!-- Rules Card Toggle -->
+                                    <div class="feature-toggle-row">
+                                        <div class="feature-toggle-info">
+                                            <div class="feature-toggle-icon" style="background: linear-gradient(135deg, rgba(239,68,68,0.25), rgba(251,146,60,0.15)); border-color: rgba(239,68,68,0.4); color: #f87171;">
+                                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                            </div>
+                                            <div>
+                                                <div class="feature-toggle-name">Kartu Pengingat (INGAT YA TEMAN-TEMAN)</div>
+                                                <div class="feature-toggle-desc">Tampilkan / sembunyikan kartu peringatan larangan di halaman My Motivation</div>
+                                            </div>
+                                        </div>
+                                        <label class="feature-toggle-switch">
+                                            <input type="checkbox" id="toggleRulesCardEnabled" onchange="handleRulesCardToggle(this.checked)">
+                                            <span class="feature-toggle-slider"></span>
+                                        </label>
+                                    </div>
+
                                 </div>
                                 <p class="info-text" style="margin-top:14px;"><i class="fa-solid fa-circle-info"></i> Perubahan langsung berlaku untuk semua pengguna tanpa perlu refresh.</p>
+                            </div>
+
+                            <!-- Rules Card Text Editor -->
+                            <div class="glass-card inner-card" id="rulesCardEditorPanel" style="margin-top: 20px;">
+                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+                                    <div style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(239,68,68,0.25), rgba(251,146,60,0.15)); border: 1px solid rgba(239,68,68,0.4); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 0.85rem; flex-shrink: 0;">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 700; font-size: 0.9rem; color: white;">Edit Isi Kartu Pengingat</div>
+                                        <div style="font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 1px;">Ubah judul dan isi poin larangan. Pisahkan setiap poin dengan baris baru.</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputRulesCardTitle" style="font-size: 0.78rem;"><i class="fa-solid fa-heading"></i> Judul Kartu</label>
+                                    <input type="text" id="inputRulesCardTitle" value="INGAT YA TEMAN-TEMAN" placeholder="Contoh: INGAT YA TEMAN-TEMAN" style="font-size: 0.88rem;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="font-size: 0.78rem;"><i class="fa-solid fa-list"></i> Poin-poin Larangan <span style="color: rgba(255,255,255,0.35); font-weight: 400;">(satu poin per baris)</span></label>
+                                    <div id="rulesPointsContainer" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px;">
+                                        <!-- Rendered dynamically by JS -->
+                                    </div>
+                                    <button type="button" onclick="addRulesPoint()" class="btn btn-secondary" style="font-size: 0.8rem; padding: 8px 14px;">
+                                        <i class="fa-solid fa-plus"></i> Tambah Poin
+                                    </button>
+                                </div>
+
+                                <button type="button" onclick="saveRulesCardSettings()" class="btn btn-primary" style="margin-top: 6px; width: 100%;">
+                                    <i class="fa-solid fa-floppy-disk"></i> Simpan Pengaturan Kartu
+                                    <i class="fa-solid fa-circle-notch fa-spin btn-spinner hide" id="rulesCardSaveSpinner"></i>
+                                </button>
                             </div>
                         </div>
 
