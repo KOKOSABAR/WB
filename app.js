@@ -254,6 +254,32 @@ const ROLE_ORDER_MAP = {
     "KASIR": 4
 };
 
+const RBAC_MENUS = [
+    { id: 'absensiView', label: 'Absensi WDBOS' },
+    { id: 'pasporView', label: 'Serah Terima Paspor' },
+    { id: 'buktiView', label: 'Doc Bukti' },
+    { id: 'dataRekeningView', label: 'Data Rekening' },
+    { id: 'bandingView', label: 'Banding Kesalahan CS' },
+    { id: 'qrisView', label: 'Cek QRIS' },
+    { id: 'serahTerimaCSLineView', label: 'Serah Terima CS LINE' },
+    { id: 'serahTerimaKaptenView', label: 'Serah Terima Kapten' },
+    { id: 'serahTerimaKasirView', label: 'Serah Terima Kasir' },
+    { id: 'adminView', label: 'Admin Panel' }
+];
+
+const DEFAULT_ROLE_ACCESS = {
+    absensiView: ['CS LINE', 'KAPTEN KASIR'],
+    pasporView: ['CS LINE', 'KAPTEN KASIR'],
+    dataRekeningView: ['CS LINE', 'KAPTEN KASIR'],
+    serahTerimaCSLineView: ['CS LINE', 'KAPTEN KASIR'],
+    serahTerimaKaptenView: ['CS LINE', 'KAPTEN KASIR'],
+    adminView: ['CS LINE', 'KAPTEN KASIR'],
+    serahTerimaKasirView: ['KASIR', 'KAPTEN KASIR'],
+    bandingView: ['CS LC', 'CS LINE', 'KAPTEN KASIR'],
+    qrisView: ['CS LC', 'CS LINE', 'KAPTEN KASIR'],
+    buktiView: ['CS LC', 'CS LINE', 'KAPTEN KASIR', 'KASIR']
+};
+
 function getRoleOrderScore(role) {
     const r = formatRoleNameUpper(role);
     return ROLE_ORDER_MAP[r] || 99;
@@ -915,6 +941,9 @@ async function loadAllData() {
                 applyBackground(state.settings.background);
                 localStorage.setItem("restease_local_bg", state.settings.background);
             }
+            if (!state.settings.role_access) {
+                state.settings.role_access = { ...DEFAULT_ROLE_ACCESS };
+            }
         }
 
         // B-E. State dasar
@@ -1438,6 +1467,10 @@ function setupEventListeners() {
                     const el = document.getElementById(id);
                     if (el) el.style.display = 'none';
                 });
+            }
+
+            if (tabId === 'tabRoleAccess') {
+                renderAdminRoleAccess();
             }
         });
     });
@@ -1982,31 +2015,31 @@ function updateRoleBasedSidebarAccess() {
         normRole = normalizeRoleString(staff.role);
     }
 
-    // 1. ABSENSI WDBOS, PASPOR, ST CS LINE, ST KAPTEN, PANEL ADMIN, DATA REKENING
-    // Allowed for Admin, CS LINE, KAPTEN KASIR
-    const isAllowedAbsensiPasporAdmin = isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
+    // Helper function to check role access from dynamic settings
+    const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    const isAllowed = (viewId) => {
+        if (isAdmin) return true;
+        if (!staff || !normRole) return false;
+        const allowedRoles = roleAccess[viewId];
+        if (!allowedRoles) return true; // If not explicitly restricted, allow
+        return allowedRoles.includes(normRole);
+    };
 
-    setRoleNavVisibility(document.getElementById('btnAbsensiView'), isAllowedAbsensiPasporAdmin, 'flex');
-    setRoleNavVisibility(document.getElementById('btnPasporView'), isAllowedAbsensiPasporAdmin, 'flex');
-    setRoleNavVisibility(document.getElementById('btnSerahTerimaCSLine'), isAllowedAbsensiPasporAdmin, 'flex');
-    setRoleNavVisibility(document.getElementById('btnSerahTerimaKapten'), isAllowedAbsensiPasporAdmin, 'flex');
-    setRoleNavVisibility(document.getElementById('btnDataRekeningView'), isAllowedAbsensiPasporAdmin, 'flex');
-    setRoleNavVisibility(document.getElementById('btnAdminPanelSidebar'), isAllowedAbsensiPasporAdmin, 'flex');
-
-    // 2. SERAH TERIMA KASIR
-    // Allowed for Admin, KASIR, KAPTEN KASIR
-    const isAllowedSTKasir = isAdmin || (normRole === 'KASIR' || normRole === 'KAPTEN KASIR');
-    setRoleNavVisibility(document.getElementById('btnSerahTerimaKasir'), isAllowedSTKasir, 'flex');
-
-    // 3. SERAH TERIMA GROUP CONTAINER TOGGLE
-    // Show if at least one sub-item is visible
-    const isAnySTVisible = isAllowedAbsensiPasporAdmin || isAllowedSTKasir;
+    setRoleNavVisibility(document.getElementById('btnAbsensiView'), isAllowed('absensiView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnPasporView'), isAllowed('pasporView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnSerahTerimaCSLine'), isAllowed('serahTerimaCSLineView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnSerahTerimaKapten'), isAllowed('serahTerimaKaptenView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnDataRekeningView'), isAllowed('dataRekeningView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnAdminPanelSidebar'), isAllowed('adminView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnSerahTerimaKasir'), isAllowed('serahTerimaKasirView'), 'flex');
+    
+    // Group container for Customer Service (Banding, QRIS)
+    const isAnyCSVisible = isAllowed('bandingView') || isAllowed('qrisView');
+    setRoleNavVisibility(document.getElementById('csGroupContainer'), isAnyCSVisible, 'block');
+    
+    // Group container for Serah Terima
+    const isAnySTVisible = isAllowed('serahTerimaCSLineView') || isAllowed('serahTerimaKaptenView') || isAllowed('serahTerimaKasirView');
     setRoleNavVisibility(document.getElementById('serahTerimaGroupContainer'), isAnySTVisible, 'block');
-
-    // 4. CUSTOMER SERVICE GROUP (Banding CS & Cek QRIS)
-    // Allowed for Admin, CS LC, CS LINE, KAPTEN KASIR
-    const isAllowedCSGroup = isAdmin || (normRole === 'CS LC' || normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
-    setRoleNavVisibility(document.getElementById('csGroupContainer'), isAllowedCSGroup, 'block');
 }
 window.updateRoleBasedSidebarAccess = updateRoleBasedSidebarAccess;
 
@@ -2020,24 +2053,14 @@ async function showView(viewId) {
         normRole = normalizeRoleString(staff.role);
     }
 
-    // Restrict ABSENSI, PASPOR, DATA REKENING, ST CS LINE, ST KAPTEN & PANEL ADMIN to CS LINE & KAPTEN KASIR only
-    const restrictedViews = ["absensiView", "pasporView", "dataRekeningView", "serahTerimaCSLineView", "serahTerimaKaptenView", "adminView"];
-    if (restrictedViews.includes(viewId)) {
-        const isAllowed = isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
+    // Cek dynamic RBAC
+    const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    const allowedRoles = roleAccess[viewId];
+    
+    if (allowedRoles) { // Jika ada pengaturan restriksi untuk view ini
+        const isAllowed = isAdmin || (staff && allowedRoles.includes(normRole));
         if (!isAllowed) {
-            showToast("Akses Ditolak: Fitur ini hanya untuk CS LINE dan KAPTEN KASIR.", "error");
-            showView("izinView");
-            const izinNavBtn = document.querySelector('.nav-item-main[data-target="izinView"]');
-            if (izinNavBtn) setActiveNav(izinNavBtn);
-            return;
-        }
-    }
-
-    // Restrict BANDING & QRIS (Customer Service Group) to CS LC, CS LINE, KAPTEN KASIR only (Hidden for KASIR)
-    if (viewId === "bandingView" || viewId === "qrisView") {
-        const isAllowedCS = isAdmin || (normRole === 'CS LC' || normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
-        if (!isAllowedCS) {
-            showToast("Akses Ditolak: Fitur Customer Service hanya untuk CS LC, CS LINE, dan KAPTEN KASIR.", "error");
+            showToast("Akses Ditolak: Anda tidak memiliki izin untuk melihat fitur ini.", "error");
             showView("izinView");
             const izinNavBtn = document.querySelector('.nav-item-main[data-target="izinView"]');
             if (izinNavBtn) setActiveNav(izinNavBtn);
@@ -2126,6 +2149,7 @@ async function showView(viewId) {
         if (!_renderedViews.has('adminView')) {
             renderAdminStaff();
             renderAdminRoles();
+            renderAdminRoleAccess();
             _renderedViews.add('adminView');
         }
     }
@@ -3662,6 +3686,80 @@ window.deleteRole = async function(roleName) {
     } catch (err) {
         console.error("Gagal menghapus jabatan:", err);
         showToast("Gagal menghapus jabatan dari database. Pastikan tidak ada dependensi.", "error");
+    }
+};
+
+// 14b. ADMIN PANEL: ROLE ACCESS (RBAC)
+function renderAdminRoleAccess() {
+    const container = document.getElementById("roleAccessContainer");
+    if (!container) return;
+    container.innerHTML = "";
+
+    const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    const allRoles = getAllowedRoles();
+
+    RBAC_MENUS.forEach(menu => {
+        const menuAllowedRoles = roleAccess[menu.id] || [];
+
+        const menuWrapper = document.createElement("div");
+        menuWrapper.className = "role-access-item";
+        menuWrapper.style.cssText = "padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);";
+        
+        let html = `<h4 style="margin:0 0 10px 0; color:var(--accent); font-size:1rem;">${menu.label}</h4>`;
+        html += `<div style="display:flex; flex-wrap:wrap; gap:10px;">`;
+        
+        allRoles.forEach(role => {
+            const isChecked = menuAllowedRoles.includes(role);
+            html += `
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.85rem;">
+                    <input type="checkbox" class="rbac-checkbox" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''} style="cursor:pointer; width:16px; height:16px;">
+                    ${role}
+                </label>
+            `;
+        });
+        
+        html += `</div>`;
+        menuWrapper.innerHTML = html;
+        container.appendChild(menuWrapper);
+    });
+}
+
+window.saveRoleAccessSettings = async function() {
+    if (!supabaseClient) return;
+
+    const newRoleAccess = {};
+    const checkboxes = document.querySelectorAll('.rbac-checkbox');
+    
+    checkboxes.forEach(cb => {
+        const viewId = cb.dataset.view;
+        const role = cb.dataset.role;
+        if (!newRoleAccess[viewId]) {
+            newRoleAccess[viewId] = [];
+        }
+        if (cb.checked) {
+            newRoleAccess[viewId].push(role);
+        }
+    });
+
+    const newSettingsVal = {
+        ...state.settings,
+        role_access: newRoleAccess
+    };
+
+    try {
+        const { error } = await supabaseClient
+            .from('settings')
+            .update({ value: newSettingsVal })
+            .eq('key', 'general');
+
+        if (error) throw error;
+        
+        state.settings = newSettingsVal;
+        updateRoleBasedSidebarAccess();
+        showToast("Pengaturan akses menu berhasil disimpan!", "success");
+    } catch (err) {
+        console.error("Gagal menyimpan role access:", err);
+        showToast("Terjadi kesalahan saat menyimpan pengaturan akses.", "error");
     }
 };
 

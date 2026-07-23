@@ -533,6 +533,7 @@
                         <ul class="admin-side-menu">
                             <li class="active" data-tab="tabStaff"><i class="fa-solid fa-users"></i> Kelola Staff</li>
                             <li data-tab="tabRoles"><i class="fa-solid fa-users-gear"></i> Kelola Jabatan</li>
+                            <li data-tab="tabRoleAccess"><i class="fa-solid fa-user-lock"></i> Akses Menu</li>
                             <li data-tab="tabGeneral"><i class="fa-solid fa-sliders"></i> Konfigurasi Umum</li>
                             <li data-tab="tabFeatures"><i class="fa-solid fa-toggle-on"></i> Fitur Aplikasi</li>
                             <li data-tab="tabBackground"><i class="fa-solid fa-image"></i> Latar Belakang</li>
@@ -655,6 +656,22 @@
                                         </table>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB: HAK AKSES MENU -->
+                        <div id="tabRoleAccess" class="admin-tab-panel">
+                            <div class="panel-header">
+                                <h3>Hak Akses Menu Sidebar</h3>
+                                <p>Tentukan menu mana saja yang boleh dilihat oleh masing-masing jabatan/role</p>
+                            </div>
+                            <div class="glass-card inner-card">
+                                <div id="roleAccessContainer" style="display: flex; flex-direction: column; gap: 15px;">
+                                    <!-- Rendered via JS -->
+                                </div>
+                                <button id="btnSaveRoleAccess" class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="saveRoleAccessSettings()">
+                                    <i class="fa-solid fa-floppy-disk"></i> Simpan Pengaturan Akses
+                                </button>
                             </div>
                         </div>
 
