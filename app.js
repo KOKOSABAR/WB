@@ -5522,8 +5522,8 @@ function renderTodayAttendanceList(currentDay) {
             const item = document.createElement("div");
             item.style.cssText = "display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; margin-bottom: 6px;";
             
-            const badgeBg = p.log.status === "ON TIME" ? "rgba(16,185,129,0.15)" : "rgba(239,68,68,0.15)";
-            const badgeColor = p.log.status === "ON TIME" ? "#10b981" : "#ef4444";
+            const badgeBg = p.log.status === "ON TIME" ? "#10b981 !important" : "#ef4444 !important";
+            const badgeColor = "#ffffff !important";
 
             item.innerHTML = `
                 <div style="display: flex; flex-direction: column; min-width: 0;">
@@ -5548,7 +5548,7 @@ function renderTodayAttendanceList(currentDay) {
                     <span style="font-weight: 700; color: white; font-size: 0.85rem; line-height: 1.3;">${a.staff.name}</span>
                     <span style="font-size: 0.7rem; color: var(--text-muted);">${a.shift}</span>
                 </div>
-                <span class="badge" style="background: rgba(245,158,11,0.15); color: #f59e0b; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">BELUM ABSEN</span>
+                <span class="badge" style="background: #f59e0b !important; color: #ffffff !important; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">BELUM ABSEN</span>
             `;
             notClockedInList.appendChild(item);
         });
@@ -5621,7 +5621,7 @@ function renderAttendanceHistory(currentDay) {
                     <span style="font-size: 0.7rem; color: var(--text-muted);">${p.shift}</span>
                 </div>
                 <span style="font-size: 0.75rem; font-weight: 700; color: white; white-space: nowrap;" class="font-mono">${p.log.clock_in_time}</span>
-                <span class="badge" style="background: rgba(16,185,129,0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">ON TIME</span>
+                <span class="badge" style="background: #10b981 !important; color: #ffffff !important; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">ON TIME</span>
             `;
             onTimeList.appendChild(item);
         });
@@ -5640,7 +5640,7 @@ function renderAttendanceHistory(currentDay) {
                     <span style="font-size: 0.7rem; color: var(--text-muted);">${p.shift}</span>
                 </div>
                 <span style="font-size: 0.75rem; font-weight: 700; color: white; white-space: nowrap;" class="font-mono">${p.log.clock_in_time}</span>
-                <span class="badge" style="background: rgba(239,68,68,0.15); color: #ef4444; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">TERLAMBAT</span>
+                <span class="badge" style="background: #ef4444 !important; color: #ffffff !important; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; white-space: nowrap;">TERLAMBAT</span>
             `;
             lateList.appendChild(item);
         });
@@ -5684,8 +5684,8 @@ function renderPersonalAttendanceLogs(currentMonthStr) {
         const dateStr = `${currentMonthStr}-${String(log.day_num).padStart(2, '0')}`;
         const shiftLabel = log.shift === "1" ? "Shift Pagi" : (log.shift === "2" ? "Shift Malam" : "Shift Setengah Hari");
         
-        const badgeBg = log.status === "ON TIME" ? "rgba(16,185,129,0.15)" : "rgba(239,68,68,0.15)";
-        const badgeColor = log.status === "ON TIME" ? "#10b981" : "#ef4444";
+        const badgeBg = log.status === "ON TIME" ? "#10b981 !important" : "#ef4444 !important";
+        const badgeColor = "#ffffff !important";
 
         tr.innerHTML = `
             <td>${index + 1}</td>
