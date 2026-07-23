@@ -2099,6 +2099,8 @@ async function showView(viewId) {
         s.classList.remove("active");
         s.classList.add("hide");
     });
+    // Stop bio greeting clock whenever we leave bioView
+    if (viewId !== 'bioView') stopBioGreetingClock();
     
     // Tampilkan target section
     const targetSection = document.getElementById(viewId);
@@ -7144,6 +7146,47 @@ const MOTIVATIONAL_QUOTES = [
     "Terus melangkah, masa depan cerah sedang menunggumu"
 ];
 
+// ----------------------------------------------------------------
+// REALTIME GREETING CLOCK — update setiap menit selama bioView aktif
+// ----------------------------------------------------------------
+let _bioGreetingTimer = null;
+
+function getRealtimeGreeting() {
+    const hour = new Date().getHours();
+    if (hour >= 4  && hour < 10) return 'PAGI';
+    if (hour >= 10 && hour < 15) return 'SIANG';
+    if (hour >= 15 && hour < 18) return 'SORE';
+    return 'MALAM';
+}
+
+function _renderGreetingEl() {
+    const el = document.getElementById('bioGreetingTime');
+    if (!el) return;
+    const greeting = getRealtimeGreeting();
+    el.innerHTML = `
+        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,0.6));"></span>
+        HAI, SELAMAT ${greeting}
+        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,rgba(251,191,36,0.6),transparent);"></span>
+    `;
+}
+
+function startBioGreetingClock() {
+    _renderGreetingEl(); // render langsung
+    clearInterval(_bioGreetingTimer);
+    // hitung sisa detik ke menit berikutnya agar tick tepat di detik ke-0
+    const now = new Date();
+    const msToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+    setTimeout(() => {
+        _renderGreetingEl();
+        _bioGreetingTimer = setInterval(_renderGreetingEl, 60_000);
+    }, msToNextMinute);
+}
+
+function stopBioGreetingClock() {
+    clearInterval(_bioGreetingTimer);
+    _bioGreetingTimer = null;
+}
+
 function updateBioView() {
     const greetingTimeEl = document.getElementById("bioGreetingTime");
     const greetingNameEl = document.getElementById("bioGreetingName");
@@ -7160,48 +7203,8 @@ function updateBioView() {
         return;
     }
     
-    // Determine greeting based on staff's scheduled shift today
-    const today = new Date();
-    const todayDay   = today.getDate();
-    const todayMonth = today.toLocaleDateString('sv-SE').substring(0, 7); // YYYY-MM
-
-    // Find shift schedule for this staff in the current month
-    const staffShift = state.absensiShifts.find(
-        s => s.staff_id === staff.id && (s.month_str === todayMonth || s.month === todayMonth)
-    );
-    const shiftToday = (staffShift && Array.isArray(staffShift.schedule))
-        ? String(staffShift.schedule[todayDay - 1] || 'OFF').toUpperCase()
-        : 'OFF';
-
-    let timeGreeting;
-    if (shiftToday === '2') {
-        // Shift Malam
-        timeGreeting = 'MALAM';
-    } else if (shiftToday === '1/2') {
-        // Shift setengah hari — masuk pagi
-        timeGreeting = 'PAGI';
-    } else if (shiftToday === '1') {
-        // Shift Pagi
-        timeGreeting = 'PAGI';
-    } else {
-        // OFF / CUTI / tidak ada jadwal — fallback ke jam sekarang
-        const hour = today.getHours();
-        if (hour >= 5 && hour < 11) {
-            timeGreeting = 'PAGI';
-        } else if (hour >= 11 && hour < 15) {
-            timeGreeting = 'SIANG';
-        } else if (hour >= 15 && hour < 18) {
-            timeGreeting = 'SORE';
-        } else {
-            timeGreeting = 'MALAM';
-        }
-    }
-    
-    greetingTimeEl.innerHTML = `
-        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,0.6));"></span>
-        HAI, SELAMAT ${timeGreeting}
-        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,rgba(251,191,36,0.6),transparent);"></span>
-    `;
+    // Determine greeting based on realtime clock (updates every minute via startBioGreetingClock)
+    startBioGreetingClock(); // sets innerHTML immediately and starts auto-refresh timer
     greetingNameEl.textContent = staff.name.toUpperCase();
     
     // Pick a quote that stays fixed all day and only changes at 00:00:00.
