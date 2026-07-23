@@ -461,10 +461,16 @@ document.addEventListener("DOMContentLoaded", () => {
         initBackgroundCustomizer();
     }
 
-    // Initialize theme preset dari localStorage
-    const savedTheme = localStorage.getItem('restease_theme_preset');
-    if (savedTheme) {
-        applyThemePreset(savedTheme, null, true);
+    // Initialize theme preset — load per-staff jika ada session tersimpan, fallback ke global
+    const savedStaffIdForTheme = localStorage.getItem('restease_current_staff_id');
+    if (savedStaffIdForTheme) {
+        // Staff tersimpan — tema akan di-load saat loadAllData selesai (auto-login flow)
+        // Terapkan sementara tema staff agar tidak flash default sebelum data load
+        const staffThemeKey = `restease_theme_preset_${savedStaffIdForTheme}`;
+        const earlyTheme = localStorage.getItem(staffThemeKey);
+        if (earlyTheme) applyThemePreset(earlyTheme, null, true);
+    } else {
+        // Tidak ada staff login — tidak terapkan tema apapun (default)
     }
 });
 
@@ -477,44 +483,239 @@ const ALL_THEME_CLASSES = [
     'theme-hackerman','theme-lambda','theme-after-eight','theme-pay-to-win','theme-white-wolf'
 ];
 
+// CSS variables + overlay gradient per tema
+// overlay  = background utama #bgOverlay (gelap + warna kuat)
+// orb1/orb2 = ambient glow orbs (body::before / body::after) via dynamic style
+// glassTint = warna tint semi-transparan untuk glass card borders
+const THEME_DATA = {
+    'gx-classic': {
+        primary:'#e91e63', primaryHover:'#c2185b', primaryGlow:'rgba(233,30,99,0.45)',
+        accent:'#ff5252',  accentGlow:'rgba(255,82,82,0.4)',  focusBorder:'rgba(233,30,99,0.6)',
+        bgDark:'#0d0307',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(233,30,99,0.32) 0%, rgba(233,30,99,0.08) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(255,82,82,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(176,0,60,0.18) 0%, transparent 50%), linear-gradient(160deg, #1a0308 0%, #1e0510 40%, #180306 70%, #1a0408 100%)',
+        orb1:'rgba(233,30,99,0.22)', orb2:'rgba(255,82,82,0.16)',
+        glassTint:'rgba(233,30,99,0.08)', cardBorder:'rgba(233,30,99,0.2)'
+    },
+    'ultraviolet': {
+        primary:'#7c3aed', primaryHover:'#6d28d9', primaryGlow:'rgba(124,58,237,0.5)',
+        accent:'#a855f7',  accentGlow:'rgba(168,85,247,0.4)',  focusBorder:'rgba(124,58,237,0.6)',
+        bgDark:'#060310',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(124,58,237,0.30) 0%, rgba(124,58,237,0.08) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(168,85,247,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(109,40,217,0.18) 0%, transparent 50%), linear-gradient(160deg, #0c0518 0%, #0e0620 40%, #0b0416 70%, #0d051c 100%)',
+        orb1:'rgba(124,58,237,0.22)', orb2:'rgba(168,85,247,0.18)',
+        glassTint:'rgba(124,58,237,0.09)', cardBorder:'rgba(124,58,237,0.22)'
+    },
+    'sub-zero': {
+        primary:'#2563eb', primaryHover:'#1d4ed8', primaryGlow:'rgba(37,99,235,0.5)',
+        accent:'#38bdf8',  accentGlow:'rgba(56,189,248,0.4)',  focusBorder:'rgba(37,99,235,0.6)',
+        bgDark:'#020610',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(37,99,235,0.30) 0%, rgba(37,99,235,0.08) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(56,189,248,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(29,78,216,0.18) 0%, transparent 50%), linear-gradient(160deg, #030816 0%, #04091c 40%, #030818 70%, #030918 100%)',
+        orb1:'rgba(37,99,235,0.22)', orb2:'rgba(56,189,248,0.18)',
+        glassTint:'rgba(37,99,235,0.09)', cardBorder:'rgba(37,99,235,0.22)'
+    },
+    'frutti-di-mare': {
+        primary:'#f43f5e', primaryHover:'#e11d48', primaryGlow:'rgba(244,63,94,0.45)',
+        accent:'#fb7185',  accentGlow:'rgba(251,113,133,0.4)', focusBorder:'rgba(244,63,94,0.6)',
+        bgDark:'#0f0407',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(244,63,94,0.30) 0%, rgba(244,63,94,0.08) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(251,113,133,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(225,29,72,0.18) 0%, transparent 50%), linear-gradient(160deg, #1a0408 0%, #1e050a 40%, #190408 70%, #1b0408 100%)',
+        orb1:'rgba(244,63,94,0.22)', orb2:'rgba(251,113,133,0.18)',
+        glassTint:'rgba(244,63,94,0.08)', cardBorder:'rgba(244,63,94,0.22)'
+    },
+    'purple-haze': {
+        primary:'#84cc16', primaryHover:'#65a30d', primaryGlow:'rgba(132,204,22,0.45)',
+        accent:'#a3e635',  accentGlow:'rgba(163,230,53,0.4)',  focusBorder:'rgba(132,204,22,0.6)',
+        bgDark:'#040e03',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(132,204,22,0.28) 0%, rgba(132,204,22,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(163,230,53,0.20) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(101,163,13,0.16) 0%, transparent 50%), linear-gradient(160deg, #071404 0%, #081606 40%, #061304 70%, #071404 100%)',
+        orb1:'rgba(132,204,22,0.20)', orb2:'rgba(163,230,53,0.16)',
+        glassTint:'rgba(132,204,22,0.08)', cardBorder:'rgba(132,204,22,0.20)'
+    },
+    'vaporwave': {
+        primary:'#06b6d4', primaryHover:'#0891b2', primaryGlow:'rgba(6,182,212,0.45)',
+        accent:'#2dd4bf',  accentGlow:'rgba(45,212,191,0.4)',  focusBorder:'rgba(6,182,212,0.6)',
+        bgDark:'#020c0f',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(6,182,212,0.28) 0%, rgba(6,182,212,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(45,212,191,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(8,145,178,0.18) 0%, transparent 50%), linear-gradient(160deg, #031214 0%, #041614 40%, #031113 70%, #031314 100%)',
+        orb1:'rgba(6,182,212,0.22)', orb2:'rgba(45,212,191,0.18)',
+        glassTint:'rgba(6,182,212,0.09)', cardBorder:'rgba(6,182,212,0.22)'
+    },
+    'rose-quartz': {
+        primary:'#d946ef', primaryHover:'#c026d3', primaryGlow:'rgba(217,70,239,0.45)',
+        accent:'#f0abfc',  accentGlow:'rgba(240,171,252,0.4)', focusBorder:'rgba(217,70,239,0.6)',
+        bgDark:'#0e030f',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(217,70,239,0.30) 0%, rgba(217,70,239,0.08) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(240,171,252,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(192,38,211,0.18) 0%, transparent 50%), linear-gradient(160deg, #1a0418 0%, #1e051c 40%, #190418 70%, #1a0418 100%)',
+        orb1:'rgba(217,70,239,0.22)', orb2:'rgba(240,171,252,0.18)',
+        glassTint:'rgba(217,70,239,0.09)', cardBorder:'rgba(217,70,239,0.22)'
+    },
+    'coming-soon': {
+        primary:'#eab308', primaryHover:'#ca8a04', primaryGlow:'rgba(234,179,8,0.45)',
+        accent:'#86efac',  accentGlow:'rgba(134,239,172,0.4)', focusBorder:'rgba(234,179,8,0.6)',
+        bgDark:'#0e0c03',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(234,179,8,0.28) 0%, rgba(234,179,8,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(134,239,172,0.20) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(202,138,4,0.18) 0%, transparent 50%), linear-gradient(160deg, #151205 0%, #181405 40%, #141105 70%, #161205 100%)',
+        orb1:'rgba(234,179,8,0.20)', orb2:'rgba(134,239,172,0.16)',
+        glassTint:'rgba(234,179,8,0.08)', cardBorder:'rgba(234,179,8,0.20)'
+    },
+    'hackerman': {
+        primary:'#22c55e', primaryHover:'#16a34a', primaryGlow:'rgba(34,197,94,0.45)',
+        accent:'#4ade80',  accentGlow:'rgba(74,222,128,0.4)',  focusBorder:'rgba(34,197,94,0.6)',
+        bgDark:'#030e05',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(34,197,94,0.28) 0%, rgba(34,197,94,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(74,222,128,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(22,163,74,0.18) 0%, transparent 50%), linear-gradient(160deg, #041408 0%, #05160a 40%, #041407 70%, #051609 100%)',
+        orb1:'rgba(34,197,94,0.22)', orb2:'rgba(74,222,128,0.18)',
+        glassTint:'rgba(34,197,94,0.09)', cardBorder:'rgba(34,197,94,0.22)'
+    },
+    'lambda': {
+        primary:'#f97316', primaryHover:'#ea580c', primaryGlow:'rgba(249,115,22,0.45)',
+        accent:'#fbbf24',  accentGlow:'rgba(251,191,36,0.4)',  focusBorder:'rgba(249,115,22,0.6)',
+        bgDark:'#0f0803',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(249,115,22,0.28) 0%, rgba(249,115,22,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(251,191,36,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(234,88,12,0.18) 0%, transparent 50%), linear-gradient(160deg, #160a03 0%, #180c04 40%, #150a03 70%, #170b03 100%)',
+        orb1:'rgba(249,115,22,0.22)', orb2:'rgba(251,191,36,0.18)',
+        glassTint:'rgba(249,115,22,0.09)', cardBorder:'rgba(249,115,22,0.22)'
+    },
+    'after-eight': {
+        primary:'#14b8a6', primaryHover:'#0f9688', primaryGlow:'rgba(20,184,166,0.45)',
+        accent:'#5eead4',  accentGlow:'rgba(94,234,212,0.4)',  focusBorder:'rgba(20,184,166,0.6)',
+        bgDark:'#030e0d',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(20,184,166,0.28) 0%, rgba(20,184,166,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(94,234,212,0.20) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(15,150,136,0.18) 0%, transparent 50%), linear-gradient(160deg, #041412 0%, #05160f 40%, #041311 70%, #051412 100%)',
+        orb1:'rgba(20,184,166,0.22)', orb2:'rgba(94,234,212,0.18)',
+        glassTint:'rgba(20,184,166,0.09)', cardBorder:'rgba(20,184,166,0.22)'
+    },
+    'pay-to-win': {
+        primary:'#f59e0b', primaryHover:'#d97706', primaryGlow:'rgba(245,158,11,0.45)',
+        accent:'#d9f99d',  accentGlow:'rgba(217,249,157,0.4)', focusBorder:'rgba(245,158,11,0.6)',
+        bgDark:'#0e0b02',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(245,158,11,0.28) 0%, rgba(245,158,11,0.07) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(217,249,157,0.20) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(217,119,6,0.18) 0%, transparent 50%), linear-gradient(160deg, #161004 0%, #181204 40%, #151004 70%, #171104 100%)',
+        orb1:'rgba(245,158,11,0.22)', orb2:'rgba(217,249,157,0.16)',
+        glassTint:'rgba(245,158,11,0.09)', cardBorder:'rgba(245,158,11,0.22)'
+    },
+    'white-wolf': {
+        primary:'#94a3b8', primaryHover:'#64748b', primaryGlow:'rgba(148,163,184,0.35)',
+        accent:'#e2e8f0',  accentGlow:'rgba(226,232,240,0.25)', focusBorder:'rgba(148,163,184,0.5)',
+        bgDark:'#060708',
+        overlay:'radial-gradient(ellipse at 15% 15%, rgba(148,163,184,0.18) 0%, rgba(148,163,184,0.05) 40%, transparent 65%), radial-gradient(ellipse at 85% 85%, rgba(226,232,240,0.14) 0%, transparent 55%), radial-gradient(ellipse at 50% 0%, rgba(100,116,139,0.12) 0%, transparent 50%), linear-gradient(160deg, #0a0b0d 0%, #0c0d0f 40%, #0a0b0d 70%, #0b0c0e 100%)',
+        orb1:'rgba(148,163,184,0.14)', orb2:'rgba(226,232,240,0.10)',
+        glassTint:'rgba(148,163,184,0.06)', cardBorder:'rgba(148,163,184,0.18)'
+    },
+};
+
+// Helper: ambil localStorage key tema berdasarkan staff yang sedang login
+function getThemeStorageKey() {
+    const staffId = state.currentStaff?.id || localStorage.getItem('restease_current_staff_id') || 'guest';
+    return `restease_theme_preset_${staffId}`;
+}
+
+// Helper: load dan terapkan tema tersimpan untuk staff tertentu
+function loadAndApplyStaffTheme(staffId, silent = true) {
+    const key = `restease_theme_preset_${staffId}`;
+    const savedTheme = localStorage.getItem(key) || 'default';
+    applyThemePreset(savedTheme, null, silent);
+}
+window.loadAndApplyStaffTheme = loadAndApplyStaffTheme;
+
 function applyThemePreset(themeName, clickedCard, silent) {
-    // 1. Remove semua theme classes dari body
+    const root = document.documentElement;
+    const themeInfo = THEME_DATA[themeName];
+
+    // ── 1. Hapus semua theme class dari body ──────────────────────────────
     ALL_THEME_CLASSES.forEach(cls => document.body.classList.remove(cls));
 
-    // 2. Terapkan class baru jika bukan 'default'
-    if (themeName && themeName !== 'default') {
+    // ── 2. Terapkan theme class baru ──────────────────────────────────────
+    if (themeInfo) {
         document.body.classList.add('theme-' + themeName);
     }
 
-    // 3. Simpan ke localStorage
-    localStorage.setItem('restease_theme_preset', themeName || 'default');
+    // ── 3. CSS variables di :root (override stylesheet) ───────────────────
+    if (themeInfo) {
+        root.style.setProperty('--primary',            themeInfo.primary);
+        root.style.setProperty('--primary-hover',      themeInfo.primaryHover);
+        root.style.setProperty('--primary-glow',       themeInfo.primaryGlow);
+        root.style.setProperty('--accent',             themeInfo.accent);
+        root.style.setProperty('--accent-glow',        themeInfo.accentGlow);
+        root.style.setProperty('--glass-border-focus', themeInfo.focusBorder);
+        root.style.setProperty('--bg-dark',            themeInfo.bgDark);
+        root.style.setProperty('--glass-tint',         themeInfo.glassTint);
+        root.style.setProperty('--card-border-theme',  themeInfo.cardBorder);
+    } else {
+        ['--primary','--primary-hover','--primary-glow','--accent','--accent-glow',
+         '--glass-border-focus','--bg-dark','--glass-tint','--card-border-theme'
+        ].forEach(v => root.style.removeProperty(v));
+    }
 
-    // 4. Update semua radio button di galeri
+    // ── 4. Background overlay (hanya kalau tidak ada wallpaper gambar) ────
+    const bgOverlay = document.getElementById('bgOverlay');
+    if (bgOverlay) {
+        const hasBgImage = (bgOverlay.style.backgroundImage || '').includes('url(');
+        if (!hasBgImage) {
+            if (themeInfo) {
+                bgOverlay.style.background      = themeInfo.overlay;
+                bgOverlay.style.backgroundImage = 'none';
+                bgOverlay.style.backgroundColor = themeInfo.bgDark;
+            } else {
+                const defaultBg = state.settings?.background ||
+                    'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31104b 100%)';
+                bgOverlay.style.background      = defaultBg;
+                bgOverlay.style.backgroundImage = 'none';
+                bgOverlay.style.backgroundColor = '';
+            }
+        }
+    }
+
+    // ── 5. Ambient orb colors via dynamic <style> tag ─────────────────────
+    let orbStyle = document.getElementById('themeOrbStyle');
+    if (!orbStyle) {
+        orbStyle = document.createElement('style');
+        orbStyle.id = 'themeOrbStyle';
+        document.head.appendChild(orbStyle);
+    }
+    if (themeInfo) {
+        orbStyle.textContent = `
+            body::before {
+                background: radial-gradient(circle, ${themeInfo.orb1} 0%, transparent 70%) !important;
+            }
+            body::after {
+                background: radial-gradient(circle, ${themeInfo.orb2} 0%, transparent 70%) !important;
+            }
+            body.theme-${themeName} .glass-card {
+                background: linear-gradient(145deg, color-mix(in srgb, ${themeInfo.glassTint} 100%, rgba(14,20,40,0.85)) 0%, rgba(10,15,30,0.80) 100%) !important;
+                border-color: ${themeInfo.cardBorder} !important;
+            }
+        `;
+    } else {
+        orbStyle.textContent = `
+            body::before {
+                background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%) !important;
+            }
+            body::after {
+                background: radial-gradient(circle, rgba(34,211,238,0.06) 0%, transparent 70%) !important;
+            }
+        `;
+    }
+
+    // ── 6. Simpan ke localStorage per-staff ───────────────────────────────
+    const key = getThemeStorageKey();
+    localStorage.setItem(key, themeName || 'default');
+
+    // ── 7. Update radio button galeri ─────────────────────────────────────
     document.querySelectorAll('.theme-preset-card').forEach(card => {
-        const radio = card.querySelector('.theme-radio');
+        const radio    = card.querySelector('.theme-radio');
         const isActive = card.getAttribute('data-theme') === themeName;
-        
         if (isActive) {
-            card.style.border = '2px solid var(--primary, #8b5cf6)';
-            card.style.boxShadow = '0 0 16px rgba(139,92,246,0.3)';
+            card.style.border     = `2px solid ${themeInfo ? themeInfo.primary : '#8b5cf6'}`;
+            card.style.boxShadow  = `0 0 18px ${themeInfo ? themeInfo.primaryGlow : 'rgba(139,92,246,0.3)'}`;
             if (radio) {
-                radio.style.background = 'var(--primary, #8b5cf6)';
-                radio.style.borderColor = 'var(--primary, #8b5cf6)';
+                radio.style.background  = themeInfo ? themeInfo.primary : '#8b5cf6';
+                radio.style.borderColor = themeInfo ? themeInfo.primary : '#8b5cf6';
                 radio.innerHTML = '<div style="width:6px;height:6px;border-radius:50%;background:white;"></div>';
             }
         } else {
-            card.style.border = '2px solid rgba(255,255,255,0.08)';
+            card.style.border    = '2px solid rgba(255,255,255,0.08)';
             card.style.boxShadow = '';
             if (radio) {
-                radio.style.background = '';
+                radio.style.background  = '';
                 radio.style.borderColor = 'rgba(255,255,255,0.3)';
-                radio.innerHTML = '';
+                radio.innerHTML         = '';
             }
         }
     });
 
-    // 5. Tampilkan notif singkat jika bukan silent (saat init)
-    if (!silent && themeName) {
+    // ── 8. Toast notifikasi ───────────────────────────────────────────────
+    if (!silent && themeInfo) {
         const names = {
             'gx-classic':'GX Classic','ultraviolet':'Ultraviolet','sub-zero':'Sub Zero',
             'frutti-di-mare':'Frutti Di Mare','purple-haze':'Purple Haze','vaporwave':'Vaporwave',
@@ -522,20 +723,21 @@ function applyThemePreset(themeName, clickedCard, silent) {
             'lambda':'Lambda','after-eight':'After Eight','pay-to-win':'Pay-To-Win','white-wolf':'White Wolf'
         };
         const displayName = names[themeName] || themeName;
-        // Tampilkan toast kecil
         let toast = document.getElementById('themeToast');
         if (!toast) {
             toast = document.createElement('div');
             toast.id = 'themeToast';
-            toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(10,12,25,0.95);border:1px solid rgba(139,92,246,0.3);border-radius:10px;padding:8px 18px;color:white;font-size:0.78rem;font-weight:700;z-index:99999;opacity:0;transition:all 0.3s;pointer-events:none;backdrop-filter:blur(10px);white-space:nowrap;';
+            toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(10,12,25,0.95);border-radius:10px;padding:9px 20px;color:#f1f5f9;font-size:0.78rem;font-weight:700;z-index:99999;opacity:0;transition:all 0.3s;pointer-events:none;backdrop-filter:blur(12px);white-space:nowrap;';
             document.body.appendChild(toast);
         }
-        toast.innerHTML = `<i class="fa-solid fa-swatchbook" style="margin-right:7px;color:var(--primary,#8b5cf6)"></i>Tema <span style="color:var(--primary,#8b5cf6)">${displayName}</span> diterapkan`;
-        toast.style.opacity = '1';
+        toast.style.borderColor = themeInfo.primary;
+        toast.style.border      = `1px solid ${themeInfo.cardBorder}`;
+        toast.innerHTML = `<i class="fa-solid fa-swatchbook" style="margin-right:7px;color:${themeInfo.primary}"></i>Tema <span style="color:${themeInfo.primary}">${displayName}</span> diterapkan`;
+        toast.style.opacity   = '1';
         toast.style.transform = 'translateX(-50%) translateY(0)';
         clearTimeout(toast._timer);
         toast._timer = setTimeout(() => {
-            toast.style.opacity = '0';
+            toast.style.opacity   = '0';
             toast.style.transform = 'translateX(-50%) translateY(20px)';
         }, 2500);
     }
@@ -722,6 +924,8 @@ async function loadAllData() {
                         console.warn("Failed to load background on auto-login:", err);
                     }
                 }
+                // Load and apply staff's saved theme preset after auto-login
+                loadAndApplyStaffTheme(matched.id, true);
             }
         } else if (state.currentStaff) {
             const updatedStaff = state.staff.find(s => s.id === state.currentStaff.id);
@@ -737,6 +941,8 @@ async function loadAllData() {
                         console.warn("Failed to load background:", err);
                     }
                 }
+                // Load and apply staff's saved theme preset
+                loadAndApplyStaffTheme(updatedStaff.id, true);
             } else {
                 logoutStaff();
             }
@@ -954,6 +1160,14 @@ function handleSettingsRealtime(payload) {
         if (state.settings && state.settings.background) {
             applyBackground(state.settings.background);
             localStorage.setItem("restease_local_bg", state.settings.background);
+        }
+        // Kalau staff punya tema aktif, pastikan tema tidak ditimpa oleh settings update
+        if (state.currentStaff) {
+            const staffThemeKey = `restease_theme_preset_${state.currentStaff.id}`;
+            const savedTheme = localStorage.getItem(staffThemeKey);
+            if (savedTheme && savedTheme !== 'default') {
+                applyThemePreset(savedTheme, null, true);
+            }
         }
         showToast("Pengaturan sistem diperbarui secara realtime.", "success");
 
@@ -2246,6 +2460,9 @@ async function loginStaff() {
         if (typeof loadAndApplyStaffBackground === 'function') {
             await loadAndApplyStaffBackground(matched.id);
         }
+
+        // Load and apply staff's saved theme preset
+        loadAndApplyStaffTheme(matched.id, true);
         
         showToast(`Selamat datang kembali, ${matched.name}!`, "success");
 
@@ -2276,6 +2493,22 @@ function logoutStaff() {
     // Reset background ke setelan umum aplikasi saat logout
     const defaultBg = state.settings?.background || 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31104b 100%)';
     applyBackground(defaultBg);
+
+    // Reset tema ke default (hapus semua theme class) saat logout
+    ALL_THEME_CLASSES.forEach(cls => document.body.classList.remove(cls));
+    // Hapus CSS variable override agar kembali ke default stylesheet
+    const root = document.documentElement;
+    ['--primary','--primary-hover','--primary-glow','--accent','--accent-glow','--glass-border-focus'].forEach(v => root.style.removeProperty(v));
+    document.querySelectorAll('.theme-preset-card').forEach(card => {
+        const radio = card.querySelector('.theme-radio');
+        card.style.border = '2px solid rgba(255,255,255,0.08)';
+        card.style.boxShadow = '';
+        if (radio) {
+            radio.style.background = '';
+            radio.style.borderColor = 'rgba(255,255,255,0.3)';
+            radio.innerHTML = '';
+        }
+    });
     applyStaffBackgroundAnimationPreference(true, { persistLocal: false, staffId: 'guest' });
     
     // Clear active selection in background picker
@@ -3530,21 +3763,20 @@ function applyBackground(bgValue) {
 
     const normalizedBg = String(bgValue).trim();
     const isRawUrlOnly = /^url\((['"]?).*?\1\)$/i.test(normalizedBg);
+    const isImageUrl = isRawUrlOnly || normalizedBg.startsWith('data:image');
 
-    if (
-        normalizedBg.startsWith("linear-gradient") ||
-        normalizedBg.startsWith("radial-gradient") ||
-        normalizedBg.startsWith("#") ||
-        normalizedBg.startsWith("rgb(") ||
-        normalizedBg.startsWith("rgba(") ||
-        normalizedBg.startsWith("hsl(") ||
-        normalizedBg.startsWith("hsla(") ||
-        !isRawUrlOnly
-    ) {
+    // Kalau ada tema aktif DAN bukan wallpaper gambar — jangan timpa tema
+    const hasActiveTheme = ALL_THEME_CLASSES.some(cls => document.body.classList.contains(cls));
+    if (hasActiveTheme && !isImageUrl) {
+        // Cukup simpan sebagai fallback, tapi jangan terapkan ke overlay
+        return;
+    }
+
+    if (!isImageUrl) {
         overlay.style.backgroundImage = "none";
         overlay.style.background = normalizedBg;
     } else {
-        // Kemungkinan adalah URL gambar kustom atau base64
+        // Wallpaper gambar kustom — tetap terapkan, tema hanya ubah warna UI
         overlay.style.background = "none";
         overlay.style.backgroundImage = normalizedBg;
         overlay.style.backgroundSize = "cover";
@@ -5761,11 +5993,33 @@ function openStaffBgModal() {
         modal.classList.remove('hide');
         highlightCurrentStaffBg();
         syncStaffBackgroundAnimationToggleUI(state.staffBackgroundAnimationEnabled);
-        // Refresh radio state tema
-        const savedTheme = localStorage.getItem('restease_theme_preset') || 'default';
-        if (typeof applyThemePreset === 'function') {
-            applyThemePreset(savedTheme, null, true);
-        }
+        // Refresh radio state tema — pakai key per-staff, bukan key global lama
+        const staffId = state.currentStaff?.id || localStorage.getItem('restease_current_staff_id');
+        const themeKey = staffId ? `restease_theme_preset_${staffId}` : null;
+        const savedTheme = themeKey ? (localStorage.getItem(themeKey) || 'default') : 'default';
+        // Hanya sync visual radio button — jangan re-apply tema (agar tidak flash)
+        document.querySelectorAll('.theme-preset-card').forEach(card => {
+            const radio = card.querySelector('.theme-radio');
+            const isActive = card.getAttribute('data-theme') === savedTheme;
+            const themeInfo = THEME_DATA[savedTheme];
+            if (isActive) {
+                card.style.border     = `2px solid ${themeInfo ? themeInfo.primary : '#8b5cf6'}`;
+                card.style.boxShadow  = `0 0 18px ${themeInfo ? themeInfo.primaryGlow : 'rgba(139,92,246,0.3)'}`;
+                if (radio) {
+                    radio.style.background  = themeInfo ? themeInfo.primary : '#8b5cf6';
+                    radio.style.borderColor = themeInfo ? themeInfo.primary : '#8b5cf6';
+                    radio.innerHTML = '<div style="width:6px;height:6px;border-radius:50%;background:white;"></div>';
+                }
+            } else {
+                card.style.border    = '2px solid rgba(255,255,255,0.08)';
+                card.style.boxShadow = '';
+                if (radio) {
+                    radio.style.background  = '';
+                    radio.style.borderColor = 'rgba(255,255,255,0.3)';
+                    radio.innerHTML         = '';
+                }
+            }
+        });
     }
 }
 
@@ -6111,6 +6365,14 @@ async function loadAndApplyStaffBackground(staffId) {
         localStorage.setItem(key, fallbackBg);
         localStorage.setItem('restease_local_bg', fallbackBg);
         highlightCurrentStaffBg();
+    }
+
+    // Setelah background staff selesai di-load, re-apply tema staff
+    // agar tema tidak ditimpa oleh background preference
+    const themeKey = `restease_theme_preset_${staffId}`;
+    const savedTheme = localStorage.getItem(themeKey);
+    if (savedTheme && savedTheme !== 'default') {
+        applyThemePreset(savedTheme, null, true);
     }
 }
 
