@@ -2073,9 +2073,11 @@ async function showView(viewId) {
         const hasIndividualAccess = staff && allowedStaffIds.includes(staff.id);
         const hasRoleAccess = staff && allowedRoles.includes(normRole);
         const isAllowed = isAdmin || hasIndividualAccess || hasRoleAccess;
-        
         if (!isAllowed) {
-            showToast("Akses Ditolak: Anda tidak memiliki izin untuk melihat fitur ini.", "error");
+            // Only show toast if someone is actually logged in, otherwise silently redirect
+            if (isAdmin || staff) {
+                showToast("Akses Ditolak: Anda tidak memiliki izin untuk melihat fitur ini.", "error");
+            }
             showView("izinView");
             const izinNavBtn = document.querySelector('.nav-item-main[data-target="izinView"]');
             if (izinNavBtn) setActiveNav(izinNavBtn);
