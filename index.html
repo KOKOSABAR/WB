@@ -88,9 +88,9 @@
                         <span id="chatUnreadBadge" class="chat-unread-badge hide">0</span>
                     </button>
 
-                    <button class="nav-item-main" id="btnBioView" data-target="bioView" title="My Bio">
-                        <i class="fa-solid fa-address-card"></i>
-                        <span>My Bio</span>
+                    <button class="nav-item-main" id="btnBioView" data-target="bioView" title="My Motivation">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <span>My Motivation</span>
                     </button>
 
                     <button class="nav-item-main active" data-target="izinView" title="Izin Istirahat" onclick="
@@ -237,23 +237,97 @@
             <!-- ============================================== -->
             <!-- 2. BIO VIEW SECTION -->
             <!-- ============================================== -->
+            <!-- MY MOTIVATION VIEW                           -->
+            <!-- ============================================== -->
             <div id="bioView" class="view-section hide">
-                <div class="view-header">
-                    <h2><i class="fa-solid fa-address-card"></i> My Bio</h2>
+                <!-- Page Header -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;">
+                    <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(251,191,36,0.25), rgba(168,85,247,0.15)); border: 1px solid rgba(251,191,36,0.4); border-radius: 11px; display: flex; align-items: center; justify-content: center; color: #fbbf24; font-size: 1rem; box-shadow: 0 0 16px rgba(251,191,36,0.25);">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <div>
+                        <h2 style="font-size: 1.05rem; font-weight: 800; letter-spacing: 1.5px; background: linear-gradient(135deg, #fbbf24, #f0abfc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">MY MOTIVATION</h2>
+                        <p style="font-size: 0.65rem; color: rgba(255,255,255,0.3); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px;">Kata-kata penyemangat harianmu</p>
+                    </div>
                 </div>
-                <div class="content-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 70vh;">
-                    <div class="glass-card bio-card" style="max-width: 600px; width: 100%; text-align: center; padding: 50px 40px; border-radius: 24px; position: relative; overflow: hidden;">
-                        <div class="bio-greeting-subtitle" id="bioGreetingTime" style="font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">HAI, SELAMAT PAGI</div>
-                        <div class="bio-name-title" id="bioGreetingName" style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #ffffff, #c4b5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 30px; letter-spacing: 1px;">SILAKAN LOGIN DAHULU</div>
-                        
-                        <div style="height: 1px; width: 60%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); margin: 0 auto 30px;"></div>
-                        
-                        <div class="bio-quote-container" style="position: relative;">
-                            <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: rgba(168,85,247,0.2); position: absolute; top: -15px; left: -10px;"></i>
-                            <p id="bioMotivationQuote" style="font-size: 1.2rem; line-height: 1.6; font-style: italic; color: rgba(255,255,255,0.85); z-index: 1; position: relative; padding: 0 20px;">
-                                "Setiap langkah kecil menuju tujuan adalah kemajuan yang berharga."
-                            </p>
-                            <i class="fa-solid fa-quote-right" style="font-size: 2rem; color: rgba(168,85,247,0.2); position: absolute; bottom: -15px; right: -10px;"></i>
+
+                <!-- Main Card -->
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh;">
+                    <!-- Outer premium wrapper with gold + violet glow -->
+                    <div style="position: relative; max-width: 640px; width: 100%;">
+
+                        <!-- Ambient glow blobs behind card -->
+                        <div style="position: absolute; top: -60px; left: -60px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(251,191,36,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+                        <div style="position: absolute; bottom: -50px; right: -50px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(168,85,247,0.14) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+
+                        <!-- Card -->
+                        <div style="
+                            position: relative;
+                            z-index: 1;
+                            background: linear-gradient(160deg,
+                                rgba(255,255,255,0.09) 0%,
+                                rgba(20,14,40,0.75) 35%,
+                                rgba(10,8,28,0.85) 70%,
+                                rgba(5,5,20,0.90) 100%
+                            );
+                            border: 1px solid rgba(255,255,255,0.12);
+                            border-top: 1px solid rgba(255,255,255,0.26);
+                            border-left: 1px solid rgba(255,255,255,0.18);
+                            border-radius: 28px;
+                            padding: 52px 48px 44px;
+                            text-align: center;
+                            backdrop-filter: blur(40px) saturate(190%);
+                            -webkit-backdrop-filter: blur(40px) saturate(190%);
+                            box-shadow:
+                                0 32px 80px rgba(0,0,0,0.65),
+                                0 0 60px rgba(251,191,36,0.08),
+                                0 0 60px rgba(168,85,247,0.08),
+                                0 1px 0 rgba(255,255,255,0.18) inset;
+                            overflow: hidden;
+                        ">
+                            <!-- Shimmer top line -->
+                            <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5), rgba(168,85,247,0.4), transparent); pointer-events: none;"></div>
+
+                            <!-- Corner frame: top-left gold -->
+                            <div style="position: absolute; top: 18px; left: 18px; width: 52px; height: 52px; border-top: 2.5px solid rgba(251,191,36,0.80); border-left: 2.5px solid rgba(251,191,36,0.80); border-radius: 14px 0 0 0; filter: drop-shadow(0 0 8px rgba(251,191,36,0.45)); pointer-events: none;"></div>
+                            <!-- Corner frame: top-right gold -->
+                            <div style="position: absolute; top: 18px; right: 18px; width: 52px; height: 52px; border-top: 2.5px solid rgba(251,191,36,0.75); border-right: 2.5px solid rgba(251,191,36,0.75); border-radius: 0 14px 0 0; filter: drop-shadow(0 0 8px rgba(251,191,36,0.40)); pointer-events: none;"></div>
+                            <!-- Corner frame: bottom-left violet -->
+                            <div style="position: absolute; bottom: 18px; left: 18px; width: 52px; height: 52px; border-bottom: 2.5px solid rgba(168,85,247,0.80); border-left: 2.5px solid rgba(168,85,247,0.80); border-radius: 0 0 0 14px; filter: drop-shadow(0 0 8px rgba(168,85,247,0.45)); pointer-events: none;"></div>
+                            <!-- Corner frame: bottom-right violet -->
+                            <div style="position: absolute; bottom: 18px; right: 18px; width: 52px; height: 52px; border-bottom: 2.5px solid rgba(168,85,247,0.75); border-right: 2.5px solid rgba(168,85,247,0.75); border-radius: 0 0 14px 0; filter: drop-shadow(0 0 8px rgba(168,85,247,0.40)); pointer-events: none;"></div>
+
+                            <!-- Greeting subtitle -->
+                            <div id="bioGreetingTime" style="font-size: 0.88rem; font-weight: 700; color: rgba(251,191,36,0.75); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <span style="display: inline-block; width: 28px; height: 1px; background: linear-gradient(90deg, transparent, rgba(251,191,36,0.6));"></span>
+                                HAI, SELAMAT PAGI
+                                <span style="display: inline-block; width: 28px; height: 1px; background: linear-gradient(90deg, rgba(251,191,36,0.6), transparent);"></span>
+                            </div>
+
+                            <!-- Staff name -->
+                            <div id="bioGreetingName" style="font-size: 2.6rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 0%, #e9d5ff 40%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0; letter-spacing: 1.5px; line-height: 1.1; filter: drop-shadow(0 2px 16px rgba(251,191,36,0.18));">
+                                SILAKAN LOGIN DAHULU
+                            </div>
+
+                            <!-- Divider -->
+                            <div style="margin: 28px auto 32px; width: 70%; height: 1px; background: linear-gradient(90deg, transparent, rgba(168,85,247,0.35), rgba(251,191,36,0.3), transparent); position: relative;">
+                                <div style="position: absolute; top: -3px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: linear-gradient(135deg, #fbbf24, #a855f7); border-radius: 50%; box-shadow: 0 0 10px rgba(168,85,247,0.6);"></div>
+                            </div>
+
+                            <!-- Quote block -->
+                            <div style="position: relative; padding: 0 16px;">
+                                <!-- Large decorative quote marks -->
+                                <i class="fa-solid fa-quote-left" style="font-size: 3rem; background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(251,191,36,0.15)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: absolute; top: -18px; left: 0; line-height: 1;"></i>
+
+                                <p id="bioMotivationQuote" style="font-size: 1.1rem; line-height: 1.75; font-style: italic; color: rgba(255,255,255,0.88); position: relative; z-index: 1; padding: 8px 28px 8px; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.4); font-weight: 500; letter-spacing: 0.2px;">
+                                    "Setiap langkah kecil menuju tujuan adalah kemajuan yang berharga."
+                                </p>
+
+                                <i class="fa-solid fa-quote-right" style="font-size: 3rem; background: linear-gradient(135deg, rgba(251,191,36,0.3), rgba(168,85,247,0.15)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: absolute; bottom: -18px; right: 0; line-height: 1;"></i>
+                            </div>
+
+                            <!-- Bottom shimmer line -->
+                            <div style="position: absolute; bottom: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(168,85,247,0.4), rgba(251,191,36,0.3), transparent); pointer-events: none;"></div>
                         </div>
                     </div>
                 </div>

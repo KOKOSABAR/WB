@@ -6962,31 +6962,60 @@ function updateBioView() {
         return;
     }
     
-    // Determine greeting based on current time
-    const hour = new Date().getHours();
-    let timeGreeting = "PAGI";
-    
-    if (hour >= 5 && hour < 11) {
-        timeGreeting = "PAGI";
-    } else if (hour >= 11 && hour < 15) {
-        timeGreeting = "SIANG";
-    } else if (hour >= 15 && hour < 18) {
-        timeGreeting = "SORE";
+    // Determine greeting based on staff's scheduled shift today
+    const today = new Date();
+    const todayDay   = today.getDate();
+    const todayMonth = today.toLocaleDateString('sv-SE').substring(0, 7); // YYYY-MM
+
+    // Find shift schedule for this staff in the current month
+    const staffShift = state.absensiShifts.find(
+        s => s.staff_id === staff.id && (s.month_str === todayMonth || s.month === todayMonth)
+    );
+    const shiftToday = (staffShift && Array.isArray(staffShift.schedule))
+        ? String(staffShift.schedule[todayDay - 1] || 'OFF').toUpperCase()
+        : 'OFF';
+
+    let timeGreeting;
+    if (shiftToday === '2') {
+        // Shift Malam
+        timeGreeting = 'MALAM';
+    } else if (shiftToday === '1/2') {
+        // Shift setengah hari — masuk pagi
+        timeGreeting = 'PAGI';
+    } else if (shiftToday === '1') {
+        // Shift Pagi
+        timeGreeting = 'PAGI';
     } else {
-        timeGreeting = "MALAM";
+        // OFF / CUTI / tidak ada jadwal — fallback ke jam sekarang
+        const hour = today.getHours();
+        if (hour >= 5 && hour < 11) {
+            timeGreeting = 'PAGI';
+        } else if (hour >= 11 && hour < 15) {
+            timeGreeting = 'SIANG';
+        } else if (hour >= 15 && hour < 18) {
+            timeGreeting = 'SORE';
+        } else {
+            timeGreeting = 'MALAM';
+        }
     }
     
-    greetingTimeEl.textContent = `HAI, SELAMAT ${timeGreeting}`;
+    greetingTimeEl.innerHTML = `
+        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,0.6));"></span>
+        HAI, SELAMAT ${timeGreeting}
+        <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,rgba(251,191,36,0.6),transparent);"></span>
+    `;
     greetingNameEl.textContent = staff.name.toUpperCase();
     
-    // Pick a random quote
-    const todayStr = new Date().toDateString();
-    // Using a seed based on staff id and date to keep it consistent for the day?
-    // Or just fully random every time they open it. The prompt says "secara random setiap harinya", 
-    // let's do a pseudo-random based on date string so it changes daily.
-    // Or just simple Math.random() for simplicity.
-    const randomIdx = Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length);
-    motivationQuoteEl.textContent = `"${MOTIVATIONAL_QUOTES[randomIdx]}"`;
+    // Pick a quote that stays fixed all day and only changes at 00:00:00.
+    // Seed = "YYYYMMDD" + staff.id → deterministic index regardless of refresh.
+    const now = new Date();
+    const dateSeed = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}${staff.id || ''}`;
+    let seedHash = 0;
+    for (let i = 0; i < dateSeed.length; i++) {
+        seedHash = (Math.imul(31, seedHash) + dateSeed.charCodeAt(i)) | 0;
+    }
+    const dailyIdx = Math.abs(seedHash) % MOTIVATIONAL_QUOTES.length;
+    motivationQuoteEl.textContent = `"${MOTIVATIONAL_QUOTES[dailyIdx]}"`;
 }
 
 window.updateBioView = updateBioView;
