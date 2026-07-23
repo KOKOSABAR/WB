@@ -879,7 +879,11 @@ async function connectToSupabase(anonKey) {
 // Memuat data dari tabel Supabase
 async function loadAllData() {
     try {
-        // ── A. Ambil semua data PARALEL (bukan serial) ──────────────────────
+        const dateFilter = new Date();
+        dateFilter.setMonth(dateFilter.getMonth() - 1);
+        dateFilter.setDate(1); // 1st day of the previous month
+        dateFilter.setHours(0, 0, 0, 0);
+
         const [
             { data: settingsData, error: sErr },
             { data: staffData,    error: stErr },
@@ -891,7 +895,10 @@ async function loadAllData() {
             supabaseClient.from('staff').select('*').order('name'),
             supabaseClient.from('roles_config').select('*').order('role'),
             supabaseClient.from('active_breaks').select('*'),
-            supabaseClient.from('break_logs').select('*').order('end_time', { ascending: false }).limit(300)
+            supabaseClient.from('break_logs')
+                .select('*')
+                .gte('start_time', dateFilter.toISOString())
+                .order('end_time', { ascending: false })
         ]);
 
         if (sErr)  throw sErr;
@@ -1112,10 +1119,7 @@ function handleActiveBreaksRealtime(payload) {
         state.activeBreaks = dedupeActiveBreaks(state.activeBreaks);
     }
     
-    // Always update daily status panel and monitor view across all connected devices
-    scheduleRender("daily-status-panel", () => renderDailyStatusPanel());
-
-    // Only render if izin monitor view is active
+    // Hanya perbarui monitor view jika izin monitor aktif
     if (isSectionActive("izinView") && getActiveIzinTabId() === "monitorView") {
         scheduleRender("izin-monitor", () => renderMonitorSection());
     }
@@ -1154,9 +1158,6 @@ function handleLogsRealtime(payload) {
         }
     }
     
-    // Always update daily status panel across all connected devices
-    scheduleRender("daily-status-panel", () => renderDailyStatusPanel());
-
     // Only render if izin view is active
     if (isSectionActive("izinView")) {
         const activeIzinTabId = getActiveIzinTabId();
@@ -1311,9 +1312,6 @@ function handleAbsensiLogsRealtime(payload) {
         const idx = state.absensiLogs.findIndex(l => l.id === payload.new.id);
         if (idx !== -1) state.absensiLogs[idx] = payload.new;
     }
-
-    scheduleRender("daily-status-panel", () => renderDailyStatusPanel());
-
     if (isSectionActive("absensiView")) {
         scheduleRender("absensi-view", () => renderAbsensi());
     }
@@ -3023,6 +3021,7 @@ function renderRoleSlots() {
     const listEl = document.getElementById("roleSlotsList");
     listEl.innerHTML = "";
     
+    const frag = document.createDocumentFragment();
     getManagedRolesConfig().forEach(rc => {
         const activeCount = getActiveBreaksByRole(rc.role).length;
         const maxSlots = rc.max_slots;
@@ -3056,8 +3055,9 @@ function renderRoleSlots() {
                 ${dotsHtml}
             </div>
         `;
-        listEl.appendChild(row);
+        frag.appendChild(row);
     });
+    listEl.appendChild(frag);
 }
 
 function renderActiveBreaks() {
@@ -3210,6 +3210,7 @@ function renderReports(filter = "all") {
             return;
         }
         
+        const frag = document.createDocumentFragment();
         filteredLogs.forEach(log => {
             const startText = formatLocalTime(log.start_time);
             const endText = formatLocalTime(log.end_time);
@@ -3236,8 +3237,9 @@ function renderReports(filter = "all") {
                     </button>
                 </td>
             `;
-            tbody.appendChild(row);
+            frag.appendChild(row);
         });
+        tbody.appendChild(frag);
     }
 }
 
@@ -4658,6 +4660,8 @@ function renderAbsensiDaily() {
             return;
         }
         
+        const frag = document.createDocumentFragment();
+        
         categories.forEach(cat => {
             // Filter staff yang termasuk kategori ini
             let matches = list.filter(item => {
@@ -4676,7 +4680,7 @@ function renderAbsensiDaily() {
                     ⚡ ${cat} ⚡
                 </td>
             `;
-            tbody.appendChild(trDivider);
+            frag.appendChild(trDivider);
             
             if (matches.length === 0) {
                 const trEmpty = document.createElement("tr");
@@ -4685,7 +4689,7 @@ function renderAbsensiDaily() {
                         Tidak ada staff yang terjadwal
                     </td>
                 `;
-                tbody.appendChild(trEmpty);
+                frag.appendChild(trEmpty);
             } else {
                 matches.forEach(item => {
                     const tr = document.createElement("tr");
@@ -4725,10 +4729,11 @@ function renderAbsensiDaily() {
                         <td style="text-align: center;">${actionHTML}</td>
                         <td style="text-align: center;">${statusHTML}</td>
                     `;
-                    tbody.appendChild(tr);
+                    frag.appendChild(tr);
                 });
             }
         });
+        tbody.appendChild(frag);
     };
     
     renderList(morningScheduled, morningBody, "1");
@@ -4813,6 +4818,7 @@ function renderDailyStatusPanel() {
             return a.name.localeCompare(b.name);
         });
 
+        const frag = document.createDocumentFragment();
         entries.forEach(e => {
             const chip = document.createElement("div");
             chip.className = "daily-status-chip";
@@ -4820,8 +4826,9 @@ function renderDailyStatusPanel() {
                 <span class="daily-status-name">${e.name}</span>
                 <span class="daily-status-role">${formatRoleNameUpper(e.role)}</span>
             `;
-            listEl.appendChild(chip);
+            frag.appendChild(chip);
         });
+        listEl.appendChild(frag);
     };
 
     renderNames(cutiList,  cutiCount,  cuti);

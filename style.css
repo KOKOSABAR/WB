@@ -2591,9 +2591,9 @@ body:has(.app-sidebar.sidebar-collapsed) #chatView.active {
 }
 
 .btn-status-sudah {
-    background: rgba(34, 197, 94, 0.15) !important;
-    color: #22c55e !important;
-    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    background: rgba(34, 197, 94, 0.8) !important;
+    color: #ffffff !important;
+    border: 1px solid #4ade80 !important;
     border-radius: 20px !important;
     padding: 6px 16px !important;
     font-size: 0.75rem !important;
@@ -2602,7 +2602,7 @@ body:has(.app-sidebar.sidebar-collapsed) #chatView.active {
     transition: all 0.2s ease;
 }
 .btn-status-sudah:hover {
-    background: rgba(34, 197, 94, 0.25) !important;
+    background: rgba(34, 197, 94, 1) !important;
 }
 
 .btn-status-locked {

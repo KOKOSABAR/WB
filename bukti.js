@@ -226,7 +226,7 @@ async function syncWithSupabase() {
     
     // 3. Fetch Validation records
     try {
-        const { data: valData, error: valError } = await supabaseClient.from('bukti_validation').select('*');
+        const { data: valData, error: valError } = await supabaseClient.from('bukti_validation').select('*').limit(300);
         if (!valError && valData) {
             buktiState.validation = valData.map(v => ({
                 id: v.id,
@@ -247,7 +247,7 @@ async function syncWithSupabase() {
     
     // 4. Fetch Lock PL records
     try {
-        const { data: lpData, error: lpError } = await supabaseClient.from('bukti_lock_pl').select('*');
+        const { data: lpData, error: lpError } = await supabaseClient.from('bukti_lock_pl').select('*').limit(300);
         if (!lpError && lpData) {
             buktiState.lockPl = lpData.map(l => ({
                 id: l.id,
@@ -278,7 +278,7 @@ async function syncWithSupabase() {
     
     // 5. Fetch Geser G records
     try {
-        const { data: ggData, error: ggError } = await supabaseClient.from('bukti_geser_g').select('*');
+        const { data: ggData, error: ggError } = await supabaseClient.from('bukti_geser_g').select('*').limit(300);
         if (!ggError && ggData) {
             buktiState.geserG = ggData.map(g => ({
                 id: g.id,
@@ -301,7 +301,7 @@ async function syncWithSupabase() {
     
     // 6. Fetch WD Besar records
     try {
-        const { data: wdBData, error: wdBError } = await supabaseClient.from('bukti_wd_besar').select('*');
+        const { data: wdBData, error: wdBError } = await supabaseClient.from('bukti_wd_besar').select('*').limit(300);
         if (!wdBError && wdBData) {
             buktiState.wdBesar = wdBData.map(w => ({
                 id: w.id,
@@ -832,6 +832,7 @@ function renderValidationTable() {
         return;
     }
     
+    const frag = document.createDocumentFragment();
     filtered.forEach((r, idx) => {
         const tr = document.createElement("tr");
         
@@ -912,8 +913,9 @@ function renderValidationTable() {
                 </div>
             </td>
         `;
-        tbody.appendChild(tr);
+        frag.appendChild(tr);
     });
+    tbody.appendChild(frag);
 }
 
 function openAddValidationModal() {
@@ -1148,6 +1150,7 @@ function renderLockPlTable() {
         return;
     }
     
+    const frag = document.createDocumentFragment();
     filtered.forEach((r, idx) => {
         const tr = document.createElement("tr");
         
@@ -1231,8 +1234,9 @@ function renderLockPlTable() {
                 </div>
             </td>
         `;
-        tbody.appendChild(tr);
+        frag.appendChild(tr);
     });
+    tbody.appendChild(frag);
 }
 
 function updateLockPlStatus(id, newStatus) {
@@ -1796,6 +1800,7 @@ function renderGeserGTable() {
         return;
     }
     
+    const frag = document.createDocumentFragment();
     filtered.forEach((r, idx) => {
         const tr = document.createElement("tr");
         
@@ -1840,8 +1845,9 @@ function renderGeserGTable() {
                 </div>
             </td>
         `;
-        tbody.appendChild(tr);
+        frag.appendChild(tr);
     });
+    tbody.appendChild(frag);
 }
 
 // Single-click PENDING badge → instant DOM update, deferred save, background Supabase
@@ -2125,6 +2131,7 @@ function renderWdKendalaTable() {
         return;
     }
     
+    const frag = document.createDocumentFragment();
     filtered.forEach((r, idx) => {
         const tr = document.createElement("tr");
         
@@ -2170,8 +2177,9 @@ function renderWdKendalaTable() {
                 </div>
             </td>
         `;
-        tbody.appendChild(tr);
+        frag.appendChild(tr);
     });
+    tbody.appendChild(frag);
 }
 
 function copyWdKendalaSummary(id) {

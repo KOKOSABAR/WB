@@ -35,7 +35,9 @@ async function fetchPassportData() {
         const { data, error } = await supabaseClient
             .from('passport_handovers')
             .select('*')
-            .eq('date', state.pasporSelectedDate);
+            .eq('date', state.pasporSelectedDate)
+            .order('created_at', { ascending: false })
+            .limit(200);
         if (error) {
             if (error.code === '42P01') {
                 console.warn("Tabel 'passport_handovers' tidak ditemukan di Supabase. Beralih ke LocalStorage.");
@@ -356,6 +358,8 @@ function _renderTable(tbodyId, dataList, shift) {
     let lastRole = null;
     let idx = 0;
 
+    const frag = document.createDocumentFragment();
+
     [...dataList]
         .sort((a, b) => {
             const roleA = normalizePasporRole(a.staff.role).toLowerCase().trim();
@@ -382,7 +386,7 @@ function _renderTable(tbodyId, dataList, shift) {
                         ${displayRoleName}
                     </td>
                 `;
-                tbody.appendChild(dividerTr);
+                frag.appendChild(dividerTr);
                 lastRole = currentRole;
             }
 
@@ -460,8 +464,9 @@ function _renderTable(tbodyId, dataList, shift) {
             ninput.addEventListener('blur', () => _saveNote(s.id, shift, ninput.value));
             ninput.addEventListener('keydown', e => { if (e.key === 'Enter') ninput.blur(); });
 
-            tbody.appendChild(tr);
+            frag.appendChild(tr);
         });
+    tbody.appendChild(frag);
 }
 
 // ─── Simpan status lokal (fallback) ──────────────────

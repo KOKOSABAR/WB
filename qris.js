@@ -184,7 +184,8 @@ async function fetchQrisData() {
             .select('*')
             .gte('waktu', startDate)
             .lte('waktu', endDate)
-            .order('waktu', { ascending: false });
+            .order('waktu', { ascending: false })
+            .limit(200);
 
         if (error) throw error;
         qrisState.items = data || [];
@@ -249,6 +250,7 @@ function renderQrisTable() {
     }
     emptyState.style.display = 'none';
 
+    const frag = document.createDocumentFragment();
     filtered.forEach((item, idx) => {
         // status badge style
         const badgeMap = {
@@ -313,8 +315,9 @@ function renderQrisTable() {
                 </div>
             </td>
         `;
-        tbody.appendChild(tr);
+        frag.appendChild(tr);
     });
+    tbody.appendChild(frag);
 }
 
 // ── FILTER ─────────────────────────────────────────────────────────────────

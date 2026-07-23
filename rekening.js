@@ -389,7 +389,8 @@ function renderRekeningTable() {
     if (emptyState) emptyState.classList.add('hide');
 
     let html = '';
-    filtered.forEach(item => {
+    const displayList = filtered.slice(0, 150);
+    displayList.forEach(item => {
         const daysLeft = getDaysRemaining(item.masa_aktif, item.is_permanent);
         const isExpiring = isExpiringSoon(item.masa_aktif, item.is_permanent);
         const statusBadge = getStatusBadgeHTML(item.status);
@@ -455,6 +456,10 @@ function renderRekeningTable() {
         </tr>
         `;
     });
+
+    if (filtered.length > 150) {
+        html += `<tr><td colspan="8" style="text-align:center;padding:15px;color:rgba(255,255,255,0.4);font-size:0.8rem;">Menampilkan 150 dari ${filtered.length} data. Gunakan pencarian untuk mencari data lainnya.</td></tr>`;
+    }
 
     tbody.innerHTML = html;
 }

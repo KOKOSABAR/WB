@@ -29,7 +29,8 @@ async function fetchBandingData() {
             .gte('tanggal', startDate)
             .lte('tanggal', endDate)
             .order('tanggal', { ascending: false })
-            .order('created_at', { ascending: false });
+            .order('created_at', { ascending: false })
+            .limit(200);
 
         if (error) throw error;
         bandingState.items = data || [];
@@ -151,94 +152,96 @@ function renderBandingTable() {
     
     emptyState.style.display = 'none';
     
-    filtered.forEach((item, index) => {
-        const tr = document.createElement('tr');
-        tr.style.cursor = 'pointer';
-        tr.title = 'Double klik untuk melihat rincian lengkap';
-        tr.setAttribute('ondblclick', `openBandingDetailModal('${item.id}')`);
-        
-        // Dynamic row styling based on status
-        let trBg = 'rgba(255,255,255,0.01)';
-        let borderLeft = '4px solid transparent';
-        
-        if (item.keterangan === 'DONE') {
-            trBg = 'rgba(16, 185, 129, 0.02)';
-            borderLeft = '4px solid #10b981';
-        } else if (item.keterangan === 'PENDING') {
-            trBg = 'rgba(245, 158, 11, 0.02)';
-            borderLeft = '4px solid #f59e0b';
-        } else if (item.keterangan === 'BANDING DI TOLAK') {
-            trBg = 'rgba(244, 63, 94, 0.02)';
-            borderLeft = '4px solid #f43f5e';
-        } else if (item.keterangan === 'NOTE') {
-            trBg = 'rgba(14, 165, 233, 0.02)';
-            borderLeft = '4px solid #0ea5e9';
-        }
-        
-        tr.style.background = trBg;
-        tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
-        
-        // Helper to format multiple links - clicks now trigger in-page popup modal instead of new tab
-        const renderLinks = (linksStr) => {
-            if (!linksStr) return '<span style="font-size: 0.68rem; color: rgba(255,255,255,0.2); italic">Tidak ada bukti</span>';
-            const links = linksStr.split(',').map(l => l.trim()).filter(Boolean);
-            if (links.length === 0) return '<span style="font-size: 0.68rem; color: rgba(255,255,255,0.2); italic">Tidak ada bukti</span>';
+        const frag = document.createDocumentFragment();
+        filtered.forEach((item, index) => {
+            const tr = document.createElement('tr');
+            tr.style.cursor = 'pointer';
+            tr.title = 'Double klik untuk melihat rincian lengkap';
+            tr.setAttribute('ondblclick', `openBandingDetailModal('${item.id}')`);
             
-            return `<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;" onclick="event.stopPropagation()">
-                ${links.map((link, idx) => `
-                    <button onclick="openBuktiScreenshot('${link}')" class="btn-action-icon" style="background: rgba(255,255,255,0.04); color: #fbbf24; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 2px 6px; font-size: 0.68rem; display: flex; align-items: center; gap: 4px; width: fit-content; text-decoration: none; cursor: pointer;">
-                        <i class="fa-solid fa-eye" style="font-size: 0.6rem;"></i>
-                        <span>Bukti ${idx + 1}</span>
-                    </button>
-                `).join('')}
-            </div>`;
-        };
+            // Dynamic row styling based on status
+            let trBg = 'rgba(255,255,255,0.01)';
+            let borderLeft = '4px solid transparent';
+            
+            if (item.keterangan === 'DONE') {
+                trBg = 'rgba(16, 185, 129, 0.02)';
+                borderLeft = '4px solid #10b981';
+            } else if (item.keterangan === 'PENDING') {
+                trBg = 'rgba(245, 158, 11, 0.02)';
+                borderLeft = '4px solid #f59e0b';
+            } else if (item.keterangan === 'BANDING DI TOLAK') {
+                trBg = 'rgba(244, 63, 94, 0.02)';
+                borderLeft = '4px solid #f43f5e';
+            } else if (item.keterangan === 'NOTE') {
+                trBg = 'rgba(14, 165, 233, 0.02)';
+                borderLeft = '4px solid #0ea5e9';
+            }
+            
+            tr.style.background = trBg;
+            tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+            
+            // Helper to format multiple links - clicks now trigger in-page popup modal instead of new tab
+            const renderLinks = (linksStr) => {
+                if (!linksStr) return '<span style="font-size: 0.68rem; color: rgba(255,255,255,0.2); italic">Tidak ada bukti</span>';
+                const links = linksStr.split(',').map(l => l.trim()).filter(Boolean);
+                if (links.length === 0) return '<span style="font-size: 0.68rem; color: rgba(255,255,255,0.2); italic">Tidak ada bukti</span>';
+                
+                return `<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;" onclick="event.stopPropagation()">
+                    ${links.map((link, idx) => `
+                        <button onclick="openBuktiScreenshot('${link}')" class="btn-action-icon" style="background: rgba(255,255,255,0.04); color: #fbbf24; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 2px 6px; font-size: 0.68rem; display: flex; align-items: center; gap: 4px; width: fit-content; text-decoration: none; cursor: pointer;">
+                            <i class="fa-solid fa-eye" style="font-size: 0.6rem;"></i>
+                            <span>Bukti ${idx + 1}</span>
+                        </button>
+                    `).join('')}
+                </div>`;
+            };
 
-        // Render Status Badge
-        let badgeStyle = '';
-        if (item.keterangan === 'DONE') {
-            badgeStyle = 'background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.25);';
-        } else if (item.keterangan === 'PENDING') {
-            badgeStyle = 'background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25);';
-        } else if (item.keterangan === 'BANDING DI TOLAK') {
-            badgeStyle = 'background: rgba(244,63,94,0.12); color: #fb7185; border: 1px solid rgba(244,63,94,0.25);';
-        } else if (item.keterangan === 'NOTE') {
-            badgeStyle = 'background: rgba(14,165,233,0.12); color: #38bdf8; border: 1px solid rgba(14,165,233,0.25);';
-        }
-        
-        const badge = `<span class="badge" style="padding: 3px 8px; font-size: 0.68rem; font-weight: 700; border-radius: 4px; text-transform: uppercase; cursor: pointer; transition: transform 0.15s, opacity 0.15s; ${badgeStyle}" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="event.stopPropagation(); openStatusChangePopover(event, '${item.id}', '${item.keterangan}')" title="Klik untuk mengubah status">${item.keterangan || 'PENDING'}</span>`;
+            // Render Status Badge
+            let badgeStyle = '';
+            if (item.keterangan === 'DONE') {
+                badgeStyle = 'background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.25);';
+            } else if (item.keterangan === 'PENDING') {
+                badgeStyle = 'background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25);';
+            } else if (item.keterangan === 'BANDING DI TOLAK') {
+                badgeStyle = 'background: rgba(244,63,94,0.12); color: #fb7185; border: 1px solid rgba(244,63,94,0.25);';
+            } else if (item.keterangan === 'NOTE') {
+                badgeStyle = 'background: rgba(14,165,233,0.12); color: #38bdf8; border: 1px solid rgba(14,165,233,0.25);';
+            }
+            
+            const badge = `<span class="badge" style="padding: 3px 8px; font-size: 0.68rem; font-weight: 700; border-radius: 4px; text-transform: uppercase; cursor: pointer; transition: transform 0.15s, opacity 0.15s; ${badgeStyle}" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="event.stopPropagation(); openStatusChangePopover(event, '${item.id}', '${item.keterangan}')" title="Klik untuk mengubah status">${item.keterangan || 'PENDING'}</span>`;
 
-        // Truncate long Alasan Banding text
-        const fullDesc = item.keterangan_banding || '-';
-        const truncatedDesc = fullDesc.length > 55 ? fullDesc.substring(0, 55) + '...' : fullDesc;
+            // Truncate long Alasan Banding text
+            const fullDesc = item.keterangan_banding || '-';
+            const truncatedDesc = fullDesc.length > 55 ? fullDesc.substring(0, 55) + '...' : fullDesc;
 
-        tr.innerHTML = `
-            <td style="width: 3%; text-align: center; border-left: ${borderLeft}; vertical-align: middle; font-weight: 700; color: rgba(255,255,255,0.4);">${index + 1}</td>
-            <td style="width: 8%; vertical-align: middle; font-weight: 600; color: rgba(255,255,255,0.7);">${formatBandingDate(item.tanggal)}</td>
-            <td style="width: 14%; vertical-align: middle; font-weight: 700; color: #fbbf24;">${item.nama_staff}</td>
-            <td style="width: 8%; vertical-align: middle; font-weight: 600; color: white;">${item.nama_situs}</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">${renderLinks(item.bukti_ss_auditor)}</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">${renderLinks(item.bukti_banding)}</td>
-            <td style="width: 23%; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; color: rgba(255,255,255,0.85);" title="Double klik untuk melihat rincian lengkap">${truncatedDesc}</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">${badge}</td>
-            <td style="width: 14%; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; color: rgba(255,255,255,0.55);" title="${item.keterangan_tolak || ''}">${item.keterangan_tolak || '<span style="color: rgba(255,255,255,0.25); italic">Tidak ada catatan</span>'}</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;" onclick="event.stopPropagation()">
-                <div style="display: flex; gap: 4px; justify-content: center; align-items: center;">
-                    <button class="btn-action-icon" onclick="openEditBandingModal('${item.id}')" style="background: rgba(251,191,36,0.08); color: #fbbf24; border: 1px solid rgba(251,191,36,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Edit Kasus">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </button>
-                    <button class="btn-action-icon" onclick="deleteBandingRecord('${item.id}')" style="background: rgba(244,63,94,0.08); color: #fb7185; border: 1px solid rgba(244,63,94,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Hapus Kasus">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
-                    <button class="btn-action-icon" onclick="copyBandingSummary('${item.id}')" style="background: rgba(56,189,248,0.08); color: #38bdf8; border: 1px solid rgba(56,189,248,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Salin Ringkasan">
-                        <i class="fa-solid fa-copy"></i>
-                    </button>
-                </div>
-            </td>
-        `;
-        tbody.appendChild(tr);
-    });
-}
+            tr.innerHTML = `
+                <td style="width: 3%; text-align: center; border-left: ${borderLeft}; vertical-align: middle; font-weight: 700; color: rgba(255,255,255,0.4);">${index + 1}</td>
+                <td style="width: 8%; vertical-align: middle; font-weight: 600; color: rgba(255,255,255,0.7);">${formatBandingDate(item.tanggal)}</td>
+                <td style="width: 14%; vertical-align: middle; font-weight: 700; color: #fbbf24;">${item.nama_staff}</td>
+                <td style="width: 8%; vertical-align: middle; font-weight: 600; color: white;">${item.nama_situs}</td>
+                <td style="width: 10%; text-align: center; vertical-align: middle;">${renderLinks(item.bukti_ss_auditor)}</td>
+                <td style="width: 10%; text-align: center; vertical-align: middle;">${renderLinks(item.bukti_banding)}</td>
+                <td style="width: 23%; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; color: rgba(255,255,255,0.85);" title="Double klik untuk melihat rincian lengkap">${truncatedDesc}</td>
+                <td style="width: 10%; text-align: center; vertical-align: middle;">${badge}</td>
+                <td style="width: 14%; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; color: rgba(255,255,255,0.55);" title="${item.keterangan_tolak || ''}">${item.keterangan_tolak || '<span style="color: rgba(255,255,255,0.25); italic">Tidak ada catatan</span>'}</td>
+                <td style="width: 10%; text-align: center; vertical-align: middle;" onclick="event.stopPropagation()">
+                    <div style="display: flex; gap: 4px; justify-content: center; align-items: center;">
+                        <button class="btn-action-icon" onclick="openEditBandingModal('${item.id}')" style="background: rgba(251,191,36,0.08); color: #fbbf24; border: 1px solid rgba(251,191,36,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Edit Kasus">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button class="btn-action-icon" onclick="deleteBandingRecord('${item.id}')" style="background: rgba(244,63,94,0.08); color: #fb7185; border: 1px solid rgba(244,63,94,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Hapus Kasus">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <button class="btn-action-icon" onclick="copyBandingSummary('${item.id}')" style="background: rgba(56,189,248,0.08); color: #38bdf8; border: 1px solid rgba(56,189,248,0.15); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.72rem;" title="Salin Ringkasan">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                </td>
+            `;
+            frag.appendChild(tr);
+        });
+        tbody.appendChild(frag);
+    }
 
 // Handle real-time updates from filters
 function filterBandingTable() {
