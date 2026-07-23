@@ -6928,222 +6928,126 @@ window.loadAndApplyStaffBackground = loadAndApplyStaffBackground;
 // ==========================================
 // MY BIO LOGIC
 // ==========================================
+// ================================================================
+// MOTIVATIONAL QUOTES — dipisah per waktu
+// PAGI  : 04.00–09.59  |  SIANG : 10.00–14.59
+// SORE  : 15.00–17.59  |  MALAM : 18.00–03.59
+// ================================================================
+const MOTIVATIONAL_QUOTES_BY_TIME = {
+    PAGI: [
+        "Selamat pagi! Mulailah harimu dengan niat yang kuat dan tekad yang membara.",
+        "Pagi yang baik dimulai dari pikiran yang positif — yuk semangat!",
+        "Bangun lebih awal, karena pagi adalah awal dari segala kemungkinan.",
+        "Setiap pagi adalah kesempatan baru untuk menjadi versi terbaik dirimu.",
+        "Awali pagi dengan senyuman, hasilnya akan mewarnai sepanjang harimu.",
+        "Pagi ini adalah anugerah. Gunakan sebaik-baiknya.",
+        "Jangan tunggu semangat datang — bangkitlah dan semangat itu akan mengikuti.",
+        "Pagi adalah waktu terbaik untuk menanamkan benih kerja keras.",
+        "Satu langkah kecil di pagi hari menentukan arah seluruh harimu.",
+        "Selamat pagi, hari ini kamu punya kesempatan yang belum pernah ada sebelumnya.",
+        "Mulai hari dengan bismillah, niat yang baik, dan kerja yang ikhlas.",
+        "Pagi-pagi sudah bersemangat? Itu tanda orang yang akan berhasil.",
+        "Setiap pagi membawa harapan baru. Jangan sia-siakan.",
+        "Kerja keras di pagi hari adalah investasi untuk ketenangan di malam hari.",
+        "Pagi adalah momen emas — gunakan untuk hal-hal yang berarti.",
+        "Bangun, bergerak, dan buat hari ini bermakna!",
+        "Semangat pagi! Hari ini kamu lebih kuat dari yang kamu kira.",
+        "Rezeki datang bagi mereka yang bergerak lebih pagi.",
+        "Jangan mulai harimu dengan kemalasan — pagi adalah milik yang bersemangat.",
+        "Pagi ini adalah kesempatan untuk membuktikan siapa dirimu.",
+    ],
+    SIANG: [
+        "Sudah setengah hari berlalu — tetap fokus, kamu hampir di tujuan!",
+        "Siang yang produktif adalah buah dari pagi yang bersemangat.",
+        "Jika lelah di siang hari, ingat mengapa kamu memulai.",
+        "Siang ini bukan waktunya menyerah, tapi waktunya mendorong lebih keras.",
+        "Pertahankan momentum — kerja terbaikmu bisa terjadi di siang hari.",
+        "Lelah di siang hari? Itu artinya kamu sudah bekerja keras — bangga!",
+        "Fokus pada satu tugas, selesaikan, lalu lanjut ke berikutnya.",
+        "Jangan biarkan kantuk siang menghentikan produktivitasmu.",
+        "Siang adalah saat untuk membuktikan daya tahanmu.",
+        "Setengah hari sudah kamu lalui dengan baik — pertahankan!",
+        "Kerja keras di siang hari, nikmati hasilnya nanti.",
+        "Kalau siang ini terasa berat, ingat: kamu sudah melewati yang lebih berat.",
+        "Tetap semangat di siang hari — itu tanda profesionalisme.",
+        "Siang ini adalah waktu untuk menyelesaikan yang belum selesai.",
+        "Satu tugas selesai di siang hari sudah merupakan kemenangan.",
+        "Jaga fokus, jaga energi — siang ini masih panjang.",
+        "Produktivitas siang hari menentukan seberapa puas kamu di akhir shift.",
+        "Jangan tergoda malas-malasan — siang ini masih banyak yang bisa dicapai.",
+        "Kamu sudah di tengah perjalanan — terus jalan, jangan berbalik.",
+        "Rasa lelah siang ini adalah bukti kamu bekerja sungguh-sungguh.",
+    ],
+    SORE: [
+        "Sore ini, tutup harimu dengan hasil terbaik yang kamu bisa.",
+        "Sore mengingatkan kita bahwa hari hampir usai — gunakan waktu yang tersisa.",
+        "Jelang penghujung hari, berikan yang terbaik sampai akhir.",
+        "Sore yang indah dimulai dari pekerjaan yang diselesaikan dengan baik.",
+        "Masih ada waktu — manfaatkan setiap menitnya sebelum hari berakhir.",
+        "Sore ini adalah kesempatanmu untuk menyelesaikan yang tertunda.",
+        "Jangan kendur di sore hari — penyelesaian yang baik memberi kepuasan luar biasa.",
+        "Sore adalah waktu untuk refleksi: sudah apa kamu hari ini?",
+        "Tutup harimu dengan kepala tegak — kamu sudah bekerja keras.",
+        "Di penghujung sore, pertahankan semangat yang sama seperti di pagi hari.",
+        "Sore ini adalah bab terakhir dari hari kerjamu — tuliskan dengan baik.",
+        "Lelah di sore hari adalah tanda hari yang produktif.",
+        "Jangan berhenti di sore hari — sedikit lagi, kamu pasti bisa.",
+        "Sore hari adalah milik mereka yang bertahan hingga akhir.",
+        "Kamu sudah melalui pagi dan siang dengan baik — selesaikan sorenya juga!",
+        "Istirahat boleh, tapi jangan biarkan sore berlalu tanpa hasil.",
+        "Di ujung hari, yang tersisa adalah kebanggaan atas kerja kerasmu.",
+        "Sore adalah momen untuk sprint terakhir — keluarkan sisa energimu.",
+        "Tutup shift dengan senyuman — kamu layak bangga!",
+        "Setiap sore yang produktif adalah hadiah untuk dirimu sendiri.",
+    ],
+    MALAM: [
+        "Selamat malam! Shift malam adalah ujian dedikasi yang sesungguhnya.",
+        "Malam yang hening adalah waktu terbaik untuk kerja fokus tanpa gangguan.",
+        "Saat yang lain tidur, kamu berkarya — itulah yang membedakanmu.",
+        "Malam ini, berikan yang terbaik untuk mereka yang mengandalkanmu.",
+        "Cahaya paling terang sering bersinar di tengah kegelapan malam.",
+        "Pekerja malam adalah pahlawan yang tidak semua orang lihat.",
+        "Malam membawa ketenangan — gunakan untuk produktivitas yang luar biasa.",
+        "Di malam hari, pikiran jernih membawa solusi terbaik.",
+        "Kamu memilih hadir saat orang lain istirahat — itu sebuah keberanian.",
+        "Malam ini mungkin panjang, tapi tekadmu lebih panjang dari itu.",
+        "Shift malam mengajarkan kita: kualitas kerja tidak bergantung waktu.",
+        "Terima kasih sudah hadir di saat yang tidak banyak orang mau.",
+        "Malam ini, dedikasi dan tanggung jawabmu adalah inspirasi.",
+        "Tidak ada yang sia-sia dari kerja keras di malam hari.",
+        "Malam ini kamu menjaga agar roda terus berputar — itu bermakna besar.",
+        "Kelelahan malam ini akan berbuah kebanggaan di pagi hari.",
+        "Bintang hanya terlihat di malam hari — seperti kamu, bersinar saat dibutuhkan.",
+        "Jaga semangatmu malam ini — karena apa yang kamu lakukan penting.",
+        "Di bawah langit malam, kamu membuktikan bahwa kerja keras tidak mengenal waktu.",
+        "Selamat bekerja malam ini — dedikasi terbaikmu tidak akan terlupakan.",
+    ]
+};
+
+// Helper: ambil pool sesuai jam sekarang
+function getQuotePoolByTime() {
+    const period = getRealtimeGreeting(); // 'PAGI' | 'SIANG' | 'SORE' | 'MALAM'
+    return MOTIVATIONAL_QUOTES_BY_TIME[period] || MOTIVATIONAL_QUOTES_BY_TIME.PAGI;
+}
+
+// Helper: hitung index deterministik dari seed (per hari + per staff + per periode)
+function getDailyQuoteIndex(pool, staff) {
+    const now = new Date();
+    const period = getRealtimeGreeting();
+    const seed = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}${period}${staff ? staff.id : ''}`;
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+        hash = (Math.imul(31, hash) + seed.charCodeAt(i)) | 0;
+    }
+    return Math.abs(hash) % pool.length;
+}
+
+// Kept for backward compatibility (used in edge cases)
 const MOTIVATIONAL_QUOTES = [
-    "Kesuksesan tidak datang kepada kita, kita yang harus mengejarnya dengan kerja keras dan ketekunan.",
-    "Bekerja keras adalah jalan menuju impian yang lebih besar.",
-    "Jangan takut gagal, karena kegagalan adalah pelajaran untuk kesuksesan yang lebih besar.",
-    "Setiap langkah kecil menuju tujuan adalah kemajuan yang berharga.",
-    "Keberhasilan tidak dilihat dari seberapa cepat kita mencapainya, tetapi dari seberapa konsisten kita bertahan dalam prosesnya.",
-    "Kerja keras akan membawa hasil, tetapi kerja cerdas akan mempercepat kesuksesan.",
-    "Jangan menunggu kesempatan datang, buatlah kesempatan dengan usaha dan tindakan.",
-    "Setiap hari adalah peluang baru untuk menjadi lebih baik dari hari kemarin.",
-    "Bekerja dengan penuh hati akan memberikan hasil yang luar biasa.",
-    "Kerja keras adalah investasi terbaik untuk masa depan.",
-    "Tidak ada yang mustahil jika kita berusaha dengan sepenuh hati.",
-    "Mimpi besar hanya bisa dicapai dengan kerja keras dan ketekunan.",
-    "Kesuksesan dimulai dari keinginan untuk terus belajar dan berkembang.",
-    "Setiap tantangan adalah peluang untuk menjadi lebih kuat.",
-    "Jangan biarkan kegagalan menghentikanmu. Gunakan kegagalan sebagai batu loncatan menuju kesuksesan.",
-    "Sukses bukan tentang seberapa banyak yang kita miliki, tetapi tentang seberapa banyak yang kita berikan.",
-    "Pekerjaan yang dilakukan dengan sepenuh hati akan selalu memberikan hasil yang terbaik.",
-    "Kerja keras adalah kunci utama untuk membuka pintu kesuksesan.",
-    "Tidak ada yang lebih memuaskan selain melihat hasil kerja keras yang berbuah manis.",
-    "Keberhasilan bukan hanya tentang apa yang kita capai, tetapi juga tentang bagaimana kita mencapainya.",
-    "Jangan menunggu motivasi datang, ciptakanlah dengan tindakan nyata.",
-    "Bekerja keras hari ini untuk kebahagiaan masa depan.",
-    "Setiap kegagalan adalah kesempatan untuk memulai lagi dengan lebih bijaksana.",
-    "Orang sukses bukan mereka yang tidak pernah gagal, tapi mereka yang tidak pernah menyerah.",
-    "Keberhasilan dimulai dari kemauan untuk terus berusaha meski dalam keadaan sulit.",
-    "Jangan berhenti ketika kamu lelah, berhentilah ketika kamu sudah mencapai tujuan.",
-    "Jangan takut untuk berbuat salah, karena kesalahan adalah cara terbaik untuk belajar.",
-    "Pekerjaan yang baik adalah pekerjaan yang dilakukan dengan penuh rasa tanggung jawab.",
-    "Semangat kerja adalah kunci untuk mencapai segala tujuan yang diinginkan.",
-    "Setiap orang punya kesempatan untuk sukses, yang membedakan adalah usaha yang dilakukan.",
-    "Kerja keras tidak akan mengkhianati hasil, hasillah yang akan mengungkapkan kerja keras.",
-    "Tidak ada jalan pintas menuju kesuksesan, hanya ada kerja keras yang konsisten.",
-    "Jadikan pekerjaanmu sebagai jalan untuk mengembangkan dirimu menjadi pribadi yang lebih baik.",
-    "Tantangan adalah kesempatan untuk menunjukkan kekuatanmu yang sebenarnya.",
-    "Sukses bukan milik mereka yang cerdas, tetapi mereka yang bekerja lebih keras.",
-    "Bekerjalah seolah-olah itu adalah pekerjaan terakhir yang kamu lakukan.",
-    "Jangan terlalu khawatir tentang hasil, fokuslah pada usaha yang terbaik.",
-    "Setiap hari adalah kesempatan untuk melakukan sesuatu yang lebih baik dari hari sebelumnya.",
-    "Kesuksesan adalah akumulasi dari upaya kecil yang dilakukan setiap hari.",
-    "Bekerja dengan cinta akan membuat hasilnya lebih berharga.",
-    "Setiap kesulitan adalah batu loncatan menuju kesuksesan.",
-    "Tantangan bukan untuk ditakuti, tetapi untuk dihadapi dengan keberanian.",
-    "Jangan biarkan rintangan menghentikan langkahmu, jadikan itu sebagai tantangan yang harus kamu taklukkan.",
-    "Keberanian untuk mencoba adalah langkah pertama menuju kesuksesan.",
-    "Jangan berhenti ketika kamu menghadapi masalah, teruslah bergerak maju.",
-    "Kesuksesan tidak diukur dari seberapa banyak kita menghindari kegagalan, tetapi dari seberapa banyak kita bangkit setelah kegagalan.",
-    "Setiap tantangan memberikan kesempatan untuk berkembang menjadi pribadi yang lebih baik.",
-    "Jika kamu berhenti berusaha, kamu akan kehilangan kesempatan untuk sukses.",
-    "Pekerjaan yang sulit biasanya menghasilkan hasil yang luar biasa.",
-    "Keberhasilan bukan tentang berapa kali kita jatuh, tetapi tentang berapa kali kita bangkit.",
-    "Tantangan adalah cara hidup untuk menguji sejauh mana kita mampu bertahan.",
-    "Jangan pernah meremehkan kekuatan semangat dan kerja keras.",
-    "Tantangan adalah kesempatan untuk membuktikan kemampuan diri.",
-    "Jangan takut pada tantangan, karena di sana tersembunyi peluang besar.",
-    "Kegagalan adalah guru terbaik yang mengajarkan kita untuk lebih bijaksana.",
-    "Setiap tantangan adalah kesempatan untuk belajar dan berkembang.",
-    "Tidak ada pencapaian besar yang bisa diraih tanpa melewati banyak tantangan.",
-    "Keberhasilan tidak datang dengan mudah, tetapi perjuangan membuatnya lebih berharga.",
-    "Tantangan akan membuatmu lebih kuat, lebih bijaksana, dan lebih siap menghadapi masa depan.",
-    "Berani menghadapi tantangan adalah langkah pertama menuju kesuksesan.",
-    "Jangan menyerah, karena kamu tidak pernah tahu seberapa dekat kamu dengan kesuksesan.",
-    "Kegagalan bukan akhir dari segalanya, itu hanya permulaan untuk mencoba lagi dengan lebih baik.",
-    "Jangan berhenti berusaha hanya karena kamu merasa lelah, keberhasilan sudah menunggu di depan sana.",
-    "Semangat yang kuat akan mengatasi segala hambatan yang ada.",
-    "Saat kamu merasa lelah, ingatlah alasan mengapa kamu mulai.",
-    "Keberhasilan datang kepada mereka yang tidak pernah menyerah meskipun keadaan sangat sulit.",
-    "Setiap usaha yang dilakukan dengan hati akan selalu membuahkan hasil.",
-    "Jangan biarkan kegagalan hari ini menghalangi kesuksesan besok.",
-    "Kamu lebih kuat dari yang kamu kira, jangan pernah menyerah.",
-    "Keputusasaan hanya sementara, sementara hasil dari usaha terus berlanjut.",
-    "Setiap tantangan yang kamu hadapi adalah kesempatan untuk tumbuh.",
-    "Jangan berhenti ketika kamu kelelahan, berhentilah ketika kamu sudah berhasil.",
-    "Keberhasilan terbesar datang dari ketekunan yang tidak kenal lelah.",
-    "Setiap hari adalah peluang untuk memperbaiki diri dan mencapai tujuan.",
-    "Jangan pernah menyerah pada impianmu hanya karena kesulitan yang kamu hadapi.",
-    "Mimpi akan menjadi kenyataan jika kamu tetap bertahan untuk mencapainya.",
-    "Jangan takut untuk memulai dari awal, karena setiap langkah adalah kemajuan.",
-    "Keberhasilan tidak akan datang dengan mudah, tetapi itu pasti datang jika kita tidak berhenti berusaha.",
-    "Bangkitlah setelah jatuh, karena di setiap kegagalan terdapat pelajaran berharga.",
-    "Tantangan yang kita hadapi akan semakin mudah ketika kita memiliki tekad yang kuat.",
-    "Setiap hari adalah kesempatan baru untuk mencapai tujuan yang lebih besar.",
-    "Produktivitas bukan tentang berapa lama kamu bekerja, tetapi tentang bagaimana kamu memanfaatkan waktu.",
-    "Jangan fokus pada berapa banyak pekerjaan yang perlu diselesaikan, tetapi pada kualitas setiap tugas yang dikerjakan.",
-    "Kerja cerdas lebih baik daripada kerja keras tanpa arah.",
-    "Jangan menunda pekerjaan yang bisa diselesaikan hari ini, karena setiap hari adalah peluang untuk lebih baik.",
-    "Fokus pada tujuan, dan hasil akan mengikuti.",
-    "Produktivitas bukan hanya tentang bekerja keras, tetapi bekerja dengan cerdas.",
-    "Atur prioritas, selesaikan yang penting dulu, dan lihat bagaimana hari-harimu berubah.",
-    "Kerja keras yang konsisten akan menghasilkan produktivitas yang luar biasa.",
-    "Produktivitas datang dari kebiasaan yang baik dan disiplin dalam bekerja.",
-    "Jadikan setiap tugas sebagai peluang untuk meningkatkan kemampuan diri.",
-    "Semakin baik kita mengelola waktu, semakin besar pula pencapaian yang kita raih.",
-    "Produktivitas bukan tentang bekerja lebih keras, tetapi bekerja lebih pintar.",
-    "Ciptakan tujuan yang jelas, dan capailah dengan langkah-langkah yang terorganisir.",
-    "Jadikan waktu sebagai teman terbaik dalam meraih kesuksesan.",
-    "Setiap hari adalah kesempatan untuk bekerja lebih baik dari hari sebelumnya.",
-    "Bekerja dengan fokus akan meningkatkan kualitas pekerjaan dan hasil yang didapat.",
-    "Bekerja dengan hati adalah cara terbaik untuk tetap produktif.",
-    "Produktivitas dimulai dari kemauan untuk bekerja dengan disiplin dan penuh tanggung jawab.",
-    "Jangan biarkan gangguan menghalangi produktivitasmu, fokuslah pada tujuan.",
-    "Satu langkah kecil tetaplah kemajuan.",
-    "Dirimu yang sekarang sudah cukup hebat.",
-    "Istirahatlah, jangan berhenti.",
-    "Fokus pada proses, bukan hanya hasil.",
-    "Hari esok adalah kesempatan baru.",
-    "Usaha tidak akan mengkhianati hasil.",
-    "Bekerjalah dengan hati, hasilnya akan mengikuti.",
-    "Tantangan adalah cara Tuhan mendewasakanmu.",
-    "Disiplin adalah jembatan menuju impian.",
-    "Jadilah lebih baik dari dirimu yang kemarin.",
-    "Gagal sekali bukan berarti selamanya.",
-    "Jatuh tujuh kali, bangkit delapan kali.",
-    "Luka hari ini adalah kekuatan hari esok.",
-    "Pelangi muncul setelah badai reda.",
-    "Jangan takut memulai kembali dari awal.",
-    "Semangat untuk hari ini! Semoga dimudahkan",
-    "Semangat ya, aku tahu kamu bisa!",
-    "Setiap langkah kecil membawa kita lebih dekat ke tujuan besar",
-    "Kerja keras hari ini, panen hasil esok hari",
-    "Fokus pada progres, bukan kesempurnaan",
-    "Kamu lebih kuat dari yang kamu kira, buktikan hari ini!",
-    "Jangan takut gagal, itu bagian dari proses menuju sukses",
-    "Hari ini adalah kesempatan baru untuk berprestasi",
-    "Percaya pada kemampuanmu, kamu luar biasa!",
-    "Kerja cerdas dan kerja keras adalah kombinasi tak terkalahkan",
-    "Tetap semangat, rekan timmu bergantung padamu",
-    "Hadapi tantangan dengan senyuman, itu tanda keberanianmu",
-    "Jangan tunda, lakukan yang terbaik sekarang juga",
-    "Kesuksesan datang dari konsistensi dan ketekunan",
-    "Bangun dengan tekad, tidur dengan kepuasan",
-    "Setiap pekerjaan adalah batu loncatan menuju impianmu",
-    "Jadilah inspirasi bagi yang lain dengan dedikasimu",
-    "Pikiran positif menarik hasil positif, tetap optimis!",
-    "Lelah adalah sementara, tapi pencapaian adalah selamanya",
-    "Kerja adalah cara kita memberi arti pada hidup",
-    "Setiap usaha, sekecil apapun, berarti",
-    "Percaya pada proses, hasil akan mengikuti",
-    "Jangan takut mencoba hal baru, itulah cara kita tumbuh",
-    "Fokus pada solusi, bukan masalah",
-    "Kesabaran adalah kunci mengatasi rintangan",
-    "Disiplin adalah jembatan antara tujuan dan pencapaian",
-    "Kerja tim mengubah mimpi menjadi kenyataan",
-    "Perjalananmu unik, jangan bandingkan dengan orang lain",
-    "Setiap tantangan adalah peluang untuk belajar",
-    "Usahamu tidak pernah sia-sia, tetap semangat!",
-    "Kerja keras adalah investasi terbaik untuk masa depan",
-    "Jadilah bagian dari solusi, bukan masalah",
-    "Berikan yang terbaik, dan yang terbaik akan datang padamu",
-    "Tetap rendah hati, biarkan prestasimu berbicara",
-    "Kegagalan adalah guru terbaik, belajarlah darinya",
-    "Setiap hari adalah kesempatan untuk menjadi lebih baik",
-    "Kerja dengan passion, hasilnya akan luar biasa",
-    "Jadilah teladan dengan integritas dan dedikasimu",
-    "Setiap usaha membawa berkah, percayalah",
-    "Bermimpi besar, kerja keras untuk mewujudkannya",
-    "Konsistensi adalah kunci keberhasilan jangka panjang",
-    "Hadapi hari ini dengan energi penuh, esok akan berterima kasih",
-    "Jangan biarkan ketakutan menghalangi langkahmu",
-    "Kerja adalah cara kita berkontribusi pada dunia",
-    "Kamu adalah aset berharga, tunjukkan potensimu!",
-    "Setiap tugas kecil berkontribusi pada gambaran besar",
-    "Jadilah proaktif, ambil inisiatif untuk perubahan",
-    "Usahamu akan dihargai, teruslah berjuang",
-    "Setiap langkah adalah kemenangan, rayakan itu!",
-    "Kamu adalah bintang di tempat kerjamu, bersinarlah!",
-    "Jangan ragu tampil maksimal, hasil tak akan mengkhianati usaha",
-    "Setiap pagi adalah kesempatan untuk mulai lebih kuat",
-    "Kamu berkembang setiap hari tanpa kamu sadari",
-    "Jangan berhenti saat lelah, berhenti saat selesai",
-    "Kamu layak mendapatkan hasil terbaik dari kerja kerasmu",
-    "Terus melangkah, bahkan saat langkah terasa berat",
-    "Kesabaran dan konsistensi akan membawamu jauh",
-    "Buat harimu produktif, satu tugas demi satu tugas",
-    "Tidak perlu sempurna, cukup lakukan dengan sepenuh hati",
-    "Tetap fokus, kamu sudah berada di jalur yang benar",
-    "Hasil besar dimulai dari kebiasaan kecil yang baik",
-    "Kamu punya kemampuan untuk menyelesaikan ini",
-    "Jangan biarkan rasa ragu menghentikan potensi terbaikmu",
-    "Hari yang produktif dimulai dari pikiran yang positif",
-    "Sukses adalah gabungan antara keberanian dan ketekunan",
-    "Kamu bisa mengubah tantangan menjadi kemenangan",
-    "Lakukan yang bisa kamu lakukan, dengan sumber daya yang kamu punya",
-    "Percayalah, perjalanan ini akan sepadan",
-    "Setiap hari kamu selangkah lebih dekat ke tujuanmu",
-    "Bangkit lagi setiap kali jatuh, itu yang terpenting",
-    "Kerja keras akan selalu menemukan jalannya",
-    "Setiap proses punya waktunya sendiri, tetap sabar",
-    "Jangan remehkan pencapaian kecilmu, itu pondasi kesuksesan",
-    "Kamu mampu menghadapi tekanan ini, tetap tenang",
-    "Hasil luar biasa datang dari orang yang tidak menyerah",
-    "Tetap belajar, tetap tumbuh, tetap bergerak",
-    "Mulai sekarang, jangan menunggu momen sempurna",
-    "Kerja baik adalah cerminan dari sikap yang baik",
-    "Kamu sedang membangun masa depanmu hari ini",
-    "Jadikan pekerjaanmu sebagai sarana untuk berkembang",
-    "Jangan berhenti memperbaiki diri, sekecil apa pun",
-    "Ambil langkah pertama, sisanya akan mengikuti",
-    "Kamu bisa menyelesaikan lebih banyak dari yang kamu pikirkan",
-    "Saat ragu, ingat alasan kenapa kamu memulai",
-    "Tidak ada usaha yang sia-sia jika kamu terus mencoba",
-    "Jadikan kesulitan sebagai batu loncatan",
-    "Kerjakan tugas dengan hati, hasilnya akan berbeda",
-    "Disiplin hari ini menentukan kesempatanmu esok hari",
-    "Pilih untuk tetap maju meski perlahan",
-    "Yakinlah, kamu menuju arah yang benar",
-    "Setiap pekerjaan bisa menjadi peluang untuk bersinar",
-    "Kamu tidak sendirian, banyak yang percaya padamu",
-    "Kerja kerasmu adalah bukti dedikasi yang luar biasa",
-    "Selalu tinggalkan jejak kebaikan di tempat kerja",
-    "Hari yang sibuk adalah bukti kamu dibutuhkan",
-    "Kamu bisa membuat perbedaan lewat pekerjaanmu",
-    "Fokus pada apa yang bisa kamu kontrol hari ini",
-    "Setiap tugas selesai adalah kemenangan kecil",
-    "Kamu layak bangga pada prosesmu sejauh ini",
-    "Terus melangkah, masa depan cerah sedang menunggumu"
+    ...MOTIVATIONAL_QUOTES_BY_TIME.PAGI,
+    ...MOTIVATIONAL_QUOTES_BY_TIME.SIANG,
+    ...MOTIVATIONAL_QUOTES_BY_TIME.SORE,
+    ...MOTIVATIONAL_QUOTES_BY_TIME.MALAM,
 ];
 
 // ----------------------------------------------------------------
@@ -7168,6 +7072,13 @@ function _renderGreetingEl() {
         HAI, SELAMAT ${greeting}
         <span style="display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,rgba(251,191,36,0.6),transparent);"></span>
     `;
+    // Also refresh quote when the greeting period changes
+    const quoteEl = document.getElementById('bioMotivationQuote');
+    if (quoteEl && window._bioStaffRef) {
+        const pool = getQuotePoolByTime();
+        const idx  = getDailyQuoteIndex(pool, window._bioStaffRef);
+        quoteEl.textContent = `"${pool[idx]}"`;
+    }
 }
 
 function startBioGreetingClock() {
@@ -7203,20 +7114,19 @@ function updateBioView() {
         return;
     }
     
+    // Store staff ref for the greeting clock (used by _renderGreetingEl)
+    window._bioStaffRef = staff;
+
     // Determine greeting based on realtime clock (updates every minute via startBioGreetingClock)
     startBioGreetingClock(); // sets innerHTML immediately and starts auto-refresh timer
     greetingNameEl.textContent = staff.name.toUpperCase();
     
-    // Pick a quote that stays fixed all day and only changes at 00:00:00.
-    // Seed = "YYYYMMDD" + staff.id → deterministic index regardless of refresh.
-    const now = new Date();
-    const dateSeed = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}${staff.id || ''}`;
-    let seedHash = 0;
-    for (let i = 0; i < dateSeed.length; i++) {
-        seedHash = (Math.imul(31, seedHash) + dateSeed.charCodeAt(i)) | 0;
-    }
-    const dailyIdx = Math.abs(seedHash) % MOTIVATIONAL_QUOTES.length;
-    motivationQuoteEl.textContent = `"${MOTIVATIONAL_QUOTES[dailyIdx]}"`;
+    // Pick quote from the pool matching current time period.
+    // Seed = YYYYMMDD + period + staff.id → same quote all day per period,
+    // changes at 00:00 (day change) AND at 10:00, 15:00, 18:00 (period change).
+    const quotePool = getQuotePoolByTime();
+    const quoteIdx  = getDailyQuoteIndex(quotePool, staff);
+    motivationQuoteEl.textContent = `"${quotePool[quoteIdx]}"`;
 
     // Apply rules card visibility + content from settings
     applyRulesCardSettings();
