@@ -95,11 +95,14 @@ function deduplicateRekeningItems(items) {
 }
 window.deduplicateRekeningItems = deduplicateRekeningItems;
 
-// 1. MEMUAT DATA REKENING (Supabase, Base44 Importer & LocalStorage Fallback)
+/// 1. MEMUAT DATA REKENING (Base44 902 Data Importer & Supabase/LocalStorage Sync)
 async function fetchRekeningData() {
     const base44Items = (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) 
         ? window.BASE44_REKENING_DATA 
         : [];
+
+    // Filter out any legacy dummy sample data (rek-1, rek-2, etc.)
+    const cleanBase44 = base44Items.filter(item => item && !String(item.id).startsWith('rek-1') && !String(item.id).startsWith('rek-2') && !item.is_sample);
 
     if (window.supabaseClient) {
         try {
@@ -108,42 +111,28 @@ async function fetchRekeningData() {
                 .select('*')
                 .order('tanggal_input', { ascending: false });
 
-            if (!error && data) {
-                if (data.length >= base44Items.length && data.length > 0) {
-                    rekeningState.items = deduplicateRekeningItems(data);
-                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
-                    return;
-                } else if (base44Items.length > 0) {
-                    rekeningState.items = deduplicateRekeningItems(base44Items);
-                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
-                    seedBase44ToSupabase(rekeningState.items);
+            if (!error && data && data.length > 0) {
+                // Filter legacy sample data from Supabase
+                const cleanData = data.filter(item => item && !String(item.id).startsWith('rek-1') && !String(item.id).startsWith('rek-2') && !item.is_sample);
+                
+                if (cleanData.length >= cleanBase44.length && cleanData.length > 0) {
+                    rekeningState.items = cleanData;
+                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(cleanData));
                     return;
                 }
             }
         } catch (err) {
-            console.warn("Gagal memuat data_rekening dari Supabase, menggunakan cache/local fallback:", err);
+            console.warn("Gagal memuat data_rekening dari Supabase, menggunakan Base44 dataset:", err);
         }
     }
 
-    // Fallback LocalStorage or Base44 Data
-    const localData = localStorage.getItem('restease_data_rekening_cache');
-    if (localData) {
-        try {
-            const parsed = JSON.parse(localData);
-            if (Array.isArray(parsed) && parsed.length >= base44Items.length && parsed.length > 0) {
-                rekeningState.items = deduplicateRekeningItems(parsed);
-            } else if (base44Items.length > 0) {
-                rekeningState.items = deduplicateRekeningItems(base44Items);
-                localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
-            } else {
-                rekeningState.items = deduplicateRekeningItems(getDummyRekeningData());
-            }
-        } catch (e) {
-            rekeningState.items = deduplicateRekeningItems(base44Items.length > 0 ? base44Items : getDummyRekeningData());
-        }
-    } else {
-        rekeningState.items = deduplicateRekeningItems(base44Items.length > 0 ? base44Items : getDummyRekeningData());
-        localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
+    // Default: Load complete 902 Base44 dataset & update cache
+    rekeningState.items = cleanBase44;
+    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(cleanBase44));
+
+    // Seed Base44 items to Supabase if Supabase is connected
+    if (window.supabaseClient && cleanBase44.length > 0) {
+        seedBase44ToSupabase(cleanBase44);
     }
 }
 
@@ -151,10 +140,10 @@ async function fetchRekeningData() {
 async function seedBase44ToSupabase(items) {
     if (!window.supabaseClient || !items || items.length === 0) return;
     try {
-        const { data: existing } = await window.supabaseClient.from('data_rekening').select('no_rekening');
-        const existingNos = new Set((existing || []).map(e => e.no_rekening));
+        const { data: existing } = await window.supabaseClient.from('data_rekening').select('no_rekening, nama_bank');
+        const existingKeys = new Set((existing || []).map(e => ((e.nama_bank || '') + '|' + (e.no_rekening || '')).toLowerCase()));
 
-        const newItems = items.filter(i => !existingNos.has(i.no_rekening)).map(d => ({
+        const newItems = items.filter(i => !existingKeys.has(((i.nama_bank || '') + '|' + (i.no_rekening || '')).toLowerCase())).map(d => ({
             status: d.status,
             nama_bank: d.nama_bank,
             nama_rekening: d.nama_rekening,
@@ -169,7 +158,6 @@ async function seedBase44ToSupabase(items) {
         }));
 
         if (newItems.length > 0) {
-            // Seed in chunks of 100
             for (let i = 0; i < newItems.length; i += 100) {
                 const chunk = newItems.slice(i, i + 100);
                 await window.supabaseClient.from('data_rekening').insert(chunk);
@@ -180,11 +168,11 @@ async function seedBase44ToSupabase(items) {
         console.warn("Background seed Base44 ke Supabase skipped/notice:", err.message);
     }
 }
+
 function getDummyRekeningData() {
-    if (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) {
-        return window.BASE44_REKENING_DATA;
-    }
-    return [];
+    return (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) 
+        ? window.BASE44_REKENING_DATA 
+        : [];
 }
 
 // 2. HELPER MASA AKTIF & EXPIRED (< 90 HARI)

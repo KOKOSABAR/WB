@@ -1,4 +1,4 @@
-/* AUTOMATICALLY IMPORTED & DEDUPLICATED FROM https://datarekeningwdbos.base44.app/ */
+/* AUTOMATICALLY IMPORTED ALL 902 BASE44 REKENING RECORDS */
 window.BASE44_REKENING_DATA = [
   {
     "id": "6a61746fe680cd5d1781049b",
@@ -6,13 +6,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rais Marnam Rahman,SH",
     "no_rekening": "708661356200",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-21",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/zLE2qPxIrECB",
     "tanggal_input": "2026-07-23T01:54:55.944000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a617446fd3b058c596e6a49",
@@ -20,13 +22,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yanto",
     "no_rekening": "1650003277069",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-01-17",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/B1Jsyz0DZT1m",
     "tanggal_input": "2026-07-23T01:54:14.422000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a617426eb4ce317fcd23bde",
@@ -34,13 +38,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Lidya Metalita",
     "no_rekening": "1180013934111",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-01-15",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/WlIalY3lelHz",
     "tanggal_input": "2026-07-23T01:53:42.110000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a61740bf7b2775088ecb60c",
@@ -48,13 +54,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sandi Irawan",
     "no_rekening": "1190010667697",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-22",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Di465JpMcyQU",
     "tanggal_input": "2026-07-23T01:53:15.871000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6173ee8ccc4532dfebd971",
@@ -62,13 +70,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIYAN PRATAMA FIRMANSYAH",
     "no_rekening": "1550015709168",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XyiUMK0KMbOn",
     "tanggal_input": "2026-07-23T01:52:46.999000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a6173e8518ffebfaad60785",
@@ -76,13 +86,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jefri Haryanto",
     "no_rekening": "1650003356368",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-06",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/UOubPIUmFlmb",
     "tanggal_input": "2026-07-23T01:52:40.935000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a6173cce4be06fe7db7538f",
@@ -90,13 +102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUGIARTO",
     "no_rekening": "1150011456151",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bYwJOn9WrFKG",
     "tanggal_input": "2026-07-23T01:52:12.222000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a6173c81373b58d3323aee5",
@@ -104,13 +118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Edwin",
     "no_rekening": "1650003267367",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-06-17",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/j7bu09Nyr7TT",
     "tanggal_input": "2026-07-23T01:52:08.613000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6173ae66c6a54534e42d02",
@@ -118,13 +134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Andi Suwandi",
     "no_rekening": "1820013150396",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-12",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/xJcyUxHhJMcI",
     "tanggal_input": "2026-07-23T01:51:42.080000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6173a9b5d8ff0b582fe57a",
@@ -132,13 +150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TRI DJIWO HARTONO",
     "no_rekening": "1210014262855",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-06-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/D2X4JVkaMqh6",
     "tanggal_input": "2026-07-23T01:51:37.192000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a617383ee8507ba1fa99711",
@@ -146,13 +166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Mario Trimurti Ajisasmita",
     "no_rekening": "003664289414",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/WMGRzh5nJr4u",
     "tanggal_input": "2026-07-23T01:50:59.663000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a6173791a5832fd2cb4ef11",
@@ -160,13 +182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MACIH",
     "no_rekening": "1550015602918",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/IBQLLz15W3E9",
     "tanggal_input": "2026-07-23T01:50:49.509000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a617363af4b8adba84812a7",
@@ -174,13 +198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Romi",
     "no_rekening": "003670438922",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://imghostr.com/ecc14c_8qg",
     "tanggal_input": "2026-07-23T01:50:27.985000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a61734e1d58510c190ef35b",
@@ -188,13 +214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AZIZ ILHAM RIYADI",
     "no_rekening": "1180015114514",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sO0DhSWXrcPa",
     "tanggal_input": "2026-07-23T01:50:06.512000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a617315670eafcf6d44e740",
@@ -202,13 +230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dwi Apriyanto",
     "no_rekening": "054101025469508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "https://imghostr.com/6516e0_dsi",
     "tanggal_input": "2026-07-23T01:49:09.021000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6172f5b0bb51d61b6fda18",
@@ -216,13 +246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Arman",
     "no_rekening": "041501044752505",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "https://imghostr.com/898645_lm0",
     "tanggal_input": "2026-07-23T01:48:37.869000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6172d048784b35d87ceea0",
@@ -230,13 +262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eka Purnamasari",
     "no_rekening": "001901162324507",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-04-17",
     "is_permanent": false,
     "screenshot_url": "https://imghostr.com/6f3662_hjc",
     "tanggal_input": "2026-07-23T01:48:00.657000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a6172573c5f4d5aaaf02af4",
@@ -244,13 +278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Kurniawan",
     "no_rekening": "043401048482502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Hjc1FdA7fOSG",
     "tanggal_input": "2026-07-23T01:45:59.703000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a617215061734b3f444ec13",
@@ -258,13 +294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bintang Wahyuda",
     "no_rekening": "041501045420509",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pIJaAef1GWdN",
     "tanggal_input": "2026-07-23T01:44:53.985000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a6171e6da7a552284aa05b0",
@@ -272,13 +310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M. Saefullah",
     "no_rekening": "001901255115508",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tAGEyIQwxCdI",
     "tanggal_input": "2026-07-23T01:44:06.002000",
     "input_by_staff_name": "IMELDALESTARI070325",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a61714e34cb2f17e0970dce",
@@ -286,13 +326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Didi Riyanto",
     "no_rekening": "001901255740507",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yj4P53FpNdLB",
     "tanggal_input": "2026-07-23T01:41:34.511000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a5692756a4e5ffc42ce810c",
@@ -300,13 +342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD RIDWAN",
     "no_rekening": "0820400453",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-10-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ats5WSSrzK0T",
     "tanggal_input": "2026-07-14T19:48:05.904000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a569251d4076105dcc3e968",
@@ -314,13 +358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAPIF FIRDAUS",
     "no_rekening": "7642476001",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-10-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/knZbppWyYfSX",
     "tanggal_input": "2026-07-14T19:47:29.987000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a569232c67fbfe00db69f78",
@@ -328,13 +374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMAD YUSUF",
     "no_rekening": "7642475480",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JNB1OYNYUqVA",
     "tanggal_input": "2026-07-14T19:46:58.383000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3755f665305d9a2a2838ec",
@@ -342,13 +390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muharwin junur hadi",
     "no_rekening": "708800195500",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vqKhoXyBjbqn",
     "tanggal_input": "2026-06-21T03:09:42.309000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3755b5b587aaad80d266d4",
@@ -356,13 +406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Enjet Bin Mursin",
     "no_rekening": "903705383358",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qL2c72iM1iMA",
     "tanggal_input": "2026-06-21T03:08:37.417000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a375594bece6392c8ce7191",
@@ -370,13 +422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rohimin",
     "no_rekening": "903705225260",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kmz7Br0whGSb",
     "tanggal_input": "2026-06-21T03:08:04.249000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a37556e2046fae5ec4a15dc",
@@ -384,13 +438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Tia Wulantari",
     "no_rekening": "3705622557",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KlQJ33Ro1hvW",
     "tanggal_input": "2026-06-21T03:07:26.485000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a37552a0c3c863bc3612f95",
@@ -398,13 +454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Risti Mulyani Ningsih",
     "no_rekening": "903705554974",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WPSMlRkBgLi3",
     "tanggal_input": "2026-06-21T03:06:18.575000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3754eb004c564404509d74",
@@ -412,13 +470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sudarso",
     "no_rekening": "903705426579",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UIK6wYjPzb9w",
     "tanggal_input": "2026-06-21T03:05:15.416000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3754bcf23d060b85a0d2ed",
@@ -426,13 +486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ernawati",
     "no_rekening": "903705462392",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uflf5civPSv7",
     "tanggal_input": "2026-06-21T03:04:28.429000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a375483779b281d738c19f0",
@@ -440,13 +502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Maulana Anwarudin",
     "no_rekening": "903705302770",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-01-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/soIadPyeRcA2",
     "tanggal_input": "2026-06-21T03:03:31.053000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3753cdc52112023653506b",
@@ -454,13 +518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nur Fadillah",
     "no_rekening": "1680004470322",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-07-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DCpUui2IBklg",
     "tanggal_input": "2026-06-21T03:00:29.335000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3753731428bf36e2512f16",
@@ -468,13 +534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HAFIZAH DARIS KAFFAH",
     "no_rekening": "053501000397567",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/RxOsSl3t7kbi",
     "tanggal_input": "2026-06-21T02:58:59.806000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a37532a85be1687a1e51f58",
@@ -482,13 +550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MOCHAMMAD SACHRUL LASANUDIN",
     "no_rekening": "742701000051565",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xLdva3sR4pUO",
     "tanggal_input": "2026-06-21T02:57:46.260000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3752ebb82f13f7c91905ca",
@@ -496,13 +566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Enjet Bin Mursin",
     "no_rekening": "8660517155",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eEJM3u4jPhyR",
     "tanggal_input": "2026-06-21T02:56:43.486000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3752c466a1747f5dae1453",
@@ -510,13 +582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rohimin",
     "no_rekening": "8660516809",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Mj6F8sUxt6B0",
     "tanggal_input": "2026-06-21T02:56:04.200000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a37528f6ce41072075a3403",
@@ -524,13 +598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Maryadi",
     "no_rekening": "5785419291",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XVMZaNhpsCTT",
     "tanggal_input": "2026-06-21T02:55:11.148000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a37524d2dd7fce405b3bb91",
@@ -538,13 +614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nur Alif Maulana",
     "no_rekening": "6044874223",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-07-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FskHVWnW1hyP",
     "tanggal_input": "2026-06-21T02:54:05.160000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3752191bbaee78f01e1df6",
@@ -552,13 +630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Risti Mulyani Ningsih",
     "no_rekening": "7006781054",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5GKzHIJvigWt",
     "tanggal_input": "2026-06-21T02:53:13.177000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a374e06a91fe982c488d969",
@@ -566,13 +646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nurul Adha Febiani",
     "no_rekening": "0690689090",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hq73PW4IYRPM",
     "tanggal_input": "2026-06-21T02:35:50.372000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a374d9193765ba52ae61204",
@@ -580,13 +662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FIRMANSYAH",
     "no_rekening": "6470695208",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hOgC1R3ZuCm3",
     "tanggal_input": "2026-06-21T02:33:53.792000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a374d606a1a3379734e4b91",
@@ -594,13 +678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LILIS SURYANI",
     "no_rekening": "8660520261",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6oo1tU7M8fco",
     "tanggal_input": "2026-06-21T02:33:04.391000",
     "input_by_staff_name": "MELANI240324",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a3047dc1b88cd2f052e8f48",
@@ -608,13 +694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Aditia Warman",
     "no_rekening": "1630014146420",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "12-06-2027",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/rs14imjYndzx",
     "tanggal_input": "2026-06-15T18:43:40.446000",
     "input_by_staff_name": "TANIAWIRANTI09042024",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a3047b0f55461c8360dd169",
@@ -622,13 +710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Imas Masriyah",
     "no_rekening": "1170012500203",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "16-06-2027",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dRqQXvi9AJ4s",
     "tanggal_input": "2026-06-15T18:42:56.143000",
     "input_by_staff_name": "TANIAWIRANTI09042024",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a30478c8e940ac1334acf19",
@@ -636,13 +726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nurhidayat",
     "no_rekening": "9000019875690",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "07-06-2027",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SxpLoTnwgZkE",
     "tanggal_input": "2026-06-15T18:42:20.091000",
     "input_by_staff_name": "TANIAWIRANTI09042024",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a30472c74046430a9e240e0",
@@ -650,13 +742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dewi Anggita Nurnabilla",
     "no_rekening": "003706927948",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "26-12-2027",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wpmZLSNZjP35",
     "tanggal_input": "2026-06-15T18:40:44.258000",
     "input_by_staff_name": "TANIAWIRANTI09042024",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a3046b2692df13716d714bc",
@@ -664,13 +758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rizki Maulana",
     "no_rekening": "903707074898",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "5-Jul-2027",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/aMgPzZBg8EDS",
     "tanggal_input": "2026-06-15T18:38:42.756000",
     "input_by_staff_name": "TANIAWIRANTI09042024",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a301a004d5af568ce5dbafa",
@@ -678,13 +774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Abdul Rahman Soleh",
     "no_rekening": "003706941964",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9hssw6gSlOwX",
     "tanggal_input": "2026-06-15T15:28:00.848000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2baa0374b583767514f4df",
@@ -692,13 +790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muchlis Shendy",
     "no_rekening": "903705307142",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-07-25",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/DID5NrwDCgg5",
     "tanggal_input": "2026-06-12T06:41:07.656000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2ba9ea3df237478fbedd15",
@@ -706,13 +806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhamad Arsy Seftian",
     "no_rekening": "903708397405",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-07-24",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/K1ia9Ypvfdje",
     "tanggal_input": "2026-06-12T06:40:42.259000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2ba9db007ac2185b16a820",
@@ -720,13 +822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Surya Febriansyah",
     "no_rekening": "1180015349094",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-06-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/NTvL9vvsU74y",
     "tanggal_input": "2026-06-12T06:40:27.995000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2ba9bf9e3d557dc67b839a",
@@ -734,13 +838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rendie Rivaldy",
     "no_rekening": "1180015349706",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-06-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Jaqp-KlljGeO",
     "tanggal_input": "2026-06-12T06:39:59.307000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2ba980e6f8b142ce03faf8",
@@ -748,13 +854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Lavril Budi Santoso",
     "no_rekening": "708323706500",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2VvOpNUDNJvh",
     "tanggal_input": "2026-06-12T06:38:56.392000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba967564b00184a96e1dc",
@@ -762,13 +870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Didik Rahmadi",
     "no_rekening": "708693839200",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7fCLnulEAlka",
     "tanggal_input": "2026-06-12T06:38:31.963000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba931357754f01d64ab21",
@@ -776,13 +886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIZKY FAUZAN",
     "no_rekening": "1180015255762",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-07-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Yrqj3YLofweK",
     "tanggal_input": "2026-06-12T06:37:37.276000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba90fae30b8e03c0938f5",
@@ -790,13 +902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAMSUL RIZAL",
     "no_rekening": "1180015258311",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-07-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WJRUAhKT0qcV",
     "tanggal_input": "2026-06-12T06:37:03.594000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba8b657b7144db2ce45bc",
@@ -804,13 +918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "O Shelby",
     "no_rekening": "1790421899",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/r0i2vVg9FTeO",
     "tanggal_input": "2026-06-12T06:35:34.204000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba89eb8d341ea4393aa9b",
@@ -818,13 +934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "William Hardian Putra",
     "no_rekening": "4810394566",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Y7i0ek8TmgSU",
     "tanggal_input": "2026-06-12T06:35:10.187000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba87d3a89247108998023",
@@ -832,13 +950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "O Shelby",
     "no_rekening": "1170013061999",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ce6GPf1REEjT",
     "tanggal_input": "2026-06-12T06:34:37.309000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2ba8600a95262b76b5edf7",
@@ -846,13 +966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "William Hardian Putra",
     "no_rekening": "1680004585012",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QbnLGVMChaFl",
     "tanggal_input": "2026-06-12T06:34:08.236000",
     "input_by_staff_name": "FAISALSABARYANTO44",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80a",
@@ -860,13 +982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sri Ajeng Panglayung Fratas",
     "no_rekening": "082117114385",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/oo7WqrOTpSpA",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80b",
@@ -874,13 +998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERYATI",
     "no_rekening": "081219081286",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MlrhEXHg6600",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80c",
@@ -888,13 +1014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dedeh Juarsih",
     "no_rekening": "081214482135",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2ZNDZXGCwipX",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80d",
@@ -902,13 +1030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FACHRY ARYA PRAHMANA",
     "no_rekening": "081255990743",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UTzAmPgpRnEE",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80e",
@@ -916,13 +1046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Asmanah",
     "no_rekening": "082115342321",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2BohKPwi1Zjy",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a80f",
@@ -930,13 +1062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Siti Nurjanah",
     "no_rekening": "081214362687",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qYZ4H0u6xr5A",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a810",
@@ -944,13 +1078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Wafa Nafisatul Hafsoh",
     "no_rekening": "082117511507",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1O1h4INRjnIG",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a811",
@@ -958,13 +1094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suka Jaya Hartini",
     "no_rekening": "082182860181",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/beM5v9gZAZYB",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a812",
@@ -972,13 +1110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bambang Trianto Hadi",
     "no_rekening": "082117093219",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QvM9wg8clvhS",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a813",
@@ -986,13 +1126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Daman",
     "no_rekening": "081392015908",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lqmFtQEMORmU",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a814",
@@ -1000,13 +1142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sumardi",
     "no_rekening": "082182860186",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7rTgWzGj2OcX",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a815",
@@ -1014,13 +1158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MULIA NINGSI",
     "no_rekening": "081228373315",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Zd4gqHISpK9p",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a816",
@@ -1028,13 +1174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dayat Hidayat",
     "no_rekening": "082115295118",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/OqXPwP73hTTy",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a817",
@@ -1042,13 +1190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Upar Supardi",
     "no_rekening": "082116417759",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/L9fOngtkkbyK",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a818",
@@ -1056,13 +1206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LAMBOK JONATAN MANURUNG",
     "no_rekening": "081378501499",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4spSdqe2kHmT",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a819",
@@ -1070,13 +1222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMAD SALEH",
     "no_rekening": "082174650198",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/d6TORJRahZN8",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81a",
@@ -1084,13 +1238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Susi Mulyati",
     "no_rekening": "081214600456",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XBMdrtGdmlJb",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81b",
@@ -1098,13 +1254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Tuti",
     "no_rekening": "082117439907",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bJ7F8MSlNDf3",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81c",
@@ -1112,13 +1270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sumyati",
     "no_rekening": "082117565604",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nSND78ITopWn",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81d",
@@ -1126,13 +1286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jaenudin",
     "no_rekening": "082116411156",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SRbWVK2AK4Jd",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81e",
@@ -1140,13 +1302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ECHA ANGGI SAPUTRO",
     "no_rekening": "087899433522",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Prgz7lS7AVQy",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a81f",
@@ -1154,13 +1318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dede Hendaya",
     "no_rekening": "082143015263",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/F78Xoc59FHSA",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a820",
@@ -1168,13 +1334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HANIS NINGRUM",
     "no_rekening": "087899433968",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xAtrVhQmdiyJ",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a821",
@@ -1182,13 +1350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHAYU PUTRI CAMELLIA",
     "no_rekening": "085946912858",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gYgiamOxcOee",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a822",
@@ -1196,13 +1366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "oktalia",
     "no_rekening": "087812087253",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/E67a5z2qoLZK",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a823",
@@ -1210,13 +1382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIDHO AULIA ABBAD",
     "no_rekening": "087728597599",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-12-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ptj0TF1aCXCp",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a824",
@@ -1224,13 +1398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DERI SYAHPUTRA",
     "no_rekening": "082165520868",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Upc1UuGO8ZMZ",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a825",
@@ -1238,13 +1414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINDA FITRI YANI",
     "no_rekening": "081228373325",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pjdhGvJq3R9r",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a826",
@@ -1252,13 +1430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD ANGGARA",
     "no_rekening": "081263415328",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0RTEj3XJWDBq",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a827",
@@ -1266,13 +1446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI",
     "no_rekening": "085946912870",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Om1jAeASSmJV",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a828",
@@ -1280,13 +1462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DENI SYAHPUTRA",
     "no_rekening": "081263862116",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XzCxDIx66q1B",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a829",
@@ -1294,13 +1478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ADI SAHPUTRA",
     "no_rekening": "081378942364",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/owQKdy7KtmOz",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82a",
@@ -1308,13 +1494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NGATINI",
     "no_rekening": "081262077393",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZNtP4N7xeYxA",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82b",
@@ -1322,13 +1510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNI",
     "no_rekening": "082174323679",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ym2hUs1MNrkI",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82c",
@@ -1336,13 +1526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURLELI",
     "no_rekening": "085946912868",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mKzTU5rez833",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82d",
@@ -1350,13 +1542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD DEDEN",
     "no_rekening": "085934851988",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hiyyckv8inwE",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82e",
@@ -1364,13 +1558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "daffa alamsyah tanjung",
     "no_rekening": "081934437476",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZY2M8po8OLGu",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a82f",
@@ -1378,13 +1574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SLAMET ABU",
     "no_rekening": "087841015596",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-12-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/g1Waja0jMr0t",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a830",
@@ -1392,13 +1590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PONIDI AHMAD",
     "no_rekening": "085955245022",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VkMfG4mTfhEz",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a831",
@@ -1406,13 +1606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARGAWI",
     "no_rekening": "087899432363",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wSuMobUHMnpm",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a832",
@@ -1420,13 +1622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DONI FELGIANSAH",
     "no_rekening": "087899432163",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/achZ9lnfCX5j",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a833",
@@ -1434,13 +1638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TETY MASNIAR",
     "no_rekening": "085955244396",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/i3jPIevW9x2s",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a834",
@@ -1448,13 +1654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TETI",
     "no_rekening": "081937167055",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sikHxxgHNWUJ",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a835",
@@ -1462,13 +1670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DARNIATAWATY BR LUBIS",
     "no_rekening": "087840573797",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sikHxxgHNWUJ",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a836",
@@ -1476,13 +1686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DORIASNI HASIBUAN",
     "no_rekening": "087833170344",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UMdgwPMr3MAD",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a837",
@@ -1490,13 +1702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "andika pratama",
     "no_rekening": "082185323253",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/y5WOmPNLNpUm",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a838",
@@ -1504,13 +1718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Risman",
     "no_rekening": "081321277362",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/t4oWpQMnunCa",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a839",
@@ -1518,13 +1734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jumiar Komala Suptiani",
     "no_rekening": "082117972836",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UagkknTk0KWY",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83a",
@@ -1532,13 +1750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "No musdalifah",
     "no_rekening": "082179605409",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QS7cxpEXXz0q",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83b",
@@ -1546,13 +1766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Artini",
     "no_rekening": "081226375419",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xoxhIcRbMEgg",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83c",
@@ -1560,13 +1782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rumiyati",
     "no_rekening": "082179849119",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Hw2f5Vpk5OSa",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83d",
@@ -1574,13 +1798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "sri maryani",
     "no_rekening": "082179571317",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xaW1AfO3JF6p",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83e",
@@ -1588,13 +1814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hepi martini",
     "no_rekening": "082179851754",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q7bqQ3XOO4zs",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a83f",
@@ -1602,13 +1830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Inzan Ryaldi",
     "no_rekening": "082120074541",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/n80nhM3YT1Rl",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a840",
@@ -1616,13 +1846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "nenni rosdiana",
     "no_rekening": "081214813309",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jUYaqQwKY8jE",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a841",
@@ -1630,13 +1862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Fitri yani",
     "no_rekening": "081392989882",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6yzlS6wmEj0c",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a842",
@@ -1644,13 +1878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Morina imelda lumban tobing",
     "no_rekening": "081367144603",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/aMoBBzoBiLkB",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a843",
@@ -1658,13 +1894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Neni Mariam",
     "no_rekening": "082117146937",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jNUZ7QL3wGcK",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a844",
@@ -1672,13 +1910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sopiah",
     "no_rekening": "081321356012",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9YcVke8mv9jo",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a845",
@@ -1686,13 +1926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dede Suhendi",
     "no_rekening": "082115427018",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pzqW5L2sPoGU",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a846",
@@ -1700,13 +1942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yohan Juhana",
     "no_rekening": "082120342606",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WyIQFA0KE6tr",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a847",
@@ -1714,13 +1958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Andi Setiawan",
     "no_rekening": "082120238686",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/U9RHZWj4U21g",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a848",
@@ -1728,13 +1974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "onih rosita",
     "no_rekening": "081286295264",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wABOJcYVJYjq",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a849",
@@ -1742,13 +1990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "yayan",
     "no_rekening": "081286309692",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xWOSU3cNSQPS",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84a",
@@ -1756,13 +2006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Pina",
     "no_rekening": "082120546601",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/l7oBOGRnlpHK",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84b",
@@ -1770,13 +2022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhamad Iqbal Arliansyah",
     "no_rekening": "082117107038",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cVghv89b13ux",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84c",
@@ -1784,13 +2038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ely",
     "no_rekening": "082120236143",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gESzXbXDD5qU",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84d",
@@ -1798,13 +2054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ratna Komalasari",
     "no_rekening": "082120868472",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EmMZhfppCexp",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84e",
@@ -1812,13 +2070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Opik Hidayat",
     "no_rekening": "082120197728",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1OvkvOLUJkVd",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a84f",
@@ -1826,13 +2086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "EGIANDARA BANYU PRIAGUNG",
     "no_rekening": "087833170276",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/golFoP7f7WjP",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a850",
@@ -1840,13 +2102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IRVAN SURIATA",
     "no_rekening": "087833170313",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4cFbj3LwOdlA",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a851",
@@ -1854,13 +2118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARLAN S. NENTO",
     "no_rekening": "087833170314",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/c4qAA0LaetT4",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a852",
@@ -1868,13 +2134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AGNAES SIFA MELIASARI",
     "no_rekening": "087833170315",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/rxPPjPYqETFG",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a853",
@@ -1882,13 +2150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMADI",
     "no_rekening": "087833170316",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nJbY4dGE4Fb5",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a854",
@@ -1896,13 +2166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AGUNG RAMADANI",
     "no_rekening": "087833170317",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/g0eyTUyS71Me",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a855",
@@ -1910,13 +2182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "STEPHEN ELAM MULYO",
     "no_rekening": "087833170318",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GBt8BSnUu1ns",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a856",
@@ -1924,13 +2198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FATIMAH",
     "no_rekening": "087833170319",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wkLvRwX3QTFY",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a857",
@@ -1938,13 +2214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUGENG",
     "no_rekening": "087899432175",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FdyGFDau40F1",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a858",
@@ -1952,13 +2230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "OKTA FAREL",
     "no_rekening": "087733212210",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XfsCK1TY6Kcp",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a859",
@@ -1966,13 +2246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sunariyah",
     "no_rekening": "087833170132",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/N8UmYxpY2uX3",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85a",
@@ -1980,13 +2262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmat Fahjian",
     "no_rekening": "087733212174",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DFrZgJVZiNcZ",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85b",
@@ -1994,13 +2278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Kiki Ardiansyah",
     "no_rekening": "087733212171",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ERA2eWuF6tnk",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85c",
@@ -2008,13 +2294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FATHORAHMAN",
     "no_rekening": "087733212179",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2MDDo0dlgfp8",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85d",
@@ -2022,13 +2310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nur setiawan",
     "no_rekening": "087833170143",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yspBrUPJaRAr",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85e",
@@ -2036,13 +2326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rifki asyril anwar Ai",
     "no_rekening": "087833170144",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/huAMjOLBOH08",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a85f",
@@ -2050,13 +2342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Kartini",
     "no_rekening": "085943232088",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/TJ8VTwVm5rYK",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a860",
@@ -2064,13 +2358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Azhar",
     "no_rekening": "087758462245",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jmvlwCva7MYD",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a861",
@@ -2078,13 +2374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD SAIFUL",
     "no_rekening": "087758503811",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NGKiZFwv4QrX",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a862",
@@ -2092,13 +2390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SANTI KARMILA",
     "no_rekening": "087758503823",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZPBgS92wLWXq",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a863",
@@ -2106,13 +2406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYARIFAH",
     "no_rekening": "085943239009",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/c6stYFqx5sJF",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a864",
@@ -2120,13 +2422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI HASAN",
     "no_rekening": "087758500878",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/age6e5AJBvoI",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a865",
@@ -2134,13 +2438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUSTAMAN",
     "no_rekening": "087733212581",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9J47hkPXgDEi",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a866",
@@ -2148,13 +2454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAFFASYA MAULANA NADZRIL",
     "no_rekening": "085939255147",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wzIWLJ8ie8HS",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a867",
@@ -2162,13 +2470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RISKI ANANDA SAPUTRA",
     "no_rekening": "085943239044",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iC4jnvc3py40",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a868",
@@ -2176,13 +2486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMAD SEPTIANA",
     "no_rekening": "085939255161",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/fKSnKgdfOP6D",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a869",
@@ -2190,13 +2502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIPAL ADI PALAH",
     "no_rekening": "087899432330",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ETCqXQf3mL2g",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86a",
@@ -2204,13 +2518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SANDI RAMADHAN",
     "no_rekening": "087899432951",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KRKrH8yWcC0U",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86b",
@@ -2218,13 +2534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PARHAN KURNIAWAN",
     "no_rekening": "087833170148",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Gcb1spaSxB87",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86c",
@@ -2232,13 +2550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DENI ALFIAN",
     "no_rekening": "087833170128",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Z9ZTTEwRvKbF",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86d",
@@ -2246,13 +2566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD ABDULLAH YAHYA",
     "no_rekening": "087833170310",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uAFpDHEm3zBF",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86e",
@@ -2260,13 +2582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HAIDAR AHMAD NAZARUDIN",
     "no_rekening": "087833170304",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/oQ4A6DaDIXfd",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a86f",
@@ -2274,13 +2598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TASMINAH",
     "no_rekening": "087833170124",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/34Fptsi1UZ3g",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a870",
@@ -2288,13 +2614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhamad fadil adilah",
     "no_rekening": "087833170122",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NewP934gmuhY",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a871",
@@ -2302,13 +2630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KHOLIDAH",
     "no_rekening": "087899433519",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0Se8bk5O54N5",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a872",
@@ -2316,13 +2646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MURSAM SOLIHIN",
     "no_rekening": "087899433518",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EUu6wWCSoQjm",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a873",
@@ -2330,13 +2662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AZKA ABDUL AZIZ",
     "no_rekening": "087899433520",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Wnyuhkw3KwzL",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a874",
@@ -2344,13 +2678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LADY AVISHA EFFENDY",
     "no_rekening": "087899433521",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XlOJvg09fryE",
     "tanggal_input": "2026-06-11T03:12:10.691000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7cc",
@@ -2358,13 +2694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARINI",
     "no_rekening": "082116971140",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hZOiOLYxw9lR",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7cd",
@@ -2372,13 +2710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MHD RYAN PRATAMA HANAFI SIREGAR",
     "no_rekening": "087833170405",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WyN9lBcuDmrw",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ce",
@@ -2386,13 +2726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SESSE",
     "no_rekening": "082169613169",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2rd2DJuYYv7m",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7cf",
@@ -2400,13 +2742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MOCHAMMAD RAKA ISLAMI",
     "no_rekening": "087833170355",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NzEgG5qtZQfx",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d0",
@@ -2414,13 +2758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Moh ripai",
     "no_rekening": "085942982863",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1M2AoVNYBHSb",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d1",
@@ -2428,13 +2774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PUTRI AGUSTINA",
     "no_rekening": "082144490701",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6sOoZPKrcMnC",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d2",
@@ -2442,13 +2790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ikbal maulana",
     "no_rekening": "087899432493",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lbpp1hsscwHF",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d3",
@@ -2456,13 +2806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ABDULLAH AMIR",
     "no_rekening": "081284302142",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ceb6O4SfBjNV",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d4",
@@ -2470,13 +2822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BUDI",
     "no_rekening": "087899433164",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wuMpAIQ9snkf",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d5",
@@ -2484,13 +2838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURSANDI",
     "no_rekening": "087833170338",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GhWBLMtF9cAN",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d6",
@@ -2498,13 +2854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dewi widaningsih",
     "no_rekening": "081387195983",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XFuZQIbNIzfr",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d7",
@@ -2512,13 +2870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hari priyansah",
     "no_rekening": "087899433194",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/95W6vvy4zN1w",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d8",
@@ -2526,13 +2886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "leni agustini",
     "no_rekening": "081321276810",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/abguR5Bp5GpK",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7d9",
@@ -2540,13 +2902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Aam Mustofa",
     "no_rekening": "081214906788",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Qkv4ODqc6rsW",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7da",
@@ -2554,13 +2918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HIKMAL FAJAR",
     "no_rekening": "087899433166",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/evhM1H1kuomz",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7db",
@@ -2568,13 +2934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JEK",
     "no_rekening": "087899432009",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Nx3WmFAYWV6w",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7dc",
@@ -2582,13 +2950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yayah",
     "no_rekening": "081321276801",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/orO0594ypOEQ",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7dd",
@@ -2596,13 +2966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "GIBRAN RAMADHANS ALRACHMIS",
     "no_rekening": "087899433162",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/l0TLQZJr9lmV",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7de",
@@ -2610,13 +2982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WAHYU WIRATAMA",
     "no_rekening": "087899432007",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AG8ZQ582W60N",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7df",
@@ -2624,13 +2998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M YUSUP",
     "no_rekening": "087899432008",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wW2x9tVc0g3p",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e0",
@@ -2638,13 +3014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Silvia Dewi sulastri",
     "no_rekening": "082118370981",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ydz6436Qv8Gw",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e1",
@@ -2652,13 +3030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURINAWATI",
     "no_rekening": "087899432000",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/YnnX6O7Y1BCw",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e2",
@@ -2666,13 +3046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "eka Sari",
     "no_rekening": "082126055980",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-21",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e3",
@@ -2680,13 +3062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hermalita",
     "no_rekening": "082172144955",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-09",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e4",
@@ -2694,13 +3078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ADE RUKMAN",
     "no_rekening": "082117273808",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-02",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/_BTEarV-FqlH",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e5",
@@ -2708,13 +3094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bagus budimansyah",
     "no_rekening": "087899432035",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-10-10",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/pu2BfJIfTd0s",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e6",
@@ -2722,13 +3110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nuraeni",
     "no_rekening": "082111633523",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4eHQggTlT8Fz",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e7",
@@ -2736,13 +3126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hermansyah",
     "no_rekening": "082120414724",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/a1nZHIqKbyOv",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e8",
@@ -2750,13 +3142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RASWA",
     "no_rekening": "087758503813",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/IlGnkAHl3fSi",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7e9",
@@ -2764,13 +3158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FATHUR NUR NANDA",
     "no_rekening": "085942983980",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UT8ZCjkRiEb7",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ea",
@@ -2778,13 +3174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "GUSTIAN TRI PAMUNGKAS",
     "no_rekening": "087899432336",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mTsVRkset9CG",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7eb",
@@ -2792,13 +3190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI SAODAH",
     "no_rekening": "082117991443",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/IF2xxtyXLYQ4",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ec",
@@ -2806,13 +3206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI AISAH",
     "no_rekening": "082118559421",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NLe55qCSKvpP",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ed",
@@ -2820,13 +3222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Indra darmawan",
     "no_rekening": "085943286242",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DTbELnFudmeE",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ee",
@@ -2834,13 +3238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUKANTI",
     "no_rekening": "081219599877",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/89iGTpSk3jmN",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ef",
@@ -2848,13 +3254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WASNAH",
     "no_rekening": "081389904352",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DzDORvmqq6rN",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f0",
@@ -2862,13 +3270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DJUARSIH",
     "no_rekening": "081288351604",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2026-12-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/172l3uoNjhds",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f1",
@@ -2876,13 +3286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BOSTON PAULUS",
     "no_rekening": "081219590349",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wMRpSNYkQO3v",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f2",
@@ -2890,13 +3302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROMLAH BT DUROSAD",
     "no_rekening": "081389904316",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/YDzp0WNyBE41",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f3",
@@ -2904,13 +3318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUANNE SITORUS",
     "no_rekening": "081219599072",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/phxMyP8ZPydR",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f4",
@@ -2918,13 +3334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Agus Manto",
     "no_rekening": "082180683352",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MQr9nf0OFDCu",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f5",
@@ -2932,13 +3350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Wa Epi",
     "no_rekening": "082180047143",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5u29YhsP1BAD",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f6",
@@ -2946,13 +3366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BEJO",
     "no_rekening": "081219574185",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cEMD259gL4TV",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f7",
@@ -2960,13 +3382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JAMILAH",
     "no_rekening": "081219082214",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dbVJmNqLkEf5",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f8",
@@ -2974,13 +3398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "GITA ARISKA",
     "no_rekening": "081329834319",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gXa1HggpFflP",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7f9",
@@ -2988,13 +3414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PITRIYANI",
     "no_rekening": "081389904302",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yQlBPsOljD3s",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7fa",
@@ -3002,13 +3430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Basuni",
     "no_rekening": "081329561324",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LhSV52qy0JOU",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7fb",
@@ -3016,13 +3446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MELVITA DEWI",
     "no_rekening": "081378200801",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EXIQitc1mLOl",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7fc",
@@ -3030,13 +3462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI IRWANTI",
     "no_rekening": "081262075246",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tPwUdcOOce2U",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7fd",
@@ -3044,13 +3478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "fahmi",
     "no_rekening": "082183170365",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iQ8sM74EMbqH",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7fe",
@@ -3058,13 +3494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARNI",
     "no_rekening": "081223251462",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-02-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SFmQ0G2Xi29h",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a7ff",
@@ -3072,13 +3510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "dewI ramayani",
     "no_rekening": "081945372590",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2028-06-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BCcU218xotco",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a800",
@@ -3086,13 +3526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMAD HIDAYAH",
     "no_rekening": "082268264476",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0npBcJzEd02S",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a801",
@@ -3100,13 +3542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rosadi",
     "no_rekening": "081287159264",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/K4LEywjdwYWB",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a802",
@@ -3114,13 +3558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUINAH",
     "no_rekening": "087853760742",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-07-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wxu0CqG6USHj",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a803",
@@ -3128,13 +3574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dani",
     "no_rekening": "081321122895",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-01-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/d32vBDyk7zz0",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a804",
@@ -3142,13 +3590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ASMAH",
     "no_rekening": "081269939248",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-04-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BjQ6uJC3fbfW",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a805",
@@ -3156,13 +3606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jenamahavera",
     "no_rekening": "081368804498",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7UgfMnY2X0Mb",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a806",
@@ -3170,13 +3622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FITRI",
     "no_rekening": "081396136258",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ivT1zSzr0G1C",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a807",
@@ -3184,13 +3638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AINUN",
     "no_rekening": "081249168031",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-03-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hew8ofleSZOJ",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a808",
@@ -3198,13 +3654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI SULASTRI",
     "no_rekening": "081288330946",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-05-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eTkXND3C5T0f",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a278a0ef7644b9c66a809",
@@ -3212,13 +3670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NAZMA MUHARNISA",
     "no_rekening": "085967230854",
     "jenis": "OVO",
+    "jenis_detail": "E-Wallet OVO",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lMGY5E0neuyV",
     "tanggal_input": "2026-06-11T03:12:10.690000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet OVO"
+    "catatan": "E-Wallet OVO",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad7",
@@ -3226,13 +3686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SELLA LESTARI",
     "no_rekening": "081262077393",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xUNSxh9nxt1F",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad8",
@@ -3240,13 +3702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ASMURI",
     "no_rekening": "081382140261",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-04-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gZh0WAY4XlsR",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad9",
@@ -3254,13 +3718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PARTINI",
     "no_rekening": "081399785488",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XbbU0z26D8TN",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aada",
@@ -3268,13 +3734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUKANTI",
     "no_rekening": "081219599877",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-02-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/89iGTpSk3jmN",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aadb",
@@ -3282,13 +3750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MEGA RANI",
     "no_rekening": "082183576091",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1sf0zh4zuUVc",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aadc",
@@ -3296,13 +3766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ADI SAHPUTRA",
     "no_rekening": "081378942364",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PeTIp4sTEdRr",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aadd",
@@ -3310,13 +3782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WASNAH",
     "no_rekening": "081389904352",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/duz8sRlCQtUI",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aade",
@@ -3324,13 +3798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DJUARSIH",
     "no_rekening": "081288351604",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8IkFC43NDmrE",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aadf",
@@ -3338,13 +3814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BOSTON PAULUS",
     "no_rekening": "081219590349",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wMRpSNYkQO3v",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae0",
@@ -3352,13 +3830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ULAN MULANA",
     "no_rekening": "081219574198",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6U318ZtZ4ljc",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae1",
@@ -3366,13 +3846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROMLAH BT DUROSAD",
     "no_rekening": "081389904316",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8BbmESyPHjll",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae2",
@@ -3380,13 +3862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUANNE SITORUS",
     "no_rekening": "081219599072",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/phxMyP8ZPydR",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae3",
@@ -3394,13 +3878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RINA ASTUTI DAMAYANTI",
     "no_rekening": "081396136256",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-05-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HzlMY46NKtbC",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae4",
@@ -3408,13 +3894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNI",
     "no_rekening": "082174323679",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ym2hUs1MNrkI",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae5",
@@ -3422,13 +3910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BAMBANG IRIANTO",
     "no_rekening": "081374347372",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-04-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LeNr1us6jGyc",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae6",
@@ -3436,13 +3926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BEJO",
     "no_rekening": "081219574185",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-02-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1kwto9IBRzsj",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae7",
@@ -3450,13 +3942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JAMILAH",
     "no_rekening": "081219082214",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HMlIhoIaaYiI",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae8",
@@ -3464,13 +3958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARNI",
     "no_rekening": "082165137481",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ou8pml2NdtK8",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aae9",
@@ -3478,13 +3974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PITRIYANI",
     "no_rekening": "081389904302",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yQlBPsOljD3s",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaea",
@@ -3492,13 +3990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "popi puspita",
     "no_rekening": "081378200811",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/u781AG2VjrMZ",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaeb",
@@ -3506,13 +4006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "dulatip",
     "no_rekening": "085924542976",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vtwTXpzVG15Z",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaec",
@@ -3520,13 +4022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SURIANI",
     "no_rekening": "081378200801",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ryjngari2ZLN",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaed",
@@ -3534,13 +4038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUBI ANJANE",
     "no_rekening": "081396136251",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EQqtLlJ5ILpU",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaee",
@@ -3548,13 +4054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI KUMALASARI",
     "no_rekening": "081288330969",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0vIa62ezLwiN",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaef",
@@ -3562,13 +4070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMISEM",
     "no_rekening": "081262075246",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/TzO8oBVR8Ykl",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf0",
@@ -3576,13 +4086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULASTRI",
     "no_rekening": "081255990762",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PhpGJHRv2Boo",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf1",
@@ -3590,13 +4102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Subariah",
     "no_rekening": "087840104094",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-07-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ir5DGIrvXMzl",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf2",
@@ -3604,13 +4118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FITRIA NINGSIH",
     "no_rekening": "081249170175",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/39NXqn1zzVha",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf3",
@@ -3618,13 +4134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WITRA MURNI",
     "no_rekening": "085932005705",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-11-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Foeo5OGqrRZ1",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf4",
@@ -3632,13 +4150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "dewi ramayani",
     "no_rekening": "081945372590",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2028-06-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BCcU218xotco",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf5",
@@ -3646,13 +4166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMAD HIDAYAH",
     "no_rekening": "082268264476",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0npBcJzEd02S",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf6",
@@ -3660,13 +4182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MULIYADI",
     "no_rekening": "087846923244",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-05-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HaswSl5dF1eA",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf7",
@@ -3674,13 +4198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUINAH",
     "no_rekening": "087853760742",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-07-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Omxf6cyFLIn5",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf8",
@@ -3688,13 +4214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ZUNIDAR",
     "no_rekening": "085955245022",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qV7Gpa7fC9CZ",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaf9",
@@ -3702,13 +4230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FERDY ARDIYANTO",
     "no_rekening": "085924543597",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-07-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vbBBCcYxtAWE",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aafa",
@@ -3716,13 +4246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YULIANA",
     "no_rekening": "085955361226",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EPFS6cLkf1DX",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aafb",
@@ -3730,13 +4262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMIATI",
     "no_rekening": "085955361224",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qi1fqVVMqBYX",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aafc",
@@ -3744,13 +4278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "fitri",
     "no_rekening": "082181560552",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DmD3BD5AoRoK",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aafd",
@@ -3758,13 +4294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "muliya",
     "no_rekening": "082183175918",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-02-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dlU7VedKvsY6",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aafe",
@@ -3772,13 +4310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LOINA SILALAHI",
     "no_rekening": "085955248045",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-05-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hYpMBGnFUL2S",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaff",
@@ -3786,13 +4326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "rosidah",
     "no_rekening": "087716547773",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hFrDTWF4Riyt",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab00",
@@ -3800,13 +4342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NILA MARLENA NASUTION",
     "no_rekening": "085955361368",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QOgw1aqJEniS",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab01",
@@ -3814,13 +4358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURLIANI BATUBARA",
     "no_rekening": "087865826054",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab02",
@@ -3828,13 +4374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YULI YANA SAFITRI",
     "no_rekening": "081378165687",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-26",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab03",
@@ -3842,13 +4390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TETY MASNIAR",
     "no_rekening": "085955244396",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/daiCN09GfZIJ",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab04",
@@ -3856,13 +4406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TETI",
     "no_rekening": "081937167055",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-07-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sikHxxgHNWUJ",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab05",
@@ -3870,13 +4422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DARNITAWATY BR LUBIS",
     "no_rekening": "087840573797",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ShszOe0n5qin",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab06",
@@ -3884,13 +4438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DYO APRIANATA",
     "no_rekening": "085955363613",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab07",
@@ -3898,13 +4454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "imzaki bagus ramadhan",
     "no_rekening": "082185323253",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/y5WOmPNLNpUm",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab08",
@@ -3912,13 +4470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WIRA KELARA",
     "no_rekening": "081396140983",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-06",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab09",
@@ -3926,13 +4486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUSDI",
     "no_rekening": "081396142824",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/W7ZtAxNGJy9O",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0a",
@@ -3940,13 +4502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUDIATI",
     "no_rekening": "081396142821",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-05",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0b",
@@ -3954,13 +4518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIDHO AULIA ABBAD",
     "no_rekening": "087728597599",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-12-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sEtQd7AChv80",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0c",
@@ -3968,13 +4534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DERI SYAHPUTRA",
     "no_rekening": "082165520868",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Upc1UuGO8ZMZ",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0d",
@@ -3982,13 +4550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINDA FITRI YANI",
     "no_rekening": "081228373325",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7FFegY55VXX8",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0e",
@@ -3996,13 +4566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD ANGGARA",
     "no_rekening": "081263415328",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0RTEj3XJWDBq",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab0f",
@@ -4010,13 +4582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HAYANI",
     "no_rekening": "081375239115",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-06-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/RXG91vHbIlq5",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab10",
@@ -4024,13 +4598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DENI SYAHPUTRA",
     "no_rekening": "081263862116",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XzCxDIx66q1B",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4ab11",
@@ -4038,13 +4614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HERLAMBANG SUTARI",
     "no_rekening": "081389636948",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tPBUFmN4Iyco",
     "tanggal_input": "2026-06-11T03:08:39.680000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7c",
@@ -4052,13 +4630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MEMANG",
     "no_rekening": "087846122854",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Fkk1L6CeOcmB",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7d",
@@ -4066,13 +4646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HALIMA DG NGONA",
     "no_rekening": "087846123120",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sOymMrabJrDz",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7e",
@@ -4080,13 +4662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NORMA",
     "no_rekening": "087830766077",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yxe8au4ktMDh",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7f",
@@ -4094,13 +4678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KARE",
     "no_rekening": "087846123092",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8oZxKKs3xMXW",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa80",
@@ -4108,13 +4694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DARMA",
     "no_rekening": "087846123108",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DIQV8O5Czg1d",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa81",
@@ -4122,13 +4710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ZUHRA",
     "no_rekening": "081910407586",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/rSRYOb010Dhv",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa82",
@@ -4136,13 +4726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMISA DG RIMANG",
     "no_rekening": "087830766042",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Gg4a05B0rnbO",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa83",
@@ -4150,13 +4742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARIYEM",
     "no_rekening": "087830766072",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MuOc1fNtWxaR",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa84",
@@ -4164,13 +4758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUJIATI",
     "no_rekening": "087830766192",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8K50qMw10yju",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa85",
@@ -4178,13 +4774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARIPA DG MENE",
     "no_rekening": "087830766083",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/a8qjLXMqYgMb",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa86",
@@ -4192,13 +4790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG PUTTIRI",
     "no_rekening": "087846122974",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GliQ3rO0taCJ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa87",
@@ -4206,13 +4806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUSLIDAR",
     "no_rekening": "085973946515",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/oNAHbI04J3Io",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa88",
@@ -4220,13 +4822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WIDIA INDRIYANI",
     "no_rekening": "085973946763",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZLyO01ZU1cjL",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa89",
@@ -4234,13 +4838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TINO",
     "no_rekening": "087846122944",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mHGcfQgg4Eyd",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8a",
@@ -4248,13 +4854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROHANI",
     "no_rekening": "087846122857",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/W1MAfLb1sbN9",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8b",
@@ -4262,13 +4870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUHARNI",
     "no_rekening": "087846123073",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/u9r7VqHka1Gq",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8c",
@@ -4276,13 +4886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JURAIDA",
     "no_rekening": "085973946382",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KfjaY4jo7Ihe",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8d",
@@ -4290,13 +4902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ARMA ROSDIANA",
     "no_rekening": "085973946243",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3yIiEk4F7cmQ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8e",
@@ -4304,13 +4918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARI",
     "no_rekening": "087846122757",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/OTp2KspL4nuu",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa8f",
@@ -4318,13 +4934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURDIN",
     "no_rekening": "087846122698",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xP0lInDdJt9X",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa90",
@@ -4332,13 +4950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD NGAENI",
     "no_rekening": "087846122777",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cBFOK367FhJq",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa91",
@@ -4346,13 +4966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "H MAING",
     "no_rekening": "087846122306",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ffxT2drqzatZ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa92",
@@ -4360,13 +4982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JOHOSIAH",
     "no_rekening": "087846122910",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lFDD0MG55zcN",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa93",
@@ -4374,13 +4998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RETNO SANTI ZUBAIDAH",
     "no_rekening": "087846122400",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/E61nfBPXyUbX",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa94",
@@ -4388,13 +5014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ENDANG KUSRINI MARKAM",
     "no_rekening": "087846122716",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NvAvK19ZV882",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa95",
@@ -4402,13 +5030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUNI EKOWATI",
     "no_rekening": "087846122407",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WH9sQToWOPsj",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa96",
@@ -4416,13 +5046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MOHAMMAD ANAS",
     "no_rekening": "087846122399",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BuEAZ5sh3czl",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa97",
@@ -4430,13 +5062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NIHAYATUS MAULUTIN HASANAH",
     "no_rekening": "087846122312",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MUiLglxDds3g",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa98",
@@ -4444,13 +5078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SALMAH",
     "no_rekening": "087846122915",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DqwiErHRtG7I",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa99",
@@ -4458,13 +5094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BAKRI",
     "no_rekening": "087846122826",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SoWPnuEbbzjo",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9a",
@@ -4472,13 +5110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERNI",
     "no_rekening": "087846122817",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q7lfDDQvYeLG",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9b",
@@ -4486,13 +5126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG BACCE",
     "no_rekening": "087774838985",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eyMV6n8ioVM7",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9c",
@@ -4500,13 +5142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAENAB",
     "no_rekening": "087846122882",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ODvOoii5MDvM",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9d",
@@ -4514,13 +5158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI KURIYAH",
     "no_rekening": "087846122464",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DlvLd4V41wRI",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9e",
@@ -4528,13 +5174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SANU",
     "no_rekening": "087846123081",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/alcnpXbev76r",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa9f",
@@ -4542,13 +5190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BIA",
     "no_rekening": "087846123095",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/aXRSCshXViOQ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa0",
@@ -4556,13 +5206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IDRIS DG BUNDU",
     "no_rekening": "087846122865",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/W15oixWZP9kF",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa1",
@@ -4570,13 +5222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ABD RAHMAN.S",
     "no_rekening": "087778591222",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cmTOw2FhMeNx",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa2",
@@ -4584,13 +5238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MASNAWATI",
     "no_rekening": "087846122824",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/36KTWnb335yI",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa3",
@@ -4598,13 +5254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI DG SIMBA",
     "no_rekening": "087846122844",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0efOV33sHn8b",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa4",
@@ -4612,13 +5270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASMIRAH",
     "no_rekening": "087846122730",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/02gC9y3z4cQt",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa5",
@@ -4626,13 +5286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMATIA DG MINNE",
     "no_rekening": "087830766183",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2mKdPJMa9w4z",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa6",
@@ -4640,13 +5302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI ROAZAH",
     "no_rekening": "087750610640",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/d4jDoiFDTWrr",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa7",
@@ -4654,13 +5318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WAGIATI",
     "no_rekening": "087851631637",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/W4acdgo0e0uc",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa8",
@@ -4668,13 +5334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KASMA",
     "no_rekening": "087830766081",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/20fFndKB3CJh",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaa9",
@@ -4682,13 +5350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LOISTEN SIANIPAR",
     "no_rekening": "087745343611",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lPZ4xvXY8tlI",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaaa",
@@ -4696,13 +5366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURRILLAH",
     "no_rekening": "087846122673",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FdmJkW2OGE90",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaab",
@@ -4710,13 +5382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG.TINO",
     "no_rekening": "087846122839",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pylLBnVG6dxU",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaac",
@@ -4724,13 +5398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUCHTAR LAGA",
     "no_rekening": "087846122753",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/myeQjXayi33C",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaad",
@@ -4738,13 +5414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PUTRIYANTI",
     "no_rekening": "087830766079",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NwOKVEBaQzOR",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaae",
@@ -4752,13 +5430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MIDAWATI",
     "no_rekening": "082137521059",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/oVdNWsW6Fy7L",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaaf",
@@ -4766,13 +5446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUSPIDA PUTRI",
     "no_rekening": "082267631718",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/v1CkR4MZ1Xcb",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab0",
@@ -4780,13 +5462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "fitri",
     "no_rekening": "082181560552",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yL5idV8HcLQW",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab1",
@@ -4794,13 +5478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUSRA YUNI",
     "no_rekening": "082267630782",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-02-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/s1BvpIKSHpGi",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab2",
@@ -4808,13 +5494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUR AINUN",
     "no_rekening": "085954212646",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-07-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dUosHA4O8c6p",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab3",
@@ -4822,13 +5510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUGIARTO SE",
     "no_rekening": "087815584896",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-05-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nKWwHNzF8Jop",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab4",
@@ -4836,13 +5526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WILDALIANA",
     "no_rekening": "082221069286",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-03-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ywp0r9YZYoZv",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab5",
@@ -4850,13 +5542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARNO",
     "no_rekening": "081360128184",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-02-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NgnL3z2n4MZ0",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab6",
@@ -4864,13 +5558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HENNI SALFIA",
     "no_rekening": "087787854636",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Mi4LyMMBJNhX",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab7",
@@ -4878,13 +5574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASTUTI",
     "no_rekening": "087787854637",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q9MvpfgdRRAr",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab8",
@@ -4892,13 +5590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAPRIUDIN JAELANI",
     "no_rekening": "085924491305",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-08-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/91FuHavtzoY9",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aab9",
@@ -4906,13 +5606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUFRI JAMIN",
     "no_rekening": "082267630742",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-02-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hLcxEq6OAEc3",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaba",
@@ -4920,13 +5622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MEGAWATI LUSIANA FIRDANI",
     "no_rekening": "085362071355",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2QF4BcIj1ktw",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aabb",
@@ -4934,13 +5638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULAICHA",
     "no_rekening": "085362071343",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BAsVhOVgNfAQ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aabc",
@@ -4948,13 +5654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERWANI",
     "no_rekening": "082267630755",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Aq3Ty4624Eg4",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aabd",
@@ -4962,13 +5670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WAWAN HERMADI",
     "no_rekening": "082267631144",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-01-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/X2lKztTfL6Ze",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aabe",
@@ -4976,13 +5686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULISTIANI",
     "no_rekening": "087787854428",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-05-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uHP00zRTYh8p",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aabf",
@@ -4990,13 +5702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SALMIAH",
     "no_rekening": "087787853409",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-05-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GPmEVqCSxQbJ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac0",
@@ -5004,13 +5718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHASANAH",
     "no_rekening": "087787852695",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-05-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vXR9Jv4bpGoz",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac1",
@@ -5018,13 +5734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD ANGGARA",
     "no_rekening": "081263415328",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-04-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UYjmE7wDs0Dk",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac2",
@@ -5032,13 +5750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "UMADI",
     "no_rekening": "085924491267",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7GcqZev7KRNW",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac3",
@@ -5046,13 +5766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARIMAN",
     "no_rekening": "085964282609",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/g8Erml3DG4qT",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac4",
@@ -5060,13 +5782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ABDUL KODIR",
     "no_rekening": "085924544226",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-02-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4grYISA3l0iu",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac5",
@@ -5074,13 +5798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI NURBAYA",
     "no_rekening": "085955248045",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-05-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ukXsg3VzyaA4",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac6",
@@ -5088,13 +5814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eli maspudin",
     "no_rekening": "087763374027",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/i8csDnqXP99j",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac7",
@@ -5102,13 +5830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Siti sakinah",
     "no_rekening": "087763374226",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-03-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EW4SzZ38Cnfm",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac8",
@@ -5116,13 +5846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI HAWA",
     "no_rekening": "087787854431",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-06-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/whNAyqDQJHyR",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aac9",
@@ -5130,13 +5862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUSLAN HARAHAP",
     "no_rekening": "082267631604",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-02-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xFFPp7mlmRFZ",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aaca",
@@ -5144,13 +5878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dessy indriany Siregar",
     "no_rekening": "087815584891",
     "jenis": "GOPAY",
+    "jenis_detail": "E-Wallet GoPay",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eYBtRY6Rbs69",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet GoPay"
+    "catatan": "E-Wallet GoPay",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aacb",
@@ -5158,13 +5894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARINI",
     "no_rekening": "082116971140",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hZOiOLYxw9lR",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aacc",
@@ -5172,13 +5910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jono Purnomo",
     "no_rekening": "081392997261",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-12-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vogVPfRgd9bk",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aacd",
@@ -5186,13 +5926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PATIMAH",
     "no_rekening": "082144497610",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/IbodAzrN9wrM",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aace",
@@ -5200,13 +5942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINDIYARTI SRI WAHYUNI",
     "no_rekening": "081393155087",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qT9VRmOs2gMU",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aacf",
@@ -5214,13 +5958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANDI DODI",
     "no_rekening": "082144479433",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EMikEeFhmkh7",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad0",
@@ -5228,13 +5974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ABDULLAH AMIR",
     "no_rekening": "081284302142",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2027-01-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/W7xM51dHFhlR",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad1",
@@ -5242,13 +5990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dian Antoni",
     "no_rekening": "081374178112",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/a8cnMH3D2WF4",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad2",
@@ -5256,13 +6006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sukiman Samuel",
     "no_rekening": "082169377468",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-10-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/C6miVR9s8mvp",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad3",
@@ -5270,13 +6022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eka Sari",
     "no_rekening": "082126055980",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-09-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EimB2CLS55fv",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad4",
@@ -5284,13 +6038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hermalita",
     "no_rekening": "082172144955",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FVqRmvsjwqrN",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad5",
@@ -5298,13 +6054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "wartati",
     "no_rekening": "081226384354",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "BERMASALAH",
     "masa_aktif": "2026-02-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/GcL7WoYH8_tY",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aad6",
@@ -5312,13 +6070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMA",
     "no_rekening": "081387819827",
     "jenis": "LINKAJA",
+    "jenis_detail": "E-Wallet LinkAja",
     "status": "AKTIF",
     "masa_aktif": "2026-11-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/y7PapHAKKhnS",
     "tanggal_input": "2026-06-11T03:08:39.679000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet LinkAja"
+    "catatan": "E-Wallet LinkAja",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa29",
@@ -5326,13 +6086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUMRIANI",
     "no_rekening": "087716042348",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2TVoXMH165wI",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2a",
@@ -5340,13 +6102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAIFUL",
     "no_rekening": "08176570086",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zKhHa3ALHG3V",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2b",
@@ -5354,13 +6118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IIN KURNIATI KURDIN",
     "no_rekening": "087889571306",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZNMgvQKk019q",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2c",
@@ -5368,13 +6134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RISQI APRIANI. P",
     "no_rekening": "08176339927",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HyHdsidXB5zt",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2d",
@@ -5382,13 +6150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAMLI DG NABA",
     "no_rekening": "087716042220",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/13IVUzTg4L4Y",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2e",
@@ -5396,13 +6166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINDA",
     "no_rekening": "087716041825",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KR16bPiRE2JE",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa2f",
@@ -5410,13 +6182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUFRI BONTO",
     "no_rekening": "087716041823",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mVvYk6XIwLNW",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa30",
@@ -5424,13 +6198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TITIK HANIAH",
     "no_rekening": "087716042203",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pfZV02SVhzyq",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa31",
@@ -5438,13 +6214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HERLINA",
     "no_rekening": "08176570262",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AitXxwvtoY9H",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa32",
@@ -5452,13 +6230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YOHANA SESA",
     "no_rekening": "087758033908",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pPcLyPWhW2yp",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa33",
@@ -5466,13 +6246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DIMAS ARIAL MUHAMMAD",
     "no_rekening": "087716041726",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/04tN335SLr5e",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa34",
@@ -5480,13 +6262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAMSUDDIN",
     "no_rekening": "087716042517",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2tuhEUDlX9KK",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa35",
@@ -5494,13 +6278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI RAHAYU",
     "no_rekening": "085926186522",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PPEhHlcEjLPG",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa36",
@@ -5508,13 +6294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "UMAR FARUQ",
     "no_rekening": "085926186533",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hJ3uAnG8vj65",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa37",
@@ -5522,13 +6310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WARDI",
     "no_rekening": "087775851461",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QYjkTklFmlVk",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa38",
@@ -5536,13 +6326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MURNIAH",
     "no_rekening": "087723571783",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XiahblAayPzC",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa39",
@@ -5550,13 +6342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BAYUMI",
     "no_rekening": "087847148357",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AgCYW3DIzHi8",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3a",
@@ -5564,13 +6358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAKIMAN",
     "no_rekening": "087847148430",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ufYgAS1gDy2C",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3b",
@@ -5578,13 +6374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUYANTO II",
     "no_rekening": "087889546158",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/akY5rKiqYdfH",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3c",
@@ -5592,13 +6390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TUKINO",
     "no_rekening": "087854291605",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sPrEca4N2m2Z",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3d",
@@ -5606,13 +6406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AROT SIMANJUNTAK",
     "no_rekening": "087854292456",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lG3prAMLdeFD",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3e",
@@ -5620,13 +6422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HANIAH",
     "no_rekening": "081912632736",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PEBglox9x2Yh",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa3f",
@@ -5634,13 +6438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MURDI",
     "no_rekening": "087854291062",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Jf5OUtwqntJ1",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa40",
@@ -5648,13 +6454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FARIDA",
     "no_rekening": "087854291869",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/x84BchAksIYn",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa41",
@@ -5662,13 +6470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KUMI",
     "no_rekening": "087854291794",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5eyBRR2ONGFq",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa42",
@@ -5676,13 +6486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI SURYATI",
     "no_rekening": "087889549411",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/CTNZYCnwJyR6",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa43",
@@ -5690,13 +6502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINARSIH",
     "no_rekening": "087838260834",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cIhEkq1M2AIn",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa44",
@@ -5704,13 +6518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNI",
     "no_rekening": "085929913399",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JCGR937badqa",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa45",
@@ -5718,13 +6534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WATI",
     "no_rekening": "085929914066",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/s9fokITcRscO",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa46",
@@ -5732,13 +6550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RISWANA",
     "no_rekening": "085929918253",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/d8qPgugDuS7R",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa47",
@@ -5746,13 +6566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LAILA MALIKA BALKIS",
     "no_rekening": "087755352245",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9hJDYXtHsnYM",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa48",
@@ -5760,13 +6582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUWARSIH",
     "no_rekening": "087888262933",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-25",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9HoqPKjDmTTP",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa49",
@@ -5774,13 +6598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARIA NELDE HOAR",
     "no_rekening": "087889628636",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tnCJeTTtojOq",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4a",
@@ -5788,13 +6614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Maulida",
     "no_rekening": "085973946719",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/t2BHC3mQJLsr",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4b",
@@ -5802,13 +6630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Siti Imroatul Munawaroh",
     "no_rekening": "087846123022",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2BlaU1HlkaMH",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4c",
@@ -5816,13 +6646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Faizah",
     "no_rekening": "085973946394",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MsnfF2pjBKLK",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4d",
@@ -5830,13 +6662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hariyanti",
     "no_rekening": "087846122395",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1Z3sEkLXhay7",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4e",
@@ -5844,13 +6678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Meta Mauliza",
     "no_rekening": "087758624836",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LbGLInZepxOr",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa4f",
@@ -5858,13 +6694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Khusnul Khotimah",
     "no_rekening": "087846122480",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mPbRH12KB4Va",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa50",
@@ -5872,13 +6710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Khailani Harisnur",
     "no_rekening": "085973946767",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vJl0FGkR1UJ5",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa51",
@@ -5886,13 +6726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sardian Situmorang",
     "no_rekening": "087849174417",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cqrhh6CzOzXo",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa52",
@@ -5900,13 +6742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Murniati",
     "no_rekening": "085973946205",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EZSKNSA4aYwN",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa53",
@@ -5914,13 +6758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Shinta Dewi",
     "no_rekening": "087759348789",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/TqJl6BSJHmUn",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa54",
@@ -5928,13 +6774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAINUDDIN",
     "no_rekening": "087778759577",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ETCdtGQYHkDI",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa55",
@@ -5942,13 +6790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUR AIN",
     "no_rekening": "087830766155",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xKnXBJufrr0t",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa56",
@@ -5956,13 +6806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUR ASLIFATIN",
     "no_rekening": "087758790090",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tALHvLfv5HTH",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa57",
@@ -5970,13 +6822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI DJUWARIYAH",
     "no_rekening": "087830766073",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/s3Cn1YliWIUF",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa58",
@@ -5984,13 +6838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMINI",
     "no_rekening": "087830766153",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VAZTAvUFWMkX",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa59",
@@ -5998,13 +6854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURSINAH",
     "no_rekening": "087846123084",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XrstXtwqOqz3",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5a",
@@ -6012,13 +6870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAYUTI",
     "no_rekening": "087846123071",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2ChGbvyPSOLV",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5b",
@@ -6026,13 +6886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUSLAN N",
     "no_rekening": "087846122832",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4JXxNRMMhepJ",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5c",
@@ -6040,13 +6902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMATIA DG NINING",
     "no_rekening": "087846123065",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KPATWv1eUgIP",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5d",
@@ -6054,13 +6918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAMRAH",
     "no_rekening": "085939744066",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/alfprAmmvDsh",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5e",
@@ -6068,13 +6934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "UMI KUNJARIYAH",
     "no_rekening": "087846122459",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Iw8u8dQGAfBx",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa5f",
@@ -6082,13 +6950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI MUSLIKAH",
     "no_rekening": "087846123009",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EWquJJ4m9Gkf",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa60",
@@ -6096,13 +6966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KARIYATUN",
     "no_rekening": "087846122470",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AyqF2sDWL0Vr",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa61",
@@ -6110,13 +6982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TAMLIKAH",
     "no_rekening": "087846122468",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q230nIKgE93k",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa62",
@@ -6124,13 +6998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUANAM",
     "no_rekening": "087846123052",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VkEuii8VJcXy",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa63",
@@ -6138,13 +7014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI DUROTUL ALIYAH",
     "no_rekening": "087846123028",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VNrAXPplChW7",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa64",
@@ -6152,13 +7030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAAMIN",
     "no_rekening": "087846122690",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/J6H8OLmDZ47w",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa65",
@@ -6166,13 +7046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KUMAIDAH",
     "no_rekening": "087846123018",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ERTfZtJfx1cY",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa66",
@@ -6180,13 +7062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ASMAUL NIKMAH",
     "no_rekening": "087846123012",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xdiIRmVVQzRG",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa67",
@@ -6194,13 +7078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMINAH",
     "no_rekening": "087846123051",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2er7fKtC9HLy",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa68",
@@ -6208,13 +7094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI KUNJARIAH",
     "no_rekening": "087846123054",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/npmwTCJ2nUfX",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa69",
@@ -6222,13 +7110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANTIYAH",
     "no_rekening": "087846123045",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/IuyKXubE3n94",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6a",
@@ -6236,13 +7126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROHANI",
     "no_rekening": "085973946714",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/z38ElyS2J2CE",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6b",
@@ -6250,13 +7142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI",
     "no_rekening": "085973946764",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/IggK4giYtsQm",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6c",
@@ -6264,13 +7158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI SALMAH BETHAN",
     "no_rekening": "087771455176",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/lchGKvEMABJs",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6d",
@@ -6278,13 +7174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TETI RATNAWATI",
     "no_rekening": "087825740100",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xBZOGxHwvjvi",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6e",
@@ -6292,13 +7190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KANAN",
     "no_rekening": "087733763445",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5fafLQt7s5Gj",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa6f",
@@ -6306,13 +7206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FITRI WULANDARI",
     "no_rekening": "087830766187",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KYF5ZvRtTVrW",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa70",
@@ -6320,13 +7222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIFKA NURUL AISYAH RAMLI",
     "no_rekening": "087733762993",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wenp6shxnz3Q",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa71",
@@ -6334,13 +7238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUKMAWATI",
     "no_rekening": "087758791568",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/a9UoVvtbMcs1",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa72",
@@ -6348,13 +7254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KURNIAWAN",
     "no_rekening": "081912723363",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SnwnhJh5pUAh",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa73",
@@ -6362,13 +7270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SURIANI",
     "no_rekening": "087870589369",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BYaDeDQFsZrX",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa74",
@@ -6376,13 +7286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KADE NAI",
     "no_rekening": "087742113029",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/h0D3aiboQlTj",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa75",
@@ -6390,13 +7302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TATIK",
     "no_rekening": "087830766067",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/TMWGkkoZThzJ",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa76",
@@ -6404,13 +7318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPIAN SETIA KAWAN",
     "no_rekening": "085973946388",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1ftBfBEHuCvQ",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa77",
@@ -6418,13 +7334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAMSINAR",
     "no_rekening": "087750611379",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/upEMRTQ591eQ",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa78",
@@ -6432,13 +7350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNINGSIH",
     "no_rekening": "085939742213",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EYxnrpHW1R6X",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa79",
@@ -6446,13 +7366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PATONAH",
     "no_rekening": "087846123024",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NW9CUf2GgfDs",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7a",
@@ -6460,13 +7382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PRISTIWATI IRIANI",
     "no_rekening": "085973946206",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/02fDQrYupnRo",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa7b",
@@ -6474,13 +7398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI SUMIATIN",
     "no_rekening": "087846122792",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0nKVPHr1qyM5",
     "tanggal_input": "2026-06-11T03:08:39.678000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa03",
@@ -6488,13 +7414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASNA",
     "no_rekening": "087758034040",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qEfAhYvARbOf",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa04",
@@ -6502,13 +7430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAMIATUN",
     "no_rekening": "08176570332",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9PLx9RJbXTiY",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa05",
@@ -6516,13 +7446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "CUCU SUARSIH",
     "no_rekening": "087716041901",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/H8PdQiDSTjCD",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa06",
@@ -6530,13 +7462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMIATI",
     "no_rekening": "08176368883",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cRIoMkh2WIz2",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa07",
@@ -6544,13 +7478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ENEK",
     "no_rekening": "087716041879",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nqQd9E8C5p0t",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa08",
@@ -6558,13 +7494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG SATTU",
     "no_rekening": "087716042214",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/YFcbN1ipu0Uq",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa09",
@@ -6572,13 +7510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RINI ANGGRAINI",
     "no_rekening": "087716042212",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/izrM8ruSEvRU",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0a",
@@ -6586,13 +7526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MASAH",
     "no_rekening": "08176369229",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/YiGlTa8xLfsn",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0b",
@@ -6600,13 +7542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARLINA",
     "no_rekening": "081998041098",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HBFqFkzm4s3X",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0c",
@@ -6614,13 +7558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NANING",
     "no_rekening": "081998047100",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hrEEIkJScXFF",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0d",
@@ -6628,13 +7574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YADI",
     "no_rekening": "087716042396",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EyQoOoT2wByA",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0e",
@@ -6642,13 +7590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAHRUNI DG SIANG",
     "no_rekening": "08176369914",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5RlxvmDoVSNB",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa0f",
@@ -6656,13 +7606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI",
     "no_rekening": "087758034118",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GEcO98Stn8sA",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa10",
@@ -6670,13 +7622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUSTAM",
     "no_rekening": "087716042225",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/czX9v84PZtRX",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa11",
@@ -6684,13 +7638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASNIA H",
     "no_rekening": "08176368846",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gEaSN6JBBdGS",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa12",
@@ -6698,13 +7654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI ANI",
     "no_rekening": "085933885330",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-07-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5PEigdJYAGU4",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa13",
@@ -6712,13 +7670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WASFA",
     "no_rekening": "08176369287",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AgfCsiaWwMcI",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa14",
@@ -6726,13 +7686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARTATI",
     "no_rekening": "087758034053",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9xPj2XTnE1fj",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa15",
@@ -6740,13 +7702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JULAEHA",
     "no_rekening": "08176570103",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zFjzMc8pAb7Y",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa16",
@@ -6754,13 +7718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD SYAHRIR",
     "no_rekening": "08176368896",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nV0lcrxY0DFc",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa17",
@@ -6768,13 +7734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YETTY",
     "no_rekening": "087716041706",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/CEhPucwlDc7L",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa18",
@@ -6782,13 +7750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AISAH",
     "no_rekening": "087716041849",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7fSKq0HHXzcg",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa19",
@@ -6796,13 +7766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAHARIANTI",
     "no_rekening": "087716042196",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/253yMKmDCJwt",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1a",
@@ -6810,13 +7782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUCIHARIYANI",
     "no_rekening": "087716041817",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/a0QalpM12vsV",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1b",
@@ -6824,13 +7798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUROYO",
     "no_rekening": "087716041747",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LelcsOy06HyN",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1c",
@@ -6838,13 +7814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TATI DG TINO",
     "no_rekening": "087716042226",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FJjYQpQTx2By",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1d",
@@ -6852,13 +7830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YULIANA TAMMU",
     "no_rekening": "087716041818",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DzXUpnahb6S1",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1e",
@@ -6866,13 +7846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MADINA",
     "no_rekening": "087716041842",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JYAlWx627z8B",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa1f",
@@ -6880,13 +7862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUMADI DG NGEMBA",
     "no_rekening": "087716041724",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qGh1mlVp5NPH",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa20",
@@ -6894,13 +7878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MAKKUASA",
     "no_rekening": "087716041816",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/i3n5gj0GmvTn",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa21",
@@ -6908,13 +7894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI ROHANAH",
     "no_rekening": "08176368864",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EeVdH36pcG6k",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa22",
@@ -6922,13 +7910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD IBRAHIM ALGIFARI SYA",
     "no_rekening": "087716042413",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VQThs4HdNBZc",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa23",
@@ -6936,13 +7926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NENENG KOMALASARI",
     "no_rekening": "087758032930",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SmbXhGuJxoL9",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa24",
@@ -6950,13 +7942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANI MAFULA",
     "no_rekening": "087716041715",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/meUNG31oyMBm",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa25",
@@ -6964,13 +7958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG PUJI",
     "no_rekening": "087716041803",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QbpDhbl9GiBD",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa26",
@@ -6978,13 +7974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BINTI NADLIFAH",
     "no_rekening": "087758034115",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Y30j1IUEZiC4",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa27",
@@ -6992,13 +7990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIBUT",
     "no_rekening": "085950600500",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ebx6XgQ0XFUx",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a26b74bcd8e0647c4aa28",
@@ -7006,13 +8006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ARIPA",
     "no_rekening": "08176369931",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FRCPk67NQ8r7",
     "tanggal_input": "2026-06-11T03:08:39.677000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171f",
@@ -7020,13 +8022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ST.AMINAH",
     "no_rekening": "087716041237",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SpFkBpWBoViB",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e3",
@@ -7034,13 +8038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANISA",
     "no_rekening": "087733486368",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BN64H3IZyz19",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f0",
@@ -7048,13 +8054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IRNA",
     "no_rekening": "087870961768",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KOAmwaPuuEsq",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170b",
@@ -7062,13 +8070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAMSIA DG LEBANG",
     "no_rekening": "08176368870",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VcYRgEP2Lh7N",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d1",
@@ -7076,13 +8086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUYATI",
     "no_rekening": "087788901530",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/RX0opaRsIH6F",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d5",
@@ -7090,13 +8102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARIANTI",
     "no_rekening": "087889015423",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/77xwhP4ZoJwh",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e1",
@@ -7104,13 +8118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SURIANI",
     "no_rekening": "087887704843",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5oc5FDZT4Yjn",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e8",
@@ -7118,13 +8134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUNTAMAH",
     "no_rekening": "087887703740",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cu33aAc4moP5",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ff",
@@ -7132,13 +8150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MASTURA",
     "no_rekening": "08176368828",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/U0Jluu2OQW0t",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21709",
@@ -7146,13 +8166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG. SAHA",
     "no_rekening": "08176369597",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XnVWxGLtBDr5",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21715",
@@ -7160,13 +8182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARIANTI DG SAYANG",
     "no_rekening": "08176368871",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/A4F8lqCxNrwB",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21701",
@@ -7174,13 +8198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "INDO WAWO",
     "no_rekening": "087758033960",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/5SAnIbKx9FDe",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170a",
@@ -7188,13 +8214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD",
     "no_rekening": "08176369351",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gnSCmoTXybVC",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216dc",
@@ -7202,13 +8230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LISNAWATI BR NABABAN",
     "no_rekening": "087723642998",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SATuZ1ylT5oz",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f5",
@@ -7216,13 +8246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUR AISAH",
     "no_rekening": "085958906536",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4c9ehMkFME4M",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21705",
@@ -7230,13 +8262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAENG JIME",
     "no_rekening": "08176368875",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FzkSRaRiGpsv",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d2",
@@ -7244,13 +8278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARTI",
     "no_rekening": "087771876045",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zWpZXBryc7yF",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f4",
@@ -7258,13 +8294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KASMAWATI",
     "no_rekening": "087758034055",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/owtphQTBX6Fj",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216fe",
@@ -7272,13 +8310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHARRAM",
     "no_rekening": "087758032551",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/naSKBaGEPnHr",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21702",
@@ -7286,13 +8326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI PATIMAH",
     "no_rekening": "087884159700",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/B5MM0S7CuY4z",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21710",
@@ -7300,13 +8342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPAAT",
     "no_rekening": "08176570238",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xwN5rWdpFzKm",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21713",
@@ -7314,13 +8358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARTI",
     "no_rekening": "08176570166",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jsujEY7Qsmp6",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d4",
@@ -7328,13 +8374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI UMAYAH",
     "no_rekening": "087712456808",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NkzE0uX9HzfE",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216db",
@@ -7342,13 +8390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TUMISAH",
     "no_rekening": "087726618442",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/fnYwnu6Str68",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170d",
@@ -7356,13 +8406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMINI",
     "no_rekening": "08176368856",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/nGhUUzETcL4V",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ec",
@@ -7370,13 +8422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IMRO'ATIN",
     "no_rekening": "087733486465",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tH0YswndEVZH",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f8",
@@ -7384,13 +8438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DEBORA MAKU",
     "no_rekening": "087716041848",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/p93kh5XFfkes",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170e",
@@ -7398,13 +8454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LUSIWAHYUNING TIAS",
     "no_rekening": "08176570323",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UNhiJVywqfH1",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171a",
@@ -7412,13 +8470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPIATUN",
     "no_rekening": "08176570324",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ADDn1SDRZngC",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d8",
@@ -7426,13 +8486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINARTI",
     "no_rekening": "087887705439",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/rH9qjkJ2ixEO",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d9",
@@ -7440,13 +8502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MIRATUN",
     "no_rekening": "087889015388",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/aFUFAzR2wYjS",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e7",
@@ -7454,13 +8518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAT SANTOSO",
     "no_rekening": "087887705135",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GyDo3dVntPHl",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f6",
@@ -7468,13 +8534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUDARMANI",
     "no_rekening": "087758033935",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zrwhKkdjphWa",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170f",
@@ -7482,13 +8550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI ZULAIQO",
     "no_rekening": "08176570168",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/N7gJF7DFuhYX",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21717",
@@ -7496,13 +8566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASMIRI",
     "no_rekening": "087716041283",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/or9VAU7FBtCI",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171c",
@@ -7510,13 +8582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LISTAWATI",
     "no_rekening": "08176570084",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/aGdLGgKlIbDW",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ed",
@@ -7524,13 +8598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUTINGAH",
     "no_rekening": "081932855970",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Xfx4aASGgB69",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f3",
@@ -7538,13 +8614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WAODE ENDANG M",
     "no_rekening": "087870962775",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/s6SfF1ojNAUh",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f7",
@@ -7552,13 +8630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NIA",
     "no_rekening": "087716041716",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/V7Y8f8BjhFH0",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21700",
@@ -7566,13 +8646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUR ANISA",
     "no_rekening": "087716041243",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wBcSJRhLvKb8",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21704",
@@ -7580,13 +8662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI JUNIANTI",
     "no_rekening": "087716042170",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4ux1d4m1GJhi",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21706",
@@ -7594,13 +8678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DURROTUL YATIMAH",
     "no_rekening": "087758032803",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kEP0YR9Q5T8p",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21711",
@@ -7608,13 +8694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUBIYANTO",
     "no_rekening": "08176570308",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PL4Z7hjYYHVW",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21712",
@@ -7622,13 +8710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "INDAH LESTARI",
     "no_rekening": "08176570246",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4YEZsdH7B9OS",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21714",
@@ -7636,13 +8726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUMARIA",
     "no_rekening": "08176368974",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2UNag2aWcZqR",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216df",
@@ -7650,13 +8742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RISAH NIATI BR SEMBIRING",
     "no_rekening": "085946680952",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bRhTmNi4XM9w",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e4",
@@ -7664,13 +8758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NORMA",
     "no_rekening": "085954334212",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AlcEHJAyZexy",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e6",
@@ -7678,13 +8774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AZRA ZAZANA",
     "no_rekening": "087746119569",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MMk6YFLPmFOw",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e9",
@@ -7692,13 +8790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMATIA",
     "no_rekening": "087712456233",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3Wz9wIdrZlHx",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ea",
@@ -7706,13 +8806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NASRIPAH",
     "no_rekening": "087771876098",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/43oxai2B8s83",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ee",
@@ -7720,13 +8822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HAMIDA",
     "no_rekening": "087758033937",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2u29fbu8M9Nv",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f9",
@@ -7734,13 +8838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI AZIZAH",
     "no_rekening": "087792206059",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FmUynskm24Hn",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216fb",
@@ -7748,13 +8854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DEWIYANTI",
     "no_rekening": "087758033954",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AeKJItM8UiWw",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21703",
@@ -7762,13 +8870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "EUIS KUSMIATI",
     "no_rekening": "087792205017",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4mmWiDooSQSi",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21716",
@@ -7776,13 +8886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ST. HADIJAH",
     "no_rekening": "087716041290",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8I7PFyjHDOjB",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21719",
@@ -7790,13 +8902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUJARWANDY",
     "no_rekening": "087889571162",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ySfqCqFWy6Tm",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171e",
@@ -7804,13 +8918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHUSNAH",
     "no_rekening": "087716042157",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3SwwkPsLLQnW",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216dd",
@@ -7818,13 +8934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINDARI",
     "no_rekening": "087733486394",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/TPUv6QAslh63",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216de",
@@ -7832,13 +8950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMANI",
     "no_rekening": "087820668277",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SA7yz5YNuMBk",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f2",
@@ -7846,13 +8966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DJULAIKAH",
     "no_rekening": "08176368849",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LMrsCNLMR6rR",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216da",
@@ -7860,13 +8982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULTAN MAULANA SYARIHAT",
     "no_rekening": "087889015431",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3aFpHeC1V7BY",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216fa",
@@ -7874,13 +8998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NIKMATUL HASANAH",
     "no_rekening": "087758033953",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xAB40oSRXz39",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21707",
@@ -7888,13 +9014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MAHMUD",
     "no_rekening": "087758034166",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/h7huABmd4jnL",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21708",
@@ -7902,13 +9030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURLIAH",
     "no_rekening": "087758032931",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/z6t17wCw0r6y",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d3",
@@ -7916,13 +9046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "UMI TATI'AH",
     "no_rekening": "087733486847",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xVfpqTjRtf8h",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d7",
@@ -7930,13 +9062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SURI",
     "no_rekening": "087733486414",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/V6O4Ti48zy9D",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e5",
@@ -7944,13 +9078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAHMATIA BT PASE'RE",
     "no_rekening": "087889015374",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/243AqaKDx6Zx",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ef",
@@ -7958,13 +9094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BAU DG SANGNGING",
     "no_rekening": "08176570240",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uog6gfSt2qGi",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21718",
@@ -7972,13 +9110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WARSINEM",
     "no_rekening": "08176369861",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gokm2ml3RmU8",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171b",
@@ -7986,13 +9126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUSDI",
     "no_rekening": "08176570302",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Jhmgj8HnlKmJ",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d6",
@@ -8000,13 +9142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ISTIKOMAH",
     "no_rekening": "087887704017",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Eog2Q3FuNAeq",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e0",
@@ -8014,13 +9158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNI",
     "no_rekening": "087760851919",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3mzLhThZroIR",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216e2",
@@ -8028,13 +9174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARFUNGAH",
     "no_rekening": "087746118925",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pwIifz9RizLQ",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216eb",
@@ -8042,13 +9190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUYATMI",
     "no_rekening": "087788901508",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WyTTbcymp35t",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216f1",
@@ -8056,13 +9206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUH ALIF IFDAL",
     "no_rekening": "087716041701",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0CVAORPGk4QV",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216fc",
@@ -8070,13 +9222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUH BAKRI DG NAI",
     "no_rekening": "087870961518",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/w3ukWmnD1XRO",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216fd",
@@ -8084,13 +9238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUMINI",
     "no_rekening": "087716042403",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-12-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DxsBwd5GsSvd",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2170c",
@@ -8098,13 +9254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ASMAWATI AMIR",
     "no_rekening": "08176369892",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Cx7UNCW0G8XN",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2171d",
@@ -8112,13 +9270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMIATI",
     "no_rekening": "08176369928",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/U5MLIfbCqyiw",
     "tanggal_input": "2026-06-11T03:03:16.578000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21693",
@@ -8126,13 +9286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WARISAH",
     "no_rekening": "087887704458",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-09-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ia6QQPj36MFZ",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216aa",
@@ -8140,13 +9302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG RONRONG",
     "no_rekening": "087771876188",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SXBKHA0ahowl",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c8",
@@ -8154,13 +9318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUBINAH",
     "no_rekening": "087853218132",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9K2fC3R2bJ9o",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21684",
@@ -8168,13 +9334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ARMAN",
     "no_rekening": "087889547076",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/j1TwMAsU0TiE",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21695",
@@ -8182,13 +9350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURYAH",
     "no_rekening": "087852037921",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kQy4lHNffoqt",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a4",
@@ -8196,13 +9366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M SAING",
     "no_rekening": "085975004145",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ugHpQ3OCaVh5",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b7",
@@ -8210,13 +9382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURAENI",
     "no_rekening": "087771876139",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JMwXi8DFJAQR",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21686",
@@ -8224,13 +9398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAHRIR",
     "no_rekening": "087788718922",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/urifAEK5MM96",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168a",
@@ -8238,13 +9414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUDIRMAN BIN MAIMING",
     "no_rekening": "087743150452",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pRiIwVLJOjpl",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b4",
@@ -8252,13 +9430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULIYATI",
     "no_rekening": "087712456336",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/x3b6ibYqL0DA",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c5",
@@ -8266,13 +9446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPRIONO",
     "no_rekening": "087852037930",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dB4kxPEyRJEp",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21688",
@@ -8280,13 +9462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUMINO",
     "no_rekening": "087854292403",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZUjbpB9WwVTe",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21696",
@@ -8294,13 +9478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPIATI",
     "no_rekening": "087848652663",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/J6upAFyGZfmm",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ae",
@@ -8308,13 +9494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMIRAN",
     "no_rekening": "087733486844",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kRbRcj6nBjRp",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b0",
@@ -8322,13 +9510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SULIKAH",
     "no_rekening": "087771876801",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/noIZI6bZGWq2",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216bf",
@@ -8336,13 +9526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RASIAH",
     "no_rekening": "087733487038",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0SqJgjIvWryD",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216cf",
@@ -8350,13 +9542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MINAH",
     "no_rekening": "087746116962",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jS5BGqC5YSd6",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21694",
@@ -8364,13 +9558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MEGAWATI",
     "no_rekening": "087746117822",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-07-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4QkwzDHnjsk6",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169c",
@@ -8378,13 +9574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARTI DG NGASSENG",
     "no_rekening": "087722790761",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/f8eI5P995cMZ",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ab",
@@ -8392,13 +9590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BASO DG SIKKI",
     "no_rekening": "087746117814",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pQFWwhk6Xvel",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b5",
@@ -8406,13 +9606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WINARSIH",
     "no_rekening": "087853218379",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kr77406u3uGR",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216bd",
@@ -8420,13 +9622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AMIS TURSILAWATI",
     "no_rekening": "087887704925",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ySzzW8oirknC",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216be",
@@ -8434,13 +9638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAGI SISWOWATI",
     "no_rekening": "087852038766",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bWrCg0recjbN",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168b",
@@ -8448,13 +9654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAHRUDDIN",
     "no_rekening": "087854293514",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Z5Oiar3gTDVV",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168d",
@@ -8462,13 +9670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ALIAMI",
     "no_rekening": "087853218113",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-01-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cgoeIDoiCFJx",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169d",
@@ -8476,13 +9686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ELLIYA SUSILAWATI",
     "no_rekening": "087723643386",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2028-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KkQ1GtIE8kuM",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b6",
@@ -8490,13 +9702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YATIN",
     "no_rekening": "087771876138",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0jpF1euLBOup",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c7",
@@ -8504,13 +9718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROMELAH",
     "no_rekening": "087852038295",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Yx4XbCWHUU5c",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216d0",
@@ -8518,13 +9734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HIDAYAH",
     "no_rekening": "085938381307",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/yi3Vc9t5Zvdi",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21685",
@@ -8532,13 +9750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ARNI",
     "no_rekening": "087788718913",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/UuqhrQYJRXHp",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21692",
@@ -8546,13 +9766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANDI PARISI",
     "no_rekening": "087712456499",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iKMnl0ZRy7RN",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169a",
@@ -8560,13 +9782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NUSRIANI",
     "no_rekening": "085975002771",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2ELbAJjeAzhU",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a0",
@@ -8574,13 +9798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "BURHANUDDIN",
     "no_rekening": "085975004541",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bs9waMfeVJCD",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169b",
@@ -8588,13 +9814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MASRIKAH",
     "no_rekening": "087792076622",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Eq09i5A5ZmjU",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169f",
@@ -8602,13 +9830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KASIYAH",
     "no_rekening": "087887705576",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ad1kUJ9jPetR",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b3",
@@ -8616,13 +9846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUYATNO",
     "no_rekening": "087733487356",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vYc2EM5H9nJQ",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21689",
@@ -8630,13 +9862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "juariyah",
     "no_rekening": "087854292400",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gROmtzsSXQ1Y",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21697",
@@ -8644,13 +9878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYARIFUDDIN",
     "no_rekening": "085975004326",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2028-02-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pT2y6Ky8TC32",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21699",
@@ -8658,13 +9894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WULANDARI",
     "no_rekening": "087722790767",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Chn10vZMpHfc",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a2",
@@ -8672,13 +9910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ROSNIAH",
     "no_rekening": "085975003263",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/u6y3qlPH0zz5",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ba",
@@ -8686,13 +9926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TITIN KUMALASARI",
     "no_rekening": "087838260812",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/I2r82n6lT0R0",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216bc",
@@ -8700,13 +9942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NANDA PUTRI SABRIANTI",
     "no_rekening": "087733487386",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xlMWoCZU7aTm",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c1",
@@ -8714,13 +9958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASNIAR",
     "no_rekening": "087887703717",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/cthlgGluisRG",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21687",
@@ -8728,13 +9974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERNAWATI",
     "no_rekening": "087854293516",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WkiLZ3DebryP",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a9",
@@ -8742,13 +9990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG TARRING",
     "no_rekening": "087884159754",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MSeojGSmtMnU",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b8",
@@ -8756,13 +10006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUTINI",
     "no_rekening": "087853218116",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/fToIawxxD2ph",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c6",
@@ -8770,13 +10022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RUDI DAMMONG DG. RANGKA",
     "no_rekening": "087852038724",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/89rF8Uz3cHct",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216cc",
@@ -8784,13 +10038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRINI",
     "no_rekening": "087746116738",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EJdake5tdGMQ",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216cd",
@@ -8798,13 +10054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI BJUWARIYAH",
     "no_rekening": "087853218390",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/idafInbrcGAz",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168f",
@@ -8812,13 +10070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANDI MUH. FAJRIN MURSALIM",
     "no_rekening": "087733488106",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bQ2rgZO7Bn5C",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a3",
@@ -8826,13 +10086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SYAMSUL",
     "no_rekening": "085974924733",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KKboI7QoXHuC",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a5",
@@ -8840,13 +10102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUNNI",
     "no_rekening": "085975001468",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/gQqOI3JZVLzm",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a7",
@@ -8854,13 +10118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NIRLAS TRISANI",
     "no_rekening": "085920771158",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/A2NezQUby9Vz",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216bb",
@@ -8868,13 +10134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KOMSIYAH",
     "no_rekening": "087853218114",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/A2gskWdGHv2L",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216cb",
@@ -8882,13 +10150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HANDRY",
     "no_rekening": "087887705347",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Z5z3lJfAT4Bs",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21691",
@@ -8896,13 +10166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHIDAYATI",
     "no_rekening": "087853218143",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VCSEO8nSDVda",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ad",
@@ -8910,13 +10182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FADLI",
     "no_rekening": "087733486452",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/D5HG2F3mqDba",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c3",
@@ -8924,13 +10198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "PARIDA",
     "no_rekening": "087887703709",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pf6y5lkCZqZ4",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21690",
@@ -8938,13 +10214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DUWI LESTARI",
     "no_rekening": "087771876399",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JDhuoH9RWR4T",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21698",
@@ -8952,13 +10230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUMARSIH",
     "no_rekening": "087865134056",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iTD0gNiRDMXt",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2169e",
@@ -8966,13 +10246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DG KONTU",
     "no_rekening": "087746116776",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/3YkGglRIToh0",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ac",
@@ -8980,13 +10262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MAIRIANA ROSON",
     "no_rekening": "085954334209",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PUN2vMftWsBx",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c2",
@@ -8994,13 +10278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUDDIN DG NGUNJUNG",
     "no_rekening": "087733486881",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/edvvCQmn1FJw",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c4",
@@ -9008,13 +10294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURSIA",
     "no_rekening": "087887705366",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ii06r0mQNBuo",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a1",
@@ -9022,13 +10310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NASIR BERU",
     "no_rekening": "087887251912",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mpuRwYWRrog7",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a6",
@@ -9036,13 +10326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KAMALUDDIN",
     "no_rekening": "085975002795",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pLuyzPHZdiTI",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216a8",
@@ -9050,13 +10342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LILI SURYANI",
     "no_rekening": "085974924622",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-02-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ZzHxQknfZzpV",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216af",
@@ -9064,13 +10358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUH TAHIR",
     "no_rekening": "087838260806",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/H6ZvtrznhAR9",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c9",
@@ -9078,13 +10374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HERNA",
     "no_rekening": "081932855980",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iNfM7fg1NqMw",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ca",
@@ -9092,13 +10390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI CHOTIYAH",
     "no_rekening": "087887703823",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eSYsJTSbQWNw",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216ce",
@@ -9106,13 +10406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KHUSNUL KHOTIMAH",
     "no_rekening": "087746116964",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/28SsAYeAkZxk",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168c",
@@ -9120,13 +10422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURHAYATI",
     "no_rekening": "087854292920",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/r7DC9aexOi47",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2168e",
@@ -9134,13 +10438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUYOTO",
     "no_rekening": "087852039114",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-06-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GctgUQc2TREP",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b2",
@@ -9148,13 +10454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DARMIATI",
     "no_rekening": "087733486887",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PHRP1JIsKaDh",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b1",
@@ -9162,13 +10470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KHABIBATUL MAKROMAH",
     "no_rekening": "087887705837",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JuB1aniSuMmL",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216b9",
@@ -9176,13 +10486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "TUMINI",
     "no_rekening": "087853218380",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wY8lu9fIRuhj",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf216c0",
@@ -9190,13 +10502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HUSNATUL HASANAH",
     "no_rekening": "087889015455",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2027-05-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/fNcqMX3c2fhR",
     "tanggal_input": "2026-06-11T03:03:16.577000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21666",
@@ -9204,13 +10518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ABD MAJID",
     "no_rekening": "087788710748",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uIZhMc5BEL06",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166d",
@@ -9218,13 +10534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LIM JUN SHIN",
     "no_rekening": "087854292916",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/o0r1SeFjEbvr",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21680",
@@ -9232,13 +10550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MISKUN",
     "no_rekening": "087752455762",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MtHrxxYS46sE",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21682",
@@ -9246,13 +10566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI WAHYUNI",
     "no_rekening": "087854291906",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/koz5lMmGJJEJ",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21683",
@@ -9260,13 +10582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FRISKA ROIDA SARAGIH",
     "no_rekening": "087854291941",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/SDUpHwH7rSfX",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167d",
@@ -9274,13 +10598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LISNA",
     "no_rekening": "087854293541",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pvRlkrVrn89L",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21668",
@@ -9288,13 +10614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M HATTA",
     "no_rekening": "087788710373",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AHYrep8RNMOK",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21671",
@@ -9302,13 +10630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUBAEDA",
     "no_rekening": "087788710542",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q2alDk9b3GVJ",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167c",
@@ -9316,13 +10646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERNAWATI",
     "no_rekening": "087854293526",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/PSRjnp8lKMtI",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21663",
@@ -9330,13 +10662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KARNAIN",
     "no_rekening": "087889548186",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1YOlbVUQbmAn",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21677",
@@ -9344,13 +10678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ISMAIL",
     "no_rekening": "087752455289",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/L2BX38NdkJ6G",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167e",
@@ -9358,13 +10694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI AMINAH",
     "no_rekening": "081912637679",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/riIRhUdqTnaN",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21670",
@@ -9372,13 +10710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ADNAN",
     "no_rekening": "087788710535",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kXqhxqOZ5QIY",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21662",
@@ -9386,13 +10726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "KADAR",
     "no_rekening": "087775852702",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-10-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ec8ReFUeLQqd",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166e",
@@ -9400,13 +10742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAJILAH",
     "no_rekening": "087854293222",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vkcxdsuOmArX",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166f",
@@ -9414,13 +10758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASMAWATI",
     "no_rekening": "087788710368",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/53oLUcWXm1Rn",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167a",
@@ -9428,13 +10774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARIONO",
     "no_rekening": "087887601165",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XUy1Lf6B1dav",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167b",
@@ -9442,13 +10790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "WATI",
     "no_rekening": "087854291880",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/wMB6ivLwOfUW",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21681",
@@ -9456,13 +10806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUARTIK",
     "no_rekening": "081912637718",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/o6bbsmLuwk1g",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21661",
@@ -9470,13 +10822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "warsono",
     "no_rekening": "081912633654",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AMkp1YKiJwC4",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21664",
@@ -9484,13 +10838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RAJEMIATI",
     "no_rekening": "087788710753",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/1YOlbVUQbmAn",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21669",
@@ -9498,13 +10854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HASNITA",
     "no_rekening": "087788710365",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/g5Pqx1L6Vytb",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21676",
@@ -9512,13 +10870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ERLIANA",
     "no_rekening": "087752455290",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/H5UWAioCo95x",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2167f",
@@ -9526,13 +10886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAENAB M",
     "no_rekening": "087752455782",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/OLZmxsBNe6FU",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21660",
@@ -9540,13 +10902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "A IRWAN",
     "no_rekening": "087752454921",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-10-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/jojsfEjbygtq",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166a",
@@ -9554,13 +10918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUH YUSUF",
     "no_rekening": "087854292927",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/C5Pnr4OajZeK",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166c",
@@ -9568,13 +10934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUSYAROFAH",
     "no_rekening": "087854293240",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/8TzvbhNlmxhD",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21675",
@@ -9582,13 +10950,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LATIPAH HANUM",
     "no_rekening": "087752455291",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DVw6UNLjLIDF",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21665",
@@ -9596,13 +10966,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAHI",
     "no_rekening": "087788710743",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iecPmxDAuqNM",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf2166b",
@@ -9610,13 +10982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI FATIMAH",
     "no_rekening": "087752454446",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/bVKuQJgJJy8W",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21673",
@@ -9624,13 +10998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HARIFIN",
     "no_rekening": "081912632292",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/u2qVc0Xbi4pX",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21678",
@@ -9638,13 +11014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAHARIA",
     "no_rekening": "087854291881",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4AewZct4GZFx",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21667",
@@ -9652,13 +11030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SOFYAN",
     "no_rekening": "081912639595",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "BERMASALAH",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/b6bttXOgZuuf",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21672",
@@ -9666,13 +11046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAGINO",
     "no_rekening": "081912636938",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/t34MLEQr2cf5",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21674",
@@ -9680,13 +11062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YULI HARIYATI",
     "no_rekening": "087752455285",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iUN9Eus6O2dT",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a2574ae3e6abbadf21679",
@@ -9694,13 +11078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAIDA",
     "no_rekening": "087854293298",
     "jenis": "DANA",
+    "jenis_detail": "E-Wallet DANA",
     "status": "AKTIF",
     "masa_aktif": "2026-11-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/iHj2oQYiAXid",
     "tanggal_input": "2026-06-11T03:03:16.576000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "E-Wallet DANA"
+    "catatan": "E-Wallet DANA",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554b",
@@ -9708,13 +11094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Siti Aisah",
     "no_rekening": "182201017736504",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-02",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/pV60NliuyUzS",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05557",
@@ -9722,13 +11110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Endang",
     "no_rekening": "50601025486508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-10-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/P6HnS4P7hSwt",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555a",
@@ -9736,13 +11126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Amas Yani",
     "no_rekening": "112201012018507",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MkAdrReW5k9X",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05547",
@@ -9750,13 +11142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Chris Hartanto",
     "no_rekening": "331001001976509",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-03-15",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/jPCxx5e_B-C7",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554c",
@@ -9764,13 +11158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Moch.Irfan Maulana",
     "no_rekening": "798301001048509",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-03",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05559",
@@ -9778,13 +11174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmad Sudrajat",
     "no_rekening": "53901010799501",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-12",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/qCph94qpc2t9",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05540",
@@ -9792,13 +11190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Abdul Rozak",
     "no_rekening": "1984466430",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/V9wdow65QNV8",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05546",
@@ -9806,13 +11206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jasson Ivander Excel",
     "no_rekening": "203901010753509",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2026-08-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/peQYG3H6hSGm",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05558",
@@ -9820,13 +11222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JUJU JUMARA",
     "no_rekening": "213601012929500",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-10-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VoOQyjUS5fS1",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555b",
@@ -9834,13 +11238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmad Ridwan",
     "no_rekening": "52101026011506",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-06-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/pSkUlN9oAOXb",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05560",
@@ -9848,13 +11254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Arman",
     "no_rekening": "41501044752505",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05542",
@@ -9862,13 +11270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "DAVID FIRMANSYAH",
     "no_rekening": "112901036952503",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-09-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HKS8yCAQR0b6",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05552",
@@ -9876,13 +11286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Iron Setiawan",
     "no_rekening": "331101007809500",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/YCCZqZixdHxD",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555d",
@@ -9890,13 +11302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sutisna",
     "no_rekening": "53901010627500",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-12-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Pr8UklGBkNSL",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554d",
@@ -9904,13 +11318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rosliah",
     "no_rekening": "1901123186502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-21",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/NbhqCiBdp7Qt",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05551",
@@ -9918,13 +11334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Mohammad Doni Al Farizy",
     "no_rekening": "33201173835501",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VIr3Q0YsF4ex",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555f",
@@ -9932,13 +11350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eka Purnamasari",
     "no_rekening": "1901162324507",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-04-17",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05561",
@@ -9946,13 +11366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dwi Apriyanto",
     "no_rekening": "54101025469508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553f",
@@ -9960,13 +11382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dodi Setiawan",
     "no_rekening": "1979620515",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-05-18",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/sSzJAxMUjvcL",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554e",
@@ -9974,13 +11398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Deki Andtrian",
     "no_rekening": "385401006256504",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-11-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Zr5ZD8sb362D",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05554",
@@ -9988,13 +11414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Meulia Werestianti",
     "no_rekening": "774001002170503",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-31",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/N_NqqL3LWQMX",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554a",
@@ -10002,13 +11430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Cici Astriati",
     "no_rekening": "34501052842507",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6HoK98BVPWHF",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05550",
@@ -10016,13 +11446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmad Lemi",
     "no_rekening": "39701059136502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dFXlXjy1sXsl",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05555",
@@ -10030,13 +11462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "I Dewa Gede Suardana",
     "no_rekening": "463101002761500",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-06-05",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05553",
@@ -10044,13 +11478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Kurniawan",
     "no_rekening": "43401048482502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Hjc1FdA7fOSG",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05545",
@@ -10058,13 +11494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M Irvan Rojab",
     "no_rekening": "118301016519507",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zgnzsrFSdvVn",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05556",
@@ -10072,13 +11510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Atam",
     "no_rekening": "92101021162508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-10-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eTL10uH5jHAe",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05562",
@@ -10086,13 +11526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Zalfa Adela Cahya Mecca",
     "no_rekening": "8710998456",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/xZWOjlNEl166",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05541",
@@ -10100,13 +11542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rosidah",
     "no_rekening": "1982558120",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-11-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WpYTpsdGNmEM",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05543",
@@ -10114,13 +11558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Putri Ardini",
     "no_rekening": "708301004448502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-11-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7UNkutCJVGmW",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05544",
@@ -10128,13 +11574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Kevin",
     "no_rekening": "33801064880508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/s5aN5yYNeIjO",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05548",
@@ -10142,13 +11590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Asmah",
     "no_rekening": "119101022345501",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-09",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/LghwImJgzN58",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05549",
@@ -10156,13 +11606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yanto",
     "no_rekening": "385401006308505",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-08",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/fawHs5Lc345P",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0554f",
@@ -10170,13 +11622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ade Erawan",
     "no_rekening": "1901003231566",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-09",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555e",
@@ -10184,13 +11638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Tony Suhendra",
     "no_rekening": "158101005596502",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/asSGYJGJcofQ",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0555c",
@@ -10198,13 +11654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Herman Nasuir",
     "no_rekening": "33501098487508",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-04-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/M5YyaKZrjscl",
     "tanggal_input": "2026-06-11T02:59:33.477000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05504",
@@ -10212,13 +11670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HADI SUPRAPTOWO",
     "no_rekening": "4120402302",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ajK7LN4kE4fC",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550e",
@@ -10226,13 +11686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Siti Fatonah",
     "no_rekening": "8350164384",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-18",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ueghR6yWBbOo",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551e",
@@ -10240,13 +11702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Refi Irawan",
     "no_rekening": "1083060992",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-13",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/NkgOk2FcPK5k",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05528",
@@ -10254,13 +11718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bintang meriah",
     "no_rekening": "1751292010",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-24",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/KKtBRtGabnCt",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05535",
@@ -10268,13 +11734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Enur",
     "no_rekening": "5311399838",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-08-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7CVYPEjX0yld",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05537",
@@ -10282,13 +11750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nana Sumarna",
     "no_rekening": "2781624162",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ivSRUpyW2vzm",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054f9",
@@ -10296,13 +11766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AZWAR SISWANTO",
     "no_rekening": "8790356111",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/jOrizP1RrcmE",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054fe",
@@ -10310,13 +11782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "THERESA FIONA",
     "no_rekening": "7015888342",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-01-12",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/PsLet_xK8OBs",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05502",
@@ -10324,13 +11798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rangga Saputra",
     "no_rekening": "7120776678",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-09-09",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/jy3YRQarn5y7",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05505",
@@ -10338,13 +11814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAFANI",
     "no_rekening": "2620246240",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-02-17",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/rNIbqpfBouX6",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05516",
@@ -10352,13 +11830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MAYA SUSANA TAMONOB",
     "no_rekening": "403638819",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/m1F_MI-sVThp",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551b",
@@ -10366,13 +11846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HENDRA SAPUTRA",
     "no_rekening": "4160836551",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-03",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Bfv-X4DnaYh_",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05524",
@@ -10380,13 +11862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yogi Hermawan",
     "no_rekening": "6920307556",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/emmeCRDY5kEg",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553c",
@@ -10394,13 +11878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suryana",
     "no_rekening": "6910674216",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qYYiAoeudZFH",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054fc",
@@ -10408,13 +11894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NURLITA MARYAMAH",
     "no_rekening": "6930491207",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-01",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/yoygZNoIgxNF",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054fa",
@@ -10422,13 +11910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M TAHYUDI",
     "no_rekening": "6920290459",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/CXWhsgDympxo",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550a",
@@ -10436,13 +11926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "I GEDE INDRA ARTIKA",
     "no_rekening": "5800656488",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/MVDJVi-3l2u3",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05510",
@@ -10450,13 +11942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sandi Dwi Putra",
     "no_rekening": "20330724",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-19",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/kdFmi89pYWP4",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551c",
@@ -10464,13 +11958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ARIEZ FIERNANDA PUTRA",
     "no_rekening": "4160841929",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-21",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/_kZFECjEkFYD",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552b",
@@ -10478,13 +11974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUDA PRATAMA",
     "no_rekening": "7726015073",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/GavZbcjHzI-5",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05538",
@@ -10492,13 +11990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Abdul Rosid",
     "no_rekening": "3480736264",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-08-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Jx4QVcjUs8yD",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05508",
@@ -10506,13 +12006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JAYA PRANA",
     "no_rekening": "5491157560",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-06",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/PnOPnVqX1IVV",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551d",
@@ -10520,13 +12022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MOH RIZKI JUNI SETIAWAN",
     "no_rekening": "7723099414",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-02",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/HtDtbx2K9r7v",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05525",
@@ -10534,13 +12038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nurul Arifin",
     "no_rekening": "5860578184",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/TrRPNcHZ6KN_",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05509",
@@ -10548,13 +12054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FIRAZ ABDUL AZIZ",
     "no_rekening": "2320766322",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-09",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/BS-tDiYS9UUC",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05511",
@@ -10562,13 +12070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Wisti Marianti",
     "no_rekening": "7015929120",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-19",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/MVSewy37EkN_",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05512",
@@ -10576,13 +12086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dwi Mayang Sari",
     "no_rekening": "8780530317",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-01",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/sV6GsnXoOZOV",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05519",
@@ -10590,13 +12102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SADAM YASIN",
     "no_rekening": "2320767931",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/IGBMB61IGJop",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05529",
@@ -10604,13 +12118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Marlinah",
     "no_rekening": "4810386393",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-18",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/bwMynTTbk5GD",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054f8",
@@ -10618,13 +12134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SRI SULASTRI",
     "no_rekening": "4871017624",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-09",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/kINWU0Ilaw4V",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552f",
@@ -10632,13 +12150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANGGUN SUTIANI",
     "no_rekening": "31454041",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-10-18",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/9xaq9ubKp7Dg",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05515",
@@ -10646,13 +12166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "VIKRY FIRMANSYAH",
     "no_rekening": "5370560171",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-12",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/n4nNkNw5Rgsb",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552e",
@@ -10660,13 +12182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Firmansyah",
     "no_rekening": "1751290298",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/MvDS8jC5Jt98",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553e",
@@ -10674,13 +12198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ade Suryani",
     "no_rekening": "1943739677",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2026-11-19",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/E-TwcjctFvgv",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05522",
@@ -10688,13 +12214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmad Rifki Fauzan",
     "no_rekening": "8650816022",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/mCap59JSuQ_H",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05523",
@@ -10702,13 +12230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Jaelani",
     "no_rekening": "7630563831",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Z2BzqitBxNEt",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552d",
@@ -10716,13 +12246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD THARIQ",
     "no_rekening": "1751294218",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/QP2EgbRgzSTD",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054f7",
@@ -10730,13 +12262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ENENG SITIAISAH",
     "no_rekening": "6920294543",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-10",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/WCb0vJ_mdtBW",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550d",
@@ -10744,13 +12278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "INDRA",
     "no_rekening": "2410149209",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-02",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/46sb7TpU8AYm",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550f",
@@ -10758,13 +12294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dewi Priyanti",
     "no_rekening": "8780525992",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-04-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/C1htTVv1TP0v",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05520",
@@ -10772,13 +12310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eka Sita Dewi",
     "no_rekening": "1980412284",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/v2dkV3sb7QjS",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05531",
@@ -10786,13 +12326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HESTY NURHAYATI",
     "no_rekening": "31453509",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/hbCzDZJlNJGz",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550c",
@@ -10800,13 +12342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MULYATI",
     "no_rekening": "5931170709",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-09-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/O2HUF6mOYzN1",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05518",
@@ -10814,13 +12358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "GEDE ANDI AGUSTIYAWAN",
     "no_rekening": "5790569727",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/UlDuqsakXYsN",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553b",
@@ -10828,13 +12374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Roni Indra",
     "no_rekening": "1393759791",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-10-29",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/hOWhBnfFYX7F",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05503",
@@ -10842,13 +12390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Risza Anggari",
     "no_rekening": "6980286302",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-06-22",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/D0X2y0es0713",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0550b",
@@ -10856,13 +12406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD TURMUZI",
     "no_rekening": "2320760057",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/aev0nuWWPM1e",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05513",
@@ -10870,13 +12422,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Firda Yanti",
     "no_rekening": "8780530325",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ZhK8btK2VdD_",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05530",
@@ -10884,13 +12438,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FATHAN FARISAN",
     "no_rekening": "830281568",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-05-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/_-euVYk3fo3F",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553d",
@@ -10898,13 +12454,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dani Adhitya",
     "no_rekening": "1953234121",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/b1KDc_aaPdRC",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054fb",
@@ -10912,13 +12470,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "YUDI SUSANTO",
     "no_rekening": "4871018302",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ksvDJ4YCVk7t",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05521",
@@ -10926,13 +12486,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Aldo Sebastian",
     "no_rekening": "5875810534",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-18",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/BtB17RMNBNWi",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552c",
@@ -10940,13 +12502,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SARIBANUN",
     "no_rekening": "1751293297",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/5m3j5hg7-ubv",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05536",
@@ -10954,13 +12518,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Hermawan",
     "no_rekening": "7840359331",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-06-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/GyjEJ754AiJV",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05500",
@@ -10968,13 +12534,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Anik Astutik",
     "no_rekening": "1630699068",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-06-29",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/8LePLCX_NeoZ",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05507",
@@ -10982,13 +12550,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Risti Mulyani Ningsih",
     "no_rekening": "7006610225",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/uO4G_AOhL9kJ",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05514",
@@ -10996,13 +12566,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SUPARDI",
     "no_rekening": "7725998155",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/f7PDum0d0MPC",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05532",
@@ -11010,13 +12582,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "LIANAH",
     "no_rekening": "6901003316",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-04-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/kbWi5Wdc9Egc",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05534",
@@ -11024,13 +12598,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Giri Nugraha",
     "no_rekening": "5860530271",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/dIBCyraGXVJC",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05539",
@@ -11038,13 +12614,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eko Chandra",
     "no_rekening": "2781519164",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-02-27",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/4r3f3QcNSmb5",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0553a",
@@ -11052,13 +12630,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JENAL",
     "no_rekening": "1393771503",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-07-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/v0qM08a7B3Fs",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Kotor"
+    "catatan": "Bank Withdraw Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054fd",
@@ -11066,13 +12646,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMAD ALDI",
     "no_rekening": "7642279851",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-07-11",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/2VzN2eUteX3o",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05517",
@@ -11080,13 +12662,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MARIA YUNITA BUIK",
     "no_rekening": "6485681039",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/A8M0FZbCsUDk",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551f",
@@ -11094,13 +12678,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nur Azizah",
     "no_rekening": "2110446325",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/He_gulG14Z7r",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05527",
@@ -11108,13 +12694,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD FARID SANUSI",
     "no_rekening": "7726015057",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-19",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/JTomC4DNGDG3",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0552a",
@@ -11122,13 +12710,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nursanti",
     "no_rekening": "740195727",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/hTN7nw8MawkJ",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05533",
@@ -11136,13 +12726,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "CHAIRON",
     "no_rekening": "4280685564",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-06-25",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/69NbyPmwnXoM",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c054ff",
@@ -11150,13 +12742,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "IWAN GUNAWAN",
     "no_rekening": "3720460407",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-31",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/UGbG_1vdTkFw",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05501",
@@ -11164,13 +12758,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "JURIYANTI",
     "no_rekening": "5320272795",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/xcoLCArAE0wk",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05506",
@@ -11178,13 +12774,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Al Vadli Rahman",
     "no_rekening": "2453644936",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-11-05",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/9tvnnRWbtIcW",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c0551a",
@@ -11192,13 +12790,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AKHMAD ANDY SAHIR ISLAHUDDIN",
     "no_rekening": "7445520276",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-03",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/P72LglFHctsL",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a24957efc2665d2c05526",
@@ -11206,13 +12806,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "HELENA SETYA PRATIWI",
     "no_rekening": "3420795105",
     "jenis": "WITHDRAW",
+    "jenis_detail": "Bank Withdraw Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-24",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/xwcRh50B43LY",
     "tanggal_input": "2026-06-11T02:59:33.476000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Withdraw Bersih"
+    "catatan": "Bank Withdraw Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd4",
@@ -11220,13 +12822,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Fajrin Maulana Pradisti",
     "no_rekening": "10701146854505",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd5",
@@ -11234,13 +12838,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sri Widodo",
     "no_rekening": "687001010520506",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/LtjJRjQzPtPp",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fdb",
@@ -11248,13 +12854,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bella Aldamah Kosyandi",
     "no_rekening": "3677511788",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-08-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/7VOjMMsWMf3q",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd6",
@@ -11262,13 +12870,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Mulyadi",
     "no_rekening": "1650004586419",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-04-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ioUlbZsPkQaD",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd8",
@@ -11276,13 +12886,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Wakid Nur Rochim",
     "no_rekening": "1380027953251",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-04-19",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Ig45LMvlloQB",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fdf",
@@ -11290,13 +12902,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Udin",
     "no_rekening": "8426909848",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-16",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MVTkHFoD9eju",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fdc",
@@ -11304,13 +12918,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sultan Ardho Rofik",
     "no_rekening": "3704341712",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-04-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/el1rDMri44cx",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd3",
@@ -11318,13 +12934,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Erwin",
     "no_rekening": "1901190081505",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI OFFKAN",
     "masa_aktif": "2028-04-09",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fe1",
@@ -11332,13 +12950,31 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Krisna Dwi Pangestu",
     "no_rekening": "8227904561",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tP91X6a8jzT2",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
+  },
+  {
+    "id": "6a2a2405952af3bf84155fd9",
+    "nama_bank": "MANDIRI",
+    "nama_rekening": "Rendie Rivaldy",
+    "no_rekening": "1180015349706",
+    "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
+    "status": "AKTIF",
+    "masa_aktif": "",
+    "is_permanent": false,
+    "screenshot_url": "",
+    "tanggal_input": "2026-06-11T02:57:09.436000",
+    "input_by_staff_name": "ANONYMOUS",
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd1",
@@ -11346,13 +12982,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sri Pujianingsih",
     "no_rekening": "413901005217502",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2028-02-19",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd7",
@@ -11360,13 +12998,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Faza Rafliansyah",
     "no_rekening": "1680004359681",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-04-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qsZOGDi34PtN",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fe0",
@@ -11374,13 +13014,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "INA KUSNIA",
     "no_rekening": "8102921250",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-04-27",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/3vur0BxqOcON",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd2",
@@ -11388,13 +13030,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ria Ratna Sari",
     "no_rekening": "367301004479500",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2028-02-20",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/U-Wf43qNBjsl",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155faa",
@@ -11402,13 +13046,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Yenni Thersia",
     "no_rekening": "18590287",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-07",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/WUPYhvo_rSU-",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb2",
@@ -11416,13 +13062,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NGADIMAN",
     "no_rekening": "842553685",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-03-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/hQsmhiE3xZhQ",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc9",
@@ -11430,13 +13078,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "MUHAMMAD ADIRIZAL ZAKI",
     "no_rekening": "32501099002502",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-03-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/l91LDacQxEUF",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fca",
@@ -11444,13 +13094,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Agustia Anusi",
     "no_rekening": "547301020289533",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-09-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ycr09hV6eokw",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc1",
@@ -11458,13 +13110,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nurul Fikri",
     "no_rekening": "5050397990",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/hbXFBD_1nijr",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa5",
@@ -11472,13 +13126,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Handoyo",
     "no_rekening": "1984739704",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mw5JvQ8t99oA",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb8",
@@ -11486,13 +13142,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rusadi",
     "no_rekening": "6970367274",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/0PHg0nrPJC0l",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fbb",
@@ -11500,13 +13158,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Reza fahlevi",
     "no_rekening": "223293171",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/1f0SAWUp0yeK",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fad",
@@ -11514,13 +13174,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "NISA NURZANAH",
     "no_rekening": "3684210127",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Kotor",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-04",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/vu0txEsqaLRn",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Kotor"
+    "catatan": "Bank Kas Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb6",
@@ -11528,13 +13190,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Erawati",
     "no_rekening": "690658054",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-02-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Toit75vVQ-oe",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb7",
@@ -11542,13 +13206,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Desi",
     "no_rekening": "8660486047",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/iUI6hZIwd3wZ",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc5",
@@ -11556,13 +13222,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ahmad Fachroji",
     "no_rekening": "1889555352",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-11-25",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/AbVLc0M66waS",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fcd",
@@ -11570,13 +13238,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Naimah",
     "no_rekening": "719501013182508",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ZflS7b25pmfU",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa9",
@@ -11584,13 +13254,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Debri Yoanata",
     "no_rekening": "18573393",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/m6ZaePws8M92",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fcc",
@@ -11598,13 +13270,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Tika Damayanti",
     "no_rekening": "324401005090506",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI OFFKAN",
     "masa_aktif": "2026-10-19",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc8",
@@ -11612,13 +13286,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Eri Darmanto",
     "no_rekening": "2023614976",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-03",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/b0up77Pu0Vns",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fae",
@@ -11626,13 +13302,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Icah",
     "no_rekening": "5785385583",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/sbul76XjwOaP",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Kotor"
+    "catatan": "Bank Kas Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fcb",
@@ -11640,13 +13318,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Anggit Priatmadi",
     "no_rekening": "212201002999532",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2026-10-01",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/y0wvk0hdCGzL",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fce",
@@ -11654,13 +13334,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RENDI YANSYAH",
     "no_rekening": "112901038486508",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-10-16",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/r-KQQetInT_W",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa7",
@@ -11668,13 +13350,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Putri Rahmawati",
     "no_rekening": "2016850638",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0TolIWyhDq5U",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fbd",
@@ -11682,13 +13366,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sri Wahyuni",
     "no_rekening": "6475518458",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-12",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Cl2vzcKyEA9P",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc0",
@@ -11696,13 +13382,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Indah Yuliani",
     "no_rekening": "5860574146",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-11-13",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/orYZbLQFMuAJ",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa4",
@@ -11710,13 +13398,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rio Restu Nugraha",
     "no_rekening": "1991046472",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/EnJdtwgxUHBH",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb1",
@@ -11724,13 +13414,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rosidin",
     "no_rekening": "2810767467",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-06-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/OOY5XAgRDq1K",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb5",
@@ -11738,13 +13430,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suhartini",
     "no_rekening": "7131746885",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-07-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/xjtruI_nPbIt",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc2",
@@ -11752,13 +13446,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Wiwin Saptorini",
     "no_rekening": "771392422",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2028-04-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/PASUv55ksLLm",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fcf",
@@ -11766,13 +13462,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dewi Yuningsih",
     "no_rekening": "44501076725507",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-11-14",
     "is_permanent": false,
     "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fac",
@@ -11780,13 +13478,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Angela Putri",
     "no_rekening": "59411117",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-06-20",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/s4dG3NPRt8Gx",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Kotor"
+    "catatan": "Bank Kas Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb9",
@@ -11794,13 +13494,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Deni",
     "no_rekening": "5737351845",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-09-30",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/9qzYfl970JND",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fbe",
@@ -11808,13 +13510,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "M Raydika Tibriansyah",
     "no_rekening": "8075389767",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-14",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/9G6lvqyXF-q-",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fbf",
@@ -11822,13 +13526,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Mochamad Sahrul Bahri",
     "no_rekening": "2453715981",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-11-21",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/dlztu0rYdXnW",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc4",
@@ -11836,13 +13542,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Irfan Hidayat",
     "no_rekening": "542648846",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-06-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/6iAmGWx0HoqN",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fd0",
@@ -11850,13 +13558,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sukaesih",
     "no_rekening": "33801066654505",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-04",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ip_BbCMeeHIl",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa8",
@@ -11864,13 +13574,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Fina Maelani",
     "no_rekening": "1989344575",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/6Fz7GbQPTBaa",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb0",
@@ -11878,13 +13590,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "FERRY SUSANTO",
     "no_rekening": "6087013903",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-08-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/0cTLcmovOs5X",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Kotor"
+    "catatan": "Bank Kas Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb4",
@@ -11892,13 +13606,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Neneng Nani",
     "no_rekening": "820381726",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-08-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/OBobFumCsKWz",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc3",
@@ -11906,13 +13622,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suparmi",
     "no_rekening": "771390772",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2028-04-11",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/Ov6bnXL59SMo",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155faf",
@@ -11920,13 +13638,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sri Novita",
     "no_rekening": "5798053072",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Kotor",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/A07oagTIT9eB",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Kotor"
+    "catatan": "Bank Kas Kotor",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fb3",
@@ -11934,13 +13654,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Indah Sepriyeni",
     "no_rekening": "6165152658",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-03-08",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/_nwsH0AIELqJ",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fba",
@@ -11948,13 +13670,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "RIKA MAYA SARI",
     "no_rekening": "223293601",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-12-13",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/ODcknNEfADv6",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fbc",
@@ -11962,13 +13686,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rony Johannes Saragih",
     "no_rekening": "8840933891",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-13",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/dvovNN5AphhK",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc6",
@@ -11976,13 +13702,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Feby Rezqia Rahmalita",
     "no_rekening": "1982728467",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "DI CABUT",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/mkEiukQCA8oQ",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fc7",
@@ -11990,13 +13718,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Bahrudin",
     "no_rekening": "2023778004",
     "jenis": "DEPOSIT",
+    "jenis_detail": "Bank Deposit",
     "status": "AKTIF",
     "masa_aktif": "2027-05-01",
     "is_permanent": false,
     "screenshot_url": "https://prnt.sc/WTYmMxB5cQ8M",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
+    "catatan": "Bank Deposit",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa6",
@@ -12004,13 +13734,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Nenden Solihat",
     "no_rekening": "1985856496",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KlSqlxqyXxls",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fab",
@@ -12018,13 +13750,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Supena",
     "no_rekening": "59734188",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Mb0jVuyr1PKV",
     "tanggal_input": "2026-06-11T02:57:09.435000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7b",
@@ -12032,13 +13766,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Moh Syafei",
     "no_rekening": "5860571481",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-13",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FIWzQLkat3Mc",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f83",
@@ -12046,13 +13782,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suhayati",
     "no_rekening": "4080313361",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AXP9jIopE0Kb",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f87",
@@ -12060,13 +13798,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANANG",
     "no_rekening": "1170012155453",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-06-12",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DRZfruEdqMjp",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9b",
@@ -12074,13 +13814,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Vera Anita",
     "no_rekening": "903699171439",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/JTkXEDHP7YU8",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7a",
@@ -12088,13 +13830,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SITI SOHIBAH",
     "no_rekening": "7120806283",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-07-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/VfX6z0Zx7yES",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f80",
@@ -12102,13 +13846,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "AHMAD DIMYATI",
     "no_rekening": "5860575266",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-11-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/oOny4JpW6QH0",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f86",
@@ -12116,13 +13862,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Supendi",
     "no_rekening": "760315508",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Bn4JT6negmz9",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7e",
@@ -12130,13 +13878,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ujang Suparman",
     "no_rekening": "3110141806",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/FMvs9vbks1nZ",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f81",
@@ -12144,13 +13894,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rini",
     "no_rekening": "6370508451",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-20",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/q8mQSrmHfGYk",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8a",
@@ -12158,13 +13910,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Murni BT Limun",
     "no_rekening": "1550015069670",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kS26wM96gE6P",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9e",
@@ -12172,13 +13926,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Sugih Adzikri",
     "no_rekening": "903700314515",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/P8S8287ExtsO",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f90",
@@ -12186,13 +13942,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Susi",
     "no_rekening": "1760006682130",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/uy2tP1GTtxQG",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9f",
@@ -12200,13 +13958,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Milah",
     "no_rekening": "903705445256",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zGaFT9lUGbww",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7c",
@@ -12214,13 +13974,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Mei Sari",
     "no_rekening": "5875793851",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MI2ew7vIZEus",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7d",
@@ -12228,13 +13990,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Maulana Yusuf Ataqila",
     "no_rekening": "690671689",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-15",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/2QY2ua3HKFHw",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f88",
@@ -12242,13 +14006,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Reni Silvia",
     "no_rekening": "1110024392280",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-24",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/BdGuYO5yFiMg",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f93",
@@ -12256,13 +14022,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "EVA SEPTIANI",
     "no_rekening": "903688425978",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-02-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mSOKQ1j6uRaa",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f98",
@@ -12270,13 +14038,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Herawati",
     "no_rekening": "3679419865",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-17",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/Mb0jVuyr1PKV",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f7f",
@@ -12284,13 +14054,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Fitri Yani",
     "no_rekening": "5875793435",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-10-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/MKSOtVZnkmxC",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f94",
@@ -12298,13 +14070,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhammad Fakhri",
     "no_rekening": "3691899094",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-01-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mR0CJhsyUr2G",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9a",
@@ -12312,13 +14086,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rukayah",
     "no_rekening": "3693231288",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-01-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ylI7uTwfM2rw",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9d",
@@ -12326,13 +14102,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "SAODAH",
     "no_rekening": "903703126270",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-06-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/QJNGaRuiJmjD",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa3",
@@ -12340,13 +14118,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhammad Gia Rahimi",
     "no_rekening": "1991279871",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zXN0HM0hvXD6",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8c",
@@ -12354,13 +14134,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Muhammad Gia Rahimi",
     "no_rekening": "1210013961036",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-31",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/zXN0HM0hvXD6",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f82",
@@ -12368,13 +14150,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Suryanih",
     "no_rekening": "5860579946",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/9EXaEv9MsfSk",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8b",
@@ -12382,13 +14166,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Zuan Faqih Al.mafahir",
     "no_rekening": "1210013857804",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HKUUcZpfYgBV",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8e",
@@ -12396,13 +14182,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Handoyo",
     "no_rekening": "1630014320496",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-23",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/mw5JvQ8t99oA",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f99",
@@ -12410,13 +14198,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Enur",
     "no_rekening": "3696633530",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/XT1aC3VbJrR0",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa2",
@@ -12424,13 +14214,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Zuan Faqih Al.mafahir",
     "no_rekening": "1985348937",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-03-22",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/HKUUcZpfYgBV",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa1",
@@ -12438,13 +14230,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Rapiyudin",
     "no_rekening": "1983130466",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/kS26wM96gE6P",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f84",
@@ -12452,13 +14246,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "ANGGA",
     "no_rekening": "8881494841",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/njtVggx3B1Zi",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8d",
@@ -12466,13 +14262,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ayu Safitriani",
     "no_rekening": "1330033143934",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-05",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/rtNdfvcezNTU",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f8f",
@@ -12480,13 +14278,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Iis Rahma",
     "no_rekening": "1340031808362",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-03-28",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/KlSqlxqyXxls",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f97",
@@ -12494,13 +14294,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Ika Dewi Asmarani",
     "no_rekening": "3693253167",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI OFFKAN",
     "masa_aktif": "2027-08-14",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/CodaYmmUJxEr",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f9c",
@@ -12508,13 +14310,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Dedi Wijaya",
     "no_rekening": "903700440401",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-11-30",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/AWNxClPzLhMJ",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f91",
@@ -12522,13 +14326,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Thio Hok Bing",
     "no_rekening": "1180015163214",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-05-11",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/DXWtWaQiFcUK",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f92",
@@ -12536,13 +14342,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Elda Li Amanda",
     "no_rekening": "112901036958509",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-03",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/eyEvI9BqI7gG",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f95",
@@ -12550,13 +14358,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Partaian",
     "no_rekening": "3691840759",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-02-06",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/h8IZVrEwJjwL",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f85",
@@ -12564,13 +14374,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Car Yadi",
     "no_rekening": "1483357030",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-12-26",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/WOAbjc9LIgP6",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f89",
@@ -12578,13 +14390,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Erlis",
     "no_rekening": "1110024368504",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "DI CABUT",
     "masa_aktif": "2027-01-18",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/qPIceg4OtW2C",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155f96",
@@ -12592,13 +14406,15 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Diah Aprianty Zulva",
     "no_rekening": "3645124961",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-08-07",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/ip3aQOKtloof",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   },
   {
     "id": "6a2a2405952af3bf84155fa0",
@@ -12606,12 +14422,14 @@ window.BASE44_REKENING_DATA = [
     "nama_rekening": "Oyok",
     "no_rekening": "1924245173",
     "jenis": "KAS",
+    "jenis_detail": "Bank Kas Bersih",
     "status": "AKTIF",
     "masa_aktif": "2027-01-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/41Qg7arW1wEl",
     "tanggal_input": "2026-06-11T02:57:09.434000",
     "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Kas Bersih"
+    "catatan": "Bank Kas Bersih",
+    "is_sample": false
   }
 ];
