@@ -255,6 +255,9 @@ const ROLE_ORDER_MAP = {
 };
 
 const RBAC_MENUS = [
+    { id: 'chatView', label: 'Team Chat' },
+    { id: 'izinView', label: 'Izin Istirahat / Console' },
+    { id: 'clockInView', label: 'Clock In' },
     { id: 'absensiView', label: 'Absensi WDBOS' },
     { id: 'pasporView', label: 'Serah Terima Paspor' },
     { id: 'buktiView', label: 'Doc Bukti' },
@@ -268,6 +271,9 @@ const RBAC_MENUS = [
 ];
 
 const DEFAULT_ROLE_ACCESS = {
+    chatView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
+    izinView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
+    clockInView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
     absensiView: ['CS LINE', 'KAPTEN KASIR'],
     pasporView: ['CS LINE', 'KAPTEN KASIR'],
     dataRekeningView: ['CS LINE', 'KAPTEN KASIR'],
@@ -2025,6 +2031,14 @@ function updateRoleBasedSidebarAccess() {
         return allowedRoles.includes(normRole);
     };
 
+    setRoleNavVisibility(document.getElementById('btnChatView'), isAllowed('chatView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnClockInSidebar'), isAllowed('clockInView'), 'flex');
+    
+    // Izin / Staff Console isn't explicitly ID'd in your previous code for toggling, but we can target it via data-target if needed.
+    // In index.html, it's <button class="nav-item-main active" data-target="izinView" title="Izin Istirahat" onclick="showView('izinView'); setActiveNav(this)">
+    const btnIzinView = document.querySelector('.nav-item-main[data-target="izinView"]');
+    setRoleNavVisibility(btnIzinView, isAllowed('izinView'), 'flex');
+
     setRoleNavVisibility(document.getElementById('btnAbsensiView'), isAllowed('absensiView'), 'flex');
     setRoleNavVisibility(document.getElementById('btnPasporView'), isAllowed('pasporView'), 'flex');
     setRoleNavVisibility(document.getElementById('btnSerahTerimaCSLine'), isAllowed('serahTerimaCSLineView'), 'flex');
@@ -2032,6 +2046,7 @@ function updateRoleBasedSidebarAccess() {
     setRoleNavVisibility(document.getElementById('btnDataRekeningView'), isAllowed('dataRekeningView'), 'flex');
     setRoleNavVisibility(document.getElementById('btnAdminPanelSidebar'), isAllowed('adminView'), 'flex');
     setRoleNavVisibility(document.getElementById('btnSerahTerimaKasir'), isAllowed('serahTerimaKasirView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnBuktiView'), isAllowed('buktiView'), 'flex');
     
     // Group container for Customer Service (Banding, QRIS)
     const isAnyCSVisible = isAllowed('bandingView') || isAllowed('qrisView');
@@ -3748,7 +3763,9 @@ function renderAdminRoleAccess() {
         const borderBottom = isLast ? 'none' : '1px solid rgba(255,255,255,0.05)';
         
         let menuIcon = "fa-shield-halved";
-        if (menu.id.includes("absensi")) menuIcon = "fa-clock";
+        if (menu.id.includes("chat")) menuIcon = "fa-comments";
+        if (menu.id.includes("izin") || menu.id.includes("clock")) menuIcon = "fa-clock";
+        if (menu.id.includes("absensi")) menuIcon = "fa-clipboard-user";
         if (menu.id.includes("paspor")) menuIcon = "fa-passport";
         if (menu.id.includes("bukti")) menuIcon = "fa-file-invoice-dollar";
         if (menu.id.includes("dataRekening")) menuIcon = "fa-credit-card";
@@ -3784,10 +3801,16 @@ function renderAdminRoleAccess() {
             `;
         });
         
-        html += `</div>`;
-        menuWrapper.innerHTML = html;
-        container.appendChild(menuWrapper);
+        html += `</tr>`;
     });
+    
+    html += `
+            </tbody>
+        </table>
+    `;
+    
+    tableWrapper.innerHTML = html;
+    container.appendChild(tableWrapper);
 }
 
 window.saveRoleAccessSettings = async function() {
