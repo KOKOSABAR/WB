@@ -1,4 +1,4 @@
-/* AUTOMATICALLY IMPORTED DATA FROM https://datarekeningwdbos.base44.app/ */
+/* AUTOMATICALLY IMPORTED & DEDUPLICATED FROM https://datarekeningwdbos.base44.app/ */
 window.BASE44_REKENING_DATA = [
   {
     "id": "6a61746fe680cd5d1781049b",
@@ -11336,20 +11336,6 @@ window.BASE44_REKENING_DATA = [
     "masa_aktif": "2027-05-10",
     "is_permanent": false,
     "screenshot_url": "https://sleekshot.app/v/tP91X6a8jzT2",
-    "tanggal_input": "2026-06-11T02:57:09.436000",
-    "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
-  },
-  {
-    "id": "6a2a2405952af3bf84155fd9",
-    "nama_bank": "MANDIRI",
-    "nama_rekening": "Rendie Rivaldy",
-    "no_rekening": "1180015349706",
-    "jenis": "DEPOSIT",
-    "status": "AKTIF",
-    "masa_aktif": "",
-    "is_permanent": false,
-    "screenshot_url": "",
     "tanggal_input": "2026-06-11T02:57:09.436000",
     "input_by_staff_name": "ANONYMOUS",
     "catatan": "Bank Deposit"

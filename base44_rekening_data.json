@@ -11340,20 +11340,6 @@
     "catatan": "Bank Deposit"
   },
   {
-    "id": "6a2a2405952af3bf84155fd9",
-    "nama_bank": "MANDIRI",
-    "nama_rekening": "Rendie Rivaldy",
-    "no_rekening": "1180015349706",
-    "jenis": "DEPOSIT",
-    "status": "AKTIF",
-    "masa_aktif": "",
-    "is_permanent": false,
-    "screenshot_url": "",
-    "tanggal_input": "2026-06-11T02:57:09.436000",
-    "input_by_staff_name": "ANONYMOUS",
-    "catatan": "Bank Deposit"
-  },
-  {
     "id": "6a2a2405952af3bf84155fd1",
     "nama_bank": "BRI",
     "nama_rekening": "Sri Pujianingsih",

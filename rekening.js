@@ -74,6 +74,27 @@ function cleanAccountNumber(str) {
 }
 window.cleanAccountNumber = cleanAccountNumber;
 
+// HELPER DEDUKLIFIKASI DATA REKENING
+// Aturan: Jika Nama Bank BEDA (misal DANA, OVO, GoPay dengan No HP yang sama), BUKAN DUPLIKAT!
+function deduplicateRekeningItems(items) {
+    if (!Array.isArray(items)) return [];
+    const map = new Map();
+    items.forEach(item => {
+        const bank = (item.nama_bank || '').toLowerCase().trim();
+        const noRek = cleanAccountNumber(item.no_rekening);
+        const namaRek = (item.nama_rekening || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        
+        // Key komposit: Bank | No Rekening | Nama Rekening
+        const key = bank + '|' + noRek + '|' + namaRek;
+
+        if (!map.has(key)) {
+            map.set(key, item);
+        }
+    });
+    return Array.from(map.values());
+}
+window.deduplicateRekeningItems = deduplicateRekeningItems;
+
 // 1. MEMUAT DATA REKENING (Supabase, Base44 Importer & LocalStorage Fallback)
 async function fetchRekeningData() {
     const base44Items = (window.BASE44_REKENING_DATA && Array.isArray(window.BASE44_REKENING_DATA)) 
@@ -89,16 +110,13 @@ async function fetchRekeningData() {
 
             if (!error && data) {
                 if (data.length >= base44Items.length && data.length > 0) {
-                    rekeningState.items = data;
-                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(data));
+                    rekeningState.items = deduplicateRekeningItems(data);
+                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
                     return;
                 } else if (base44Items.length > 0) {
-                    // Combine or use full Base44 dataset
-                    rekeningState.items = base44Items;
-                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(base44Items));
-                    
-                    // Async seed missing Base44 records to Supabase in background
-                    seedBase44ToSupabase(base44Items);
+                    rekeningState.items = deduplicateRekeningItems(base44Items);
+                    localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
+                    seedBase44ToSupabase(rekeningState.items);
                     return;
                 }
             }
@@ -113,18 +131,18 @@ async function fetchRekeningData() {
         try {
             const parsed = JSON.parse(localData);
             if (Array.isArray(parsed) && parsed.length >= base44Items.length && parsed.length > 0) {
-                rekeningState.items = parsed;
+                rekeningState.items = deduplicateRekeningItems(parsed);
             } else if (base44Items.length > 0) {
-                rekeningState.items = base44Items;
-                localStorage.setItem('restease_data_rekening_cache', JSON.stringify(base44Items));
+                rekeningState.items = deduplicateRekeningItems(base44Items);
+                localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
             } else {
-                rekeningState.items = getDummyRekeningData();
+                rekeningState.items = deduplicateRekeningItems(getDummyRekeningData());
             }
         } catch (e) {
-            rekeningState.items = base44Items.length > 0 ? base44Items : getDummyRekeningData();
+            rekeningState.items = deduplicateRekeningItems(base44Items.length > 0 ? base44Items : getDummyRekeningData());
         }
     } else {
-        rekeningState.items = base44Items.length > 0 ? base44Items : getDummyRekeningData();
+        rekeningState.items = deduplicateRekeningItems(base44Items.length > 0 ? base44Items : getDummyRekeningData());
         localStorage.setItem('restease_data_rekening_cache', JSON.stringify(rekeningState.items));
     }
 }
