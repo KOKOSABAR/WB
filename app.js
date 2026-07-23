@@ -2008,9 +2008,17 @@ function updateRoleBasedSidebarAccess() {
 
     // Helper function to check role access from dynamic settings
     const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    const staffAccess = state.settings.staff_access || {};
+    
     const isAllowed = (viewId) => {
         if (isAdmin) return true;
         if (!staff || !normRole) return false;
+        
+        // 1. Check Individual Staff Access Override (Exceptions)
+        const allowedStaffIds = staffAccess[viewId] || [];
+        if (allowedStaffIds.includes(staff.id)) return true;
+        
+        // 2. Check Role-based Access
         const allowedRoles = roleAccess[viewId];
         if (!allowedRoles) return true; // If not explicitly restricted, allow
         return allowedRoles.includes(normRole);
@@ -2055,10 +2063,17 @@ async function showView(viewId) {
 
     // Cek dynamic RBAC
     const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    const staffAccess = state.settings.staff_access || {};
+    
     const allowedRoles = roleAccess[viewId];
+    const allowedStaffIds = staffAccess[viewId] || [];
     
     if (allowedRoles) { // Jika ada pengaturan restriksi untuk view ini
-        const isAllowed = isAdmin || (staff && allowedRoles.includes(normRole));
+        // Allowed if admin, OR if staff ID is in exceptions, OR if role is allowed
+        const hasIndividualAccess = staff && allowedStaffIds.includes(staff.id);
+        const hasRoleAccess = staff && allowedRoles.includes(normRole);
+        const isAllowed = isAdmin || hasIndividualAccess || hasRoleAccess;
+        
         if (!isAllowed) {
             showToast("Akses Ditolak: Anda tidak memiliki izin untuk melihat fitur ini.", "error");
             showView("izinView");
@@ -3697,6 +3712,11 @@ function renderAdminRoleAccess() {
     const allRoles = ["CS LINE", "CS LC", "KAPTEN KASIR", "KASIR"];
     const currentAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
     
+    // Inisialisasi temporary state untuk pemilihan staff sebelum di-save
+    if (!window.tempStaffAccess) {
+        window.tempStaffAccess = state.settings.staff_access ? JSON.parse(JSON.stringify(state.settings.staff_access)) : {};
+    }
+    
     // Clear container
     container.innerHTML = "";
     
@@ -3734,6 +3754,16 @@ function renderAdminRoleAccess() {
             </th>
         `;
     });
+    
+    // Add Individual Staff Column Header
+    html += `
+            <th style="text-align: center; padding: 18px 10px; background: rgba(255,255,255,0.03); color: #cbd5e1; font-weight: 600; font-size: 0.8rem; border-bottom: 2px solid rgba(255,255,255,0.08); width: 160px; border-left: 1px solid rgba(255,255,255,0.1);">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-users-gear" style="color: #38bdf8; font-size: 1.1rem; text-shadow: 0 0 10px rgba(56,189,248,0.5);"></i>
+                    <span>Pengecualian Staff</span>
+                </div>
+            </th>
+    `;
     
     html += `
                 </tr>
@@ -3785,6 +3815,21 @@ function renderAdminRoleAccess() {
                 </td>
             `;
         });
+        
+        // Add Individual Staff Access Button
+        const staffCount = window.tempStaffAccess[menu.id] ? window.tempStaffAccess[menu.id].length : 0;
+        const btnClass = staffCount > 0 ? 'btn-active-override' : 'btn-dim-override';
+        const btnColor = staffCount > 0 ? '#38bdf8' : 'rgba(255,255,255,0.3)';
+        const btnBg = staffCount > 0 ? 'rgba(56,189,248,0.1)' : 'rgba(255,255,255,0.05)';
+        const btnBorder = staffCount > 0 ? 'rgba(56,189,248,0.4)' : 'rgba(255,255,255,0.1)';
+        
+        html += `
+                <td style="text-align: center; padding: 16px 10px; border-left: 1px solid rgba(255,255,255,0.05);">
+                    <button onclick="openRbacStaffModal('${menu.id}', '${menu.label}')" style="background: ${btnBg}; border: 1px solid ${btnBorder}; color: ${btnColor}; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                        <i class="fa-solid fa-user-plus" style="margin-right: 5px;"></i> ${staffCount > 0 ? staffCount + ' Staff' : 'Pilih'}
+                    </button>
+                </td>
+        `;
         
         html += `</tr>`;
     });

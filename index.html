@@ -3000,6 +3000,35 @@ MANDIRI  Wiwin Saptorini  1380027429245" style="width: 100%; background: #0f131d
                 </div>
 
                 <!-- ==========================================================================
+                     MODAL: RBAC STAFF ACCESS OVERRIDE
+                     ========================================================================== -->
+                <div id="rbacStaffModal" class="modal-overlay hide">
+                    <div class="glass-card modal-card" style="max-width: 480px; width: 95%; padding: 0; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.25); position: relative;">
+                        <!-- Header -->
+                        <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.01);">
+                            <div>
+                                <h3 id="rbacStaffModalTitle" style="font-size: 1.15rem; font-weight: 800; color: white; margin: 0;">Akses Khusus: Menu</h3>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 4px 0 0 0;">Pilih staff yang diizinkan meski role mereka dibatasi</p>
+                            </div>
+                            <button onclick="closeRbacStaffModal()" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.2s;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,0.4)';">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <!-- Body -->
+                        <div style="padding: 16px 24px; max-height: 60vh; overflow-y: auto;">
+                            <div id="rbacStaffList" style="display: flex; flex-direction: column;">
+                                <!-- Checkboxes populated via JS -->
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <div style="padding: 16px 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 10px; background: rgba(0,0,0,0.2);">
+                            <button class="btn btn-secondary" onclick="closeRbacStaffModal()" style="font-weight: 600;">Batal</button>
+                            <button class="btn btn-primary" onclick="saveRbacStaffSelection()" style="background: var(--primary); font-weight: 600;">Konfirmasi Pilihan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
                      MODAL: TAMBAH / EDIT BANDING KESALAHAN CS
                      ========================================================================== -->
                 <div id="modalBandingForm" class="modal-overlay hide">
