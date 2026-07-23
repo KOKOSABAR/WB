@@ -3693,59 +3693,94 @@ window.deleteRole = async function(roleName) {
 function renderAdminRoleAccess() {
     const container = document.getElementById("roleAccessContainer");
     if (!container) return;
+    
+    const allRoles = ["CS LINE", "CS LC", "KAPTEN KASIR", "KASIR"];
+    const currentAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
+    
+    // Clear container
     container.innerHTML = "";
     
-    // Override inline styles with luxurious grid
-    container.style.cssText = "display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;";
+    // Create luxurious matrix table wrapper
+    const tableWrapper = document.createElement("div");
+    tableWrapper.style.cssText = `
+        overflow-x: auto;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(145deg, rgba(15,23,42,0.6) 0%, rgba(0,0,0,0.4) 100%);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+        backdrop-filter: blur(12px);
+    `;
 
-    const roleAccess = state.settings.role_access || DEFAULT_ROLE_ACCESS;
-    const allRoles = getAllowedRoles();
-
-    RBAC_MENUS.forEach(menu => {
-        const menuAllowedRoles = roleAccess[menu.id] || [];
-
-        const menuWrapper = document.createElement("div");
-        menuWrapper.className = "glass-card rbac-premium-card";
-        menuWrapper.style.cssText = `
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            border-left: 4px solid var(--accent);
-            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.3) 100%);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        `;
-        menuWrapper.onmouseenter = () => {
-            menuWrapper.style.transform = "translateY(-3px)";
-            menuWrapper.style.boxShadow = "0 8px 25px rgba(0,0,0,0.3)";
-        };
-        menuWrapper.onmouseleave = () => {
-            menuWrapper.style.transform = "translateY(0)";
-            menuWrapper.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
-        };
+    let html = `
+        <table style="width: 100%; border-collapse: collapse; min-width: 650px;">
+            <thead>
+                <tr>
+                    <th style="text-align: left; padding: 18px 20px; background: rgba(255,255,255,0.03); color: #f8fafc; font-weight: 700; letter-spacing: 0.5px; border-bottom: 2px solid rgba(255,255,255,0.08); border-top-left-radius: 16px; text-transform: uppercase; font-size: 0.8rem;">Menu / Fitur</th>
+    `;
+    
+    // Add column headers for roles
+    allRoles.forEach(role => {
+        let icon = "fa-user-tie";
+        if (role.includes("LINE")) icon = "fa-headset";
+        if (role.includes("LC")) icon = "fa-comments";
+        if (role.includes("KASIR")) icon = "fa-cash-register";
         
-        let html = `
-            <div style="display:flex; align-items:center; gap:12px;">
-                <div style="width:38px; height:38px; border-radius:50%; background:var(--primary-glow); display:flex; align-items:center; justify-content:center; color:var(--primary); font-size:1.1rem; flex-shrink:0;">
-                    <i class="fa-solid fa-shield-halved"></i>
+        html += `
+            <th style="text-align: center; padding: 18px 10px; background: rgba(255,255,255,0.03); color: #cbd5e1; font-weight: 600; font-size: 0.8rem; border-bottom: 2px solid rgba(255,255,255,0.08); width: 110px;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                    <i class="fa-solid ${icon}" style="color: var(--primary); font-size: 1.1rem; text-shadow: 0 0 10px var(--primary-glow);"></i>
+                    <span>${role}</span>
                 </div>
-                <h4 style="margin:0; color:#fff; font-size:1.05rem; font-weight:600; letter-spacing:0.3px;">${menu.label}</h4>
-            </div>
-            <div style="height:1px; background:rgba(255,255,255,0.05); margin: 5px 0;"></div>
-            <div style="display:flex; flex-direction:column; gap:12px;">
+            </th>
+        `;
+    });
+    
+    html += `
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    
+    // Add rows for each menu
+    RBAC_MENUS.forEach((menu, index) => {
+        const menuAllowedRoles = currentAccess[menu.id] || [];
+        const isLast = index === RBAC_MENUS.length - 1;
+        const borderBottom = isLast ? 'none' : '1px solid rgba(255,255,255,0.05)';
+        
+        let menuIcon = "fa-shield-halved";
+        if (menu.id.includes("absensi")) menuIcon = "fa-clock";
+        if (menu.id.includes("paspor")) menuIcon = "fa-passport";
+        if (menu.id.includes("bukti")) menuIcon = "fa-file-invoice-dollar";
+        if (menu.id.includes("dataRekening")) menuIcon = "fa-credit-card";
+        if (menu.id.includes("banding")) menuIcon = "fa-gavel";
+        if (menu.id.includes("qris")) menuIcon = "fa-qrcode";
+        if (menu.id.includes("serahTerima")) menuIcon = "fa-handshake";
+        if (menu.id.includes("admin")) menuIcon = "fa-screwdriver-wrench";
+
+        html += `
+            <tr style="border-bottom: ${borderBottom}; transition: all 0.25s ease;" 
+                onmouseover="this.style.background='rgba(255,255,255,0.04)'; this.style.transform='scale(1.002)';" 
+                onmouseout="this.style.background='transparent'; this.style.transform='scale(1)';">
+                <td style="padding: 16px 20px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); display: flex; align-items: center; justify-content: center; color: #c4b5fd; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 0 10px rgba(139,92,246,0.1);">
+                            <i class="fa-solid ${menuIcon}"></i>
+                        </div>
+                        <span style="font-weight: 600; color: #f1f5f9; font-size: 0.95rem; letter-spacing: 0.2px;">${menu.label}</span>
+                    </div>
+                </td>
         `;
         
+        // Add toggles for each role
         allRoles.forEach(role => {
             const isChecked = menuAllowedRoles.includes(role);
             html += `
-                <div style="display:flex; justify-content:space-between; align-items:center; padding: 10px 12px; border-radius:8px; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.03); transition: background 0.2s;">
-                    <span style="font-size:0.9rem; color:rgba(255,255,255,0.9); font-weight:500;"><i class="fa-solid fa-user-tag" style="margin-right:8px; color:var(--text-muted); font-size:0.8rem;"></i>${role}</span>
-                    <label class="feature-toggle-switch" style="margin:0;">
+                <td style="text-align: center; padding: 16px 10px;">
+                    <label class="feature-toggle-switch" style="margin: 0 auto; display: inline-block;">
                         <input type="checkbox" class="rbac-checkbox" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''}>
-                        <span class="feature-toggle-slider"></span>
+                        <span class="feature-toggle-slider" style="box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></span>
                     </label>
-                </div>
+                </td>
             `;
         });
         
