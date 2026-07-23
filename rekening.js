@@ -744,7 +744,21 @@ function processBatchRekeningSearch() {
     if (foundResultsContainer) {
         if (allMatchedItems.length > 0) {
             foundResultsContainer.classList.remove('hide');
-            let cardsHtml = `<div style="font-size:0.7rem;color:rgba(255,255,255,0.45);padding:2px 4px 6px 4px;font-weight:700;letter-spacing:0.3px;"><i class="fa-solid fa-list-check"></i> DATA REKENING YANG DITEMUKAN (${allMatchedItems.length} record)</div>`;
+
+            // Build the "salin semua" text in requested format: JENIS BANK\tNAMA\tNO_REK
+            const semuaRows = allMatchedItems.map(({ item }) => {
+                const jenisBank = ('BANK ' + (item.jenis || '') + ' ' + (item.nama_bank || '')).trim().toUpperCase();
+                return jenisBank + '\t' + (item.nama_rekening || '') + '\t' + (item.no_rekening || '');
+            }).join('\n');
+            const encodedSemua = encodeURIComponent(semuaRows);
+
+            let cardsHtml = `
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:2px 4px 8px 4px;flex-wrap:wrap;gap:6px;">
+                <span style="font-size:0.7rem;color:rgba(255,255,255,0.45);font-weight:700;letter-spacing:0.3px;"><i class="fa-solid fa-list-check"></i> DATA REKENING YANG DITEMUKAN (${allMatchedItems.length} record)</span>
+                <button onclick="copyAllBatchRekText(this)" data-copy-all="${encodedSemua}" style="padding:4px 12px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);border-radius:6px;color:#4ade80;font-size:0.7rem;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all 0.2s;" title="Salin semua rekening ditemukan dalam format tabel">
+                    <i class="fa-solid fa-copy"></i> Salin Semua (${allMatchedItems.length})
+                </button>
+            </div>`;
 
             allMatchedItems.forEach(({ inputLine, item }, idx) => {
                 const statusColor = item.status === 'AKTIF' ? '#4ade80' : item.status === 'DI OFFKAN' ? '#fca5a5' : '#fde68a';
@@ -843,6 +857,44 @@ function copyBatchRekText(btn) {
     }, 1500);
 }
 window.copyBatchRekText = copyBatchRekText;
+
+// Helper: Salin SEMUA rekening dari hasil batch search
+function copyAllBatchRekText(btn) {
+    const encoded = btn.getAttribute('data-copy-all') || '';
+    const text = decodeURIComponent(encoded);
+    if (!text) return;
+
+    const doWrite = (str) => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(str).catch(() => {
+                const t = document.createElement('textarea');
+                t.value = str; document.body.appendChild(t); t.select();
+                document.execCommand('copy'); document.body.removeChild(t);
+            });
+        } else {
+            const t = document.createElement('textarea');
+            t.value = str; document.body.appendChild(t); t.select();
+            document.execCommand('copy'); document.body.removeChild(t);
+        }
+    };
+    doWrite(text);
+
+    const prevHtml = btn.innerHTML;
+    const prevColor = btn.style.color;
+    const prevBorder = btn.style.borderColor;
+    const prevBg = btn.style.background;
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Tersalin Semua!';
+    btn.style.color = '#4ade80';
+    btn.style.borderColor = 'rgba(74,222,128,0.7)';
+    btn.style.background = 'rgba(34,197,94,0.3)';
+    setTimeout(() => {
+        btn.innerHTML = prevHtml;
+        btn.style.color = prevColor;
+        btn.style.borderColor = prevBorder;
+        btn.style.background = prevBg;
+    }, 2000);
+}
+window.copyAllBatchRekText = copyAllBatchRekText;
 
 function clearRekBatchSearch() {
     const textarea = document.getElementById('rekBatchSearchInput');
