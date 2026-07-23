@@ -101,17 +101,19 @@ async function fetchRekeningData() {
         ? window.BASE44_REKENING_DATA 
         : [];
 
-    // Filter valid user records (ID rek-user-*)
-    const userItems = rawUserItems.filter(item => item && item.no_rekening && !item.is_sample);
+    // Filter valid user records dan deduplikasi
+    const filtered = rawUserItems.filter(item => item && item.no_rekening && !item.is_sample);
+    const userItems = deduplicateRekeningItems(filtered);
 
-    // Overwrite local items and cache directly
+    // Bersihkan localStorage dari data lama agar tidak ada sisa cache yang menyebabkan duplikat
+    localStorage.removeItem('restease_data_rekening_cache');
+
+    // Overwrite local items dan simpan cache baru
     rekeningState.items = userItems;
     localStorage.setItem('restease_data_rekening_cache', JSON.stringify(userItems));
 
-    // Optional background sync to Supabase
-    if (window.supabaseClient && userItems.length > 0) {
-        seedBase44ToSupabase(userItems);
-    }
+    // CATATAN: Seeding ke Supabase dinonaktifkan untuk mencegah duplikat.
+    // Data disajikan langsung dari BASE44_REKENING_DATA (file lokal).
 }
 
 // Background Batch Seed to Supabase
@@ -1151,7 +1153,11 @@ function escapeHtml(str) {
 // Handle Realtime Supabase updates for data_rekening
 function handleRekeningRealtime(payload) {
     if (payload.eventType === 'INSERT') {
-        const exist = rekeningState.items.some(i => i.id === payload.new.id);
+        // Tolak INSERT dari Supabase jika ID sudah ada (dari BASE44 lokal)
+        const exist = rekeningState.items.some(i => i.id === payload.new.id ||
+            (cleanAccountNumber(i.no_rekening) === cleanAccountNumber(payload.new.no_rekening) &&
+             (i.nama_bank || '').toLowerCase() === (payload.new.nama_bank || '').toLowerCase() &&
+             (i.jenis || '') === (payload.new.jenis || '')));
         if (!exist) {
             rekeningState.items.unshift(payload.new);
         }
