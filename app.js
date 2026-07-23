@@ -1983,9 +1983,8 @@ function updateRoleBasedSidebarAccess() {
     }
 
     // 1. ABSENSI WDBOS, PASPOR, ST CS LINE, ST KAPTEN, PANEL ADMIN, DATA REKENING
-    // Allowed for Admin, CS LINE, KAPTEN KASIR, dan saat belum login staff (!staff)
-    // Hidden COMPLETELY jika staff login sebagai CS LC & KASIR!
-    const isAllowedAbsensiPasporAdmin = !staff || isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
+    // Allowed for Admin, CS LINE, KAPTEN KASIR
+    const isAllowedAbsensiPasporAdmin = isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
 
     setRoleNavVisibility(document.getElementById('btnAbsensiView'), isAllowedAbsensiPasporAdmin, 'flex');
     setRoleNavVisibility(document.getElementById('btnPasporView'), isAllowedAbsensiPasporAdmin, 'flex');
@@ -1996,7 +1995,7 @@ function updateRoleBasedSidebarAccess() {
 
     // 2. SERAH TERIMA KASIR
     // Allowed for Admin, KASIR, KAPTEN KASIR
-    const isAllowedSTKasir = !staff || isAdmin || (normRole === 'KASIR' || normRole === 'KAPTEN KASIR');
+    const isAllowedSTKasir = isAdmin || (normRole === 'KASIR' || normRole === 'KAPTEN KASIR');
     setRoleNavVisibility(document.getElementById('btnSerahTerimaKasir'), isAllowedSTKasir, 'flex');
 
     // 3. SERAH TERIMA GROUP CONTAINER TOGGLE
@@ -2005,8 +2004,8 @@ function updateRoleBasedSidebarAccess() {
     setRoleNavVisibility(document.getElementById('serahTerimaGroupContainer'), isAnySTVisible, 'block');
 
     // 4. CUSTOMER SERVICE GROUP (Banding CS & Cek QRIS)
-    // Allowed for Admin, CS LC, CS LINE, KAPTEN KASIR, dan !staff
-    const isAllowedCSGroup = !staff || isAdmin || (normRole === 'CS LC' || normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
+    // Allowed for Admin, CS LC, CS LINE, KAPTEN KASIR
+    const isAllowedCSGroup = isAdmin || (normRole === 'CS LC' || normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
     setRoleNavVisibility(document.getElementById('csGroupContainer'), isAllowedCSGroup, 'block');
 }
 window.updateRoleBasedSidebarAccess = updateRoleBasedSidebarAccess;
@@ -2024,7 +2023,7 @@ async function showView(viewId) {
     // Restrict ABSENSI, PASPOR, DATA REKENING, ST CS LINE, ST KAPTEN & PANEL ADMIN to CS LINE & KAPTEN KASIR only
     const restrictedViews = ["absensiView", "pasporView", "dataRekeningView", "serahTerimaCSLineView", "serahTerimaKaptenView", "adminView"];
     if (restrictedViews.includes(viewId)) {
-        const isAllowed = !staff || isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
+        const isAllowed = isAdmin || (normRole === 'CS LINE' || normRole === 'KAPTEN KASIR');
         if (!isAllowed) {
             showToast("Akses Ditolak: Fitur ini hanya untuk CS LINE dan KAPTEN KASIR.", "error");
             showView("izinView");
@@ -3352,7 +3351,7 @@ function authenticateAdmin() {
 }
 
 function isAdminAuthenticated() {
-    return true;
+    return sessionStorage.getItem("restease_admin_auth") === "true";
 }
 
 function lockAdminPanel() {
