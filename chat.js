@@ -1651,7 +1651,27 @@ async function submitAvatarChange() {
     if (!chatState.myUser) return;
     try {
         await supabaseClient.from('chat_users').update({ avatar_url: chatState.pendingAvatarBase64 }).eq('id', chatState.myUser.id);
+        try {
+            await supabaseClient.from('staff').update({ avatar_url: chatState.pendingAvatarBase64 }).eq('id', chatState.myUser.id);
+        } catch (stErr) {
+            console.warn("Gagal sinkron avatar ke tabel staff:", stErr);
+        }
+        
         chatState.myUser.avatar_url = chatState.pendingAvatarBase64;
+        
+        if (window.state && window.state.currentStaff && window.state.currentStaff.id === chatState.myUser.id) {
+            window.state.currentStaff.avatar_url = chatState.pendingAvatarBase64;
+            if (Array.isArray(window.state.staff)) {
+                const sIdx = window.state.staff.findIndex(s => s.id === chatState.myUser.id);
+                if (sIdx !== -1) {
+                    window.state.staff[sIdx].avatar_url = chatState.pendingAvatarBase64;
+                }
+            }
+            if (typeof window.updateStaffConsoleUI === 'function') {
+                window.updateStaffConsoleUI();
+            }
+        }
+        
         chatState.pendingAvatarBase64 = null;
         document.getElementById('modalChangeAvatar').classList.add('hide');
         updateChatProfileHeader();

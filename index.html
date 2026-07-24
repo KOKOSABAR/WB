@@ -222,8 +222,11 @@
                         <span>Background</span>
                     </button>
                     <div id="headerStaffInfo" class="hide" style="display: flex; align-items: center; gap: 10px;">
-                        <div style="display: flex; align-items: center; gap: 8px; background: rgba(139, 92, 246, 0.08); padding: 6px 14px; border-radius: 50px; border: 1px solid rgba(139, 92, 246, 0.2); color: white; font-size: 0.8rem; font-weight: 600; height: 34px; box-sizing: border-box; display: flex; align-items: center;">
-                            <i class="fa-solid fa-circle-user" style="color: #a78bfa; font-size: 1rem;"></i>
+                        <div id="headerStaffProfileBtn" onclick="openChangeAvatarModal()" title="Klik untuk ganti foto profil" style="display: flex; align-items: center; gap: 8px; background: rgba(139, 92, 246, 0.08); padding: 6px 14px; border-radius: 50px; border: 1px solid rgba(139, 92, 246, 0.2); color: white; font-size: 0.8rem; font-weight: 600; height: 34px; box-sizing: border-box; display: flex; align-items: center; cursor: pointer;">
+                            <div style="width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
+                                <i id="headerStaffAvatarIcon" class="fa-solid fa-circle-user" style="color: #a78bfa; font-size: 1rem;"></i>
+                                <img id="headerStaffAvatarImg" src="" class="hide" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
                             <span id="headerStaffName">Nama Staff</span>
                         </div>
                         <button id="btnStaffLogout" class="btn btn-secondary" style="height: 34px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 14px; font-weight: 700; font-size: 0.78rem; border: 1px solid rgba(244, 63, 94, 0.2); background: rgba(244, 63, 94, 0.05); color: #f43f5e; transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='rgba(244, 63, 94, 0.12)'; this.style.borderColor='rgba(244, 63, 94, 0.35)';" onmouseout="this.style.background='rgba(244, 63, 94, 0.05)'; this.style.borderColor='rgba(244, 63, 94, 0.2)';">

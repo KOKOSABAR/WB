@@ -2646,6 +2646,21 @@ function updateStaffConsoleUI() {
     if (headerStaffInfo && headerStaffName) {
         headerStaffName.textContent = staff.name;
         headerStaffInfo.classList.remove("hide");
+        
+        // Update header avatar image
+        const avatarIcon = document.getElementById("headerStaffAvatarIcon");
+        const avatarImg = document.getElementById("headerStaffAvatarImg");
+        if (avatarIcon && avatarImg) {
+            if (staff.avatar_url) {
+                avatarImg.src = staff.avatar_url;
+                avatarImg.classList.remove("hide");
+                avatarIcon.classList.add("hide");
+            } else {
+                avatarImg.src = "";
+                avatarImg.classList.add("hide");
+                avatarIcon.classList.remove("hide");
+            }
+        }
     }
     
     // Avatar Initials (Diabaikan karena diganti animasi gerak tanpa teks)
@@ -2798,6 +2813,7 @@ function updateStaffConsoleUI() {
         }
     }
 }
+window.updateStaffConsoleUI = updateStaffConsoleUI;
 let isActionProcessing = false;
 // Per-role optimistic lock: mencegah double-tap dari device yang sama
 // sebelum RPC selesai (lapisan pertama; RPC server = lapisan final)
@@ -7266,11 +7282,19 @@ window.handleStoriesRealtime = handleStoriesRealtime;
 async function loadStories() {
     if (!supabaseClient) return;
     
-    // Set post avatar initials
+    // Set post avatar initials or image
     const currentStaff = state.currentStaff;
     const postAvatar = document.getElementById('storyPostAvatar');
     if (postAvatar && currentStaff) {
-        postAvatar.textContent = getInitials(currentStaff.name);
+        if (currentStaff.avatar_url) {
+            postAvatar.innerHTML = `<img src="${currentStaff.avatar_url}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
+            postAvatar.style.background = "transparent";
+            postAvatar.style.boxShadow = "none";
+        } else {
+            postAvatar.textContent = getInitials(currentStaff.name);
+            postAvatar.style.background = "linear-gradient(135deg, #a855f7, #7c3aed)";
+            postAvatar.style.boxShadow = "0 0 10px rgba(168,85,247,0.3)";
+        }
     }
     
     try {
@@ -7324,6 +7348,16 @@ function renderStories() {
             imageHtml = `<img src="${story.image_url}" class="story-card-image" alt="Story Image" ondblclick="openStoryImagePreviewModal('${story.image_url}')" title="Double klik untuk melihat lebih besar">`;
         }
         
+        // Find author avatar url
+        const authorStaff = state.staff.find(s => s.id === story.staff_id);
+        const authorAvatarUrl = authorStaff ? authorStaff.avatar_url : null;
+        let authorAvatarHtml = "";
+        if (authorAvatarUrl) {
+            authorAvatarHtml = `<img src="${authorAvatarUrl}" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.15); flex-shrink: 0;">`;
+        } else {
+            authorAvatarHtml = `<div class="story-avatar-initials" style="width: 38px; height: 38px; border-radius: 50%; background: ${avatarBg}; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); flex-shrink: 0;">${initials}</div>`;
+        }
+        
         let commentsHtml = "";
         if (comments.length > 0) {
             commentsHtml = comments.map(comment => {
@@ -7332,25 +7366,44 @@ function renderStories() {
                 if (commentReplies.length > 0) {
                     repliesListHtml = `
                         <div class="replies-list">
-                            ${commentReplies.map(reply => `
-                                <div class="reply-item">
-                                    <div class="story-avatar-initials" style="width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">${getInitials(reply.staff_name)}</div>
-                                    <div class="reply-bubble">
-                                        <div class="comment-author-name">${reply.staff_name}</div>
-                                        <div class="comment-text">${escapeHtml(reply.text)}</div>
-                                        <div class="comment-footer">
-                                            <span>${formatTimeAgo(reply.created_at)}</span>
+                            ${commentReplies.map(reply => {
+                                const replyStaff = state.staff.find(s => s.id === reply.staff_id);
+                                const replyAvatarUrl = replyStaff ? replyStaff.avatar_url : null;
+                                let replyAvatarHtml = "";
+                                if (replyAvatarUrl) {
+                                    replyAvatarHtml = `<img src="${replyAvatarUrl}" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">`;
+                                } else {
+                                    replyAvatarHtml = `<div class="story-avatar-initials" style="width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">${getInitials(reply.staff_name)}</div>`;
+                                }
+                                return `
+                                    <div class="reply-item">
+                                        ${replyAvatarHtml}
+                                        <div class="reply-bubble">
+                                            <div class="comment-author-name">${reply.staff_name}</div>
+                                            <div class="comment-text">${escapeHtml(reply.text)}</div>
+                                            <div class="comment-footer">
+                                                <span>${formatTimeAgo(reply.created_at)}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            `).join('')}
+                                `;
+                            }).join('')}
                         </div>
                     `;
                 }
                 
+                const commentStaff = state.staff.find(s => s.id === comment.staff_id);
+                const commentAvatarUrl = commentStaff ? commentStaff.avatar_url : null;
+                let commentAvatarHtml = "";
+                if (commentAvatarUrl) {
+                    commentAvatarHtml = `<img src="${commentAvatarUrl}" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">`;
+                } else {
+                    commentAvatarHtml = `<div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(comment.staff_name)}</div>`;
+                }
+                
                 return `
                     <div class="comment-item">
-                        <div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(comment.staff_name)}</div>
+                        ${commentAvatarHtml}
                         <div style="flex-grow: 1;">
                             <div class="comment-bubble">
                                 <div class="comment-author-name">${comment.staff_name}</div>
@@ -7375,10 +7428,17 @@ function renderStories() {
         
         const isAuthorOrAdmin = currentStaff.id === story.staff_id || currentStaff.role === 'ADMIN' || (typeof isAdminAuthenticated === 'function' && isAdminAuthenticated());
         
+        let commentInputAvatarHtml = "";
+        if (currentStaff.avatar_url) {
+            commentInputAvatarHtml = `<img src="${currentStaff.avatar_url}" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">`;
+        } else {
+            commentInputAvatarHtml = `<div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(currentStaff.name)}</div>`;
+        }
+        
         card.innerHTML = `
             <div class="story-card-header">
                 <div class="story-card-author">
-                    <div class="story-avatar-initials" style="width: 38px; height: 38px; border-radius: 50%; background: ${avatarBg}; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">${initials}</div>
+                    ${authorAvatarHtml}
                     <div style="display: flex; flex-direction: column;">
                         <span class="story-author-name">${story.staff_name}</span>
                         <span class="story-post-time">${formatTimeAgo(story.created_at)}</span>
@@ -7410,7 +7470,7 @@ function renderStories() {
                 </div>
                 
                 <div class="comment-input-area">
-                    <div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(currentStaff.name)}</div>
+                    ${commentInputAvatarHtml}
                     <input type="text" class="comment-input-field" id="commentField-${story.id}" placeholder="Tulis komentar..." onkeydown="handleCommentKeydown(event, '${story.id}')">
                     <button class="btn btn-primary" onclick="publishStoryComment('${story.id}')" style="padding: 6px 14px; border-radius: 10px; background: linear-gradient(135deg, #a855f7, #7c3aed); border:none; font-size:0.8rem;"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
