@@ -8511,39 +8511,39 @@ function createShiftDayCard(day, shiftValue) {
     
     switch(val) {
         case '1':
-            bgGradient = 'linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.08) 100%)';
-            borderColor = 'rgba(16, 185, 129, 0.4)';
-            textColor = '#10b981';
+            bgGradient = 'linear-gradient(135deg, rgba(7, 28, 23, 0.96) 0%, rgba(10, 42, 33, 0.93) 100%)';
+            borderColor = 'rgba(16, 185, 129, 0.45)';
+            textColor = '#34d399';
             label = 'PAGI';
-            glowColor = 'rgba(16, 185, 129, 0.3)';
+            glowColor = 'rgba(16, 185, 129, 0.24)';
             break;
         case '2':
-            bgGradient = 'linear-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(59, 130, 246, 0.08) 100%)';
-            borderColor = 'rgba(59, 130, 246, 0.4)';
-            textColor = '#3b82f6';
+            bgGradient = 'linear-gradient(135deg, rgba(12, 24, 46, 0.96) 0%, rgba(18, 39, 74, 0.93) 100%)';
+            borderColor = 'rgba(59, 130, 246, 0.45)';
+            textColor = '#60a5fa';
             label = 'MALAM';
-            glowColor = 'rgba(59, 130, 246, 0.3)';
+            glowColor = 'rgba(59, 130, 246, 0.24)';
             break;
         case '1/2':
-            bgGradient = 'linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0.08) 100%)';
-            borderColor = 'rgba(245, 158, 11, 0.4)';
-            textColor = '#f59e0b';
+            bgGradient = 'linear-gradient(135deg, rgba(45, 28, 8, 0.96) 0%, rgba(63, 39, 10, 0.93) 100%)';
+            borderColor = 'rgba(245, 158, 11, 0.45)';
+            textColor = '#fbbf24';
             label = 'SETENGAH';
-            glowColor = 'rgba(245, 158, 11, 0.3)';
+            glowColor = 'rgba(245, 158, 11, 0.24)';
             break;
         case 'CUTI':
-            bgGradient = 'linear-gradient(135deg, rgba(236, 72, 153, 0.18) 0%, rgba(236, 72, 153, 0.08) 100%)';
-            borderColor = 'rgba(236, 72, 153, 0.4)';
-            textColor = '#ec4899';
+            bgGradient = 'linear-gradient(135deg, rgba(49, 16, 35, 0.96) 0%, rgba(68, 18, 47, 0.93) 100%)';
+            borderColor = 'rgba(236, 72, 153, 0.45)';
+            textColor = '#f472b6';
             label = 'CUTI';
-            glowColor = 'rgba(236, 72, 153, 0.3)';
+            glowColor = 'rgba(236, 72, 153, 0.24)';
             break;
         default:
-            bgGradient = 'linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 100%)';
-            borderColor = 'rgba(239, 68, 68, 0.35)';
-            textColor = '#ef4444';
+            bgGradient = 'linear-gradient(135deg, rgba(44, 14, 20, 0.96) 0%, rgba(60, 18, 24, 0.93) 100%)';
+            borderColor = 'rgba(239, 68, 68, 0.42)';
+            textColor = '#f87171';
             label = 'OFF';
-            glowColor = 'rgba(239, 68, 68, 0.3)';
+            glowColor = 'rgba(239, 68, 68, 0.24)';
     }
     
     div.style.cssText = `
@@ -8577,8 +8577,8 @@ function createShiftDayCard(day, shiftValue) {
     
     div.innerHTML += `
         <div style="font-size: 0.65rem; color: ${textColor}; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7;">TGL</div>
-        <div style="font-size: 1.8rem; font-weight: 900; color: white; line-height: 1; text-shadow: 0 2px 8px ${glowColor};">${day}</div>
-        <div style="background: ${bgGradient}; border: 1px solid ${borderColor}; border-radius: 8px; padding: 6px 12px; width: 100%; text-align: center; box-shadow: 0 2px 8px ${glowColor};">
+        <div style="font-size: 1.8rem; font-weight: 900; color: #ffffff; line-height: 1; text-shadow: 0 3px 10px rgba(0,0,0,0.38), 0 0 12px ${glowColor};">${day}</div>
+        <div style="background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.08) 100%), ${bgGradient}; border: 1px solid ${borderColor}; border-radius: 8px; padding: 6px 12px; width: 100%; text-align: center; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 2px 8px ${glowColor};">
             <div style="font-size: 0.7rem; font-weight: 900; color: ${textColor}; text-transform: uppercase; letter-spacing: 0.8px;">${label}</div>
         </div>
     `;

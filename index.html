@@ -578,17 +578,17 @@
 
             <!-- B. STAFF VIEW (Login & Personal Console) -->
             <div id="staffView" class="absensi-tab-content hide">
+                <!-- Break Notification Container (Fixed Position - Above Frame) -->
+                <div id="breakNotificationContainer" class="break-notification-container"></div>
+                
                 <!-- Step 2: Staff Break Action Dashboard -->
                 <div id="staffPortalConsole" class="staff-portal-center">
-                    <div class="glass-card staff-console-card premium-izin-frame" id="staffConsoleCard">
                         <div class="console-luxury-border" aria-hidden="true">
                             <span class="frame-corner top-left"></span>
                             <span class="frame-corner top-right"></span>
                             <span class="frame-corner bottom-left"></span>
                             <span class="frame-corner bottom-right"></span>
                         </div>
-                        <!-- Break Notification Container (Top of Frame) -->
-                        <div id="breakNotificationContainer" class="break-notification-container"></div>
                         <div class="console-mouse-glow" aria-hidden="true"></div>
                         <div class="console-mesh-overlay" aria-hidden="true"></div>
                         <div class="console-shine-sweep" aria-hidden="true"></div>
@@ -1703,9 +1703,9 @@
                         
                         <!-- Shift Schedule Display -->
                         <div id="shiftScheduleContainer" class="hide">
-                            <div class="glass-card" style="padding: 35px; background: linear-gradient(145deg, rgba(139, 92, 246, 0.03) 0%, rgba(10, 15, 30, 0.95) 100%); border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);">
+                            <div class="glass-card" style="padding: 35px; background: linear-gradient(145deg, rgba(9, 14, 28, 0.98) 0%, rgba(12, 18, 35, 0.985) 55%, rgba(17, 24, 39, 0.99) 100%); border: 1px solid rgba(139, 92, 246, 0.24); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 8px 32px rgba(139, 92, 246, 0.12);">
                                 <!-- Header with Staff Info -->
-                                <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(124, 58, 237, 0.04) 100%); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: 15px; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1); gap: 20px; flex-wrap: wrap;">
+                                <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, rgba(16, 22, 40, 0.96) 0%, rgba(20, 28, 52, 0.94) 100%); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 15px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(139, 92, 246, 0.08); gap: 20px; flex-wrap: wrap;">
                                     <div style="display: flex; align-items: center; gap: 20px; flex: 1; min-width: 300px;">
                                         <div id="shiftStaffAvatar" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6, #7c3aed); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; color: white; box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4); border: 3px solid rgba(139, 92, 246, 0.3);"></div>
                                         <div>
@@ -1715,14 +1715,14 @@
                                     </div>
                                     <div style="display: flex; gap: 15px; align-items: stretch; flex-wrap: wrap;">
                                         <!-- Month Display -->
-                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(124, 58, 237, 0.08) 100%); border: 1.5px solid rgba(139, 92, 246, 0.3); border-radius: 12px; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15); display: flex; flex-direction: column; justify-content: center; min-width: 140px;">
+                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(33, 24, 64, 0.92) 0%, rgba(28, 22, 55, 0.9) 100%); border: 1.5px solid rgba(139, 92, 246, 0.34); border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22), 0 4px 15px rgba(139, 92, 246, 0.1); display: flex; flex-direction: column; justify-content: center; min-width: 140px;">
                                             <div style="font-size: 0.65rem; color: rgba(167, 139, 250, 0.9); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; white-space: nowrap;">
                                                 <i class="fa-solid fa-calendar-check" style="margin-right: 5px;"></i>PERIODE
                                             </div>
                                             <div id="shiftMonthDisplay" style="font-size: 1.2rem; font-weight: 900; color: #a78bfa; letter-spacing: 0.5px; white-space: nowrap;"></div>
                                         </div>
                                         <!-- Summary Info: OFF Days -->
-                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 100%); border: 1.5px solid rgba(239, 68, 68, 0.3); border-radius: 12px; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15); display: flex; flex-direction: column; justify-content: center; min-width: 100px;">
+                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(58, 18, 26, 0.94) 0%, rgba(45, 16, 24, 0.9) 100%); border: 1.5px solid rgba(239, 68, 68, 0.34); border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22), 0 4px 15px rgba(239, 68, 68, 0.1); display: flex; flex-direction: column; justify-content: center; min-width: 100px;">
                                             <div style="font-size: 0.65rem; color: rgba(252, 165, 165, 0.9); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; white-space: nowrap;">
                                                 <i class="fa-solid fa-calendar-xmark" style="margin-right: 5px;"></i>OFF DAY
                                             </div>
@@ -1732,7 +1732,7 @@
                                             </div>
                                         </div>
                                         <!-- Summary Info: Half Days -->
-                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.08) 100%); border: 1.5px solid rgba(245, 158, 11, 0.3); border-radius: 12px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15); display: flex; flex-direction: column; justify-content: center; min-width: 130px;">
+                                        <div style="text-align: center; padding: 12px 20px; background: linear-gradient(135deg, rgba(57, 35, 10, 0.94) 0%, rgba(46, 28, 10, 0.9) 100%); border: 1.5px solid rgba(245, 158, 11, 0.34); border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22), 0 4px 15px rgba(245, 158, 11, 0.1); display: flex; flex-direction: column; justify-content: center; min-width: 130px;">
                                             <div style="font-size: 0.65rem; color: rgba(251, 191, 36, 0.9); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; white-space: nowrap;">
                                                 <i class="fa-solid fa-clock" style="margin-right: 5px;"></i>SETENGAH HARI
                                             </div>
@@ -1747,7 +1747,7 @@
                                 <!-- Quick Summary dengan Tanggal - Luxury Compact Design -->
                                 <div style="margin-bottom: 30px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                                     <!-- OFF Day Dates Card -->
-                                    <div style="padding: 20px 24px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(220, 38, 38, 0.02) 100%); border: 1.5px solid rgba(239, 68, 68, 0.25); border-radius: 14px; box-shadow: 0 4px 16px rgba(239, 68, 68, 0.15); position: relative; overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 24px rgba(239, 68, 68, 0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(239, 68, 68, 0.15)';">
+                                    <div style="padding: 20px 24px; background: linear-gradient(135deg, rgba(29, 14, 20, 0.97) 0%, rgba(40, 18, 24, 0.95) 100%); border: 1.5px solid rgba(239, 68, 68, 0.28); border-radius: 14px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(239, 68, 68, 0.1); position: relative; overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(0, 0, 0, 0.34), 0 6px 24px rgba(239, 68, 68, 0.18)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 18px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(239, 68, 68, 0.1)';">
                                         <!-- Ambient glow background -->
                                         <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
                                         
@@ -1764,7 +1764,7 @@
                                     </div>
                                     
                                     <!-- Half Day Dates Card -->
-                                    <div style="padding: 20px 24px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.02) 100%); border: 1.5px solid rgba(245, 158, 11, 0.25); border-radius: 14px; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15); position: relative; overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 24px rgba(245, 158, 11, 0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(245, 158, 11, 0.15)';">
+                                    <div style="padding: 20px 24px; background: linear-gradient(135deg, rgba(36, 24, 10, 0.97) 0%, rgba(47, 31, 12, 0.95) 100%); border: 1.5px solid rgba(245, 158, 11, 0.28); border-radius: 14px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(245, 158, 11, 0.1); position: relative; overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(0, 0, 0, 0.34), 0 6px 24px rgba(245, 158, 11, 0.18)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 18px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(245, 158, 11, 0.1)';">
                                         <!-- Ambient glow background -->
                                         <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
                                         
@@ -1782,7 +1782,7 @@
                                 </div>
 
                                 <!-- Legend -->
-                                <div style="display: flex; gap: 12px; margin-bottom: 25px; flex-wrap: wrap; padding: 18px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.04) 0%, rgba(124, 58, 237, 0.02) 100%); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                                <div style="display: flex; gap: 12px; margin-bottom: 25px; flex-wrap: wrap; padding: 18px; background: linear-gradient(135deg, rgba(15, 21, 38, 0.96) 0%, rgba(18, 25, 45, 0.94) 100%); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);">
                                     <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; display: flex; align-items: center; margin-right: 10px;">
                                         <i class="fa-solid fa-info-circle" style="margin-right: 8px; color: var(--primary);"></i>KETERANGAN:
                                     </div>
