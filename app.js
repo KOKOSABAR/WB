@@ -3019,9 +3019,13 @@ function restoreBreakNotificationFromState() {
     
     const activeBreak = state.activeBreaks?.find(b => b.staff_id === staffId);
     const saved = loadBreakNotificationState();
+    const container = document.getElementById('breakNotificationContainer');
     
     // 1) Jika staff sedang istirahat => notif PERSISTENT harus tampil (dan rotasi)
     if (activeBreak) {
+        if (container && container.querySelector('.break-notification') && saved && saved.persistent && saved.staffId === staffId) {
+            return;
+        }
         const msg = (saved && saved.staffId === staffId && saved.persistent && saved.message)
             ? saved.message
             : getRandomMessage(BREAK_START_MESSAGES);
@@ -3031,6 +3035,9 @@ function restoreBreakNotificationFromState() {
     
     // 2) Kalau tidak sedang istirahat, tapi ada notif non-persistent yang masih berlaku => restore sisa durasinya
     if (saved && saved.staffId === staffId && !saved.persistent && saved.expiresAt && Date.now() < saved.expiresAt) {
+        if (container && container.querySelector('.break-notification')) {
+            return;
+        }
         const remainingMs = Math.max(1500, saved.expiresAt - Date.now());
         showBreakNotification(saved.message || "", saved.type || "info", false, remainingMs);
         return;
