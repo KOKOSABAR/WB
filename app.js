@@ -8294,63 +8294,98 @@ function renderStaffShiftCalendar(staff, shiftData, monthStr) {
 // Buat card untuk setiap hari
 function createShiftDayCard(day, shiftValue) {
     const div = document.createElement('div');
-    div.style.cssText = 'background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;';
     
     // Determine colors and text based on shift value
-    let bgColor, borderColor, textColor, label;
+    let bgGradient, borderColor, textColor, label, glowColor;
     const val = String(shiftValue).toUpperCase().trim();
     
     switch(val) {
         case '1':
-            bgColor = 'rgba(16, 185, 129, 0.15)';
-            borderColor = 'rgba(16, 185, 129, 0.3)';
+            bgGradient = 'linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.08) 100%)';
+            borderColor = 'rgba(16, 185, 129, 0.4)';
             textColor = '#10b981';
             label = 'PAGI';
+            glowColor = 'rgba(16, 185, 129, 0.3)';
             break;
         case '2':
-            bgColor = 'rgba(59, 130, 246, 0.15)';
-            borderColor = 'rgba(59, 130, 246, 0.3)';
+            bgGradient = 'linear-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(59, 130, 246, 0.08) 100%)';
+            borderColor = 'rgba(59, 130, 246, 0.4)';
             textColor = '#3b82f6';
             label = 'MALAM';
+            glowColor = 'rgba(59, 130, 246, 0.3)';
             break;
         case '1/2':
-            bgColor = 'rgba(245, 158, 11, 0.15)';
-            borderColor = 'rgba(245, 158, 11, 0.3)';
+            bgGradient = 'linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0.08) 100%)';
+            borderColor = 'rgba(245, 158, 11, 0.4)';
             textColor = '#f59e0b';
             label = 'SETENGAH';
+            glowColor = 'rgba(245, 158, 11, 0.3)';
             break;
         case 'CUTI':
-            bgColor = 'rgba(236, 72, 153, 0.15)';
-            borderColor = 'rgba(236, 72, 153, 0.3)';
+            bgGradient = 'linear-gradient(135deg, rgba(236, 72, 153, 0.18) 0%, rgba(236, 72, 153, 0.08) 100%)';
+            borderColor = 'rgba(236, 72, 153, 0.4)';
             textColor = '#ec4899';
             label = 'CUTI';
+            glowColor = 'rgba(236, 72, 153, 0.3)';
             break;
         default:
-            bgColor = 'rgba(100, 116, 139, 0.15)';
-            borderColor = 'rgba(100, 116, 139, 0.3)';
+            bgGradient = 'linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(71, 85, 105, 0.08) 100%)';
+            borderColor = 'rgba(100, 116, 139, 0.35)';
             textColor = '#64748b';
             label = 'OFF';
+            glowColor = 'rgba(100, 116, 139, 0.2)';
     }
     
-    div.innerHTML = `
-        <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">TGL</div>
-        <div style="font-size: 1.5rem; font-weight: 800; color: white; line-height: 1;">${day}</div>
-        <div style="background: ${bgColor}; border: 1px solid ${borderColor}; border-radius: 6px; padding: 4px 10px; width: 100%; text-align: center;">
-            <div style="font-size: 0.65rem; font-weight: 800; color: ${textColor}; text-transform: uppercase; letter-spacing: 0.5px;">${label}</div>
+    div.style.cssText = `
+        background: ${bgGradient};
+        border: 1.5px solid ${borderColor};
+        border-radius: 12px;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    `;
+    
+    // Add shimmer effect overlay
+    const shimmer = document.createElement('div');
+    shimmer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, ${glowColor}, transparent);
+        transition: left 0.5s;
+        pointer-events: none;
+    `;
+    div.appendChild(shimmer);
+    
+    div.innerHTML += `
+        <div style="font-size: 0.65rem; color: ${textColor}; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7;">TGL</div>
+        <div style="font-size: 1.8rem; font-weight: 900; color: white; line-height: 1; text-shadow: 0 2px 8px ${glowColor};">${day}</div>
+        <div style="background: ${bgGradient}; border: 1px solid ${borderColor}; border-radius: 8px; padding: 6px 12px; width: 100%; text-align: center; box-shadow: 0 2px 8px ${glowColor};">
+            <div style="font-size: 0.7rem; font-weight: 900; color: ${textColor}; text-transform: uppercase; letter-spacing: 0.8px;">${label}</div>
         </div>
     `;
     
-    // Hover effect
+    // Hover effect with glow
     div.addEventListener('mouseenter', () => {
-        div.style.transform = 'translateY(-2px)';
-        div.style.boxShadow = `0 4px 12px ${borderColor}`;
+        div.style.transform = 'translateY(-4px) scale(1.02)';
+        div.style.boxShadow = `0 8px 24px ${glowColor}, 0 0 20px ${glowColor}`;
         div.style.borderColor = textColor;
+        shimmer.style.left = '100%';
     });
     
     div.addEventListener('mouseleave', () => {
-        div.style.transform = 'translateY(0)';
+        div.style.transform = 'translateY(0) scale(1)';
         div.style.boxShadow = '';
-        div.style.borderColor = 'rgba(255,255,255,0.05)';
+        div.style.borderColor = borderColor;
+        shimmer.style.left = '-100%';
     });
     
     return div;
