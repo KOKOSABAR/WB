@@ -7265,7 +7265,14 @@ function handleStoriesRealtime(payload) {
         if (!state.stories) state.stories = [];
         const idx = state.stories.findIndex(s => s.id === payload.new.id);
         if (idx !== -1) {
-            state.stories[idx] = payload.new;
+            const existing = state.stories[idx];
+            const updated = { ...payload.new };
+            // Supabase realtime ~64KB limit may truncate large base64 image_url.
+            // Preserve the existing image_url if the new payload lacks it.
+            if (!updated.image_url && existing.image_url) {
+                updated.image_url = existing.image_url;
+            }
+            state.stories[idx] = updated;
         } else {
             state.stories.unshift(payload.new);
         }
