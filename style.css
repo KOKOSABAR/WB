@@ -7948,15 +7948,22 @@ tr.expiring-warning-row:hover {
     position: fixed;
     top: 100px;
     left: 50%;
-    transform: translateX(-50%);
+    right: auto;
     width: min(100%, 640px);
+    transform: translateX(-50%);
     z-index: 9999;
     pointer-events: none;
+    margin: 0 auto;
 }
 
 /* Adjust position untuk staff view yang lebih tinggi */
 #staffView .break-notification-container {
     top: 80px;
+}
+
+/* Ensure notification stays centered on viewport, not relative to parent */
+.break-notification-container {
+    max-width: calc(100vw - 40px);
 }
 
 .break-notification {
@@ -8313,8 +8320,11 @@ tr.expiring-warning-row:hover {
 /* Responsive */
 @media (max-width: 768px) {
     .break-notification-container {
-        width: 95%;
+        width: calc(100vw - 30px);
+        max-width: calc(100vw - 30px);
         top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     #staffView .break-notification-container {
