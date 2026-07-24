@@ -8141,24 +8141,10 @@ window.submitGlobalAvatarChange = submitGlobalAvatarChange;
 
 // Inisialisasi Shift View
 async function initShiftView() {
-    const monthSelector = document.getElementById('shiftMonthSelector');
-    
-    if (!monthSelector) return;
-    
-    // Set default month to current month
-    const now = new Date();
-    const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-    monthSelector.value = currentMonthStr;
-    
-    // Event listener untuk month selector
-    monthSelector.addEventListener('change', () => {
-        if (state.currentStaff) {
-            displayStaffShift(state.currentStaff.id, monthSelector.value);
-        }
-    });
-    
-    // Langsung tampilkan shift staff yang sedang login
+    // Langsung tampilkan shift staff yang sedang login dengan bulan sekarang
     if (state.currentStaff) {
+        const now = new Date();
+        const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
         displayStaffShift(state.currentStaff.id, currentMonthStr);
     } else {
         showNoLoginState();
