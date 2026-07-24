@@ -7321,7 +7321,7 @@ function renderStories() {
         
         let imageHtml = "";
         if (story.image_url) {
-            imageHtml = `<img src="${story.image_url}" class="story-card-image" alt="Story Image">`;
+            imageHtml = `<img src="${story.image_url}" class="story-card-image" alt="Story Image" ondblclick="openStoryImagePreviewModal('${story.image_url}')" title="Double klik untuk melihat lebih besar">`;
         }
         
         let commentsHtml = "";
@@ -7717,4 +7717,35 @@ function handleReplyKeydown(e, storyId, commentId) {
     }
 }
 window.handleReplyKeydown = handleReplyKeydown;
+
+// Story Image Preview Modal Helpers
+function openStoryImagePreviewModal(src) {
+    const modal = document.getElementById('storyImagePreviewModal');
+    const img = document.getElementById('storyModalPreviewImg');
+    if (!modal || !img) return;
+    
+    img.src = src;
+    modal.classList.remove('hide');
+    setTimeout(() => {
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+        img.style.transform = "scale(1)";
+    }, 50);
+}
+window.openStoryImagePreviewModal = openStoryImagePreviewModal;
+
+function closeStoryImagePreviewModal() {
+    const modal = document.getElementById('storyImagePreviewModal');
+    const img = document.getElementById('storyModalPreviewImg');
+    if (!modal || !img) return;
+    
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+    img.style.transform = "scale(0.95)";
+    setTimeout(() => {
+        modal.classList.add('hide');
+        img.src = "";
+    }, 300);
+}
+window.closeStoryImagePreviewModal = closeStoryImagePreviewModal;
 
