@@ -7942,7 +7942,8 @@ tr.expiring-warning-row:hover {
    ================================================================= */
 .break-notification-container {
     position: absolute;
-    top: 18px;
+    /* Biar shadow/shine tidak kepotong oleh overflow card */
+    top: 36px;
     left: 50%;
     transform: translateX(-50%);
     width: min(95%, 640px);
@@ -7961,7 +7962,8 @@ tr.expiring-warning-row:hover {
         0 10px 20px rgba(0, 0, 0, 0.3),
         0 0 50px rgba(102, 126, 234, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(-200%) scale(0.8);
+    /* Hindari animasi masuk dari atas terlalu jauh (bisa kepotong) */
+    transform: translateY(-48px) scale(0.94);
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
@@ -8028,17 +8030,17 @@ tr.expiring-warning-row:hover {
 
 @keyframes luxuryBounceIn {
     0% {
-        transform: translateY(-200%) scale(0.5) rotate(-10deg);
+        transform: translateY(-48px) scale(0.78) rotate(-8deg);
         opacity: 0;
     }
     40% {
-        transform: translateY(20%) scale(1.08) rotate(2deg);
+        transform: translateY(8px) scale(1.04) rotate(2deg);
     }
     60% {
-        transform: translateY(-10%) scale(0.96) rotate(-1deg);
+        transform: translateY(-4px) scale(0.98) rotate(-1deg);
     }
     80% {
-        transform: translateY(5%) scale(1.02) rotate(0.5deg);
+        transform: translateY(2px) scale(1.01) rotate(0.5deg);
     }
     100% {
         transform: translateY(0) scale(1) rotate(0deg);
@@ -8304,7 +8306,7 @@ tr.expiring-warning-row:hover {
 @media (max-width: 768px) {
     .break-notification-container {
         width: 95%;
-        top: 14px;
+        top: 28px;
     }
     
     .break-notification {
