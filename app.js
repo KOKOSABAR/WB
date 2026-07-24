@@ -2713,6 +2713,15 @@ function updateStaffConsoleUI() {
         window.stUpdateSidebarAccess();
     }
     
+    // Sync avatar_url if missing on currentStaff object
+    if (staff && !staff.avatar_url && Array.isArray(state.staffList)) {
+        const found = state.staffList.find(s => s.id === staff.id || (s.name && staff.name && s.name.toUpperCase() === staff.name.toUpperCase()));
+        if (found && found.avatar_url) {
+            staff.avatar_url = found.avatar_url;
+            state.currentStaff.avatar_url = found.avatar_url;
+        }
+    }
+    
     // Set Profile
     document.getElementById("currentStaffName").textContent = staff.name;
     document.getElementById("currentStaffRole").textContent = formatRoleNameUpper(staff.role);
@@ -8474,10 +8483,20 @@ function renderStaffShiftCalendar(staff, shiftData, monthStr) {
     emptyState.classList.add('hide');
     container.classList.remove('hide');
     
-    // Update staff info
+    // Update staff info & avatar photo
     staffName.textContent = staff.name.toUpperCase();
     staffRole.textContent = staff.role || 'STAFF';
-    staffAvatar.textContent = staff.name.charAt(0).toUpperCase();
+    
+    const avatarUrl = staff.avatar_url || state.staffList?.find(s => s.id === staff.id || (s.name && staff.name && s.name.toUpperCase() === staff.name.toUpperCase()))?.avatar_url || null;
+    if (avatarUrl) {
+        staffAvatar.innerHTML = `<img src="${avatarUrl}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+        staffAvatar.style.background = "transparent";
+        staffAvatar.style.border = "none";
+    } else {
+        staffAvatar.textContent = staff.name.charAt(0).toUpperCase();
+        staffAvatar.style.background = "linear-gradient(135deg, #8b5cf6, #7c3aed)";
+        staffAvatar.style.border = "3px solid rgba(139, 92, 246, 0.3)";
+    }
     
     // Format month display
     const [year, month] = monthStr.split('-');
