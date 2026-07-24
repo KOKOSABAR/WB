@@ -382,9 +382,14 @@ function _renderTable(tbodyId, dataList, shift) {
                 let displayRoleName = normalizePasporRole(s.role);
                 
                 dividerTr.innerHTML = `
-                    <td colspan="6" class="paspor-role-divider">
+                    <td class="paspor-role-divider"></td>
+                    <td class="paspor-role-divider"></td>
+                    <td class="paspor-role-divider">
                         ${displayRoleName}
                     </td>
+                    <td class="paspor-role-divider"></td>
+                    <td class="paspor-role-divider"></td>
+                    <td class="paspor-role-divider"></td>
                 `;
                 frag.appendChild(dividerTr);
                 lastRole = currentRole;

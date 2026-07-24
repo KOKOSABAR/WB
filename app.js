@@ -1527,7 +1527,10 @@ function setupEventListeners() {
     document.getElementById("btnResetAppConfig").addEventListener("click", handleResetConfig);
 
     // T. Laporan: Ekspor CSV & Hapus Semua Log
-    document.getElementById("btnExportCSV").addEventListener("click", exportLogsToCSV);
+    const btnExportCSV = document.getElementById("btnExportCSV");
+    if (btnExportCSV) {
+        btnExportCSV.addEventListener("click", exportLogsToCSV);
+    }
     
     const btnDeleteAllReportLogs = document.getElementById("btnDeleteAllReportLogs");
     if (btnDeleteAllReportLogs) {
@@ -3181,63 +3184,100 @@ function renderActiveBreaks() {
 // 11. RENDERING LAPORAN
 function renderReports(filter = "all") {
     if (state.reportMode === "monthly") {
-        // TAMPILAN REKAP BULANAN
+        // TAMPILAN REKAP BULANAN (SEBULAN PENUH)
         const tbodyGrouped = document.getElementById("monthlyReportTableBody");
         tbodyGrouped.innerHTML = "";
         
         const selectedMonth = document.getElementById("reportMonthFilter") ? document.getElementById("reportMonthFilter").value : new Date().toLocaleDateString('sv-SE').substring(0, 7);
         
-        // Filter log terlambat di bulan terpilih
+        if (!selectedMonth) {
+            tbodyGrouped.innerHTML = `<tr><td colspan="2" class="text-center" style="color: var(--text-muted); padding: 30px;">Pilih bulan terlebih dahulu.</td></tr>`;
+            return;
+        }
+
+        // Filter log di bulan terpilih (semua status agar bisa mendeteksi hari aman vs tidak ada data)
         let filteredLogs = state.logs.filter(l => {
-            if (l.status !== 'Terlambat') return false;
-            if (!selectedMonth) return true;
+            if (!l.start_time) return false;
             return new Date(l.start_time).toLocaleDateString('sv-SE').substring(0, 7) === selectedMonth;
         });
         
-        if (filteredLogs.length === 0) {
-            tbodyGrouped.innerHTML = `<tr><td colspan="2" class="text-center" style="color: var(--text-muted); padding: 30px;">Tidak ada rekap keterlambatan staff untuk bulan ${selectedMonth || '-'}.</td></tr>`;
-            return;
+        const [year, month] = selectedMonth.split('-').map(Number);
+        const daysInMonth = new Date(year, month, 0).getDate();
+        
+        // Grouping logs berdasarkan hari (1 sampai daysInMonth)
+        const groupedByDay = {};
+        for (let d = 1; d <= daysInMonth; d++) {
+            groupedByDay[d] = {
+                lateStaff: {}, // nama -> jumlah terlambat
+                totalLogs: 0
+            };
         }
         
-        // Grouping berdasarkan Tanggal (format MM/DD/YYYY) dan Nama Staff
-        const groupedByDate = {};
         filteredLogs.forEach(l => {
             const d = new Date(l.start_time);
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            const year = d.getFullYear();
-            const dateKey = `${month}/${day}/${year}`;
-            
-            if (!groupedByDate[dateKey]) {
-                groupedByDate[dateKey] = {};
+            const dayNum = d.getDate();
+            if (groupedByDay[dayNum]) {
+                groupedByDay[dayNum].totalLogs++;
+                if (l.status === 'Terlambat') {
+                    const name = l.staff_name;
+                    groupedByDay[dayNum].lateStaff[name] = (groupedByDay[dayNum].lateStaff[name] || 0) + 1;
+                }
             }
-            
-            const name = l.staff_name;
-            groupedByDate[dateKey][name] = (groupedByDate[dateKey][name] || 0) + 1;
         });
         
-        // Urutkan tanggal dari yang terbaru
-        const sortedDates = Object.keys(groupedByDate).sort((a, b) => new Date(b) - new Date(a));
+        let hasLateData = false;
         
-        sortedDates.forEach(date => {
-            const staffCounts = groupedByDate[date];
+        // Urutkan hari dari yang terbaru (tanggal terbesar ke terkecil)
+        for (let dayNum = daysInMonth; dayNum >= 1; dayNum--) {
+            const dayData = groupedByDay[dayNum];
             
-            // Format output: FAISAL SABARYANTO 2x, BUDI SANTOSO 1x
-            const staffList = Object.entries(staffCounts)
-                .map(([name, count]) => `<span style="font-weight: 700; color: var(--danger); font-size: 0.85rem;">${name.toUpperCase()} <span style="background: rgba(239, 68, 68, 0.15); padding: 2px 6px; border-radius: 4px; font-size: 0.75rem;">${count}x</span></span>`)
-                .join("<span style='color: var(--text-muted); margin: 0 10px;'>|</span>");
+            if (Object.keys(dayData.lateStaff).length > 0) {
+                hasLateData = true;
+                const dayStr = String(dayNum).padStart(2, '0');
+                const monthStr = String(month).padStart(2, '0');
+                const dateKey = `${monthStr}/${dayStr}/${year}`;
                 
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td style="font-weight: 700; font-size: 0.88rem; color: var(--text-muted);"><i class="fa-solid fa-calendar-day" style="margin-right: 6px; color: var(--primary);"></i> ${date}</td>
-                <td>
-                    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        ${staffList}
-                    </div>
-                </td>
-            `;
-            tbodyGrouped.appendChild(row);
-        });
+                const [mVal, dVal, yVal] = dateKey.split('/').map(Number);
+                const dateObj = new Date(yVal, mVal - 1, dVal);
+                const dayName = dateObj.toLocaleDateString('id-ID', { weekday: 'long' });
+                const monthNameShort = dateObj.toLocaleDateString('id-ID', { month: 'short' }).toUpperCase();
+                
+                const staffList = Object.entries(dayData.lateStaff)
+                    .map(([name, count]) => `
+                        <span class="late-staff-tag" style="background: rgba(244, 63, 94, 0.05); border: 1px solid rgba(244, 63, 94, 0.16); padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s ease;">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #f43f5e; font-size: 0.75rem;"></i>
+                            <span style="font-weight: 700; color: #fda4af; font-size: 0.78rem; letter-spacing: 0.3px;">${name.toUpperCase()}</span>
+                            <span style="background: rgba(244, 63, 94, 0.18); border: 1px solid rgba(244, 63, 94, 0.3); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">${count}x Terlambat</span>
+                        </span>
+                    `).join("");
+                
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td style="padding: 12px 14px; vertical-align: middle;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 10px; width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <span style="font-size: 0.55rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 800;">${monthNameShort}</span>
+                                <span style="font-size: 0.95rem; font-weight: 800; color: #ffffff;">${dVal}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-main);">${dayName}</span>
+                                <span style="font-size: 0.65rem; color: var(--text-muted);">${yVal}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 12px 14px; vertical-align: middle;">
+                        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            ${staffList}
+                        </div>
+                    </td>
+                `;
+                tbodyGrouped.appendChild(row);
+            }
+        }
+        
+        if (!hasLateData) {
+            tbodyGrouped.innerHTML = `<tr><td colspan="2" class="text-center" style="color: var(--text-muted); padding: 30px;">Tidak ada rekap keterlambatan staff untuk bulan ${selectedMonth || '-'}.</td></tr>`;
+        }
     } else {
         // TAMPILAN RIWAYAT HARIAN (DEFAULT)
         const tbody = document.getElementById("reportTableBody");
@@ -3296,47 +3336,72 @@ function renderReports(filter = "all") {
 // Ekspor Riwayat ke File CSV
 function exportLogsToCSV() {
     if (state.reportMode === "monthly") {
-        // Ekspor Rekap Bulanan Terlambat
+        // Ekspor Rekap Bulanan Terlambat (Sebulan Penuh)
         const selectedMonth = document.getElementById("reportMonthFilter") ? document.getElementById("reportMonthFilter").value : new Date().toLocaleDateString('sv-SE').substring(0, 7);
         
-        const filteredLogs = state.logs.filter(l => 
-            l.status === 'Terlambat' && 
-            new Date(l.start_time).toLocaleDateString('sv-SE').substring(0, 7) === selectedMonth
-        );
-        
-        if (filteredLogs.length === 0) {
-            showToast(`Tidak ada data rekap keterlambatan bulan ${selectedMonth || '-'} untuk diekspor.`, "warning");
+        if (!selectedMonth) {
+            showToast("Bulan tidak valid.", "warning");
             return;
         }
+
+        const [year, month] = selectedMonth.split('-').map(Number);
+        const daysInMonth = new Date(year, month, 0).getDate();
         
-        const groupedByDate = {};
-        filteredLogs.forEach(l => {
-            const d = new Date(l.start_time);
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            const year = d.getFullYear();
-            const dateKey = `${month}/${day}/${year}`;
-            
-            if (!groupedByDate[dateKey]) groupedByDate[dateKey] = {};
-            groupedByDate[dateKey][l.staff_name] = (groupedByDate[dateKey][l.staff_name] || 0) + 1;
+        // Filter log di bulan terpilih
+        const filteredLogs = state.logs.filter(l => {
+            if (!l.start_time) return false;
+            return new Date(l.start_time).toLocaleDateString('sv-SE').substring(0, 7) === selectedMonth;
         });
         
-        const sortedDates = Object.keys(groupedByDate).sort((a, b) => new Date(b) - new Date(a));
+        const groupedByDay = {};
+        for (let d = 1; d <= daysInMonth; d++) {
+            groupedByDay[d] = {
+                lateStaff: {},
+                totalLogs: 0
+            };
+        }
+        
+        filteredLogs.forEach(l => {
+            const d = new Date(l.start_time);
+            const dayNum = d.getDate();
+            if (groupedByDay[dayNum]) {
+                groupedByDay[dayNum].totalLogs++;
+                if (l.status === 'Terlambat') {
+                    const name = l.staff_name;
+                    groupedByDay[dayNum].lateStaff[name] = (groupedByDay[dayNum].lateStaff[name] || 0) + 1;
+                }
+            }
+        });
         
         let csvContent = "data:text/csv;charset=utf-8,";
         csvContent += "Tanggal,Daftar Staff Terlambat\n";
         
-        sortedDates.forEach(date => {
-            const staffList = Object.entries(groupedByDate[date])
-                .map(([name, count]) => `${name.toUpperCase()} (${count}x)`)
-                .join(" | ");
-            csvContent += `"${date}","${staffList}"\n`;
-        });
+        let hasLateData = false;
+        for (let dayNum = daysInMonth; dayNum >= 1; dayNum--) {
+            const dayData = groupedByDay[dayNum];
+            if (Object.keys(dayData.lateStaff).length > 0) {
+                hasLateData = true;
+                const dayStr = String(dayNum).padStart(2, '0');
+                const monthStr = String(month).padStart(2, '0');
+                const dateKey = `${monthStr}/${dayStr}/${year}`;
+                
+                const staffListStr = Object.entries(dayData.lateStaff)
+                    .map(([name, count]) => `${name.toUpperCase()} (${count}x)`)
+                    .join(" | ");
+                
+                csvContent += `"${dateKey}","${staffListStr}"\n`;
+            }
+        }
+        
+        if (!hasLateData) {
+            showToast(`Tidak ada data rekap keterlambatan bulan ${selectedMonth || '-'} untuk diekspor.`, "warning");
+            return;
+        }
         
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
-        link.setAttribute("download", `rekap_bulanan_terlambat_${selectedMonth}.csv`);
+        link.setAttribute("download", `rekap_bulanan_${selectedMonth}.csv`);
         document.body.appendChild(link);
         
         link.click();
@@ -4471,9 +4536,16 @@ async function handleGenerateDummyData() {
     }
 }
 
-// Validasi Password Admin (Bypassed - Tanpa Password)
+// Validasi Password Admin untuk hapus/delete
 async function validateAdminPassword() {
-    return true;
+    const input = await showCustomPrompt("Masukkan password admin untuk melanjutkan tindakan hapus/delete:", "Otorisasi Hapus Data");
+    if (input === null) return false; // Dibatalkan oleh user
+    if (input === "wdbos88") {
+        return true;
+    } else {
+        showToast("Password salah! Tindakan dibatalkan.", "error");
+        return false;
+    }
 }
 
 // Menghapus satu log riwayat istirahat
