@@ -229,7 +229,7 @@ function renderRekeningStats() {
                         : `<span style="background:rgba(234,179,8,0.25);color:#fef08a;padding:2px 7px;border-radius:5px;font-size:0.68rem;font-weight:800;border:1px solid rgba(234,179,8,0.4);white-space:nowrap;"><i class="fa-solid fa-clock"></i> Sisa ${daysLeft} Hari</span>`;
 
                     listHtml += `
-                    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.4);border:1px solid rgba(234,179,8,0.25);padding:8px 10px;border-radius:8px;gap:8px;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(12,14,24,0.88);border:1px solid rgba(234,179,8,0.35);padding:10px 12px;border-radius:10px;gap:8px;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 4px 15px rgba(0,0,0,0.4);">
                         <div style="display:flex;align-items:center;gap:8px;overflow:hidden;flex:1;">
                             <div style="width:28px;height:28px;border-radius:6px;background:rgba(234,179,8,0.2);color:#facc15;display:flex;align-items:center;justify-content:center;font-size:0.78rem;flex-shrink:0;">
                                 <i class="${getBankIconClass(item.nama_bank)}"></i>
