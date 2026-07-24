@@ -256,6 +256,7 @@ const ROLE_ORDER_MAP = {
 
 const RBAC_MENUS = [
     { id: 'chatView', label: 'Team Chat' },
+    { id: 'storyView', label: 'Story Feed' },
     { id: 'izinView', label: 'Izin Istirahat / Console' },
     { id: 'clockInView', label: 'Clock In' },
     { id: 'absensiView', label: 'Absensi WDBOS' },
@@ -272,6 +273,7 @@ const RBAC_MENUS = [
 
 const DEFAULT_ROLE_ACCESS = {
     chatView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
+    storyView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
     izinView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
     clockInView: ['CS LINE', 'CS LC', 'KAPTEN KASIR', 'KASIR'],
     absensiView: ['CS LINE', 'KAPTEN KASIR'],
@@ -1082,6 +1084,11 @@ function setupRealtimeSubscriptions() {
         .on('postgres_changes', { event: '*', schema: 'public', table: 'data_rekening' }, payload => {
             if (typeof handleRekeningRealtime === 'function') {
                 handleRekeningRealtime(payload);
+            }
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'staff_stories' }, payload => {
+            if (typeof handleStoriesRealtime === 'function') {
+                handleStoriesRealtime(payload);
             }
         });
 
@@ -2031,6 +2038,7 @@ function updateRoleBasedSidebarAccess() {
     };
 
     setRoleNavVisibility(document.getElementById('btnChatView'), isAllowed('chatView'), 'flex');
+    setRoleNavVisibility(document.getElementById('btnStoryView'), isAllowed('storyView'), 'flex');
     setRoleNavVisibility(document.getElementById('btnClockInSidebar'), isAllowed('clockInView'), 'flex');
     
     // Izin / Staff Console isn't explicitly ID'd in your previous code for toggling, but we can target it via data-target if needed.
@@ -2115,6 +2123,11 @@ async function showView(viewId) {
         if (viewId === "bioView") {
             if (typeof updateBioView === 'function') {
                 updateBioView();
+            }
+        }
+        if (viewId === "storyView") {
+            if (typeof loadStories === 'function') {
+                loadStories();
             }
         }
     }
@@ -3857,6 +3870,7 @@ function renderAdminRoleAccess() {
         
         let menuIcon = "fa-shield-halved";
         if (menu.id.includes("chat")) menuIcon = "fa-comments";
+        if (menu.id.includes("story")) menuIcon = "fa-square-rss";
         if (menu.id.includes("izin") || menu.id.includes("clock")) menuIcon = "fa-clock";
         if (menu.id.includes("absensi")) menuIcon = "fa-clipboard-user";
         if (menu.id.includes("paspor")) menuIcon = "fa-passport";
@@ -7211,3 +7225,496 @@ function updateBioView() {
 }
 
 window.updateBioView = updateBioView;
+
+// ==============================================================
+// 21. PREMIUM STORY FEED SYSTEM (AUTO-SYNC, COMMENTS, REPLIES, LIKES)
+// ==============================================================
+
+// State variable to store local base64 image data
+let selectedStoryImageBase64 = null;
+
+// Realtime update handler
+function handleStoriesRealtime(payload) {
+    if (payload.eventType === 'INSERT') {
+        if (!state.stories) state.stories = [];
+        state.stories.unshift(payload.new);
+        if (document.getElementById('storyView').classList.contains('active')) {
+            renderStories();
+        }
+    } else if (payload.eventType === 'UPDATE') {
+        if (!state.stories) state.stories = [];
+        const idx = state.stories.findIndex(s => s.id === payload.new.id);
+        if (idx !== -1) {
+            state.stories[idx] = payload.new;
+        } else {
+            state.stories.unshift(payload.new);
+        }
+        if (document.getElementById('storyView').classList.contains('active')) {
+            renderStories();
+        }
+    } else if (payload.eventType === 'DELETE') {
+        if (!state.stories) state.stories = [];
+        state.stories = state.stories.filter(s => s.id !== payload.old.id);
+        if (document.getElementById('storyView').classList.contains('active')) {
+            renderStories();
+        }
+    }
+}
+window.handleStoriesRealtime = handleStoriesRealtime;
+
+// Load stories from database
+async function loadStories() {
+    if (!supabaseClient) return;
+    
+    // Set post avatar initials
+    const currentStaff = state.currentStaff;
+    const postAvatar = document.getElementById('storyPostAvatar');
+    if (postAvatar && currentStaff) {
+        postAvatar.textContent = getInitials(currentStaff.name);
+    }
+    
+    try {
+        const { data, error } = await supabaseClient
+            .from('staff_stories')
+            .select('*')
+            .order('created_at', { ascending: false });
+            
+        if (error) throw error;
+        state.stories = data || [];
+        renderStories();
+    } catch (err) {
+        console.error("Gagal memuat stories:", err);
+        showToast("Gagal memuat Story Feed.", "error");
+    }
+}
+window.loadStories = loadStories;
+
+// Render stories list
+function renderStories() {
+    const container = document.getElementById('storyFeedContainer');
+    if (!container) return;
+    
+    container.innerHTML = "";
+    const currentStaff = state.currentStaff;
+    if (!currentStaff) {
+        container.innerHTML = `<div style="text-align: center; color: rgba(255,255,255,0.4); padding: 40px; font-size: 0.9rem;">Silakan login terlebih dahulu untuk melihat dan membagikan cerita.</div>`;
+        return;
+    }
+    
+    if (!state.stories || state.stories.length === 0) {
+        container.innerHTML = `<div style="text-align: center; color: rgba(255,255,255,0.3); padding: 60px; font-size: 0.9rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 16px; background: rgba(0,0,0,0.1);"><i class="fa-solid fa-square-rss" style="font-size: 2rem; color: rgba(255,255,255,0.15); margin-bottom: 12px; display: block;"></i>Belum ada cerita yang dibagikan. Jadilah yang pertama!</div>`;
+        return;
+    }
+    
+    state.stories.forEach(story => {
+        const likes = Array.isArray(story.likes) ? story.likes : [];
+        const isLiked = likes.includes(currentStaff.id);
+        const comments = Array.isArray(story.comments) ? story.comments : [];
+        const initials = getInitials(story.staff_name);
+        
+        const hash = [...story.staff_name].reduce((acc, char) => char.charCodeAt(0) + ((acc << 5) - acc), 0);
+        const hue = Math.abs(hash % 360);
+        const avatarBg = `linear-gradient(135deg, hsl(${hue}, 70%, 55%), hsl(${(hue + 60) % 360}, 80%, 45%))`;
+        
+        const card = document.createElement('div');
+        card.className = "glass-card story-card";
+        
+        let imageHtml = "";
+        if (story.image_url) {
+            imageHtml = `<img src="${story.image_url}" class="story-card-image" alt="Story Image">`;
+        }
+        
+        let commentsHtml = "";
+        if (comments.length > 0) {
+            commentsHtml = comments.map(comment => {
+                const commentReplies = Array.isArray(comment.replies) ? comment.replies : [];
+                let repliesListHtml = "";
+                if (commentReplies.length > 0) {
+                    repliesListHtml = `
+                        <div class="replies-list">
+                            ${commentReplies.map(reply => `
+                                <div class="reply-item">
+                                    <div class="story-avatar-initials" style="width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">${getInitials(reply.staff_name)}</div>
+                                    <div class="reply-bubble">
+                                        <div class="comment-author-name">${reply.staff_name}</div>
+                                        <div class="comment-text">${escapeHtml(reply.text)}</div>
+                                        <div class="comment-footer">
+                                            <span>${formatTimeAgo(reply.created_at)}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+                
+                return `
+                    <div class="comment-item">
+                        <div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(comment.staff_name)}</div>
+                        <div style="flex-grow: 1;">
+                            <div class="comment-bubble">
+                                <div class="comment-author-name">${comment.staff_name}</div>
+                                <div class="comment-text">${escapeHtml(comment.text)}</div>
+                                <div class="comment-footer">
+                                    <span>${formatTimeAgo(comment.created_at)}</span>
+                                    <button class="comment-reply-btn" onclick="showReplyInput('${comment.id}')"><i class="fa-solid fa-reply"></i> Balas</button>
+                                </div>
+                            </div>
+                            
+                            ${repliesListHtml}
+                            
+                            <div class="reply-input-box hide" id="replyInput-${comment.id}">
+                                <input type="text" class="reply-textarea" id="replyText-${comment.id}" placeholder="Balas komentar ini..." onkeydown="handleReplyKeydown(event, '${story.id}', '${comment.id}')">
+                                <button class="btn btn-primary" onclick="publishCommentReply('${story.id}', '${comment.id}')" style="padding: 4px 12px; border-radius: 8px; font-size: 0.75rem; background: linear-gradient(135deg, #a855f7, #7c3aed); border:none;"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        const isAuthorOrAdmin = currentStaff.id === story.staff_id || currentStaff.role === 'ADMIN' || (typeof isAdminAuthenticated === 'function' && isAdminAuthenticated());
+        
+        card.innerHTML = `
+            <div class="story-card-header">
+                <div class="story-card-author">
+                    <div class="story-avatar-initials" style="width: 38px; height: 38px; border-radius: 50%; background: ${avatarBg}; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">${initials}</div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="story-author-name">${story.staff_name}</span>
+                        <span class="story-post-time">${formatTimeAgo(story.created_at)}</span>
+                    </div>
+                </div>
+                ${isAuthorOrAdmin ? `
+                    <button onclick="deleteStaffStory('${story.id}')" style="background:none; border:none; color: rgba(239, 68, 68, 0.6); cursor:pointer; font-size: 0.9rem; transition: color 0.2s;" onmouseover="this.style.color='#ef4444';" onmouseout="this.style.color='rgba(239, 68, 68, 0.6)';"><i class="fa-solid fa-trash-can"></i></button>
+                ` : ''}
+            </div>
+            
+            <div class="story-card-content">${escapeHtml(story.content)}</div>
+            
+            ${imageHtml}
+            
+            <div class="story-actions">
+                <button class="story-action-btn ${isLiked ? 'liked' : ''}" onclick="toggleLikeStory('${story.id}')">
+                    <i class="${isLiked ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+                    <span>${likes.length} Suka</span>
+                </button>
+                <button class="story-action-btn" onclick="toggleCommentsVisibility('${story.id}')">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span>${comments.length} Komentar</span>
+                </button>
+            </div>
+            
+            <div class="story-comments-section hide" id="commentsSection-${story.id}">
+                <div style="display: flex; flex-direction: column; gap: 8px;" id="commentsList-${story.id}">
+                    ${commentsHtml ? commentsHtml : `<div style="text-align: center; color: rgba(255,255,255,0.25); padding: 12px; font-size: 0.78rem;">Belum ada komentar.</div>`}
+                </div>
+                
+                <div class="comment-input-area">
+                    <div class="story-avatar-initials" style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;">${getInitials(currentStaff.name)}</div>
+                    <input type="text" class="comment-input-field" id="commentField-${story.id}" placeholder="Tulis komentar..." onkeydown="handleCommentKeydown(event, '${story.id}')">
+                    <button class="btn btn-primary" onclick="publishStoryComment('${story.id}')" style="padding: 6px 14px; border-radius: 10px; background: linear-gradient(135deg, #a855f7, #7c3aed); border:none; font-size:0.8rem;"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        `;
+        
+        container.appendChild(card);
+    });
+}
+window.renderStories = renderStories;
+
+function getInitials(name) {
+    if (!name) return "--";
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+        return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+}
+window.getInitials = getInitials;
+
+function formatTimeAgo(dateString) {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffSec = Math.floor(diffMs / 1000);
+    const diffMin = Math.floor(diffSec / 60);
+    const diffHr = Math.floor(diffMin / 60);
+    const diffDay = Math.floor(diffHr / 24);
+    
+    if (diffSec < 60) return "Baru saja";
+    if (diffMin < 60) return `${diffMin} menit yang lalu`;
+    if (diffHr < 24) return `${diffHr} jam yang lalu`;
+    if (diffDay === 1) return "Kemarin";
+    if (diffDay < 7) return `${diffDay} hari yang lalu`;
+    
+    return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+window.formatTimeAgo = formatTimeAgo;
+
+function handleStoryImageSelect(input) {
+    const file = input.files[0];
+    if (!file) return;
+    
+    if (file.size > 3 * 1024 * 1024) {
+        showToast("Ukuran gambar terlalu besar. Maksimal 3MB.", "warning");
+        input.value = "";
+        return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        selectedStoryImageBase64 = e.target.result;
+        const previewImg = document.getElementById('storyImagePreview');
+        const previewContainer = document.getElementById('storyImagePreviewContainer');
+        if (previewImg && previewContainer) {
+            previewImg.src = selectedStoryImageBase64;
+            previewContainer.classList.remove('hide');
+        }
+    };
+    reader.readAsDataURL(file);
+}
+window.handleStoryImageSelect = handleStoryImageSelect;
+
+function clearStoryImageSelection() {
+    selectedStoryImageBase64 = null;
+    const fileInput = document.getElementById('storyImageFileInput');
+    if (fileInput) fileInput.value = "";
+    
+    const previewContainer = document.getElementById('storyImagePreviewContainer');
+    const previewImg = document.getElementById('storyImagePreview');
+    if (previewContainer && previewImg) {
+        previewImg.src = "";
+        previewContainer.classList.add('hide');
+    }
+}
+window.clearStoryImageSelection = clearStoryImageSelection;
+
+async function publishStaffStory() {
+    if (!supabaseClient) return;
+    
+    const currentStaff = state.currentStaff;
+    if (!currentStaff) {
+        showToast("Silakan login terlebih dahulu.", "warning");
+        return;
+    }
+    
+    const inputEl = document.getElementById('storyInputText');
+    const text = inputEl ? inputEl.value.trim() : "";
+    
+    if (!text && !selectedStoryImageBase64) {
+        showToast("Ketik status atau pilih gambar terlebih dahulu.", "warning");
+        return;
+    }
+    
+    const btn = document.getElementById('btnPublishStory');
+    if (btn) btn.disabled = true;
+    
+    try {
+        const { error } = await supabaseClient
+            .from('staff_stories')
+            .insert({
+                staff_id: currentStaff.id,
+                staff_name: currentStaff.name,
+                content: text,
+                image_url: selectedStoryImageBase64,
+                likes: [],
+                comments: []
+            });
+            
+        if (error) throw error;
+        
+        if (inputEl) inputEl.value = "";
+        clearStoryImageSelection();
+        showToast("Cerita Anda berhasil dibagikan!", "success");
+        await loadStories();
+    } catch (err) {
+        console.error("Gagal membagikan cerita:", err);
+        showToast("Gagal membagikan cerita.", "error");
+    } finally {
+        if (btn) btn.disabled = false;
+    }
+}
+window.publishStaffStory = publishStaffStory;
+
+async function deleteStaffStory(storyId) {
+    if (!supabaseClient) return;
+    if (!await showCustomConfirm("Apakah Anda yakin ingin menghapus cerita ini?", "Hapus Cerita", true)) return;
+    
+    try {
+        const { error } = await supabaseClient
+            .from('staff_stories')
+            .delete()
+            .eq('id', storyId);
+            
+        if (error) throw error;
+        showToast("Cerita berhasil dihapus.", "success");
+        await loadStories();
+    } catch (err) {
+        console.error("Gagal menghapus cerita:", err);
+        showToast("Gagal menghapus cerita.", "error");
+    }
+}
+window.deleteStaffStory = deleteStaffStory;
+
+async function toggleLikeStory(storyId) {
+    if (!supabaseClient) return;
+    const currentStaff = state.currentStaff;
+    if (!currentStaff) return;
+    
+    const story = state.stories.find(s => s.id === storyId);
+    if (!story) return;
+    
+    let likes = Array.isArray(story.likes) ? [...story.likes] : [];
+    const idx = likes.indexOf(currentStaff.id);
+    if (idx !== -1) {
+        likes.splice(idx, 1);
+    } else {
+        likes.push(currentStaff.id);
+    }
+    
+    try {
+        const { error } = await supabaseClient
+            .from('staff_stories')
+            .update({ likes: likes })
+            .eq('id', storyId);
+            
+        if (error) throw error;
+        
+        story.likes = likes;
+        renderStories();
+    } catch (err) {
+        console.error("Gagal menyukai cerita:", err);
+    }
+}
+window.toggleLikeStory = toggleLikeStory;
+
+function toggleCommentsVisibility(storyId) {
+    const el = document.getElementById(`commentsSection-${storyId}`);
+    if (el) {
+        el.classList.toggle('hide');
+    }
+}
+window.toggleCommentsVisibility = toggleCommentsVisibility;
+
+function showReplyInput(commentId) {
+    const el = document.getElementById(`replyInput-${commentId}`);
+    if (el) {
+        el.classList.toggle('hide');
+        if (!el.classList.contains('hide')) {
+            const input = document.getElementById(`replyText-${commentId}`);
+            if (input) input.focus();
+        }
+    }
+}
+window.showReplyInput = showReplyInput;
+
+async function publishStoryComment(storyId) {
+    if (!supabaseClient) return;
+    const currentStaff = state.currentStaff;
+    if (!currentStaff) return;
+    
+    const field = document.getElementById(`commentField-${storyId}`);
+    const text = field ? field.value.trim() : "";
+    if (!text) return;
+    
+    const story = state.stories.find(s => s.id === storyId);
+    if (!story) return;
+    
+    const newComment = {
+        id: crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2),
+        staff_id: currentStaff.id,
+        staff_name: currentStaff.name,
+        text: text,
+        created_at: new Date().toISOString(),
+        replies: []
+    };
+    
+    const comments = Array.isArray(story.comments) ? [...story.comments] : [];
+    comments.push(newComment);
+    
+    try {
+        const { error } = await supabaseClient
+            .from('staff_stories')
+            .update({ comments: comments })
+            .eq('id', storyId);
+            
+        if (error) throw error;
+        if (field) field.value = "";
+        
+        story.comments = comments;
+        renderStories();
+        
+        const commentSection = document.getElementById(`commentsSection-${storyId}`);
+        if (commentSection) commentSection.classList.remove('hide');
+    } catch (err) {
+        console.error("Gagal mengirim komentar:", err);
+        showToast("Gagal mengirim komentar.", "error");
+    }
+}
+window.publishStoryComment = publishStoryComment;
+
+function handleCommentKeydown(e, storyId) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        publishStoryComment(storyId);
+    }
+}
+window.handleCommentKeydown = handleCommentKeydown;
+
+async function publishCommentReply(storyId, commentId) {
+    if (!supabaseClient) return;
+    const currentStaff = state.currentStaff;
+    if (!currentStaff) return;
+    
+    const field = document.getElementById(`replyText-${commentId}`);
+    const text = field ? field.value.trim() : "";
+    if (!text) return;
+    
+    const story = state.stories.find(s => s.id === storyId);
+    if (!story) return;
+    
+    const comments = Array.isArray(story.comments) ? JSON.parse(JSON.stringify(story.comments)) : [];
+    const comment = comments.find(c => c.id === commentId);
+    if (!comment) return;
+    
+    const newReply = {
+        id: crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2),
+        staff_id: currentStaff.id,
+        staff_name: currentStaff.name,
+        text: text,
+        created_at: new Date().toISOString()
+    };
+    
+    if (!Array.isArray(comment.replies)) comment.replies = [];
+    comment.replies.push(newReply);
+    
+    try {
+        const { error } = await supabaseClient
+            .from('staff_stories')
+            .update({ comments: comments })
+            .eq('id', storyId);
+            
+        if (error) throw error;
+        if (field) field.value = "";
+        
+        story.comments = comments;
+        renderStories();
+        
+        const commentSection = document.getElementById(`commentsSection-${storyId}`);
+        if (commentSection) commentSection.classList.remove('hide');
+    } catch (err) {
+        console.error("Gagal membalas komentar:", err);
+        showToast("Gagal mengirim balasan.", "error");
+    }
+}
+window.publishCommentReply = publishCommentReply;
+
+function handleReplyKeydown(e, storyId, commentId) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        publishCommentReply(storyId, commentId);
+    }
+}
+window.handleReplyKeydown = handleReplyKeydown;
+
