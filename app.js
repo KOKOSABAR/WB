@@ -7342,6 +7342,12 @@ function renderStories() {
     const container = document.getElementById('storyFeedContainer');
     if (!container) return;
     
+    // Save which comment sections are currently open before re-render
+    const openCommentSections = new Set();
+    container.querySelectorAll('.story-comments-section:not(.hide)').forEach(el => {
+        openCommentSections.add(el.id);
+    });
+    
     container.innerHTML = "";
     const currentStaff = state.currentStaff;
     if (!currentStaff) {
@@ -7489,6 +7495,12 @@ function renderStories() {
             </div>
             
             <div class="story-comments-section hide" id="commentsSection-${story.id}">
+                <!-- Close button row -->
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 8px;">
+                    <button onclick="toggleCommentsVisibility('${story.id}')" title="Tutup komentar" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px 12px; color: rgba(255,255,255,0.5); font-size: 0.72rem; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(239,68,68,0.12)'; this.style.borderColor='rgba(239,68,68,0.3)'; this.style.color='#ef4444';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.color='rgba(255,255,255,0.5)';">
+                        <i class="fa-solid fa-xmark"></i> Tutup
+                    </button>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 8px;" id="commentsList-${story.id}">
                     ${commentsHtml ? commentsHtml : `<div style="text-align: center; color: rgba(255,255,255,0.25); padding: 12px; font-size: 0.78rem;">Belum ada komentar.</div>`}
                 </div>
@@ -7503,6 +7515,14 @@ function renderStories() {
         
         container.appendChild(card);
     });
+    
+    // Restore comment sections that were open before re-render
+    if (openCommentSections.size > 0) {
+        openCommentSections.forEach(sectionId => {
+            const el = document.getElementById(sectionId);
+            if (el) el.classList.remove('hide');
+        });
+    }
 }
 window.renderStories = renderStories;
 
