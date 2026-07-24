@@ -2175,6 +2175,10 @@ async function showView(viewId) {
     if (viewId === "clockInView" && typeof initClockInView === 'function') {
         initClockInView();
     }
+    // Trigger render untuk shiftView
+    if (viewId === "shiftView" && typeof initShiftView === 'function') {
+        initShiftView();
+    }
     // Trigger render untuk chatView
     if (viewId === "chatView" && typeof onChatViewOpen === 'function') {
         onChatViewOpen();
@@ -8130,3 +8134,244 @@ async function submitGlobalAvatarChange() {
 }
 window.submitGlobalAvatarChange = submitGlobalAvatarChange;
 
+
+// ==========================================================================
+// SHIFT KERJA VIEW
+// ==========================================================================
+
+// Inisialisasi Shift View
+async function initShiftView() {
+    const monthSelector = document.getElementById('shiftMonthSelector');
+    const staffSearch = document.getElementById('shiftStaffSearch');
+    const staffDropdown = document.getElementById('shiftStaffDropdown');
+    
+    if (!monthSelector || !staffSearch || !staffDropdown) return;
+    
+    // Set default month to current month
+    const now = new Date();
+    const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    monthSelector.value = currentMonthStr;
+    
+    // Event listener untuk month selector
+    monthSelector.addEventListener('change', () => {
+        if (staffSearch.dataset.selectedStaffId) {
+            displayStaffShift(staffSearch.dataset.selectedStaffId, monthSelector.value);
+        }
+    });
+    
+    // Event listener untuk staff search autocomplete
+    staffSearch.addEventListener('input', (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        if (!query) {
+            staffDropdown.classList.add('hide');
+            return;
+        }
+        
+        const filtered = state.staff.filter(s => 
+            s.name.toLowerCase().includes(query)
+        );
+        
+        if (filtered.length === 0) {
+            staffDropdown.classList.add('hide');
+            return;
+        }
+        
+        staffDropdown.innerHTML = filtered.map(s => `
+            <div class="autocomplete-item" data-staff-id="${s.id}">
+                <div class="autocomplete-item-content">
+                    <strong>${s.name}</strong>
+                    <span style="color: var(--accent); font-size: 0.7rem; text-transform: uppercase; font-weight: 600; margin-left: 10px;">${s.role || ''}</span>
+                </div>
+            </div>
+        `).join('');
+        
+        staffDropdown.classList.remove('hide');
+        
+        // Add click handlers to dropdown items
+        staffDropdown.querySelectorAll('.autocomplete-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const staffId = item.dataset.staffId;
+                const staff = state.staff.find(s => s.id === staffId);
+                if (staff) {
+                    staffSearch.value = staff.name;
+                    staffSearch.dataset.selectedStaffId = staffId;
+                    staffDropdown.classList.add('hide');
+                    displayStaffShift(staffId, monthSelector.value);
+                }
+            });
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.autocomplete-container')) {
+            staffDropdown.classList.add('hide');
+        }
+    });
+}
+
+// Tampilkan jadwal shift untuk staff tertentu
+async function displayStaffShift(staffId, monthStr) {
+    const staff = state.staff.find(s => s.id === staffId);
+    if (!staff) return;
+    
+    // Fetch shift data untuk bulan ini jika belum ada
+    const shiftData = state.absensiShifts.find(s => s.staff_id === staffId && s.month_str === monthStr);
+    
+    if (!shiftData) {
+        // Try to fetch from database
+        try {
+            const { data, error } = await supabaseClient
+                .from('absensi_shifts')
+                .select('*')
+                .eq('staff_id', staffId)
+                .eq('month_str', monthStr)
+                .single();
+            
+            if (error) throw error;
+            
+            if (data) {
+                state.absensiShifts.push(data);
+                renderStaffShiftCalendar(staff, data, monthStr);
+            } else {
+                showEmptyShiftState(staff, monthStr);
+            }
+        } catch (err) {
+            console.error('Error fetching shift data:', err);
+            showEmptyShiftState(staff, monthStr);
+        }
+    } else {
+        renderStaffShiftCalendar(staff, shiftData, monthStr);
+    }
+}
+
+// Render kalender shift staff
+function renderStaffShiftCalendar(staff, shiftData, monthStr) {
+    const container = document.getElementById('shiftScheduleContainer');
+    const emptyState = document.getElementById('shiftEmptyState');
+    const staffName = document.getElementById('shiftStaffName');
+    const staffRole = document.getElementById('shiftStaffRole');
+    const staffAvatar = document.getElementById('shiftStaffAvatar');
+    const monthDisplay = document.getElementById('shiftMonthDisplay');
+    const calendarGrid = document.getElementById('shiftCalendarGrid');
+    
+    if (!container || !emptyState || !staffName || !staffRole || !staffAvatar || !monthDisplay || !calendarGrid) return;
+    
+    // Show schedule container, hide empty state
+    emptyState.classList.add('hide');
+    container.classList.remove('hide');
+    
+    // Update staff info
+    staffName.textContent = staff.name.toUpperCase();
+    staffRole.textContent = staff.role || 'STAFF';
+    staffAvatar.textContent = staff.name.charAt(0).toUpperCase();
+    
+    // Format month display
+    const [year, month] = monthStr.split('-');
+    const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    monthDisplay.textContent = `${monthNames[parseInt(month) - 1]} ${year}`;
+    
+    // Generate calendar grid
+    const schedule = shiftData.schedule || [];
+    const daysInMonth = new Date(parseInt(year), parseInt(month), 0).getDate();
+    
+    calendarGrid.innerHTML = '';
+    
+    for (let day = 1; day <= daysInMonth; day++) {
+        const shiftValue = schedule[day - 1] || 'OFF';
+        const dayDiv = createShiftDayCard(day, shiftValue);
+        calendarGrid.appendChild(dayDiv);
+    }
+}
+
+// Buat card untuk setiap hari
+function createShiftDayCard(day, shiftValue) {
+    const div = document.createElement('div');
+    div.style.cssText = 'background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;';
+    
+    // Determine colors and text based on shift value
+    let bgColor, borderColor, textColor, label;
+    const val = String(shiftValue).toUpperCase().trim();
+    
+    switch(val) {
+        case '1':
+            bgColor = 'rgba(16, 185, 129, 0.15)';
+            borderColor = 'rgba(16, 185, 129, 0.3)';
+            textColor = '#10b981';
+            label = 'PAGI';
+            break;
+        case '2':
+            bgColor = 'rgba(59, 130, 246, 0.15)';
+            borderColor = 'rgba(59, 130, 246, 0.3)';
+            textColor = '#3b82f6';
+            label = 'MALAM';
+            break;
+        case '1/2':
+            bgColor = 'rgba(245, 158, 11, 0.15)';
+            borderColor = 'rgba(245, 158, 11, 0.3)';
+            textColor = '#f59e0b';
+            label = 'SETENGAH';
+            break;
+        case 'CUTI':
+            bgColor = 'rgba(236, 72, 153, 0.15)';
+            borderColor = 'rgba(236, 72, 153, 0.3)';
+            textColor = '#ec4899';
+            label = 'CUTI';
+            break;
+        default:
+            bgColor = 'rgba(100, 116, 139, 0.15)';
+            borderColor = 'rgba(100, 116, 139, 0.3)';
+            textColor = '#64748b';
+            label = 'OFF';
+    }
+    
+    div.innerHTML = `
+        <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">TGL</div>
+        <div style="font-size: 1.5rem; font-weight: 800; color: white; line-height: 1;">${day}</div>
+        <div style="background: ${bgColor}; border: 1px solid ${borderColor}; border-radius: 6px; padding: 4px 10px; width: 100%; text-align: center;">
+            <div style="font-size: 0.65rem; font-weight: 800; color: ${textColor}; text-transform: uppercase; letter-spacing: 0.5px;">${label}</div>
+        </div>
+    `;
+    
+    // Hover effect
+    div.addEventListener('mouseenter', () => {
+        div.style.transform = 'translateY(-2px)';
+        div.style.boxShadow = `0 4px 12px ${borderColor}`;
+        div.style.borderColor = textColor;
+    });
+    
+    div.addEventListener('mouseleave', () => {
+        div.style.transform = 'translateY(0)';
+        div.style.boxShadow = '';
+        div.style.borderColor = 'rgba(255,255,255,0.05)';
+    });
+    
+    return div;
+}
+
+// Tampilkan empty state
+function showEmptyShiftState(staff, monthStr) {
+    const container = document.getElementById('shiftScheduleContainer');
+    const emptyState = document.getElementById('shiftEmptyState');
+    
+    if (!container || !emptyState) return;
+    
+    container.classList.add('hide');
+    emptyState.classList.remove('hide');
+    
+    const [year, month] = monthStr.split('-');
+    const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    
+    emptyState.innerHTML = `
+        <div style="font-size: 3rem; color: rgba(139, 92, 246, 0.2); margin-bottom: 20px;">
+            <i class="fa-solid fa-calendar-xmark"></i>
+        </div>
+        <h3 style="margin: 0 0 10px 0; font-size: 1.2rem; font-weight: 700; color: var(--text-main);">Jadwal Shift Tidak Ditemukan</h3>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Belum ada jadwal shift untuk <strong>${staff.name}</strong> pada bulan <strong>${monthNames[parseInt(month) - 1]} ${year}</strong>.</p>
+        <p style="margin: 10px 0 0 0; font-size: 0.75rem; color: var(--text-muted);">Silakan hubungi admin untuk menambahkan jadwal shift.</p>
+    `;
+}
+
+// Export functions to window
+window.initShiftView = initShiftView;
+window.displayStaffShift = displayStaffShift;
