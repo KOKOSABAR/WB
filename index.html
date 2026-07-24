@@ -4507,7 +4507,7 @@ MANDIRI  Wiwin Saptorini  1380027429245" style="width: 100%; background: #0f131d
 
     <!-- 20. STORY IMAGE PREVIEW MODAL -->
     <div id="storyImagePreviewModal" class="hide" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(25px); z-index: 99999; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" onclick="closeStoryImagePreviewModal()">
-        <button style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem; cursor: pointer; transition: all 0.2s;" onclick="closeStoryImagePreviewModal()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="story-modal-close-btn" onclick="closeStoryImagePreviewModal()"><i class="fa-solid fa-xmark"></i></button>
         <img id="storyModalPreviewImg" src="" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 25px 60px rgba(0,0,0,0.6); transform: scale(0.95); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);" onclick="event.stopPropagation()">
     </div>
 

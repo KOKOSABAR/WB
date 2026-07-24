@@ -7705,3 +7705,34 @@ tr.expiring-warning-row:hover {
     border-color: rgba(168, 85, 247, 0.35);
     background: rgba(0,0,0,0.3);
 }
+
+/* Premium Image Preview Modal Close Button */
+.story-modal-close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.15rem;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.story-modal-close-btn:hover {
+    background: rgba(239, 68, 68, 0.25);
+    border-color: rgba(239, 68, 68, 0.6);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    transform: rotate(90deg) scale(1.08);
+}
+.story-modal-close-btn:active {
+    transform: rotate(90deg) scale(0.95);
+}
