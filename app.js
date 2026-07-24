@@ -7253,9 +7253,13 @@ let selectedStoryImageBase64 = null;
 function handleStoriesRealtime(payload) {
     if (payload.eventType === 'INSERT') {
         if (!state.stories) state.stories = [];
-        state.stories.unshift(payload.new);
-        if (document.getElementById('storyView').classList.contains('active')) {
-            renderStories();
+        // Prevent duplicate: skip if story with this id already exists
+        const alreadyExists = state.stories.some(s => s.id === payload.new.id);
+        if (!alreadyExists) {
+            state.stories.unshift(payload.new);
+            if (document.getElementById('storyView').classList.contains('active')) {
+                renderStories();
+            }
         }
     } else if (payload.eventType === 'UPDATE') {
         if (!state.stories) state.stories = [];
@@ -7298,6 +7302,19 @@ async function loadStories() {
     }
     
     try {
+        // Refresh avatar_url from staff table so comments always show up-to-date photos
+        const { data: freshStaff } = await supabaseClient.from('staff').select('id, avatar_url');
+        if (freshStaff && Array.isArray(freshStaff)) {
+            freshStaff.forEach(fs => {
+                const sIdx = state.staff.findIndex(s => s.id === fs.id);
+                if (sIdx !== -1) state.staff[sIdx].avatar_url = fs.avatar_url;
+            });
+            if (state.currentStaff) {
+                const me = freshStaff.find(s => s.id === state.currentStaff.id);
+                if (me) state.currentStaff.avatar_url = me.avatar_url;
+            }
+        }
+
         const { data, error } = await supabaseClient
             .from('staff_stories')
             .select('*')
@@ -7587,7 +7604,7 @@ async function publishStaffStory() {
         if (inputEl) inputEl.value = "";
         clearStoryImageSelection();
         showToast("Cerita Anda berhasil dibagikan!", "success");
-        await loadStories();
+        // loadStories() removed — realtime INSERT handler will add it to prevent double
     } catch (err) {
         console.error("Gagal membagikan cerita:", err);
         showToast("Gagal membagikan cerita.", "error");
