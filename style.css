@@ -6459,43 +6459,49 @@ select option {
     opacity: 1;
 }
 
-/* ---- MODAL CLOSE BUTTON — ULTRA LUXURY GLOW ---- */
+/* ---- MODAL CLOSE BUTTON — UNIFIED ULTRA LUXURY ---- */
 .modal-close-btn,
-.btn-close-luxury {
-    position: absolute;
-    top: -16px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.25);
-    z-index: 100;
-    backdrop-filter: blur(12px);
-    outline: none;
+.btn-close-luxury,
+.story-modal-close-btn {
+    position: absolute !important;
+    top: 16px !important;
+    right: 18px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 0.95rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+    z-index: 100 !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    outline: none !important;
 }
 
 .modal-close-btn:hover,
-.btn-close-luxury:hover {
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(185, 28, 28, 0.95));
-    border-color: rgba(254, 202, 202, 0.6);
-    color: #ffffff;
-    transform: translateX(50%) scale(1.15) rotate(90deg);
-    box-shadow: 0 0 25px rgba(239, 68, 68, 0.75), 0 8px 25px rgba(239, 68, 68, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+.btn-close-luxury:hover,
+.story-modal-close-btn:hover {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(185, 28, 28, 0.95)) !important;
+    border-color: rgba(254, 202, 202, 0.6) !important;
+    color: #ffffff !important;
+    transform: scale(1.1) rotate(90deg) !important;
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.75), 0 6px 20px rgba(239, 68, 68, 0.5) !important;
 }
 
 .modal-close-btn:active,
-.btn-close-luxury:active {
-    transform: translateX(50%) scale(0.9) rotate(90deg);
+.btn-close-luxury:active,
+.story-modal-close-btn:active {
+    transform: scale(0.92) rotate(90deg) !important;
 }
 
 /* ---- AVATAR CHANGE MODAL ---- */
