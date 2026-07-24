@@ -3883,7 +3883,7 @@ function renderAdminRoleAccess() {
             html += `
                 <td style="text-align: center; padding: 16px 10px;">
                     <label class="feature-toggle-switch" style="margin: 0 auto; display: inline-block;">
-                        <input type="checkbox" class="rbac-checkbox" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''}>
+                        <input type="checkbox" class="rbac-checkbox" onchange="saveRoleAccessSettings()" data-view="${menu.id}" data-role="${role}" ${isChecked ? 'checked' : ''}>
                         <span class="feature-toggle-slider" style="box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></span>
                     </label>
                 </td>
@@ -4028,7 +4028,7 @@ window.closeRbacStaffModal = function() {
     if (modal) modal.classList.add('hide');
 };
 
-window.saveRbacStaffSelection = function() {
+window.saveRbacStaffSelection = async function() {
     if (!window.currentEditingMenuView) return;
     const viewId = window.currentEditingMenuView;
     
@@ -4043,8 +4043,8 @@ window.saveRbacStaffSelection = function() {
     window.tempStaffAccess[viewId] = selectedIds;
     
     closeRbacStaffModal();
-    // Re-render the matrix to update button counters
-    renderAdminRoleAccess();
+    // Auto-save to Supabase immediately!
+    await saveRoleAccessSettings();
 };
 
 // 15. ADMIN PANEL: CONFIG UMUM
