@@ -3040,18 +3040,7 @@ function animateBreakNotificationTextSwap(nextText) {
 
 function startBreakNotificationRotation(messageArray, intervalMs = 12000) {
     stopBreakNotificationRotation();
-    breakNotificationRotationInterval = setInterval(() => {
-        const container = document.getElementById('breakNotificationContainer');
-        const notification = container?.querySelector('.break-notification');
-        if (!notification) {
-            stopBreakNotificationRotation();
-            return;
-        }
-        const textEl = notification.querySelector('.break-notification-text');
-        const currentText = (textEl?.textContent || '').trim();
-        const nextText = _pickRandomDifferent(messageArray, currentText);
-        animateBreakNotificationTextSwap(nextText);
-    }, Math.max(4000, intervalMs));
+    // Rotasi otomatis dinonaktifkan: 1 kalimat acak digunakan untuk 1 masa istirahat penuh.
 }
 
 function restoreBreakNotificationFromState() {
@@ -3163,10 +3152,8 @@ function showBreakNotification(message, type = 'info', persistent = false, autoH
         expiresAt: persistent ? null : (now + Math.max(1000, autoHideMs))
     });
     
-    // Rotasi kalimat random hanya untuk notif "Mulai Istirahat" (persistent)
-    if (persistent) {
-        startBreakNotificationRotation(BREAK_START_MESSAGES, 12000);
-    }
+    // Kalimat tidak berganti-ganti terus dalam 1 kali istirahat.
+    // 1 kalimat dipilih untuk 1 sesi istirahat dan tetap tenang, baru berganti pada izin berikutnya.
     
     // Auto-hide logic:
     // - persistent (mulai istirahat): tetap tampil, tidak auto-hide
