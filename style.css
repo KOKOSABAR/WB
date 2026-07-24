@@ -4441,7 +4441,7 @@ select option {
 }
 
 .staff-console-card:hover {
-    transform: translateY(-10px) scale(1.01) translateZ(0) !important;
+    transform: none !important;
     border-color: rgba(255,255,255,0.28) !important;
     border-top-color: rgba(255,255,255,0.45) !important;
     box-shadow:
