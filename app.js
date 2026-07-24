@@ -973,6 +973,7 @@ async function loadAllData() {
             if (matched) {
                 state.currentStaff = matched;
                 updateStaffConsoleUI();
+                restoreBreakNotificationFromState();
                 
                 // Load and apply staff's background preference after auto-login
                 if (typeof loadAndApplyStaffBackground === 'function') {
@@ -990,6 +991,7 @@ async function loadAllData() {
             if (updatedStaff) {
                 state.currentStaff = updatedStaff;
                 updateStaffConsoleUI();
+                restoreBreakNotificationFromState();
                 
                 // Load and apply staff's background preference
                 if (typeof loadAndApplyStaffBackground === 'function') {
@@ -1164,6 +1166,10 @@ function handleActiveBreaksRealtime(payload) {
     if (state.currentStaff) {
         scheduleRender("staff-console", () => updateStaffConsoleUI());
     }
+    // Sinkronkan banner notifikasi untuk staff yang sedang login (agar tidak hilang saat refresh / realtime)
+    if (isMyAction) {
+        restoreBreakNotificationFromState();
+    }
 }
 
 function handleLogsRealtime(payload) {
@@ -1208,6 +1214,9 @@ function handleLogsRealtime(payload) {
     // Update staff console only if currentStaff exists
     if (state.currentStaff) {
         scheduleRender("staff-console", () => updateStaffConsoleUI());
+    }
+    if (isMyAction) {
+        restoreBreakNotificationFromState();
     }
 }
 
@@ -1878,8 +1887,15 @@ function setupEventListeners() {
         btnImportShiftSubmit.addEventListener("click", async () => {
             const textarea = importShiftTextarea;
             const selectCategory = importShiftCategory;
+            const importMonthSelector = document.getElementById('importShiftMonth');
+            
             if (!textarea.value.trim()) {
                 showToast("Data salinan shift tidak boleh kosong.", "warning");
+                return;
+            }
+            
+            if (!importMonthSelector || !importMonthSelector.value) {
+                showToast("Pilih bulan target terlebih dahulu.", "warning");
                 return;
             }
             
@@ -1890,7 +1906,8 @@ function setupEventListeners() {
                 const lines = textarea.value.split('\n');
                 let currentCategory = selectCategory.value;
                 const validShifts = ["1", "2", "1/2", "OFF", "CUTI"];
-                const [year, month] = state.absensiSelectedMonth.split('-').map(Number);
+                const selectedMonthStr = importMonthSelector.value; // Format: "YYYY-MM"
+                const [year, month] = selectedMonthStr.split('-').map(Number);
                 const daysInMonth = new Date(year, month, 0).getDate();
                 
                 let importCount = 0;
@@ -1948,16 +1965,23 @@ function setupEventListeners() {
                         }
                     }
                     
-                    await saveAbsensiShift(staff.id, staff.name, staff.role, schedule);
+                    // Save dengan bulan yang dipilih
+                    await saveAbsensiShift(staff.id, staff.name, staff.role, schedule, selectedMonthStr);
                     importCount++;
                 }
                 
                 closeImportShiftModal();
-                showToast(`Berhasil memproses & mengimpor ${importCount} jadwal shift staff.`, "success");
+                showToast(`Berhasil memproses & mengimpor ${importCount} jadwal shift staff untuk bulan ${selectedMonthStr}.`, "success");
                 
                 await fetchAbsensiData();
                 renderAbsensi();
                 renderAdminStaff();
+                
+                // Refresh shift view jika sedang melihat bulan yang sama
+                const shiftViewMonthSelector = document.getElementById('shiftViewMonthSelector');
+                if (state.currentStaff && shiftViewMonthSelector && shiftViewMonthSelector.value === selectedMonthStr) {
+                    await displayStaffShift(state.currentStaff.id, selectedMonthStr);
+                }
             } catch (err) {
                 console.error("Gagal memproses impor shift:", err);
                 showToast("Terjadi kesalahan saat memproses text jadwal.", "error");
@@ -2543,6 +2567,7 @@ async function loginStaff() {
         document.getElementById("appShell").classList.remove("hide");
 
         updateStaffConsoleUI();
+        restoreBreakNotificationFromState();
         
         // Load and apply staff's background preference
         if (typeof loadAndApplyStaffBackground === 'function') {
@@ -2570,6 +2595,8 @@ window.loginStaff = loginStaff;
 function logoutStaff() {
     state.currentStaff = null;
     localStorage.removeItem("restease_current_staff_id");
+    // Pastikan banner notifikasi istirahat ikut bersih saat logout
+    hideBreakNotification();
     updateRoleBasedSidebarAccess();
     
     // Reset background card ke normal
@@ -2891,9 +2918,140 @@ function getRandomMessage(messageArray) {
     return messageArray[Math.floor(Math.random() * messageArray.length)];
 }
 
-function showBreakNotification(message, type = 'info', persistent = false) {
+// ================================================================
+// BREAK NOTIFICATION (PERSIST + ROTATE)
+// ================================================================
+const BREAK_NOTIFICATION_STORAGE_KEY = "restease_break_notification_state_v1";
+let breakNotificationRotationInterval = null;
+let breakNotificationAutoHideTimeout = null;
+
+function _safeJsonParse(raw) {
+    try { return JSON.parse(raw); } catch (_) { return null; }
+}
+
+function loadBreakNotificationState() {
+    return _safeJsonParse(localStorage.getItem(BREAK_NOTIFICATION_STORAGE_KEY));
+}
+
+function saveBreakNotificationState(nextState) {
+    try {
+        if (!nextState) return;
+        localStorage.setItem(BREAK_NOTIFICATION_STORAGE_KEY, JSON.stringify(nextState));
+    } catch (_) {}
+}
+
+function clearBreakNotificationState() {
+    try { localStorage.removeItem(BREAK_NOTIFICATION_STORAGE_KEY); } catch (_) {}
+}
+
+function stopBreakNotificationRotation() {
+    if (breakNotificationRotationInterval) {
+        clearInterval(breakNotificationRotationInterval);
+        breakNotificationRotationInterval = null;
+    }
+}
+
+function _pickRandomDifferent(messageArray, currentText) {
+    if (!Array.isArray(messageArray) || messageArray.length === 0) return currentText || "";
+    if (messageArray.length === 1) return messageArray[0];
+    let pick = getRandomMessage(messageArray);
+    let guard = 0;
+    while (pick === currentText && guard < 4) {
+        pick = getRandomMessage(messageArray);
+        guard++;
+    }
+    return pick;
+}
+
+function animateBreakNotificationTextSwap(nextText) {
+    const container = document.getElementById('breakNotificationContainer');
+    const textEl = container?.querySelector('.break-notification-text');
+    if (!textEl) return;
+    
+    const currentText = (textEl.textContent || '').trim();
+    const resolvedText = nextText && String(nextText).trim() ? String(nextText) : currentText;
+    if (!resolvedText || resolvedText === currentText) return;
+    
+    textEl.classList.remove('switch-in');
+    textEl.classList.add('switch-out');
+    
+    setTimeout(() => {
+        textEl.textContent = resolvedText;
+        textEl.classList.remove('switch-out');
+        textEl.classList.add('switch-in');
+        
+        // update state storage supaya refresh tetap pakai kalimat terakhir
+        const saved = loadBreakNotificationState();
+        if (saved && saved.persistent) {
+            saveBreakNotificationState({ ...saved, message: resolvedText, updatedAt: Date.now() });
+        }
+    }, 320);
+    
+    setTimeout(() => {
+        textEl.classList.remove('switch-in');
+    }, 950);
+}
+
+function startBreakNotificationRotation(messageArray, intervalMs = 12000) {
+    stopBreakNotificationRotation();
+    breakNotificationRotationInterval = setInterval(() => {
+        const container = document.getElementById('breakNotificationContainer');
+        const notification = container?.querySelector('.break-notification');
+        if (!notification) {
+            stopBreakNotificationRotation();
+            return;
+        }
+        const textEl = notification.querySelector('.break-notification-text');
+        const currentText = (textEl?.textContent || '').trim();
+        const nextText = _pickRandomDifferent(messageArray, currentText);
+        animateBreakNotificationTextSwap(nextText);
+    }, Math.max(4000, intervalMs));
+}
+
+function restoreBreakNotificationFromState() {
+    // Wajib: hanya restore untuk staff yang sedang login
+    const staffId = state.currentStaff?.id;
+    if (!staffId) {
+        clearBreakNotificationState();
+        hideBreakNotification();
+        return;
+    }
+    
+    const activeBreak = state.activeBreaks?.find(b => b.staff_id === staffId);
+    const saved = loadBreakNotificationState();
+    
+    // 1) Jika staff sedang istirahat => notif PERSISTENT harus tampil (dan rotasi)
+    if (activeBreak) {
+        const msg = (saved && saved.staffId === staffId && saved.persistent && saved.message)
+            ? saved.message
+            : getRandomMessage(BREAK_START_MESSAGES);
+        showBreakNotification(msg, 'info', true);
+        return;
+    }
+    
+    // 2) Kalau tidak sedang istirahat, tapi ada notif non-persistent yang masih berlaku => restore sisa durasinya
+    if (saved && saved.staffId === staffId && !saved.persistent && saved.expiresAt && Date.now() < saved.expiresAt) {
+        const remainingMs = Math.max(1500, saved.expiresAt - Date.now());
+        showBreakNotification(saved.message || "", saved.type || "info", false, remainingMs);
+        return;
+    }
+    
+    // 3) Selain itu, bersihkan
+    clearBreakNotificationState();
+    hideBreakNotification();
+}
+window.restoreBreakNotificationFromState = restoreBreakNotificationFromState;
+
+function showBreakNotification(message, type = 'info', persistent = false, autoHideMs = 60000) {
     const container = document.getElementById('breakNotificationContainer');
     if (!container) return;
+    
+    // clear timers
+    stopBreakNotificationRotation();
+    if (breakNotificationAutoHideTimeout) {
+        clearTimeout(breakNotificationAutoHideTimeout);
+        breakNotificationAutoHideTimeout = null;
+    }
     
     // Clear any existing notification
     container.innerHTML = '';
@@ -2939,15 +3097,35 @@ function showBreakNotification(message, type = 'info', persistent = false) {
     
     // Trigger animation
     setTimeout(() => notification.classList.add('show'), 50);
+
+    // Persist state (agar tidak hilang saat dashboard refresh)
+    const staffId = state.currentStaff?.id || localStorage.getItem("restease_current_staff_id") || null;
+    const now = Date.now();
+    saveBreakNotificationState({
+        staffId,
+        message,
+        type,
+        persistent: !!persistent,
+        shownAt: now,
+        expiresAt: persistent ? null : (now + Math.max(1000, autoHideMs))
+    });
+    
+    // Rotasi kalimat random hanya untuk notif "Mulai Istirahat" (persistent)
+    if (persistent) {
+        startBreakNotificationRotation(BREAK_START_MESSAGES, 12000);
+    }
     
     // Auto-hide logic:
     // - persistent (mulai istirahat): tetap tampil, tidak auto-hide
     // - success/warning (selesai istirahat): hilang setelah 1 menit (60 detik)
     if (!persistent) {
-        setTimeout(() => {
+        breakNotificationAutoHideTimeout = setTimeout(() => {
             notification.classList.remove('show');
-            setTimeout(() => notification.remove(), 800);
-        }, 60000); // 60000ms = 1 menit
+            setTimeout(() => {
+                notification.remove();
+                clearBreakNotificationState();
+            }, 800);
+        }, Math.max(1000, autoHideMs)); // default 60000ms = 1 menit
     }
 }
 
@@ -2955,6 +3133,13 @@ function showBreakNotification(message, type = 'info', persistent = false) {
 function hideBreakNotification() {
     const container = document.getElementById('breakNotificationContainer');
     if (!container) return;
+    
+    stopBreakNotificationRotation();
+    if (breakNotificationAutoHideTimeout) {
+        clearTimeout(breakNotificationAutoHideTimeout);
+        breakNotificationAutoHideTimeout = null;
+    }
+    clearBreakNotificationState();
     
     const notification = container.querySelector('.break-notification');
     if (notification) {
@@ -5185,8 +5370,9 @@ function loadAbsensiLocal() {
 }
 
 // Menyimpan jadwal shift staff (Supabase / LocalStorage)
-async function saveAbsensiShift(staffId, staffName, role, schedule) {
-    const monthStr = state.absensiSelectedMonth;
+async function saveAbsensiShift(staffId, staffName, role, schedule, monthStr = null) {
+    // Gunakan monthStr yang diberikan, atau fallback ke state.absensiSelectedMonth
+    const targetMonth = monthStr || state.absensiSelectedMonth;
     
     if (state.absensiUseLocalFallback || !supabaseClient) {
         let allShifts = [];
@@ -5194,14 +5380,14 @@ async function saveAbsensiShift(staffId, staffName, role, schedule) {
         if (raw) allShifts = JSON.parse(raw);
         
         // Cari dan hapus jadwal lama
-        allShifts = allShifts.filter(s => !(s.staff_id === staffId && s.month_str === monthStr));
+        allShifts = allShifts.filter(s => !(s.staff_id === staffId && s.month_str === targetMonth));
         
         allShifts.push({
-            id: `local-shift-${staffId}-${monthStr}`,
+            id: `local-shift-${staffId}-${targetMonth}`,
             staff_id: staffId,
             staff_name: staffName,
             role: role,
-            month_str: monthStr,
+            month_str: targetMonth,
             schedule: schedule
         });
         
@@ -5217,7 +5403,7 @@ async function saveAbsensiShift(staffId, staffName, role, schedule) {
             .from('absensi_shifts')
             .delete()
             .eq('staff_id', staffId)
-            .eq('month_str', monthStr);
+            .eq('month_str', targetMonth);
             
         if (delErr) throw delErr;
         
@@ -5227,7 +5413,7 @@ async function saveAbsensiShift(staffId, staffName, role, schedule) {
                 staff_id: staffId,
                 staff_name: staffName,
                 role: role,
-                month_str: monthStr,
+                month_str: targetMonth,
                 schedule: schedule
             });
             
@@ -5236,7 +5422,7 @@ async function saveAbsensiShift(staffId, staffName, role, schedule) {
         console.error("Gagal menyimpan shift ke Supabase, mengalihkan ke lokal:", err);
         showToast("Database error. Menyimpan jadwal secara lokal...", "warning");
         state.absensiUseLocalFallback = true;
-        await saveAbsensiShift(staffId, staffName, role, schedule);
+        await saveAbsensiShift(staffId, staffName, role, schedule, targetMonth);
     }
 }
 
@@ -8141,10 +8327,32 @@ window.submitGlobalAvatarChange = submitGlobalAvatarChange;
 
 // Inisialisasi Shift View
 async function initShiftView() {
+    // Set month selector ke bulan sekarang
+    const now = new Date();
+    const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    
+    const monthSelector = document.getElementById('shiftViewMonthSelector');
+    const importMonthSelector = document.getElementById('importShiftMonth');
+    
+    if (monthSelector) {
+        monthSelector.value = currentMonthStr;
+        
+        // Add event listener untuk month change
+        monthSelector.addEventListener('change', async function() {
+            const selectedMonth = this.value;
+            if (state.currentStaff && selectedMonth) {
+                await displayStaffShift(state.currentStaff.id, selectedMonth);
+            }
+        });
+    }
+    
+    // Set default untuk import month selector juga
+    if (importMonthSelector) {
+        importMonthSelector.value = currentMonthStr;
+    }
+    
     // Langsung tampilkan shift staff yang sedang login dengan bulan sekarang
     if (state.currentStaff) {
-        const now = new Date();
-        const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
         displayStaffShift(state.currentStaff.id, currentMonthStr);
     } else {
         showNoLoginState();
@@ -8419,5 +8627,3 @@ function showEmptyShiftState(staff, monthStr) {
 // Export functions to window
 window.initShiftView = initShiftView;
 window.displayStaffShift = displayStaffShift;
-
-

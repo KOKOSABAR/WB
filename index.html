@@ -578,9 +578,6 @@
 
             <!-- B. STAFF VIEW (Login & Personal Console) -->
             <div id="staffView" class="absensi-tab-content hide">
-                <!-- Break Notification Container (Fixed Position Above Frame) -->
-                <div id="breakNotificationContainer" class="break-notification-container"></div>
-                
                 <!-- Step 2: Staff Break Action Dashboard -->
                 <div id="staffPortalConsole" class="staff-portal-center">
                     <div class="glass-card staff-console-card premium-izin-frame" id="staffConsoleCard">
@@ -590,6 +587,8 @@
                             <span class="frame-corner bottom-left"></span>
                             <span class="frame-corner bottom-right"></span>
                         </div>
+                        <!-- Break Notification Container (Top of Frame) -->
+                        <div id="breakNotificationContainer" class="break-notification-container"></div>
                         <div class="console-mouse-glow" aria-hidden="true"></div>
                         <div class="console-mesh-overlay" aria-hidden="true"></div>
                         <div class="console-shine-sweep" aria-hidden="true"></div>
@@ -1467,7 +1466,7 @@
             <!-- Modal Impor Jadwal Shift (Salin-Tempel) -->
             <div id="importShiftModal" class="modal-overlay hide">
                 <div class="glass-card modal-card" style="max-width: 600px; width: 90%; position: relative;">
-                    <button class="modal-close-btn" onclick="document.getElementById('btnImportShiftCancel').click()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; outline: none; z-index: 10;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='white';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='rgba(255,255,255,0.6)';">
+                    <button class="modal-close-btn" onclick="document.getElementById('btnImportShiftCancel').click()">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                     <div class="modal-header">
@@ -1480,6 +1479,15 @@
                         <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">
                             Tempelkan jadwal shift bulanan dari Excel / WhatsApp. Pastikan format nama diikuti kode shift (1, 2, 1/2, OFF, CUTI). Gunakan pemisah baris untuk setiap staff.
                         </p>
+                        
+                        <!-- Month Selector -->
+                        <div class="import-month-selector">
+                            <label for="importShiftMonth" class="month-selector-label" style="color: rgba(252, 165, 165, 0.95);">
+                                <i class="fa-solid fa-calendar-alt"></i> Bulan Target
+                            </label>
+                            <input type="month" id="importShiftMonth" />
+                        </div>
+                        
                         <div class="form-group" style="margin-bottom: 12px;">
                             <label for="importShiftCategory" style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px;">Target Divisi Default</label>
                             <select id="importShiftCategory" class="date-picker-input" style="width: 100%;">
@@ -1507,7 +1515,7 @@
     <!-- Custom Confirm Modal Overlay (Mewah & Glassmorphism) -->
     <div id="customConfirmModal" class="modal-overlay hide">
         <div class="glass-card modal-card" style="position: relative;">
-            <button class="modal-close-btn" onclick="document.getElementById('btnConfirmCancel').click()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; outline: none; z-index: 10;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='white';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='rgba(255,255,255,0.6)';">
+            <button class="modal-close-btn" onclick="document.getElementById('btnConfirmCancel').click()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="modal-header">
@@ -1529,7 +1537,7 @@
     <!-- Custom Prompt Modal (Input Password Mewah) -->
     <div id="customPromptModal" class="modal-overlay hide">
         <div class="glass-card modal-card" style="border: 1px solid rgba(168, 85, 247, 0.35); max-width: 420px; position: relative;">
-            <button class="modal-close-btn" onclick="document.getElementById('btnPromptCancel').click()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; outline: none; z-index: 10;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='white';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='rgba(255,255,255,0.6)';">
+            <button class="modal-close-btn" onclick="document.getElementById('btnPromptCancel').click()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="modal-header" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
@@ -1552,7 +1560,7 @@
                     <!-- Delete Absensi Modal -->
                     <div id="deleteAbsensiModal" class="modal-overlay hide">
                         <div class="glass-card modal-card" style="max-width: 400px; text-align: center; position: relative;">
-                            <button class="modal-close-btn" onclick="document.getElementById('btnCancelDeleteAbsensi').click()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; outline: none; z-index: 10;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='white';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='rgba(255,255,255,0.6)';">
+                            <button class="modal-close-btn" onclick="document.getElementById('btnCancelDeleteAbsensi').click()">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                             <div class="modal-icon warning" style="margin: 0 auto 20px auto;">
@@ -1671,7 +1679,7 @@
                 <!-- G. SHIFT KERJA VIEW -->
                 <div id="shiftView" class="view-section" style="padding: 20px 0;">
                     <!-- Header -->
-                    <div class="monitor-header" style="margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin-left: auto; margin-right: auto;">
+                    <div class="monitor-header" style="margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin-left: auto; margin-right: auto; gap: 20px;">
                         <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
                             <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.35rem; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -1680,6 +1688,13 @@
                                 <h2 style="margin: 0; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.5px; color: white;">SHIFT KERJA BULANAN</h2>
                                 <p style="margin: 4px 0 0 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Jadwal Shift Personal WDBOS Team</p>
                             </div>
+                        </div>
+                        <!-- Month Selector -->
+                        <div class="luxury-month-selector" style="display: flex; flex-direction: column; gap: 8px; padding: 16px 24px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.06) 0%, rgba(124, 58, 237, 0.02) 100%); border-radius: 16px; border: 1px solid rgba(139, 92, 246, 0.15); box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);">
+                            <label for="shiftViewMonthSelector" class="month-selector-label">
+                                <i class="fa-solid fa-calendar-alt"></i> Pilih Periode
+                            </label>
+                            <input type="month" id="shiftViewMonthSelector" />
                         </div>
                     </div>
 
