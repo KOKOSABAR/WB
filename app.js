@@ -2663,6 +2663,22 @@ function updateStaffConsoleUI() {
         }
     }
     
+    // Update console profile avatar photo (the large animated orb on the console page)
+    const consoleAvatarImg = document.getElementById('consoleStaffAvatarImg');
+    const avatarCore = document.getElementById('avatarCore');
+    if (consoleAvatarImg) {
+        if (staff.avatar_url) {
+            consoleAvatarImg.src = staff.avatar_url;
+            consoleAvatarImg.classList.remove('hide');
+            // Hide the glowing orb core when photo is shown
+            if (avatarCore) avatarCore.style.opacity = '0';
+        } else {
+            consoleAvatarImg.src = '';
+            consoleAvatarImg.classList.add('hide');
+            if (avatarCore) avatarCore.style.opacity = '1';
+        }
+    }
+    
     // Avatar Initials (Diabaikan karena diganti animasi gerak tanpa teks)
     // const initials = staff.name.split(" ").map(n => n[0]).slice(0, 2).join("").toUpperCase();
     // document.getElementById("staffAvatar").textContent = initials;
