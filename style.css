@@ -7743,12 +7743,12 @@ tr.expiring-warning-row:hover {
    BREAK NOTIFICATIONS - ULTRA LUXURY PREMIUM EDITION
    ================================================================= */
 .break-notification-container {
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: -90px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 750px;
+    width: 95%;
+    max-width: 540px;
     z-index: 10000;
     pointer-events: none;
 }
@@ -7757,12 +7757,12 @@ tr.expiring-warning-row:hover {
     background: linear-gradient(135deg, 
         rgba(102, 126, 234, 0.95) 0%, 
         rgba(118, 75, 162, 0.95) 100%);
-    border-radius: 24px;
-    padding: 24px 36px;
+    border-radius: 20px;
+    padding: 16px 24px;
     box-shadow: 
-        0 30px 80px rgba(102, 126, 234, 0.5),
-        0 12px 24px rgba(0, 0, 0, 0.3),
-        0 0 60px rgba(102, 126, 234, 0.3),
+        0 25px 60px rgba(102, 126, 234, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 0 50px rgba(102, 126, 234, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transform: translateY(-200%) scale(0.8);
     opacity: 0;
@@ -7856,9 +7856,9 @@ tr.expiring-warning-row:hover {
         rgba(5, 150, 105, 0.95) 50%,
         rgba(6, 95, 70, 0.95) 100%);
     box-shadow: 
-        0 30px 80px rgba(16, 185, 129, 0.5),
-        0 12px 24px rgba(0, 0, 0, 0.3),
-        0 0 60px rgba(16, 185, 129, 0.4),
+        0 25px 60px rgba(16, 185, 129, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 0 50px rgba(16, 185, 129, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -7878,9 +7878,9 @@ tr.expiring-warning-row:hover {
         rgba(225, 29, 72, 0.95) 50%,
         rgba(190, 18, 60, 0.95) 100%);
     box-shadow: 
-        0 30px 80px rgba(244, 63, 94, 0.5),
-        0 12px 24px rgba(0, 0, 0, 0.3),
-        0 0 60px rgba(244, 63, 94, 0.4),
+        0 25px 60px rgba(244, 63, 94, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 0 50px rgba(244, 63, 94, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     animation: warningPulse 2s ease-in-out infinite;
 }
@@ -7897,29 +7897,29 @@ tr.expiring-warning-row:hover {
 @keyframes warningPulse {
     0%, 100% {
         box-shadow: 
-            0 30px 80px rgba(244, 63, 94, 0.5),
-            0 12px 24px rgba(0, 0, 0, 0.3),
-            0 0 60px rgba(244, 63, 94, 0.4);
+            0 25px 60px rgba(244, 63, 94, 0.5),
+            0 10px 20px rgba(0, 0, 0, 0.3),
+            0 0 50px rgba(244, 63, 94, 0.4);
     }
     50% {
         box-shadow: 
-            0 30px 80px rgba(244, 63, 94, 0.7),
-            0 12px 24px rgba(0, 0, 0, 0.3),
-            0 0 80px rgba(244, 63, 94, 0.6);
+            0 25px 60px rgba(244, 63, 94, 0.7),
+            0 10px 20px rgba(0, 0, 0, 0.3),
+            0 0 70px rgba(244, 63, 94, 0.6);
     }
 }
 
 .break-notification-content {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
     position: relative;
     z-index: 2;
 }
 
 /* Ultra luxury icon with multiple effects */
 .break-notification-icon {
-    font-size: 48px;
+    font-size: 40px;
     color: #ffffff;
     animation: luxuryPulse 2.5s ease-in-out infinite;
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4))
@@ -7967,9 +7967,9 @@ tr.expiring-warning-row:hover {
 
 .break-notification-text {
     color: #ffffff;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 1.7;
+    line-height: 1.6;
     margin: 0;
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.3),
@@ -8088,21 +8088,25 @@ tr.expiring-warning-row:hover {
 @media (max-width: 768px) {
     .break-notification-container {
         width: 95%;
-        top: 15px;
+        top: -80px;
     }
     
     .break-notification {
-        padding: 18px 24px;
-        border-radius: 20px;
+        padding: 14px 20px;
+        border-radius: 18px;
+    }
+    
+    .break-notification-content {
+        gap: 14px;
     }
     
     .break-notification-icon {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .break-notification-text {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
 
