@@ -8329,11 +8329,11 @@ function createShiftDayCard(day, shiftValue) {
             glowColor = 'rgba(236, 72, 153, 0.3)';
             break;
         default:
-            bgGradient = 'linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(71, 85, 105, 0.08) 100%)';
-            borderColor = 'rgba(100, 116, 139, 0.35)';
-            textColor = '#64748b';
+            bgGradient = 'linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 100%)';
+            borderColor = 'rgba(239, 68, 68, 0.35)';
+            textColor = '#ef4444';
             label = 'OFF';
-            glowColor = 'rgba(100, 116, 139, 0.2)';
+            glowColor = 'rgba(239, 68, 68, 0.3)';
     }
     
     div.style.cssText = `
