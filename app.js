@@ -8142,10 +8142,8 @@ window.submitGlobalAvatarChange = submitGlobalAvatarChange;
 // Inisialisasi Shift View
 async function initShiftView() {
     const monthSelector = document.getElementById('shiftMonthSelector');
-    const staffSearch = document.getElementById('shiftStaffSearch');
-    const staffDropdown = document.getElementById('shiftStaffDropdown');
     
-    if (!monthSelector || !staffSearch || !staffDropdown) return;
+    if (!monthSelector) return;
     
     // Set default month to current month
     const now = new Date();
@@ -8154,60 +8152,36 @@ async function initShiftView() {
     
     // Event listener untuk month selector
     monthSelector.addEventListener('change', () => {
-        if (staffSearch.dataset.selectedStaffId) {
-            displayStaffShift(staffSearch.dataset.selectedStaffId, monthSelector.value);
+        if (state.currentStaff) {
+            displayStaffShift(state.currentStaff.id, monthSelector.value);
         }
     });
     
-    // Event listener untuk staff search autocomplete
-    staffSearch.addEventListener('input', (e) => {
-        const query = e.target.value.trim().toLowerCase();
-        if (!query) {
-            staffDropdown.classList.add('hide');
-            return;
-        }
-        
-        const filtered = state.staff.filter(s => 
-            s.name.toLowerCase().includes(query)
-        );
-        
-        if (filtered.length === 0) {
-            staffDropdown.classList.add('hide');
-            return;
-        }
-        
-        staffDropdown.innerHTML = filtered.map(s => `
-            <div class="autocomplete-item" data-staff-id="${s.id}">
-                <div class="autocomplete-item-content">
-                    <strong>${s.name}</strong>
-                    <span style="color: var(--accent); font-size: 0.7rem; text-transform: uppercase; font-weight: 600; margin-left: 10px;">${s.role || ''}</span>
-                </div>
-            </div>
-        `).join('');
-        
-        staffDropdown.classList.remove('hide');
-        
-        // Add click handlers to dropdown items
-        staffDropdown.querySelectorAll('.autocomplete-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const staffId = item.dataset.staffId;
-                const staff = state.staff.find(s => s.id === staffId);
-                if (staff) {
-                    staffSearch.value = staff.name;
-                    staffSearch.dataset.selectedStaffId = staffId;
-                    staffDropdown.classList.add('hide');
-                    displayStaffShift(staffId, monthSelector.value);
-                }
-            });
-        });
-    });
+    // Langsung tampilkan shift staff yang sedang login
+    if (state.currentStaff) {
+        displayStaffShift(state.currentStaff.id, currentMonthStr);
+    } else {
+        showNoLoginState();
+    }
+}
+
+// Tampilkan state jika belum login
+function showNoLoginState() {
+    const container = document.getElementById('shiftScheduleContainer');
+    const emptyState = document.getElementById('shiftEmptyState');
     
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.autocomplete-container')) {
-            staffDropdown.classList.add('hide');
-        }
-    });
+    if (!container || !emptyState) return;
+    
+    container.classList.add('hide');
+    emptyState.classList.remove('hide');
+    
+    emptyState.innerHTML = `
+        <div style="font-size: 3rem; color: rgba(139, 92, 246, 0.2); margin-bottom: 20px;">
+            <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h3 style="margin: 0 0 10px 0; font-size: 1.2rem; font-weight: 700; color: var(--text-main);">Silakan Login Terlebih Dahulu</h3>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Untuk melihat jadwal shift Anda, silakan login melalui Staff Console.</p>
+    `;
 }
 
 // Tampilkan jadwal shift untuk staff tertentu
@@ -8216,7 +8190,7 @@ async function displayStaffShift(staffId, monthStr) {
     if (!staff) return;
     
     // Fetch shift data untuk bulan ini jika belum ada
-    const shiftData = state.absensiShifts.find(s => s.staff_id === staffId && s.month_str === monthStr);
+    let shiftData = state.absensiShifts.find(s => s.staff_id === staffId && s.month_str === monthStr);
     
     if (!shiftData) {
         // Try to fetch from database
@@ -8232,16 +8206,17 @@ async function displayStaffShift(staffId, monthStr) {
             
             if (data) {
                 state.absensiShifts.push(data);
-                renderStaffShiftCalendar(staff, data, monthStr);
-            } else {
-                showEmptyShiftState(staff, monthStr);
+                shiftData = data;
             }
         } catch (err) {
             console.error('Error fetching shift data:', err);
-            showEmptyShiftState(staff, monthStr);
         }
-    } else {
+    }
+    
+    if (shiftData) {
         renderStaffShiftCalendar(staff, shiftData, monthStr);
+    } else {
+        showEmptyShiftState(staff, monthStr);
     }
 }
 
@@ -8254,6 +8229,10 @@ function renderStaffShiftCalendar(staff, shiftData, monthStr) {
     const staffAvatar = document.getElementById('shiftStaffAvatar');
     const monthDisplay = document.getElementById('shiftMonthDisplay');
     const calendarGrid = document.getElementById('shiftCalendarGrid');
+    const summaryOff = document.getElementById('shiftSummaryOff');
+    const summaryHalf = document.getElementById('shiftSummaryHalf');
+    const offDates = document.getElementById('shiftOffDates');
+    const halfDates = document.getElementById('shiftHalfDates');
     
     if (!container || !emptyState || !staffName || !staffRole || !staffAvatar || !monthDisplay || !calendarGrid) return;
     
@@ -8271,16 +8250,44 @@ function renderStaffShiftCalendar(staff, shiftData, monthStr) {
     const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
     monthDisplay.textContent = `${monthNames[parseInt(month) - 1]} ${year}`;
     
-    // Generate calendar grid
+    // Generate calendar grid and count summary
     const schedule = shiftData.schedule || [];
     const daysInMonth = new Date(parseInt(year), parseInt(month), 0).getDate();
+    
+    let offCount = 0;
+    let halfCount = 0;
+    const offDayList = [];
+    const halfDayList = [];
     
     calendarGrid.innerHTML = '';
     
     for (let day = 1; day <= daysInMonth; day++) {
         const shiftValue = schedule[day - 1] || 'OFF';
+        const val = String(shiftValue).toUpperCase().trim();
+        
+        // Count OFF and 1/2
+        if (val === 'OFF') {
+            offCount++;
+            offDayList.push(day);
+        } else if (val === '1/2') {
+            halfCount++;
+            halfDayList.push(day);
+        }
+        
         const dayDiv = createShiftDayCard(day, shiftValue);
         calendarGrid.appendChild(dayDiv);
+    }
+    
+    // Update summary
+    if (summaryOff) summaryOff.textContent = offCount;
+    if (summaryHalf) summaryHalf.textContent = halfCount;
+    
+    // Update dates list
+    if (offDates) {
+        offDates.textContent = offDayList.length > 0 ? offDayList.join(', ') : 'Tidak ada';
+    }
+    if (halfDates) {
+        halfDates.textContent = halfDayList.length > 0 ? halfDayList.join(', ') : 'Tidak ada';
     }
 }
 

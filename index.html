@@ -1689,23 +1689,6 @@
                     <!-- Main Content -->
                     <div style="max-width: 1400px; margin-left: auto; margin-right: auto;">
                         
-                        <!-- Staff Selector Card -->
-                        <div class="glass-card" style="padding: 20px; margin-bottom: 20px;">
-                            <div style="display: flex; align-items: center; gap: 15px;">
-                                <i class="fa-solid fa-user-circle" style="font-size: 1.5rem; color: var(--primary);"></i>
-                                <div style="flex: 1;">
-                                    <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 8px;">Pilih Staff untuk Melihat Jadwal Shift:</label>
-                                    <div class="autocomplete-container">
-                                        <div class="input-with-icon">
-                                            <input type="text" id="shiftStaffSearch" class="autocomplete-search" placeholder="Ketik nama staff..." autocomplete="off" style="width: 100%; max-width: 400px; padding: 10px 40px 10px 14px; font-size: 0.85rem;">
-                                            <i class="fa-solid fa-search search-icon"></i>
-                                        </div>
-                                        <div id="shiftStaffDropdown" class="autocomplete-dropdown hide"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Shift Schedule Display -->
                         <div id="shiftScheduleContainer" class="hide">
                             <div class="glass-card" style="padding: 30px;">
@@ -1721,6 +1704,37 @@
                                     <div style="text-align: right;">
                                         <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 4px;">Periode</div>
                                         <div id="shiftMonthDisplay" style="font-size: 1.1rem; font-weight: 800; color: var(--primary);"></div>
+                                    </div>
+                                    <!-- Summary Info: OFF Days & Half Days -->
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        <div style="text-align: center; padding: 12px 20px; background: rgba(100, 116, 139, 0.15); border: 1px solid rgba(100, 116, 139, 0.3); border-radius: 10px;">
+                                            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 4px;">OFF Day</div>
+                                            <div id="shiftSummaryOff" style="font-size: 1.8rem; font-weight: 900; color: #64748b; line-height: 1;">0</div>
+                                            <div style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px;">hari</div>
+                                        </div>
+                                        <div style="text-align: center; padding: 12px 20px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px;">
+                                            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 4px;">Setengah Hari</div>
+                                            <div id="shiftSummaryHalf" style="font-size: 1.8rem; font-weight: 900; color: #f59e0b; line-height: 1;">0</div>
+                                            <div style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px;">hari</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Quick Summary dengan Tanggal -->
+                                <div style="margin-bottom: 25px; padding: 15px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: 10px;">
+                                    <div style="display: flex; gap: 25px; flex-wrap: wrap;">
+                                        <div style="flex: 1; min-width: 200px;">
+                                            <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px;">
+                                                <i class="fa-solid fa-calendar-xmark" style="margin-right: 6px; color: #64748b;"></i>Tanggal OFF Day:
+                                            </div>
+                                            <div id="shiftOffDates" style="font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">-</div>
+                                        </div>
+                                        <div style="flex: 1; min-width: 200px;">
+                                            <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px;">
+                                                <i class="fa-solid fa-clock" style="margin-right: 6px; color: #f59e0b;"></i>Tanggal Setengah Hari:
+                                            </div>
+                                            <div id="shiftHalfDates" style="font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">-</div>
+                                        </div>
                                     </div>
                                 </div>
 
