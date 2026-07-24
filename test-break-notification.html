@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Break Notification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .test-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .btn-test {
+            width: 100%;
+            padding: 15px 30px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .btn-test:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-test:active {
+            transform: translateY(0);
+        }
+        
+        .btn-start {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .btn-ontime {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        
+        .btn-late {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 16px;
+        }
+        
+        .info-box ul {
+            margin: 5px 0;
+            padding-left: 20px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Break Notification Container -->
+    <div id="breakNotificationContainer" class="break-notification-container"></div>
+    
+    <div class="test-container">
+        <h1>🧪 Test Break Notification</h1>
+        <p class="subtitle">Klik tombol di bawah untuk test notifikasi dengan pesan random</p>
+        
+        <button class="btn-test btn-start" onclick="testBreakStart()">
+            <i class="fa-solid fa-coffee"></i> Test Mulai Istirahat
+        </button>
+        
+        <button class="btn-test btn-ontime" onclick="testBreakOnTime()">
+            <i class="fa-solid fa-circle-check"></i> Test Kembali On Time
+        </button>
+        
+        <button class="btn-test btn-late" onclick="testBreakLate()">
+            <i class="fa-solid fa-triangle-exclamation"></i> Test Kembali Terlambat
+        </button>
+        
+        <div class="info-box">
+            <h3>ℹ️ Informasi Test:</h3>
+            <ul>
+                <li><strong>12 variasi pesan</strong> untuk setiap kategori</li>
+                <li><strong>Notifikasi "Mulai Istirahat"</strong>: Tetap tampil sampai staff tekan selesai</li>
+                <li><strong>Notifikasi "On Time/Terlambat"</strong>: Auto-hide setelah 1 menit</li>
+                <li><strong>Animasi mewah</strong> dengan bounce, shimmer, pulse & particles</li>
+                <li><strong>Gradient berbeda</strong> untuk setiap status</li>
+                <li><strong>Responsive</strong> untuk semua ukuran layar</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Copy exact messages from app.js
+        const BREAK_START_MESSAGES = [
+            "Selamat beristirahat! Nikmati waktu santainya, dan pastikan kembali on time ya.",
+            "Silakan istirahat, jangan lupa makan siang! Ditunggu kehadirannya kembali tepat waktu nanti.",
+            "Silakan gunakan waktu istirahatnya. Mohon perhatikan jam agar tidak ada keterlambatan saat kembali bertugas.",
+            "Selamat istirahat! Isi energi dulu ya, ditunggu comeback-nya tepat waktu!",
+            "Waktunya recharge! Silakan istirahat, tolong pasang alarm biar nggak bablas jam masuknya ya.",
+            "Selamat makan dan beristirahat semuanya! Jangan lupa kembali on time supaya operasional kita tetap lancar.",
+            "Silakan beristirahat. Pastikan pekerjaan yang urgent sudah dikomunikasikan ke tim, dan jangan sampai telat balik.",
+            "Selamat menggunakan waktu istirahat. Tolong jam kembalinya diperhatikan agar jadwal kerja kita hari ini tidak mundur.",
+            "Silakan istirahat. Harap perhatikan durasi istirahat yang sudah ditentukan dan kembali ke posisi masing-masing tepat pada waktunya.",
+            "Waktunya recharge! Selamat istirahat, nikmati waktunya. Jangan lupa setel alarm biar nggak telat masuk ya! ⚡",
+            "Selamat break! Isi perut dan tenaganya dulu. Pastikan nanti masuk lagi on time biar ritme kerja kita tetap lancar jaya. 🍔",
+            "Met istirahat semuanya! Jangan sampai keasyikan nongkrong terus lupa jam masuk ya. Ditunggu kehadirannya tepat waktu! 🚀"
+        ];
+
+        const BREAK_END_ONTIME_MESSAGES = [
+            "Mantap, terima kasih sudah on time! Yuk, semangat lagi lanjut kerjanya.",
+            "Terima kasih atas kedisiplinannya kembali tepat waktu. Mari kita maksimalkan sisa jam kerja hari ini.",
+            "Terima kasih sudah kembali sesuai jadwal. Selamat bertugas kembali!",
+            "Keren, selalu on time! Terima kasih ya, mari kita gas lagi pekerjaannya.",
+            "Wah, tepat waktu! Terima kasih disiplinnya, semangat terus sampai jam pulang nanti.",
+            "Teng! Pas banget jamnya. Terima kasih, yuk kita mulai lagi rutinitasnya.",
+            "Terima kasih sudah komitmen dengan waktu istirahatnya. Selamat bertugas kembali.",
+            "Apresiasi untuk kedisiplinan waktunya hari ini. Mari kita lanjutkan target pekerjaan kita.",
+            "Terima kasih sudah kembali dan standby sesuai jadwal. Silakan dilanjutkan tugasnya.",
+            "Cakep! Makasih udah masuk on time. Energi udah full lagi kan? Yuk, langsung gas selesaikan target hari ini! 🔥",
+            "Mantap kedisiplinannya! Pas banget jam masuk udah langsung standby. Mari kita sikat lagi sisa kerjaan hari ini. 💪✨",
+            "Keren, selalu tepat waktu! Terima kasih kerja samanya, mari kita maksimalkan waktu sampai jam pulang nanti. 💯"
+        ];
+
+        const BREAK_END_LATE_MESSAGES = [
+            "Selamat bekerja kembali. Tolong manajemen waktu istirahatnya lebih diperhatikan lagi ya agar tidak telat masuk di kesempatan berikutnya.",
+            "Terima kasih sudah kembali. Lain kali mohon lebih disiplin. Jika memang ada kendala mendesak saat istirahat, tolong informasikan ke saya sebelumnya ya.",
+            "Harap jadikan perhatian untuk kedisiplinan waktunya. Saya harap keterlambatan seperti ini tidak menjadi kebiasaan. Silakan lanjutkan pekerjaannya.",
+            "Selamat bergabung kembali. Saya perhatikan hari ini ada keterlambatan, tolong besok waktu istirahatnya lebih diatur lagi ya.",
+            "Lain waktu tolong pasang pengingat sebelum jam istirahat habis ya. Kedisiplinan waktu sangat penting untuk kenyamanan kerja tim kita.",
+            "Terima kasih sudah kembali. Tolong lebih dihargai waktu operasionalnya ya, agar pekerjaan teman-teman di shift atau bagian lain tidak ikut terhambat.",
+            "Halo, saya catat hari ini kamu terlambat masuk setelah istirahat. Tolong pastikan hal ini tidak terulang karena berdampak pada ritme kerja kita.",
+            "Tolong diperhatikan lagi jam istirahatnya. Keterlambatan tanpa alasan yang darurat akan masuk ke catatan kedisiplinan. Silakan kembali bekerja.",
+            "Waktu istirahat sudah diatur agar semua berjalan tertib. Saya harap ini keterlambatan yang terakhir. Silakan langsung lanjutkan pekerjaan yang tertunda.",
+            "Halo, agak telat masuknya nih hari ini. Besok-besok tolong atur waktu istirahatnya lebih oke lagi ya, biar tim kita jalannya tetap kompak. Yuk langsung lanjut kerja! 🙏",
+            "Wah, kayaknya keasyikan istirahat sampai lewat jam masuk nih. Besok pasang alarm ya biar nggak bablas lagi waktunya. Sekarang silakan langsung dikebut kerjaannya! ⏰🏃‍♂️",
+            "Halo, perhatikan jam masuknya lagi ya besok. Kasihan teman-teman yang lain kalau kerjaannya jadi tertunda. Yuk, sekarang fokus dan langsung kejar ketertinggalannya. ✌️"
+        ];
+
+        function getRandomMessage(messagesArray) {
+            return messagesArray[Math.floor(Math.random() * messagesArray.length)];
+        }
+
+        function showBreakNotification(message, type = 'info', persistent = false) {
+            const container = document.getElementById('breakNotificationContainer');
+            if (!container) return;
+            
+            // Clear any existing notification
+            container.innerHTML = '';
+            
+            const notification = document.createElement('div');
+            notification.className = `break-notification ${type}`;
+            
+            let icon = 'fa-coffee';
+            if (type === 'success') icon = 'fa-circle-check';
+            if (type === 'warning') icon = 'fa-triangle-exclamation';
+            
+            notification.innerHTML = `
+                <div class="break-notification-content">
+                    <i class="fa-solid ${icon} break-notification-icon"></i>
+                    <p class="break-notification-text">${message}</p>
+                </div>
+            `;
+            
+            // Add sparkle effects
+            for (let i = 0; i < 4; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'break-notification-sparkle';
+                notification.appendChild(sparkle);
+            }
+            
+            // Add confetti for success notifications
+            if (type === 'success') {
+                for (let i = 0; i < 5; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'break-notification-confetti';
+                    notification.appendChild(confetti);
+                }
+            }
+            
+            // Add progress bar for non-persistent notifications
+            if (!persistent) {
+                const progressBar = document.createElement('div');
+                progressBar.className = 'break-notification-progress';
+                notification.appendChild(progressBar);
+            }
+            
+            container.appendChild(notification);
+            
+            // Trigger animation
+            setTimeout(() => notification.classList.add('show'), 50);
+            
+            // Auto-hide logic:
+            // - persistent (mulai istirahat): tetap tampil, tidak auto-hide
+            // - success/warning (selesai istirahat): hilang setelah 1 menit (60 detik)
+            if (!persistent) {
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 800);
+                }, 60000); // 60000ms = 1 menit
+            }
+        }
+
+        function hideBreakNotification() {
+            const container = document.getElementById('breakNotificationContainer');
+            if (!container) return;
+            
+            const notification = container.querySelector('.break-notification');
+            if (notification) {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 600);
+            }
+        }
+
+        function testBreakStart() {
+            const message = getRandomMessage(BREAK_START_MESSAGES);
+            showBreakNotification(message, 'info', true); // persistent = true
+        }
+
+        function testBreakOnTime() {
+            hideBreakNotification(); // hapus notif persistent dulu
+            setTimeout(() => {
+                const message = getRandomMessage(BREAK_END_ONTIME_MESSAGES);
+                showBreakNotification(message, 'success', false); // auto-hide setelah 1 menit
+            }, 100);
+        }
+
+        function testBreakLate() {
+            hideBreakNotification(); // hapus notif persistent dulu
+            setTimeout(() => {
+                const message = getRandomMessage(BREAK_END_LATE_MESSAGES);
+                showBreakNotification(message, 'warning', false); // auto-hide setelah 1 menit
+            }, 100);
+        }
+    </script>
+</body>
+</html>

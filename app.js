@@ -2835,6 +2835,130 @@ let isActionProcessing = false;
 // sebelum RPC selesai (lapisan pertama; RPC server = lapisan final)
 const _roleProcessingLock = new Set();
 
+// ================================================================
+// BREAK NOTIFICATION MESSAGES
+// ================================================================
+const BREAK_START_MESSAGES = [
+    "Selamat beristirahat! Nikmati waktu santainya, dan pastikan kembali on time ya.",
+    "Silakan istirahat, jangan lupa makan siang! Ditunggu kehadirannya kembali tepat waktu nanti.",
+    "Silakan gunakan waktu istirahatnya. Mohon perhatikan jam agar tidak ada keterlambatan saat kembali bertugas.",
+    "Selamat istirahat! Isi energi dulu ya, ditunggu comeback-nya tepat waktu!",
+    "Waktunya recharge! Silakan istirahat, tolong pasang alarm biar nggak bablas jam masuknya ya.",
+    "Selamat makan dan beristirahat semuanya! Jangan lupa kembali on time supaya operasional kita tetap lancar.",
+    "Silakan beristirahat. Pastikan pekerjaan yang urgent sudah dikomunikasikan ke tim, dan jangan sampai telat balik.",
+    "Selamat menggunakan waktu istirahat. Tolong jam kembalinya diperhatikan agar jadwal kerja kita hari ini tidak mundur.",
+    "Silakan istirahat. Harap perhatikan durasi istirahat yang sudah ditentukan dan kembali ke posisi masing-masing tepat pada waktunya.",
+    "Waktunya recharge! Selamat istirahat, nikmati waktunya. Jangan lupa setel alarm biar nggak telat masuk ya! ⚡",
+    "Selamat break! Isi perut dan tenaganya dulu. Pastikan nanti masuk lagi on time biar ritme kerja kita tetap lancar jaya. 🍔",
+    "Met istirahat semuanya! Jangan sampai keasyikan nongkrong terus lupa jam masuk ya. Ditunggu kehadirannya tepat waktu! 🚀"
+];
+
+const BREAK_END_ONTIME_MESSAGES = [
+    "Mantap, terima kasih sudah on time! Yuk, semangat lagi lanjut kerjanya.",
+    "Terima kasih atas kedisiplinannya kembali tepat waktu. Mari kita maksimalkan sisa jam kerja hari ini.",
+    "Terima kasih sudah kembali sesuai jadwal. Selamat bertugas kembali!",
+    "Keren, selalu on time! Terima kasih ya, mari kita gas lagi pekerjaannya.",
+    "Wah, tepat waktu! Terima kasih disiplinnya, semangat terus sampai jam pulang nanti.",
+    "Teng! Pas banget jamnya. Terima kasih, yuk kita mulai lagi rutinitasnya.",
+    "Terima kasih sudah komitmen dengan waktu istirahatnya. Selamat bertugas kembali.",
+    "Apresiasi untuk kedisiplinan waktunya hari ini. Mari kita lanjutkan target pekerjaan kita.",
+    "Terima kasih sudah kembali dan standby sesuai jadwal. Silakan dilanjutkan tugasnya.",
+    "Cakep! Makasih udah masuk on time. Energi udah full lagi kan? Yuk, langsung gas selesaikan target hari ini! 🔥",
+    "Mantap kedisiplinannya! Pas banget jam masuk udah langsung standby. Mari kita sikat lagi sisa kerjaan hari ini. 💪✨",
+    "Keren, selalu tepat waktu! Terima kasih kerja samanya, mari kita maksimalkan waktu sampai jam pulang nanti. 💯"
+];
+
+const BREAK_END_LATE_MESSAGES = [
+    "Selamat bekerja kembali. Tolong manajemen waktu istirahatnya lebih diperhatikan lagi ya agar tidak telat masuk di kesempatan berikutnya.",
+    "Terima kasih sudah kembali. Lain kali mohon lebih disiplin. Jika memang ada kendala mendesak saat istirahat, tolong informasikan ke saya sebelumnya ya.",
+    "Harap jadikan perhatian untuk kedisiplinan waktunya. Saya harap keterlambatan seperti ini tidak menjadi kebiasaan. Silakan lanjutkan pekerjaannya.",
+    "Selamat bergabung kembali. Saya perhatikan hari ini ada keterlambatan, tolong besok waktu istirahatnya lebih diatur lagi ya.",
+    "Lain waktu tolong pasang pengingat sebelum jam istirahat habis ya. Kedisiplinan waktu sangat penting untuk kenyamanan kerja tim kita.",
+    "Terima kasih sudah kembali. Tolong lebih dihargai waktu operasionalnya ya, agar pekerjaan teman-teman di shift atau bagian lain tidak ikut terhambat.",
+    "Halo, saya catat hari ini kamu terlambat masuk setelah istirahat. Tolong pastikan hal ini tidak terulang karena berdampak pada ritme kerja kita.",
+    "Tolong diperhatikan lagi jam istirahatnya. Keterlambatan tanpa alasan yang darurat akan masuk ke catatan kedisiplinan. Silakan kembali bekerja.",
+    "Waktu istirahat sudah diatur agar semua berjalan tertib. Saya harap ini keterlambatan yang terakhir. Silakan langsung lanjutkan pekerjaan yang tertunda.",
+    "Halo, agak telat masuknya nih hari ini. Besok-besok tolong atur waktu istirahatnya lebih oke lagi ya, biar tim kita jalannya tetap kompak. Yuk langsung lanjut kerja! 🙏",
+    "Wah, kayaknya keasyikan istirahat sampai lewat jam masuk nih. Besok pasang alarm ya biar nggak bablas lagi waktunya. Sekarang silakan langsung dikebut kerjaannya! ⏰🏃‍♂️",
+    "Halo, perhatikan jam masuknya lagi ya besok. Kasihan teman-teman yang lain kalau kerjaannya jadi tertunda. Yuk, sekarang fokus dan langsung kejar ketertinggalannya. ✌️"
+];
+
+function getRandomMessage(messageArray) {
+    return messageArray[Math.floor(Math.random() * messageArray.length)];
+}
+
+function showBreakNotification(message, type = 'info', persistent = false) {
+    const container = document.getElementById('breakNotificationContainer');
+    if (!container) return;
+    
+    // Clear any existing notification
+    container.innerHTML = '';
+    
+    const notification = document.createElement('div');
+    notification.className = `break-notification ${type}`;
+    
+    let icon = 'fa-coffee';
+    if (type === 'success') icon = 'fa-circle-check';
+    if (type === 'warning') icon = 'fa-triangle-exclamation';
+    
+    notification.innerHTML = `
+        <div class="break-notification-content">
+            <i class="fa-solid ${icon} break-notification-icon"></i>
+            <p class="break-notification-text">${message}</p>
+        </div>
+    `;
+    
+    // Add sparkle effects
+    for (let i = 0; i < 4; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'break-notification-sparkle';
+        notification.appendChild(sparkle);
+    }
+    
+    // Add confetti for success notifications
+    if (type === 'success') {
+        for (let i = 0; i < 5; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'break-notification-confetti';
+            notification.appendChild(confetti);
+        }
+    }
+    
+    // Add progress bar for non-persistent notifications
+    if (!persistent) {
+        const progressBar = document.createElement('div');
+        progressBar.className = 'break-notification-progress';
+        notification.appendChild(progressBar);
+    }
+    
+    container.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 50);
+    
+    // Auto-hide logic:
+    // - persistent (mulai istirahat): tetap tampil, tidak auto-hide
+    // - success/warning (selesai istirahat): hilang setelah 1 menit (60 detik)
+    if (!persistent) {
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 800);
+        }, 60000); // 60000ms = 1 menit
+    }
+}
+
+// Helper function to hide break notification manually
+function hideBreakNotification() {
+    const container = document.getElementById('breakNotificationContainer');
+    if (!container) return;
+    
+    const notification = container.querySelector('.break-notification');
+    if (notification) {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 600);
+    }
+}
+
 // Mulai / Selesai Istirahat Handler
 async function handleBreakAction() {
     if (!state.currentStaff || !supabaseClient) return;
@@ -2907,6 +3031,9 @@ async function handleBreakAction() {
             state.activeBreaks = state.activeBreaks.filter(b => b.staff_id !== staff.id);
             state.activeBreaks.push(inserted);
 
+            // Show random break start notification (persistent - tidak auto-hide)
+            const randomMessage = getRandomMessage(BREAK_START_MESSAGES);
+            showBreakNotification(randomMessage, 'info', true); // persistent = true
             showToast("Selamat beristirahat!", "success");
             
         } else {
@@ -2964,7 +3091,19 @@ async function handleBreakAction() {
             };
             state.logs.unshift(logWithId);
             
-            showToast("Selamat kembali bekerja!", "success");
+            // Hide persistent break start notification first
+            hideBreakNotification();
+            
+            // Show appropriate break end notification (auto-hide setelah 1 menit)
+            if (status === "Aman") {
+                const randomMessage = getRandomMessage(BREAK_END_ONTIME_MESSAGES);
+                showBreakNotification(randomMessage, 'success', false); // persistent = false, auto-hide
+                showToast("Selamat kembali bekerja!", "success");
+            } else {
+                const randomMessage = getRandomMessage(BREAK_END_LATE_MESSAGES);
+                showBreakNotification(randomMessage, 'warning', false); // persistent = false, auto-hide
+                showToast("Selamat kembali bekerja!", "success");
+            }
         }
         
         // Render UI Instan (Optimistic UI Update) — targeted, bukan renderAll

@@ -7737,3 +7737,419 @@ tr.expiring-warning-row:hover {
 .story-modal-close-btn:active {
     transform: rotate(90deg) scale(0.95);
 }
+
+
+/* =================================================================
+   BREAK NOTIFICATIONS - ULTRA LUXURY PREMIUM EDITION
+   ================================================================= */
+.break-notification-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 750px;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.break-notification {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.95) 0%, 
+        rgba(118, 75, 162, 0.95) 100%);
+    border-radius: 24px;
+    padding: 24px 36px;
+    box-shadow: 
+        0 30px 80px rgba(102, 126, 234, 0.5),
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        0 0 60px rgba(102, 126, 234, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-200%) scale(0.8);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animated gradient background */
+.break-notification::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 40%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.1) 60%,
+        transparent 70%
+    );
+    animation: shimmerRotate 4s linear infinite;
+    z-index: 0;
+}
+
+@keyframes shimmerRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Glowing border effect */
+.break-notification::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(102, 126, 234, 0.8),
+        rgba(255, 255, 255, 0.6)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderGlow 3s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.break-notification.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    animation: luxuryBounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes luxuryBounceIn {
+    0% {
+        transform: translateY(-200%) scale(0.5) rotate(-10deg);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(20%) scale(1.08) rotate(2deg);
+    }
+    60% {
+        transform: translateY(-10%) scale(0.96) rotate(-1deg);
+    }
+    80% {
+        transform: translateY(5%) scale(1.02) rotate(0.5deg);
+    }
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Success theme - Green Emerald Luxury */
+.break-notification.success {
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.95) 0%, 
+        rgba(5, 150, 105, 0.95) 50%,
+        rgba(6, 95, 70, 0.95) 100%);
+    box-shadow: 
+        0 30px 80px rgba(16, 185, 129, 0.5),
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        0 0 60px rgba(16, 185, 129, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.break-notification.success::after {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(16, 185, 129, 0.8),
+        rgba(255, 255, 255, 0.6)
+    );
+}
+
+/* Warning theme - Pink Rose Gold Luxury */
+.break-notification.warning {
+    background: linear-gradient(135deg, 
+        rgba(244, 63, 94, 0.95) 0%, 
+        rgba(225, 29, 72, 0.95) 50%,
+        rgba(190, 18, 60, 0.95) 100%);
+    box-shadow: 
+        0 30px 80px rgba(244, 63, 94, 0.5),
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        0 0 60px rgba(244, 63, 94, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    animation: warningPulse 2s ease-in-out infinite;
+}
+
+.break-notification.warning::after {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(244, 63, 94, 0.8),
+        rgba(255, 255, 255, 0.6)
+    );
+}
+
+@keyframes warningPulse {
+    0%, 100% {
+        box-shadow: 
+            0 30px 80px rgba(244, 63, 94, 0.5),
+            0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 60px rgba(244, 63, 94, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 30px 80px rgba(244, 63, 94, 0.7),
+            0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 80px rgba(244, 63, 94, 0.6);
+    }
+}
+
+.break-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ultra luxury icon with multiple effects */
+.break-notification-icon {
+    font-size: 48px;
+    color: #ffffff;
+    animation: luxuryPulse 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4))
+            drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+    position: relative;
+}
+
+.break-notification-icon::before {
+    content: '';
+    position: absolute;
+    inset: -15px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: iconGlow 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes luxuryPulse {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.15) rotate(-5deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+        opacity: 0.9;
+    }
+    75% {
+        transform: scale(1.15) rotate(-3deg);
+    }
+}
+
+@keyframes iconGlow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+.break-notification-text {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.3);
+    flex: 1;
+    letter-spacing: 0.3px;
+}
+
+/* Floating particles */
+.break-notification-content::before,
+.break-notification-content::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: floatingParticles 3s ease-in-out infinite;
+}
+
+.break-notification-content::before {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.break-notification-content::after {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatingParticles {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: translate(20px, -30px) scale(1.5);
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+/* Sparkle effects */
+.break-notification-sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+    z-index: 1;
+}
+
+.break-notification-sparkle:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.break-notification-sparkle:nth-child(2) {
+    top: 60%;
+    left: 25%;
+    animation-delay: 0.5s;
+}
+
+.break-notification-sparkle:nth-child(3) {
+    top: 40%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.break-notification-sparkle:nth-child(4) {
+    bottom: 25%;
+    right: 30%;
+    animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Progress bar at bottom */
+.break-notification-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 22px 22px;
+    transform-origin: left;
+    animation: progressBar 60s linear forwards;
+    z-index: 3;
+}
+
+@keyframes progressBar {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .break-notification-container {
+        width: 95%;
+        top: 15px;
+    }
+    
+    .break-notification {
+        padding: 18px 24px;
+        border-radius: 20px;
+    }
+    
+    .break-notification-icon {
+        font-size: 36px;
+    }
+    
+    .break-notification-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Confetti effect for success */
+.break-notification.success .break-notification-confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    animation: confetti 3s ease-out infinite;
+}
+
+.break-notification-confetti:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.break-notification-confetti:nth-child(2) {
+    left: 30%;
+    animation-delay: 0.3s;
+}
+
+.break-notification-confetti:nth-child(3) {
+    left: 50%;
+    animation-delay: 0.6s;
+}
+
+.break-notification-confetti:nth-child(4) {
+    left: 70%;
+    animation-delay: 0.9s;
+}
+
+.break-notification-confetti:nth-child(5) {
+    left: 90%;
+    animation-delay: 1.2s;
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(150px) rotate(720deg);
+        opacity: 0;
+    }
+}
