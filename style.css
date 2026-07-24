@@ -7946,12 +7946,17 @@ tr.expiring-warning-row:hover {
    ================================================================= */
 .break-notification-container {
     position: fixed;
-    top: 60px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     width: min(100%, 640px);
     z-index: 9999;
     pointer-events: none;
+}
+
+/* Adjust position untuk staff view yang lebih tinggi */
+#staffView .break-notification-container {
+    top: 80px;
 }
 
 .break-notification {
@@ -8309,7 +8314,11 @@ tr.expiring-warning-row:hover {
 @media (max-width: 768px) {
     .break-notification-container {
         width: 95%;
-        top: 50px;
+        top: 90px;
+    }
+    
+    #staffView .break-notification-container {
+        top: 70px;
     }
     
     .break-notification {
