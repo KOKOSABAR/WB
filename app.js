@@ -7809,3 +7809,114 @@ function closeStoryImagePreviewModal() {
 }
 window.closeStoryImagePreviewModal = closeStoryImagePreviewModal;
 
+// ----------------------------------------------------------------
+// GLOBAL PROFILE PHOTO MODAL (works from any page/view)
+// ----------------------------------------------------------------
+let _pendingGlobalAvatarBase64 = null;
+
+function openGlobalProfilePhotoModal() {
+    const staff = state.currentStaff;
+    if (!staff) { showToast("Login terlebih dahulu.", "warning"); return; }
+    
+    _pendingGlobalAvatarBase64 = null;
+    
+    const previewImg = document.getElementById('globalAvatarPreviewImg');
+    const previewInitials = document.getElementById('globalAvatarPreviewInitials');
+    const previewWrap = document.getElementById('globalAvatarPreviewWrap');
+    const fileInput = document.getElementById('globalAvatarFileInput');
+    
+    if (fileInput) fileInput.value = '';
+    
+    // Set initials
+    if (previewInitials) {
+        const parts = staff.name.trim().split(/\s+/);
+        const initials = parts.length >= 2 
+            ? (parts[0][0] + parts[1][0]).toUpperCase() 
+            : staff.name.slice(0, 2).toUpperCase();
+        previewInitials.textContent = initials;
+    }
+    
+    // Show existing avatar or initials
+    if (staff.avatar_url && previewImg) {
+        previewImg.src = staff.avatar_url;
+        previewImg.style.display = 'block';
+        if (previewInitials) previewInitials.style.display = 'none';
+        if (previewWrap) previewWrap.style.background = 'transparent';
+    } else {
+        if (previewImg) previewImg.style.display = 'none';
+        if (previewInitials) previewInitials.style.display = 'block';
+        if (previewWrap) previewWrap.style.background = 'linear-gradient(135deg, #a855f7, #7c3aed)';
+    }
+    
+    document.getElementById('globalProfilePhotoModal').classList.remove('hide');
+}
+window.openGlobalProfilePhotoModal = openGlobalProfilePhotoModal;
+
+function closeGlobalProfilePhotoModal() {
+    document.getElementById('globalProfilePhotoModal').classList.add('hide');
+    _pendingGlobalAvatarBase64 = null;
+}
+window.closeGlobalProfilePhotoModal = closeGlobalProfilePhotoModal;
+
+function handleGlobalAvatarSelect(input) {
+    const file = input.files[0];
+    if (!file) return;
+    if (file.size > 512 * 1024) {
+        showToast("Ukuran foto maksimal 500KB.", "warning");
+        input.value = ''; return;
+    }
+    const reader = new FileReader();
+    reader.onload = e => {
+        _pendingGlobalAvatarBase64 = e.target.result;
+        const previewImg = document.getElementById('globalAvatarPreviewImg');
+        const previewInitials = document.getElementById('globalAvatarPreviewInitials');
+        const previewWrap = document.getElementById('globalAvatarPreviewWrap');
+        if (previewImg) { previewImg.src = e.target.result; previewImg.style.display = 'block'; }
+        if (previewInitials) previewInitials.style.display = 'none';
+        if (previewWrap) previewWrap.style.background = 'transparent';
+    };
+    reader.readAsDataURL(file);
+}
+window.handleGlobalAvatarSelect = handleGlobalAvatarSelect;
+
+async function submitGlobalAvatarChange() {
+    if (!_pendingGlobalAvatarBase64) {
+        showToast("Pilih foto terlebih dahulu.", "warning"); return;
+    }
+    const staff = state.currentStaff;
+    if (!staff) { showToast("Sesi tidak valid.", "error"); return; }
+    
+    try {
+        // Update staff table
+        const { error } = await supabaseClient.from('staff')
+            .update({ avatar_url: _pendingGlobalAvatarBase64 })
+            .eq('id', staff.id);
+        if (error) throw error;
+        
+        // Update in-memory state
+        state.currentStaff.avatar_url = _pendingGlobalAvatarBase64;
+        const sIdx = state.staff.findIndex(s => s.id === staff.id);
+        if (sIdx !== -1) state.staff[sIdx].avatar_url = _pendingGlobalAvatarBase64;
+        
+        // Also sync to chat_users if possible
+        try {
+            await supabaseClient.from('chat_users')
+                .update({ avatar_url: _pendingGlobalAvatarBase64 })
+                .eq('id', staff.id);
+        } catch (chatErr) {
+            console.warn("Gagal sinkron avatar ke chat_users:", chatErr);
+        }
+        
+        // Refresh UI
+        updateStaffConsoleUI();
+        
+        closeGlobalProfilePhotoModal();
+        showToast("Foto profil berhasil disimpan! 🎉", "success");
+        
+    } catch (err) {
+        console.error("Gagal simpan foto profil:", err);
+        showToast("Gagal menyimpan foto. Pastikan kolom avatar_url sudah ada di tabel staff.", "error");
+    }
+}
+window.submitGlobalAvatarChange = submitGlobalAvatarChange;
+
