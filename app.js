@@ -1219,7 +1219,11 @@ function handleSettingsRealtime(payload) {
                 applyThemePreset(savedTheme, null, true);
             }
         }
-        showToast("Pengaturan sistem diperbarui secara realtime.", "success");
+        if (window.ignoreNextSettingsRealtimeToast) {
+            window.ignoreNextSettingsRealtimeToast = false;
+        } else {
+            showToast("Pengaturan sistem diperbarui secara realtime.", "success");
+        }
 
         // Terapkan chat toggle saat settings berubah (realtime)
         let chatOn = state.settings.chat_enabled;
@@ -3940,6 +3944,7 @@ window.saveRoleAccessSettings = async function() {
         staff_access: window.tempStaffAccess || {}
     };
 
+    window.ignoreNextSettingsRealtimeToast = true;
     try {
         const { error } = await supabaseClient
             .from('settings')
@@ -4074,6 +4079,7 @@ async function handleSaveSettings(e) {
         admin_passcode: passcode
     };
     
+    window.ignoreNextSettingsRealtimeToast = true;
     try {
         const { error } = await supabaseClient
             .from('settings')
@@ -4108,6 +4114,7 @@ async function handleChatToggle(enabled) {
     // 3. Update state.settings dulu sebelum save ke DB
     state.settings.chat_enabled = enabled;
 
+    window.ignoreNextSettingsRealtimeToast = true;
     try {
         // 4. Simpan ke database
         const { data, error } = await supabaseClient
@@ -4290,6 +4297,7 @@ async function handleRulesCardToggle(enabled) {
     applyRulesCardSettings();
     localStorage.setItem('rules_card_enabled', JSON.stringify(enabled));
 
+    window.ignoreNextSettingsRealtimeToast = true;
     try {
         const { error } = await supabaseClient
             .from('settings')
@@ -4329,6 +4337,7 @@ async function saveRulesCardSettings() {
 
     applyRulesCardSettings();
 
+    window.ignoreNextSettingsRealtimeToast = true;
     try {
         const { error } = await supabaseClient
             .from('settings')
