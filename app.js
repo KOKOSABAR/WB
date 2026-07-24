@@ -1434,7 +1434,10 @@ function setupEventListeners() {
             handleChatToggle(e.target.checked);
         });
     }
-    document.getElementById("btnLockAdmin").addEventListener("click", lockAdminPanel);
+    const btnLockAdmin = document.getElementById("btnLockAdmin");
+    if (btnLockAdmin) {
+        btnLockAdmin.addEventListener("click", lockAdminPanel);
+    }
 
     // H. Admin Workspace Tab Switcher
     const adminMenu = document.querySelectorAll(".admin-side-menu li");
