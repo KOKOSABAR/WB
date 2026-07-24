@@ -1177,8 +1177,14 @@ function handleLogsRealtime(payload) {
     const isMyAction = payload.new?.staff_id === myStaffId || payload.old?.staff_id === myStaffId;
 
     if (payload.eventType === 'INSERT') {
-        const exist = state.logs.some(l => l.id === payload.new.id);
-        if (!exist) {
+        const existingIdx = state.logs.findIndex(l => 
+            l.id === payload.new.id || 
+            (l.staff_id === payload.new.staff_id && String(l.start_time) === String(payload.new.start_time))
+        );
+        if (existingIdx !== -1) {
+            // Timpa log temporary optimis dengan record database resmi Supabase
+            state.logs[existingIdx] = payload.new;
+        } else {
             state.logs.unshift(payload.new);
             const log = payload.new;
             if (!isMyAction) {
@@ -2769,8 +2775,16 @@ function updateStaffConsoleUI() {
     // const initials = staff.name.split(" ").map(n => n[0]).slice(0, 2).join("").toUpperCase();
     // document.getElementById("staffAvatar").textContent = initials;
     
-    // Jatah Quota & Pemakaian hari ini
-    const todayLogsCount = state.logs.filter(log => log.staff_id === staff.id && isLogToday(log.start_time)).length;
+    // Jatah Quota & Pemakaian hari ini (deduplikasi log unik berdasarkan staff_id & start_time)
+    const rawTodayLogs = state.logs.filter(log => log.staff_id === staff.id && isLogToday(log.start_time));
+    const seenStartTimes = new Set();
+    const todayLogsCount = rawTodayLogs.filter(log => {
+        const key = `${log.staff_id}_${log.start_time}`;
+        if (seenStartTimes.has(key)) return false;
+        seenStartTimes.add(key);
+        return true;
+    }).length;
+    
     const dailyQuota = state.settings.daily_quota;
     
     document.getElementById("quotaText").textContent = `${todayLogsCount} / ${dailyQuota} Kali`;
