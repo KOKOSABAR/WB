@@ -8403,3 +8403,177 @@ function showEmptyShiftState(staff, monthStr) {
 // Export functions to window
 window.initShiftView = initShiftView;
 window.displayStaffShift = displayStaffShift;
+
+// ==========================================================================
+// BREAK NOTIFICATION SYSTEM - Random Messages
+// ==========================================================================
+
+// Pesan saat staff mulai istirahat
+const BREAK_START_MESSAGES = [
+    "Selamat beristirahat! Nikmati waktu santainya, dan pastikan kembali on time ya.",
+    "Silakan istirahat, jangan lupa makan siang! Ditunggu kehadirannya kembali tepat waktu nanti.",
+    "Silakan gunakan waktu istirahatnya. Mohon perhatikan jam agar tidak ada keterlambatan saat kembali bertugas.",
+    "Selamat istirahat! Isi energi dulu ya, ditunggu comeback-nya tepat waktu!",
+    "Waktunya recharge! Silakan istirahat, tolong pasang alarm biar nggak bablas jam masuknya ya.",
+    "Selamat makan dan beristirahat semuanya! Jangan lupa kembali on time supaya operasional kita tetap lancar.",
+    "Silakan beristirahat. Pastikan pekerjaan yang urgent sudah dikomunikasikan ke tim, dan jangan sampai telat balik.",
+    "Selamat menggunakan waktu istirahat. Tolong jam kembalinya diperhatikan agar jadwal kerja kita hari ini tidak mundur.",
+    "Silakan istirahat. Harap perhatikan durasi istirahat yang sudah ditentukan dan kembali ke posisi masing-masing tepat pada waktunya.",
+    "Waktunya recharge! Selamat istirahat, nikmati waktunya. Jangan lupa setel alarm biar nggak telat masuk ya! ⚡",
+    "Selamat break! Isi perut dan tenaganya dulu. Pastikan nanti masuk lagi on time biar ritme kerja kita tetap lancar jaya. 🍔",
+    "Met istirahat semuanya! Jangan sampai keasyikan nongkrong terus lupa jam masuk ya. Ditunggu kehadirannya tepat waktu! 🚀"
+];
+
+// Pesan saat staff kembali ON TIME
+const BREAK_END_ONTIME_MESSAGES = [
+    "Mantap, terima kasih sudah on time! Yuk, semangat lagi lanjut kerjanya.",
+    "Terima kasih atas kedisiplinannya kembali tepat waktu. Mari kita maksimalkan sisa jam kerja hari ini.",
+    "Terima kasih sudah kembali sesuai jadwal. Selamat bertugas kembali!",
+    "Keren, selalu on time! Terima kasih ya, mari kita gas lagi pekerjaannya.",
+    "Wah, tepat waktu! Terima kasih disiplinnya, semangat terus sampai jam pulang nanti.",
+    "Teng! Pas banget jamnya. Terima kasih, yuk kita mulai lagi rutinitasnya.",
+    "Terima kasih sudah komitmen dengan waktu istirahatnya. Selamat bertugas kembali.",
+    "Apresiasi untuk kedisiplinan waktunya hari ini. Mari kita lanjutkan target pekerjaan kita.",
+    "Terima kasih sudah kembali dan standby sesuai jadwal. Silakan dilanjutkan tugasnya.",
+    "Cakep! Makasih udah masuk on time. Energi udah full lagi kan? Yuk, langsung gas selesaikan target hari ini! 🔥",
+    "Mantap kedisiplinannya! Pas banget jam masuk udah langsung standby. Mari kita sikat lagi sisa kerjaan hari ini. 💪✨",
+    "Keren, selalu tepat waktu! Terima kasih kerja samanya, mari kita maksimalkan waktu sampai jam pulang nanti. 💯"
+];
+
+// Pesan saat staff kembali TERLAMBAT
+const BREAK_END_LATE_MESSAGES = [
+    "Selamat bekerja kembali. Tolong manajemen waktu istirahatnya lebih diperhatikan lagi ya agar tidak telat masuk di kesempatan berikutnya.",
+    "Terima kasih sudah kembali. Lain kali mohon lebih disiplin. Jika memang ada kendala mendesak saat istirahat, tolong informasikan ke saya sebelumnya ya.",
+    "Harap jadikan perhatian untuk kedisiplinan waktunya. Saya harap keterlambatan seperti ini tidak menjadi kebiasaan. Silakan lanjutkan pekerjaannya.",
+    "Selamat bergabung kembali. Saya perhatikan hari ini ada keterlambatan, tolong besok waktu istirahatnya lebih diatur lagi ya.",
+    "Lain waktu tolong pasang pengingat sebelum jam istirahat habis ya. Kedisiplinan waktu sangat penting untuk kenyamanan kerja tim kita.",
+    "Terima kasih sudah kembali. Tolong lebih dihargai waktu operasionalnya ya, agar pekerjaan teman-teman di shift atau bagian lain tidak ikut terhambat.",
+    "Halo, saya catat hari ini kamu terlambat masuk setelah istirahat. Tolong pastikan hal ini tidak terulang karena berdampak pada ritme kerja kita.",
+    "Tolong diperhatikan lagi jam istirahatnya. Keterlambatan tanpa alasan yang darurat akan masuk ke catatan kedisiplinan. Silakan kembali bekerja.",
+    "Waktu istirahat sudah diatur agar semua berjalan tertib. Saya harap ini keterlambatan yang terakhir. Silakan langsung lanjutkan pekerjaan yang tertunda.",
+    "Halo, agak telat masuknya nih hari ini. Besok-besok tolong atur waktu istirahatnya lebih oke lagi ya, biar tim kita jalannya tetap kompak. Yuk langsung lanjut kerja! 🙏",
+    "Wah, kayaknya keasyikan istirahat sampai lewat jam masuk nih. Besok pasang alarm ya biar nggak bablas lagi waktunya. Sekarang silakan langsung dikebut kerjaannya! ⏰🏃‍♂️",
+    "Halo, perhatikan jam masuknya lagi ya besok. Kasihan teman-teman yang lain kalau kerjaannya jadi tertunda. Yuk, sekarang fokus dan langsung kejar ketertinggalannya. ✌️"
+];
+
+// Helper function untuk ambil pesan random
+function getRandomMessage(messageArray) {
+    const randomIndex = Math.floor(Math.random() * messageArray.length);
+    return messageArray[randomIndex];
+}
+
+// Global notification element tracker
+let currentBreakNotification = null;
+let notificationAutoHideTimeout = null;
+
+// Show break notification dengan animasi mewah
+function showBreakNotification(message, type = 'info', persistent = false) {
+    // Hide existing notification first
+    hideBreakNotification();
+    
+    // Determine colors based on type
+    let bgColor, borderColor, iconColor, icon, glowColor;
+    switch(type) {
+        case 'success':
+            bgColor = 'linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(5, 150, 105, 0.98) 100%)';
+            borderColor = 'rgba(16, 185, 129, 0.6)';
+            iconColor = '#d1fae5';
+            icon = 'fa-circle-check';
+            glowColor = 'rgba(16, 185, 129, 0.6)';
+            break;
+        case 'warning':
+            bgColor = 'linear-gradient(135deg, rgba(245, 158, 11, 0.95) 0%, rgba(217, 119, 6, 0.98) 100%)';
+            borderColor = 'rgba(245, 158, 11, 0.6)';
+            iconColor = '#fef3c7';
+            icon = 'fa-triangle-exclamation';
+            glowColor = 'rgba(245, 158, 11, 0.6)';
+            break;
+        default: // info
+            bgColor = 'linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(37, 99, 235, 0.98) 100%)';
+            borderColor = 'rgba(59, 130, 246, 0.6)';
+            iconColor = '#dbeafe';
+            icon = 'fa-info-circle';
+            glowColor = 'rgba(59, 130, 246, 0.6)';
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.id = 'breakNotification';
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100px);
+        min-width: 400px;
+        max-width: 600px;
+        background: ${bgColor};
+        border: 2px solid ${borderColor};
+        border-radius: 15px;
+        padding: 20px 25px;
+        box-shadow: 0 10px 40px ${glowColor}, 0 0 60px ${glowColor};
+        z-index: 99999;
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        backdrop-filter: blur(10px);
+    `;
+    
+    notification.innerHTML = `
+        <div style="display: flex; align-items: flex-start; gap: 15px;">
+            <div style="width: 50px; height: 50px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <i class="fa-solid ${icon}" style="font-size: 1.5rem; color: ${iconColor};"></i>
+            </div>
+            <div style="flex: 1; min-width: 0;">
+                <div style="font-size: 1rem; font-weight: 700; color: white; line-height: 1.5; margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">
+                    ${message}
+                </div>
+                ${!persistent ? '<div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.8); margin-top: 8px;"><i class="fa-solid fa-clock"></i> Pesan ini akan hilang otomatis dalam 1 menit</div>' : ''}
+            </div>
+            ${!persistent ? `<button onclick="hideBreakNotification()" style="background: rgba(255, 255, 255, 0.2); border: none; width: 30px; height: 30px; border-radius: 50%; color: white; cursor: pointer; flex-shrink: 0; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                <i class="fa-solid fa-times"></i>
+            </button>` : ''}
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    currentBreakNotification = notification;
+    
+    // Trigger animation
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            notification.style.transform = 'translateX(-50%) translateY(0)';
+            notification.style.opacity = '1';
+        });
+    });
+    
+    // Auto-hide after 1 minute if not persistent
+    if (!persistent) {
+        notificationAutoHideTimeout = setTimeout(() => {
+            hideBreakNotification();
+        }, 60000); // 60 seconds
+    }
+}
+
+// Hide break notification
+function hideBreakNotification() {
+    if (notificationAutoHideTimeout) {
+        clearTimeout(notificationAutoHideTimeout);
+        notificationAutoHideTimeout = null;
+    }
+    
+    if (currentBreakNotification) {
+        currentBreakNotification.style.transform = 'translateX(-50%) translateY(-100px)';
+        currentBreakNotification.style.opacity = '0';
+        
+        setTimeout(() => {
+            if (currentBreakNotification && currentBreakNotification.parentNode) {
+                currentBreakNotification.parentNode.removeChild(currentBreakNotification);
+            }
+            currentBreakNotification = null;
+        }, 500);
+    }
+}
+
+// Export to window
+window.showBreakNotification = showBreakNotification;
+window.hideBreakNotification = hideBreakNotification;
+window.getRandomMessage = getRandomMessage;
