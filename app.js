@@ -1805,33 +1805,79 @@ function setupEventListeners() {
         btnClearAbsensiLogs.addEventListener("click", resetAbsensiLogs);
     }
 
-    // W7a. Absensi: Hapus Semua Shift
+    // W7a. Absensi: Hapus Shift Bulanan per Bulan
     const btnDeleteAllShifts = document.getElementById("btnDeleteAllShifts");
+    const modalDeleteShiftMonth = document.getElementById("modalDeleteShiftMonth");
+    const deleteShiftMonthSelect = document.getElementById("deleteShiftMonthSelect");
+    const btnConfirmDeleteShiftMonth = document.getElementById("btnConfirmDeleteShiftMonth");
+
     if (btnDeleteAllShifts) {
-        btnDeleteAllShifts.addEventListener("click", async () => {
-            const month = state.absensiSelectedMonth;
-            if (!await showCustomConfirm(`Apakah Anda yakin ingin MENGHAPUS SEMUA jadwal shift untuk bulan ${month}? Tindakan ini tidak dapat dibatalkan.`, "Hapus Semua Shift", true)) return;
-            
+        btnDeleteAllShifts.addEventListener("click", () => {
+            if (!modalDeleteShiftMonth) return;
+            const currentMonth = state.absensiSelectedMonth || new Date().toISOString().slice(0, 7);
+            if (deleteShiftMonthSelect) deleteShiftMonthSelect.value = currentMonth;
+            modalDeleteShiftMonth.classList.remove("hide");
+        });
+    }
+
+    if (btnConfirmDeleteShiftMonth) {
+        btnConfirmDeleteShiftMonth.addEventListener("click", async () => {
+            const monthStr = deleteShiftMonthSelect?.value || state.absensiSelectedMonth;
+            if (!monthStr) {
+                showToast("Silakan pilih bulan yang ingin dihapus.", "warning");
+                return;
+            }
+
+            const monthLabel = (function(m) {
+                if (!m || !m.includes('-')) return m;
+                const [yy, mm] = m.split('-').map(Number);
+                const dateObj = new Date(yy, mm - 1, 1);
+                return dateObj.toLocaleDateString('id-ID', { month: 'long', year: 'numeric' });
+            })(monthStr);
+
+            const confirmText = `Apakah Anda yakin ingin MENGHAPUS SEMUA jadwal shift untuk bulan ${monthLabel.toUpperCase()} (${monthStr})?\n\nTindakan ini tidak dapat dibatalkan.`;
+            if (!await showCustomConfirm(confirmText, `Hapus Shift Bulan ${monthLabel}`, true)) return;
+
             try {
-                btnDeleteAllShifts.disabled = true;
-                btnDeleteAllShifts.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i><span> Menghapus...</span>`;
-                
-                const { error } = await supabaseClient
-                    .from('absensi_shifts')
-                    .delete()
-                    .eq('month', month);
+                btnConfirmDeleteShiftMonth.disabled = true;
+                btnConfirmDeleteShiftMonth.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i><span> Menghapus...</span>`;
+
+                if (supabaseClient) {
+                    const { error } = await supabaseClient
+                        .from('absensi_shifts')
+                        .delete()
+                        .or(`month_str.eq.${monthStr},month.eq.${monthStr}`);
                     
-                if (error) throw error;
+                    if (error) throw error;
+                }
+
+                // Sync LocalStorage jika fallback
+                let allShifts = [];
+                const raw = localStorage.getItem("restease_absensi_shifts");
+                if (raw) {
+                    try {
+                        allShifts = JSON.parse(raw);
+                        allShifts = allShifts.filter(s => s.month_str !== monthStr && s.month !== monthStr);
+                        localStorage.setItem("restease_absensi_shifts", JSON.stringify(allShifts));
+                    } catch(e) {}
+                }
+
+                // Update local state jika bulan yang dihapus adalah bulan yang sedang aktif
+                if (state.absensiSelectedMonth === monthStr) {
+                    state.absensiShifts = [];
+                }
+
+                if (modalDeleteShiftMonth) modalDeleteShiftMonth.classList.add("hide");
+                showToast(`Semua jadwal shift bulan ${monthLabel} (${monthStr}) berhasil dihapus.`, "success");
                 
-                showToast(`Semua jadwal shift bulan ${month} berhasil dihapus.`, "success");
                 await fetchAbsensiData();
                 renderAbsensi();
             } catch (err) {
                 console.error("Gagal menghapus shift:", err);
                 showToast("Terjadi kesalahan saat menghapus shift.", "error");
             } finally {
-                btnDeleteAllShifts.disabled = false;
-                btnDeleteAllShifts.innerHTML = `<i class="fa-solid fa-trash"></i><span> Hapus Semua Shift</span>`;
+                btnConfirmDeleteShiftMonth.disabled = false;
+                btnConfirmDeleteShiftMonth.innerHTML = `<i class="fa-solid fa-trash-can"></i> Hapus Shift Bulan Ini`;
             }
         });
     }

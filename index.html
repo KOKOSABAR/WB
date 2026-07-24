@@ -1464,6 +1464,41 @@
                 </div>
             </div>
 
+            <!-- Modal Hapus Shift Bulanan per Bulan -->
+            <div id="modalDeleteShiftMonth" class="modal-overlay hide">
+                <div class="glass-card modal-card" style="max-width: 480px; width: 92%; padding: 24px; border: 1px solid rgba(239, 68, 68, 0.35); position: relative;">
+                    <button type="button" class="modal-close-btn" onclick="document.getElementById('modalDeleteShiftMonth').classList.add('hide')">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                        <div style="width: 44px; height: 44px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 1.25rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-calendar-xmark"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 800; color: white;">Hapus Jadwal Shift Bulanan</h3>
+                            <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: var(--text-muted);">Pilih bulan & tahun yang ingin dihapus seluruh jadwal shift-nya.</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; background: rgba(15, 20, 32, 0.8); padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <label for="deleteShiftMonthSelect" style="display: block; font-size: 0.8rem; font-weight: 700; color: #cbd5e1; margin-bottom: 8px;">
+                            <i class="fa-solid fa-calendar-days" style="color: #a78bfa; margin-right: 4px;"></i> PILIH BULAN TARGET:
+                        </label>
+                        <input type="month" id="deleteShiftMonthSelect" class="date-picker-input" style="width: 100%; padding: 10px 14px !important; font-size: 0.95rem; font-weight: 800; background: #0b0e17; color: white; border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 8px; outline: none; color-scheme: dark;">
+                        <p style="margin: 10px 0 0 0; font-size: 0.75rem; color: #fca5a5; line-height: 1.4;">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Semua data jadwal shift pada bulan yang dipilih akan dihapus secara permanen dari database.
+                        </p>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('modalDeleteShiftMonth').classList.add('hide')" style="padding: 8px 16px;">Batal</button>
+                        <button type="button" id="btnConfirmDeleteShiftMonth" class="btn" style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); color: white; border: 1px solid #dc2626; padding: 8px 20px; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px; border-radius: 8px; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35);">
+                            <i class="fa-solid fa-trash-can"></i> Hapus Shift Bulan Ini
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Modal Impor Jadwal Shift (Salin-Tempel) -->
             <div id="importShiftModal" class="modal-overlay hide">
                 <div class="glass-card modal-card" style="max-width: 600px; width: 90%; position: relative;">
