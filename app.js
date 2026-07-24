@@ -911,11 +911,6 @@ async function connectToSupabase(anonKey) {
 // Memuat data dari tabel Supabase
 async function loadAllData() {
     try {
-        const dateFilter = new Date();
-        dateFilter.setMonth(dateFilter.getMonth() - 1);
-        dateFilter.setDate(1); // 1st day of the previous month
-        dateFilter.setHours(0, 0, 0, 0);
-
         const [
             { data: settingsData, error: sErr },
             { data: staffData,    error: stErr },
@@ -929,7 +924,6 @@ async function loadAllData() {
             supabaseClient.from('active_breaks').select('*'),
             supabaseClient.from('break_logs')
                 .select('*')
-                .gte('start_time', dateFilter.toISOString())
                 .order('end_time', { ascending: false })
         ]);
 
