@@ -788,7 +788,7 @@ function processBatchRekeningSearch() {
                 const screenshotBtn = item.screenshot_url ? `<button onclick="viewRekeningScreenshot('${escapeHtml(item.screenshot_url)}', '${escapeHtml(item.nama_rekening)}')" title="Lihat Screenshot" style="padding:3px 8px;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);border-radius:5px;color:#38bdf8;font-size:0.65rem;font-weight:700;cursor:pointer;"><i class="fa-solid fa-image"></i></button>` : '';
 
                 cardsHtml += `
-                <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.35);border:1px solid rgba(139,92,246,0.2);border-radius:8px;padding:8px 12px;gap:8px;flex-wrap:wrap;">
+                <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(10,12,20,0.88);border:1px solid rgba(139,92,246,0.35);border-radius:8px;padding:8px 12px;gap:8px;flex-wrap:wrap;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 4px 15px rgba(0,0,0,0.4);">
                     <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;flex-wrap:wrap;">
                         <div style="width:30px;height:30px;border-radius:7px;background:rgba(139,92,246,0.2);color:#a78bfa;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;">
                             <i class="${getBankIconClass(item.nama_bank)}"></i>
