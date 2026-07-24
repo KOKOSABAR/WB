@@ -7396,7 +7396,7 @@ function renderStories() {
                                     <div class="reply-item">
                                         ${replyAvatarHtml}
                                         <div class="reply-bubble">
-                                            <div class="comment-author-name">${toTitleCase(reply.staff_name)}</div>
+                                            <div class="comment-author-name">${reply.staff_name}</div>
                                             <div class="comment-text">${escapeHtml(reply.text)}</div>
                                             <div class="comment-footer">
                                                 <span>${formatTimeAgo(reply.created_at)}</span>
@@ -7423,7 +7423,7 @@ function renderStories() {
                         ${commentAvatarHtml}
                         <div style="flex-grow: 1;">
                             <div class="comment-bubble">
-                                <div class="comment-author-name">${toTitleCase(comment.staff_name)}</div>
+                                <div class="comment-author-name">${comment.staff_name}</div>
                                 <div class="comment-text">${escapeHtml(comment.text)}</div>
                                 <div class="comment-footer">
                                     <span>${formatTimeAgo(comment.created_at)}</span>
@@ -7457,7 +7457,7 @@ function renderStories() {
                 <div class="story-card-author">
                     ${authorAvatarHtml}
                     <div style="display: flex; flex-direction: column;">
-                        <span class="story-author-name">${toTitleCase(story.staff_name)}</span>
+                        <span class="story-author-name">${story.staff_name}</span>
                         <span class="story-post-time">${formatTimeAgo(story.created_at)}</span>
                     </div>
                 </div>

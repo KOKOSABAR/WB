@@ -109,7 +109,8 @@ body {
     text-transform: uppercase;
 }
 
-input, textarea, select, .chat-input, .message-content, .chat-message, .chat-time, .message-text, .ql-editor {
+input, textarea, select, .chat-input, .message-content, .chat-message, .chat-time, .message-text, .ql-editor,
+.story-card-content, .comment-text, .reply-bubble .comment-text {
     text-transform: none !important;
 }
 
