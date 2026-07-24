@@ -8268,12 +8268,28 @@ function renderStaffShiftCalendar(staff, shiftData, monthStr) {
     if (summaryOff) summaryOff.textContent = offCount;
     if (summaryHalf) summaryHalf.textContent = halfCount;
     
-    // Update dates list
+    // Update dates list dengan format yang lebih mewah (dengan nama bulan)
+    const monthNameShort = monthNames[parseInt(month) - 1].toUpperCase();
+    
     if (offDates) {
-        offDates.textContent = offDayList.length > 0 ? offDayList.join(', ') : 'Tidak ada';
+        if (offDayList.length > 0) {
+            const formattedOffDates = offDayList.map(d => `${d} ${monthNameShort}`).join(', ');
+            offDates.textContent = formattedOffDates;
+        } else {
+            offDates.textContent = 'Tidak ada';
+            offDates.style.fontSize = '1.2rem';
+            offDates.style.opacity = '0.5';
+        }
     }
     if (halfDates) {
-        halfDates.textContent = halfDayList.length > 0 ? halfDayList.join(', ') : 'Tidak ada';
+        if (halfDayList.length > 0) {
+            const formattedHalfDates = halfDayList.map(d => `${d} ${monthNameShort}`).join(', ');
+            halfDates.textContent = formattedHalfDates;
+        } else {
+            halfDates.textContent = 'Tidak ada';
+            halfDates.style.fontSize = '1.2rem';
+            halfDates.style.opacity = '0.5';
+        }
     }
 }
 
